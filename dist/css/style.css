@@ -57,3 +57,18 @@ p {
     line-height: 1.5;
     font-style: italic;
 }
+
+pre {
+    margin: 1rem;
+    padding: 0.25rem;
+}
+
+pre {
+    margin: 1rem;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 1rem -1rem;
+    line-height: 1rem;
+    width: 50%;
+}
+
