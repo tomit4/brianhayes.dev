@@ -54,7 +54,7 @@ h5 {
     font-style: italic;
     /* the following only for h1? */
     margin-top: 1.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 }
 
 .title {
@@ -62,12 +62,31 @@ h5 {
     margin: 0 auto;
     width: 90vw;
     max-width: 50rem;
+    /* background-color: red; */
+}
+
+.title-card {
+    margin-left: 0.75rem;
+}
+
+.subtitle {
+    font-size: 95%;
+    font-style: italic;
+    margin-left: 0.25rem;
 }
 
 .aside {
-    margin-bottom: 8rem;
-    font-size: 95%;
+    margin-bottom: 4rem;
+    font-size: 90%;
     margin-left: 0.25rem;
+}
+
+blockquote {
+    margin-left: 4rem;
+    margin-bottom: 3rem;
+    text-align: right;
+    font-style: italic;
+    max-width: 40rem;
 }
 
 a {
@@ -79,13 +98,12 @@ a {
 
 article {
     margin: 0 auto;
-    max-width: 50rem;
 }
 
 p {
     margin: 1rem auto;
     width: 90vw;
-    max-width: 50rem;
+    max-width: 44rem;
     word-wrap: break-word;
     line-height: 1.5;
     text-align: left;
