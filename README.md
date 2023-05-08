@@ -26,6 +26,12 @@ __The Plan__
 
 While the implementation of this blog will be very bare bones, it is also meant to act as a teaching implementation for best practices on how to create a minimalist blog while also being independent of all blogging platforms. A small amount of javascript will be implemented for light/dark mode but I hope not to include much else. Right now the blog uses liveserver, but the big learning part will be more admin oriented, as I wish to use docker/nginx/linode to host the site rather than other more simple hosting services. This is meant to keep independence from these platforms and rely solely on linode for hosting.
 
+__NGINX config info__
+
+- [ ] [Remove .html extension](https://stackoverflow.com/questions/38228393/nginx-remove-html-extension)
+- [ ] [Configure use of .gz files for fonts](https://blog.bigdinosaur.org/gzipping-font-face-with-nginx/)
+- [ ] Optional, you may need to [allow CORS](https://serverfault.com/questions/186965/how-can-i-make-nginx-support-font-face-formats-and-allow-access-control-allow-o)
+
 __Todo__
 
 - [ ] Learn how to dockerize a basic nginx server that serves an index.html with routing to an about.html 
