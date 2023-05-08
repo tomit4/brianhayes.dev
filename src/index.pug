@@ -6,10 +6,15 @@ html(lang = "en")
         meta(name='viewport' content='width=device-width, initial-scale=1')
         link(rel='stylesheet' type='text/css' href='css/style.css')
     body
-        h1 Home Page
-        a(aria-label="about" role="link" href="./about.html") About Page
-        article.container
-            p A basic paragraph tag in home page
+        nav
+            a(aria-label="about" role="link" href="./about.html") About Page
+        div.title
+            h1 Article One
+            div.aside Published on 2023-05-08
+        article
+            p A basic paragraph tag in home page that just keeps going until the end of time. It just doesn't stop wow! What a paragraph tag!
             pre 
                code // some comment&#10 something.foreach(wow => {&#10    console.log('wow');&#10 )}
+        footer
+            a(aria-label="about" role="link" href="./about.html") About Page
 html
