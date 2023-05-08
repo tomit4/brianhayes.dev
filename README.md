@@ -34,6 +34,7 @@ __Todo__
 - [ ] Nginx should have the ability to serve up compressed .gz versions of your downloaded fonts, so do that using the @font-face format('gz') property instead of the 'truetype' you have now. Technically this is negigble now, but again, this is for learning purposes. 
 - [ ] Pull your old blog articles from your current more heavy front end oriented blog onto your new minimalist blog so you have some genuine text to play with.
 - [ ] Implement dark mode toggle in JS using dark reader as a template like you did using darkreader API on your original blog. This should be far easier than your original implementation as you have pretty much just black and white to toggle here.
+- [ ] Provide a 32x32 and 16x16 favicon png for site
 - [ ] Generate an RSS feed for this (I know, ugh...)
 - [ ] Consider how to possibly automate RSS generation using bash, node, or python and implement said strategy if one is found
 - [ ] Consider SEO strategies
