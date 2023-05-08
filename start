@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+pug -w src/index.pug -o dist -P & live-server ./dist/
