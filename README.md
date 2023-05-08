@@ -36,4 +36,4 @@ __Todo__
 - [ ] Implement dark mode toggle in JS using dark reader as a template like you did using darkreader API on your original blog. This should be far easier than your original implementation as you have pretty much just black and white to toggle here.
 - [ ] Generate an RSS feed for this (I know, ugh...)
 - [ ] Consider how to possibly automate RSS generation using bash, node, or python and implement said strategy if one is found
-- [ ] Consider Sand implement EO strategies
+- [ ] Consider SEO strategies
