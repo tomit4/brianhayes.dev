@@ -3,12 +3,12 @@
 *,
 *::before,
 **::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 html {
-  box-sizing: border-box;
-  font-size: 100%;
+    box-sizing: border-box;
+    font-size: 100%;
 }
 
 /* Custom fonts (convert from true type to gz when nginx is up)*/
@@ -41,34 +41,37 @@ html {
 }
 
 body {
-  font-family: 'Lora', serif;
-}
-
-h1, h2, h3, p {
-    margin-top: 0;
+    display: block;
+    margin: auto;
+    width: 50vw;
+    text-align: center;
+    align-items: center;
+    font-family: 'Lora', serif;
 }
 
 h1, h2, h3, h4, h5 {
-    line-height: 1;
-    font-style: bold;
-}
-
-p {
-    line-height: 1.5;
+    margin: 0;
+    font-weight: bold;
     font-style: italic;
 }
 
-pre {
-    margin: 1rem;
-    padding: 0.25rem;
+a {
+    font-style: italic;
+}
+
+p {
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.5;
 }
 
 pre {
-    margin: 1rem;
+    margin: auto ;
     border: 1px solid black;
     border-radius: 3px;
-    padding: 1rem -1rem;
+    padding: 0.25rem 0;
     line-height: 1rem;
-    width: 50%;
+    text-align: left;
+    /* add media query to limit this */
+    width: 50vw;
 }
-
