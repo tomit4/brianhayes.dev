@@ -32,6 +32,9 @@ __NGINX config info__
 - [ ] [Configure use of .gz files for fonts](https://blog.bigdinosaur.org/gzipping-font-face-with-nginx/)
 - [ ] Optional, you may need to [allow CORS](https://serverfault.com/questions/186965/how-can-i-make-nginx-support-font-face-formats-and-allow-access-control-allow-o)
 
+__Docker with NGINX__
+- [ ] Read [NGINX_with_Docker_and_NodJS_A_Beginners_Guide](https://scribe.rip/nginx-with-docker-and-node-js-a-beginners-guide-434fe1216b6b)
+
 __Todo__
 
 - [ ] Learn how to dockerize a basic nginx server that serves an index.html with routing to an about.html 
