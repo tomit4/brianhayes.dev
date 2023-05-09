@@ -13,7 +13,7 @@
 
 html {
     /* hard coded: no change on dark mode */
-    background-color: #343231; 
+    background-color: #343231;
     box-sizing: border-box;
     font-size: 100%;
     width: 100%;
@@ -102,7 +102,7 @@ nav {
 .nav-items,
 .foot-items {
     margin: 0 1.5rem;
-    transition: transform .2s;
+    transition: transform 0.2s;
 }
 
 .nav-items:hover,
@@ -112,33 +112,54 @@ nav {
 }
 
 #contact {
-    content: url("../assets/icons/mail-sharp.svg");
+    content: url('../assets/icons/mail-sharp.svg');
     height: 100%;
 }
 
 #about {
-    content: url("../assets/icons/information-variant-box.svg");
+    content: url('../assets/icons/information-variant-box.svg');
     height: 100%;
 }
 
 #home {
-    content: url("../assets/icons/home-filled.svg");
+    content: url('../assets/icons/home-filled.svg');
     height: 100%;
 }
 
 #blog {
-    content: url("../assets/icons/pencil.svg");
+    content: url('../assets/icons/pencil.svg');
     height: 90%;
 }
 
 #rss {
-    content: url("../assets/icons/logo-rss.svg");
+    content: url('../assets/icons/logo-rss.svg');
     height: 90%;
 }
 
 .foot-division,
 .nav-division {
     height: 2rem;
+}
+
+/* article navigation arrows */
+.arrows {
+    margin: 0 auto;
+    margin-bottom: -1rem;
+    display: flex;
+    justify-content: center;
+    padding: 0.25rem;
+    width: 90vw;
+    max-width: 50rem;
+}
+
+.left-arrow,
+.right-arrow {
+    margin: 0 45%;
+    content: url('../assets/icons/arrow.svg');
+}
+
+.left-arrow {
+    transform: scaleX(-1);
 }
 
 /* article */
@@ -220,7 +241,6 @@ footer {
     padding: 0;
 }
 
-
 .foot-menu {
     display: flex;
     justify-content: center;
@@ -237,30 +257,29 @@ footer {
     border-top: 2px solid var(--offblack);
 }
 
-
 #sun {
-    content: url("../assets/icons/sun-filled.svg");
+    content: url('../assets/icons/sun-filled.svg');
     height: 100%;
     cursor: pointer;
 }
 
 #git {
-    content: url("../assets/icons/git.svg");
+    content: url('../assets/icons/git.svg');
     height: 100%;
 }
 
 #linkedin {
-    content: url("../assets/icons/linkedin-box-fill.svg");
+    content: url('../assets/icons/linkedin-box-fill.svg');
     height: 100%;
 }
 
 #mastodon {
-    content: url("../assets/icons/mastodon.svg");
+    content: url('../assets/icons/mastodon.svg');
     height: 110%;
 }
 
 #moon {
-    content: url("../assets/icons/moon-bold.svg");
+    content: url('../assets/icons/moon-bold.svg');
     height: 90%;
     cursor: pointer;
 }

@@ -9,16 +9,19 @@ html(lang = "en")
         nav
             ul.nav-menu
                 li.nav-items
-                    a#contact(aria-label="email" role="link" href="mailto: leafbytes@protonmail.com")
+                    a#contact(aria-label="email" role="contact" href="mailto: leafbytes@protonmail.com")
                 li.nav-items
-                    a#about(aria-label="about" role="link" href="./about.html")
+                    a#about(aria-label="about" role="navigation" href="./about.html")
                 li.nav-items
-                    a#home(aria-label="about" role="link" href="./")
+                    a#home(aria-label="about" role="navigation" href="./")
                 li.nav-items
-                    a#blog(aria-label="blog" role="link" href="./blog.html")
+                    a#blog(aria-label="blog" role="navigation" href="./blog.html")
                 li.nav-items
-                    a#rss(aria-label="rss" role="link" href="./feed.rss")
+                    a#rss(aria-label="rss" role="download" href="./feed.rss")
             div.nav-division
+        div.arrows
+            a.left-arrow(aria-label="previous" role="navigation" href="./about.html")
+            a.right-arrow(aria-label="next" role="navigation" href="./about.html")
         div.title
             div.title-card
                 h1 One With The Keyboard
