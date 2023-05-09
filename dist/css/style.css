@@ -12,7 +12,8 @@
 }
 
 html {
-    background-color: var(--offblack);
+    /* hard coded: no change on dark mode */
+    background-color: #343231; 
     box-sizing: border-box;
     font-size: 100%;
     width: 100%;
