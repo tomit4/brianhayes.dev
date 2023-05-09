@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>leafbytes.com</title>
+<link>https://leafbytes.com</link>
+<language>en-us</language>
+<atom:link href="http://leafbytes.com/test.rss" rel="self" type="application/rss+xml" />
+<description>Articles on Web Development, Development Tools, and Linux</description>
+<item>
+<pubDate>Sun, 08 Jan 2023</pubdate>
+<title>One With The Keyboard</title>
+<link>https://leafbytes.com/articles/one-with-the-keyboard.html</link>
+<guid isPermaLink="false">414153c9pcqklkdaqh77pii7zddktqkyl07n028j</guid>
+<description>There is such a huge skill and knowledge divide between the average everyday user of todays computers and programmers, and that divide is becoming ever wider with the emphasis placed on
+tablets, phones, and touchscreens.</description>
+</item>
+</channel>
+</rss>
