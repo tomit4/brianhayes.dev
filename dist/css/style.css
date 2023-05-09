@@ -71,7 +71,7 @@ html {
 body {
     font-family: 'Lora', serif;
     color: var(--offblack);
-    background-color: #fff7f0;
+    background-color: var(--offwhite);
     width: 100%;
     margin: 0 auto;
     padding: 0;
