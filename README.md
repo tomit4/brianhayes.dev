@@ -47,3 +47,4 @@ __Todo__
 - [ ] Generate an RSS feed for this (I know, ugh...)
 - [ ] Consider how to possibly automate RSS generation using bash, node, or python and implement said strategy if one is found
 - [ ] Consider SEO strategies
+- [ ] Write a bash script that will take an large image file, copy it three times over, and convert each to width 700px, 500px, and 300px, and rename each as image_desktop.webp, image_tablet.webp, and image_mobile.webp
