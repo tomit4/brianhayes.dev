@@ -9,9 +9,11 @@
   <body>
     <nav>
       <ul class="nav-menu">
-        <li class="nav-items"><a id="contact" aria-label="about" role="link" href="mailto: leafbytes@protonmail.com"></a></li>
+        <li class="nav-items"><a id="contact" aria-label="email" role="link" href="mailto: leafbytes@protonmail.com"></a></li>
+        <li class="nav-items"><a id="about" aria-label="about" role="link" href="about"></a></li>
         <li class="nav-items"><a id="home" aria-label="about" role="link" href="./"></a></li>
-        <li class="nav-items"><a id="about" aria-label="about" role="link" href="./about.html"></a></li>
+        <li class="nav-items"><a id="blog" aria-label="blog" role="link" href="./blog.html"></a></li>
+        <li class="nav-items"><a id="rss" aria-label="rss" role="link" href="./feed.rss"></a></li>
       </ul>
       <div class="nav-division"></div>
     </nav>
@@ -29,9 +31,16 @@
       <p>A basic paragraph tag in home page that just keeps going until the end of time. It just doesn't stop wow! What a paragraph tag!</p>
       <pre> <code>// somefile.js&#10 something.foreach(wow => {&#10    console.log('wow');&#10 )}</code></pre>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
     <footer>
-      <!-- a(aria-label="about" role="link" href="./about.html") About Page-->
+      <div class="foot-division"></div>
+      <ul class="foot-menu">
+        <li class="foot-items">
+          <div id="sun" aria-label="light-mode" onclick="toggleLight()"></div>
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

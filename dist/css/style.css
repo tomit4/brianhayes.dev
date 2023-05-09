@@ -65,7 +65,7 @@ nav {
 }
 
 .nav-items {
-    margin: 0 1.75rem;
+    margin: 0 1.5rem;
 }
 
 
@@ -74,14 +74,24 @@ nav {
     height: 100%;
 }
 
+#about {
+    content: url("../assets/icons/information-variant-box.svg");
+    height: 100%;
+}
+
 #home {
     content: url("../assets/icons/home-filled.svg");
     height: 100%;
 }
 
-#about {
+#blog {
     content: url("../assets/icons/pencil.svg");
-    height: 100%;
+    height: 95%;
+}
+
+#rss {
+    content: url("../assets/icons/logo-rss.svg");
+    height: 95%;
 }
 
 .nav-division {
@@ -166,4 +176,46 @@ pre {
     text-align: left;
     width: 80vw;
     max-width: 40rem;
+}
+
+/* footer bar */
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.foot-division {
+    height: 2rem;
+    /* background-color: white */
+}
+
+.foot-menu {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    list-style: none;
+    padding: 0.25rem;
+    padding-bottom: 0.5rem;
+    /* margin-top: -0.5rem; */
+    margin-bottom: 0;
+    bottom: 0;
+    width: 90vw;
+    max-width: 50rem;
+    background-color: white;
+    height: 1.5rem;
+    border-top: 2px solid black;
+}
+
+.foot-items {
+    margin: 0 1.5rem;
+}
+
+#sun {
+    content: url("../assets/icons/sun-filled.svg");
+    height: 100%;
+}
+/* ?? */
+#sun :hover {
+    cursor: pointer;
 }
