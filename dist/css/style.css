@@ -155,11 +155,14 @@ nav {
 .left-arrow,
 .right-arrow {
     margin: 0 45%;
-    content: url('../assets/icons/arrow.svg');
+}
+
+.right-arrow {
+    content: url('../assets/icons/arrow-right.svg');
 }
 
 .left-arrow {
-    transform: scaleX(-1);
+    content: url("../assets/icons/arrow-left.svg")
 }
 
 /* article */
