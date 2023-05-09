@@ -1,14 +1,42 @@
-/* :root {} */
+:root {
+    --offblack: #343231;
+    --offwhite: #faf0e6;
+}
 
 *,
 *::before,
 **::after {
+    margin: 0;
+    padding: 0;
     box-sizing: inherit;
 }
 
 html {
+    background-color: var(--offblack);
     box-sizing: border-box;
     font-size: 100%;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0;
+    min-height: 100vh;
+    /* mozilla firefox styling of scrollbar */
+    scrollbar-color: var(--offblack) var(--offwhite);
+}
+
+/* chromium styling of scrollbar */
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--offwhite);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--offblack);
+    border-radius: 20px;
+    border: 3px solid var(--offblack);
 }
 
 /* Custom fonts (convert from true type to gz when nginx is up)*/
@@ -42,6 +70,13 @@ html {
 
 body {
     font-family: 'Lora', serif;
+    color: var(--offblack);
+    background-color: #fff7f0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1920px;
+    cursor: default;
 }
 
 /* navigation bar */
@@ -56,18 +91,24 @@ nav {
     position: fixed;
     list-style: none;
     padding: 0.25rem;
-    margin-top: -0.5rem;
-    padding-top: 0.5rem;
+    margin: 0;
     width: 90vw;
     max-width: 50rem;
-    background-color: white;
-    border-bottom: 2px solid black;
+    background-color: var(--offwhite);
+    border-bottom: 2px solid var(--offblack);
 }
 
-.nav-items {
+.nav-items,
+.foot-items {
     margin: 0 1.5rem;
+    transition: transform .2s;
 }
 
+.nav-items:hover,
+.foot-items:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+}
 
 #contact {
     content: url("../assets/icons/mail-sharp.svg");
@@ -86,14 +127,15 @@ nav {
 
 #blog {
     content: url("../assets/icons/pencil.svg");
-    height: 95%;
+    height: 90%;
 }
 
 #rss {
     content: url("../assets/icons/logo-rss.svg");
-    height: 95%;
+    height: 90%;
 }
 
+.foot-division,
 .nav-division {
     height: 2rem;
 }
@@ -107,7 +149,6 @@ h5 {
     font-size: 2.75rem;
     font-weight: normal;
     font-style: italic;
-    /* the following only for h1? */
     margin-top: 1.75rem;
     margin-bottom: 0rem;
 }
@@ -117,7 +158,6 @@ h5 {
     margin: 0 auto;
     width: 90vw;
     max-width: 50rem;
-    /* background-color: red; */
 }
 
 .title-card {
@@ -131,25 +171,17 @@ h5 {
 }
 
 .aside {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     font-size: 90%;
     margin-left: 0.25rem;
 }
 
 blockquote {
-    margin-top: -2rem;
     margin-bottom: 3rem;
     margin-left: 4rem;
     text-align: right;
     font-style: italic;
     max-width: 40rem;
-}
-
-a {
-    /* display: block; */
-    /* margin: 0 auto; */
-    /* text-align: center; */
-    /* font-style: italic; */
 }
 
 article {
@@ -169,7 +201,7 @@ p {
 
 pre {
     margin: 0 auto;
-    border: 1px solid black;
+    border: 1px solid var(--offblack);
     border-radius: 3px;
     padding: 0.25rem 0;
     line-height: 1rem;
@@ -178,17 +210,15 @@ pre {
     max-width: 40rem;
 }
 
+/* TODO: dedupe these props, combine with navbar */
 /* footer bar */
-
 footer {
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
-.foot-division {
-    height: 2rem;
-    /* background-color: white */
-}
 
 .foot-menu {
     display: flex;
@@ -197,25 +227,45 @@ footer {
     list-style: none;
     padding: 0.25rem;
     padding-bottom: 0.5rem;
-    /* margin-top: -0.5rem; */
     margin-bottom: 0;
     bottom: 0;
     width: 90vw;
     max-width: 50rem;
-    background-color: white;
+    background-color: var(--offwhite);
     height: 1.5rem;
-    border-top: 2px solid black;
+    border-top: 2px solid var(--offblack);
 }
 
-.foot-items {
-    margin: 0 1.5rem;
-}
 
 #sun {
     content: url("../assets/icons/sun-filled.svg");
     height: 100%;
-}
-/* ?? */
-#sun :hover {
     cursor: pointer;
+}
+
+#git {
+    content: url("../assets/icons/git.svg");
+    height: 100%;
+}
+
+#linkedin {
+    content: url("../assets/icons/linkedin-box-fill.svg");
+    height: 100%;
+}
+
+#mastodon {
+    content: url("../assets/icons/mastodon.svg");
+    height: 110%;
+}
+
+#moon {
+    content: url("../assets/icons/moon-bold.svg");
+    height: 90%;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px;
 }

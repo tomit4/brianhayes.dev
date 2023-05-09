@@ -11,7 +11,7 @@ html(lang = "en")
                 li.nav-items
                     a#contact(aria-label="email" role="link" href="mailto: leafbytes@protonmail.com")
                 li.nav-items
-                    a#about(aria-label="about" role="link" href="about")
+                    a#about(aria-label="about" role="link" href="./about.html")
                 li.nav-items
                     a#home(aria-label="about" role="link" href="./")
                 li.nav-items
@@ -24,6 +24,10 @@ html(lang = "en")
                 h1 One With The Keyboard
                 div.subtitle A Necessary Prerequisite
                 div.aside Published on 2023-05-08
+                picture
+                    source(media="(min-width: 62.5em)" srcset="../assets/images/keyboard_desktop.webp")
+                    source(media="(min-width: 37.5em)" srcset="../assets/images/keyboard_tablet.webp")
+                    img.intro-image#keyboard(src="../assets/images/keyboard_mobile.webp" alt="A Macbook Air Keyboard" cite="https://commons.wikimedia.org")
             blockquote(cite="https://www.brainyquote.com") "What I was proud of was that I used very few parts to build a computer that could actually speak words on a screen and type words on a keyboard and run a programming language that could play games. And I did all this myself."
                     div.quote_author -Steve Wozniak
         article
@@ -38,7 +42,13 @@ html(lang = "en")
             ul.foot-menu
                 li.foot-items
                     div#sun(aria-label="light-mode" onclick="toggleLight()")
+                li.foot-items
+                    a#git(aria-label="git" role="link" target="_blank" rel="noopener noreferrer" href="https://github.com/tomit4")
+                li.foot-items
+                    a#linkedin(aria-label="linkedin" target="_blank" rel="noopener noreferrer" role="link" href="https://linkedin.com/in/brian-hayes-33496067")
+                li.foot-items
+                    a#mastodon(aria-label="resume" target="_blank" rel="noopener noreferrer" role="link" href="https://mastodon.social/@z3rOR0ne")
+                li.foot-items
+                    div#moon(aria-label="dark-mode" onclick="toggleDark()")
+        script(src="./index.js" default)
 html
-
-
-
