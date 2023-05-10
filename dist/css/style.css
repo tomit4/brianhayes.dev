@@ -8,10 +8,6 @@
     --offwhite: #161615;
 }
 
-.icons[data-theme='dark'] {
-    filter: invert(100%);
-}
-
 *,
 *::before,
 **::after {
@@ -89,23 +85,31 @@ body {
     cursor: default;
 }
 
-/* navigation bar */
-nav {
+.icons[data-theme='dark'] {
+    filter: invert(100%) 
+            sepia(80%) 
+            brightness(110%) 
+            contrast(110%);
+}
+
+/* nav/footer settings */
+nav,
+.nav-menu,
+.arrows,
+footer,
+.foot-menu {
     display: flex;
     justify-content: center;
 }
 
-.nav-menu {
-    display: flex;
-    justify-content: center;
+.nav-menu,
+.foot-menu {
     position: fixed;
     list-style: none;
     padding: 0.25rem;
-    margin: 0;
     width: 90vw;
     max-width: 50rem;
     background-color: var(--offwhite);
-    border-bottom: 2px solid var(--offblack);
 }
 
 .nav-items,
@@ -120,42 +124,21 @@ nav {
     transform: scale(1.25);
 }
 
-#contact {
-    content: url('../assets/icons/mail-sharp.svg');
-    height: 100%;
-}
-
-#about {
-    content: url('../assets/icons/information-variant-box.svg');
-    height: 100%;
-}
-
-#home {
-    content: url('../assets/icons/home-filled.svg');
-    height: 100%;
-}
-
-#blog {
-    content: url('../assets/icons/pencil.svg');
-    height: 90%;
-}
-
-#rss {
-    content: url('../assets/icons/logo-rss.svg');
-    height: 90%;
-}
-
-.foot-division,
-.nav-division {
+.nav-division,
+.foot-division {
     height: 2rem;
+}
+
+/* nav only settings */
+.nav-menu {
+    margin: 0;
+    border-bottom: 2px solid var(--offblack);
 }
 
 /* article navigation arrows */
 .arrows {
     margin: 0 auto;
     margin-bottom: -1rem;
-    display: flex;
-    justify-content: center;
     padding: 0.25rem;
     width: 90vw;
     max-width: 50rem;
@@ -166,15 +149,8 @@ nav {
     margin: 0 45%;
 }
 
-#right-arrow {
-    content: url('../assets/icons/arrow-right.svg');
-}
 
-#left-arrow {
-    content: url('../assets/icons/arrow-left.svg');
-}
-
-/* article */
+/* article stylings*/
 header,
 h1,
 h2 {
@@ -223,6 +199,13 @@ h2 {
     margin-left: 0.25rem;
 }
 
+img {
+    display: block;
+    margin: 0 auto;
+    border: 1.5px solid var(--offblack);
+    border-radius: 2px;
+}
+
 blockquote {
     margin-bottom: 3rem;
     margin-left: 4rem;
@@ -257,61 +240,77 @@ pre {
     max-width: 40rem;
 }
 
-/* TODO: dedupe these props, combine with navbar */
 /* footer bar */
 footer {
-    display: flex;
-    justify-content: center;
     margin: 0;
     padding: 0;
 }
 
 .foot-menu {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    list-style: none;
-    padding: 0.25rem;
     padding-bottom: 0.5rem;
     margin-bottom: 0;
     bottom: 0;
-    width: 90vw;
-    max-width: 50rem;
-    background-color: var(--offwhite);
     height: 1.5rem;
     border-top: 2px solid var(--offblack);
 }
 
-#sun {
-    content: url('../assets/icons/sun-filled.svg');
+/* nav/foot icon height adjustments*/
+#contact,
+#about,
+#home,
+#sun,
+#git,
+#linkedin {
     height: 100%;
+}
+
+#blog,
+#rss, 
+#moon {
+    height: 90%;
+}
+
+/* sun/moon icons pointer adjustments */
+.temp {
     cursor: pointer;
 }
 
+#contact {
+    content: url('../assets/icons/mail-sharp.svg');
+}
+#about {
+    content: url('../assets/icons/information-variant-box.svg');
+}
+#home {
+    content: url('../assets/icons/home-filled.svg');
+}
+#blog {
+    content: url('../assets/icons/pencil.svg');
+}
+#rss {
+    content: url('../assets/icons/logo-rss.svg');
+}
+/* arrow svgs */
+#right-arrow {
+    content: url('../assets/icons/arrow-right.svg');
+}
+#left-arrow {
+    content: url('../assets/icons/arrow-left.svg');
+}
+/* footer svgs */
+#sun {
+    content: url('../assets/icons/sun-filled.svg');
+}
 #git {
     content: url('../assets/icons/git.svg');
-    height: 100%;
 }
-
 #linkedin {
     content: url('../assets/icons/linkedin-box-fill.svg');
-    height: 100%;
 }
-
 #mastodon {
     content: url('../assets/icons/mastodon.svg');
     height: 110%;
 }
-
 #moon {
     content: url('../assets/icons/moon-bold.svg');
-    height: 90%;
-    cursor: pointer;
-}
-
-img {
-    display: block;
-    margin: 0 auto;
-    border: 1.5px solid var(--offblack);
-    border-radius: 2px;
 }
