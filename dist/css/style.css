@@ -260,14 +260,15 @@ footer {
 #home,
 #sun,
 #git,
-#linkedin {
-    height: 100%;
+#linkedin,
+#mastodon {
+    height: 110%;
 }
 
 #blog,
 #rss, 
 #moon {
-    height: 90%;
+    height: 100%;
 }
 
 /* sun/moon icons pointer adjustments */
@@ -309,7 +310,6 @@ footer {
 }
 #mastodon {
     content: url('../assets/icons/mastodon.svg');
-    height: 110%;
 }
 #moon {
     content: url('../assets/icons/moon-bold.svg');
