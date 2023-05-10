@@ -134,7 +134,8 @@ footer,
 /* nav only settings */
 .nav-menu {
     margin: 0;
-    border-bottom: 2px solid var(--offblack);
+    padding-bottom: 0.4rem;
+    border-bottom: 2.5px solid var(--offblack);
 }
 
 /* article navigation arrows */
@@ -204,7 +205,7 @@ h2 {
 img {
     display: block;
     margin: 0 auto;
-    border: 1.5px solid var(--offblack);
+    border: 2px solid var(--offblack);
     border-radius: 2px;
 }
 
@@ -253,7 +254,7 @@ footer {
     margin-bottom: 0;
     bottom: 0;
     height: 1.5rem;
-    border-top: 2px solid var(--offblack);
+    border-top: 2.5px solid var(--offblack);
 }
 
 /* nav/foot icon height adjustments*/
