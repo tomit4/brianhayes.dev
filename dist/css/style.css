@@ -119,7 +119,9 @@ footer,
 }
 
 .nav-items:hover,
-.foot-items:hover {
+.foot-items:hover,
+#left-arrow:hover,
+#right-arrow:hover {
     cursor: pointer;
     transform: scale(1.25);
 }
