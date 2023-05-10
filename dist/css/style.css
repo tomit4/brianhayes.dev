@@ -108,10 +108,6 @@ nav {
     border-bottom: 2px solid var(--offblack);
 }
 
-.nav-menu:after {
-    filter: brightness(70%);
-}
-
 .nav-items,
 .foot-items {
     margin: 0 1.5rem;
