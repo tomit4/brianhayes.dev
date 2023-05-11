@@ -1,10 +1,12 @@
+@import url('fonts.css');
+
 :root {
     --offblack: #343231;
-    --offwhite: #faf0e6;
+    --offwhite: #e9f3fb;
 }
 
 :root[data-theme='dark'] {
-    --offblack: #f7ead3;
+    --offblack: #e9f3fb;
     --offwhite: #161615;
 }
 
@@ -45,35 +47,6 @@ html {
     border: 3px solid var(--offblack);
 }
 
-/* Custom fonts (convert from true type to gz when nginx is up)*/
-@font-face {
-    font-family: 'Lora';
-    src: url('../fonts/Lora-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Lora';
-    src: url('../fonts/Lora-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Lora';
-    src: url('../fonts/Lora-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Lora';
-    src: url('../fonts/Lora-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-}
-
 body {
     font-family: 'Lora', serif;
     color: var(--offblack);
@@ -87,9 +60,9 @@ body {
 
 .icons[data-theme='dark'] {
     filter: invert(100%) 
-            sepia(80%) 
+            sepia(0%) 
             brightness(110%) 
-            contrast(110%);
+            contrast(100%);
 }
 
 /* nav/footer settings */
