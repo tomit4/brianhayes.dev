@@ -79,6 +79,7 @@ footer,
 .foot-menu {
     position: fixed;
     list-style: none;
+    z-index: 2;
     padding: 0.25rem;
     width: 90vw;
     max-width: 50rem;
