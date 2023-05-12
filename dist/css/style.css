@@ -4,11 +4,11 @@
 
 :root {
     --offblack: #343231;
-    --offwhite: #e9f3fb;
+    --offwhite: #faf0e6;
 }
 
 :root[data-theme='dark'] {
-    --offblack: #e9f3fb;
+    --offblack: #f7ead3;
     --offwhite: #161615;
 }
 
