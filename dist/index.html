@@ -8,12 +8,12 @@
   </head>
   <body>
     <nav>
-      <ul class="nav-menu">
-        <li class="nav-items"><a class="icons" id="contact" aria-label="email" role="contact" href="mailto: leafbytes@protonmail.com"></a></li>
+      <ul class="nav-menu" role="menu">
+        <li class="nav-items" role="menubar"><a class="icons" id="contact" aria-label="email" role="menuitem" href="mailto: leafbytes@protonmail.com"></a></li>
         <li class="nav-items"><a class="icons" id="about" aria-label="about" role="navigation" href="./about.html"></a></li>
         <li class="nav-items"><a class="icons" id="home" aria-label="about" role="navigation" href="./"></a></li>
         <li class="nav-items"><a class="icons" id="blog" aria-label="blog" role="navigation" href="./blog.html"></a></li>
-        <li class="nav-items"><a class="icons" id="rss" aria-label="rss" role="download" href="./assets/feed.rss"></a></li>
+        <li class="nav-items"><a class="icons" id="rss" aria-label="rss" role="menuitem" href="./assets/feed.rss"></a></li>
       </ul>
       <div class="nav-division"></div>
     </nav>
@@ -24,7 +24,7 @@
           <header>One With The Keyboard</header>
           <div class="subtitle">A Necessary Prerequisite</div>
           <div class="aside">Published on 2023-05-08</div>
-          <picture>
+          <picture role="img" aria-label="image of a macbook keyboard">
             <source media="(min-width: 62.5em)" srcset="../assets/images/keyboard_desktop.webp">
             <source media="(min-width: 37.5em)" srcset="../assets/images/keyboard_tablet.webp"><img class="intro-image" src="../assets/images/keyboard_mobile.webp" alt="A Macbook Air Keyboard" cite="https://commons.wikimedia.org">
           </picture>
@@ -43,17 +43,17 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </article>
     </div>
-    <footer>
+    <footer role="menu">
       <div class="foot-division"></div>
-      <ul class="foot-menu">
+      <ul class="foot-menu" role="menubar">
         <li class="foot-items">
-          <div class="icons temp" id="sun" aria-label="light-mode"></div>
+          <div class="icons temp" id="sun" aria-label="light-mode" role="menuitem"></div>
         </li>
         <li class="foot-items"><a class="icons" id="git" aria-label="git" role="link" target="_blank" rel="noopener noreferrer" href="https://github.com/tomit4"></a></li>
         <li class="foot-items"><a class="icons" id="linkedin" aria-label="linkedin" target="_blank" rel="noopener noreferrer" role="link" href="https://linkedin.com/in/brian-hayes-33496067"></a></li>
         <li class="foot-items"><a class="icons" id="mastodon" aria-label="resume" target="_blank" rel="noopener noreferrer" role="link" href="https://mastodon.social/@z3rOR0ne"></a></li>
         <li class="foot-items">
-          <div class="icons temp" id="moon" aria-label="dark-mode"></div>
+          <div class="icons temp" id="moon" aria-label="dark-mode" role="menuitem"></div>
         </li>
       </ul>
     </footer>

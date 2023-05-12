@@ -8,33 +8,33 @@ html(lang = "en")
         link(rel='stylesheet' type='text/css' href='css/style.css')
     body
         nav
-            ul.nav-menu
-                li.nav-items
-                    a.icons#contact(aria-label="email" role="contact" href="mailto: leafbytes@protonmail.com")
+            ul.nav-menu(role="menu")
+                li.nav-items(role="menubar")
+                    a.icons#contact(aria-label="email" role="menuitem" href="mailto: leafbytes@protonmail.com")
                 li.nav-items
                     a.icons#about(aria-label="about" role="navigation" href="./about.html")
                 li.nav-items
                     a.icons#home(aria-label="about" role="navigation" href="./")
                 li.nav-items
                     a.icons#blog(aria-label="blog" role="navigation" href="./blog.html")
-                li.nav-items
-                    a.icons#rss(aria-label="rss" role="download" href="./assets/feed.rss")
+                li.nav-items(role="menubar")
+                    a.icons#rss(aria-label="rss" role="menuitem" href="./assets/feed.rss")
             div.nav-division
         div.container
             div.home-title
                 div.logo-container
-                    div.logo.icons
+                    div.logo.icons(aria-label="an animated icon of a computer screen")
                 div.home-title-card
                     header.home Welcome Traveler,
                     h1.home to my little corner of the web! &#128578;
             p.home Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             p.home Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             p.home Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        footer
+        footer(role="menu")
             div.foot-division
-            ul.foot-menu
+            ul.foot-menu(role="menubar")
                 li.foot-items
-                    div.icons.temp#sun(aria-label="light-mode")
+                    div.icons.temp#sun(aria-label="light-mode" role="menuitem")
                 li.foot-items
                     a.icons#git(aria-label="git" role="link" target="_blank" rel="noopener noreferrer" href="https://github.com/tomit4")
                 li.foot-items
@@ -42,6 +42,6 @@ html(lang = "en")
                 li.foot-items
                     a.icons#mastodon(aria-label="resume" target="_blank" rel="noopener noreferrer" role="link" href="https://mastodon.social/@z3rOR0ne")
                 li.foot-items
-                    div.icons.temp#moon(aria-label="dark-mode")
+                    div.icons.temp#moon(aria-label="dark-mode" role="menuitem")
         script(src="./index.js" default)
 html
