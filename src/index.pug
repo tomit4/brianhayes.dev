@@ -13,12 +13,24 @@ html(lang = "en")
                 li.nav-items
                     a.icons#about(aria-label="about" role="navigation" href="./about.html")
                 li.nav-items
-                    a.icons#home(aria-label="about" role="navigation" href="./")
+                    a.icons#home(aria-label="home" role="navigation" href="./")
                 li.nav-items
                     a.icons#blog(aria-label="blog" role="navigation" href="./blog.html")
                 li.nav-items
                     a.icons#rss(aria-label="rss" role="menuitem" href="./assets/feed.rss")
-            div.nav-division
+        div.nav-division
+        div.nav-text
+            ul.nav-text-menu(role="menu")
+                li.nav-text-items(role="menubar")
+                    a.nav-text-link(aria-label="email" role="menuitem" href="mailto: leafbytes@protonmail.com") email
+                li.nav-text-items(role="menubar")
+                    a.nav-text-link(aria-label="about" role="navigation" href="./about.html") about
+                li.nav-text-items(role="menubar")
+                    a.nav-text-link(aria-label="home" role="navigation" href="./home") home
+                li.nav-text-items(role="menubar")
+                    a.nav-text-link(aria-label="blog" role="menuitem" href="./blog.html") blog
+                li.nav-text-items(role="menubar")
+                    a.nav-text-link(aria-label="rss" role="menuitem" href="./assets/feed.rss") rss 
         div.container.fadein
             div.arrows
                 a.icons#left-arrow(aria-label="previous" role="navigation" href="./about.html")

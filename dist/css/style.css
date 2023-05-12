@@ -63,6 +63,8 @@ body {
 /* nav/footer settings */
 nav,
 .nav-menu,
+/* .nav-text, */
+.nav-text-menu,
 .arrows,
 footer,
 .foot-menu {
@@ -71,6 +73,8 @@ footer,
 }
 
 .nav-menu,
+.nav-text,
+.nav-text-menu,
 .foot-menu {
     position: fixed;
     list-style: none;
@@ -81,6 +85,7 @@ footer,
     background-color: var(--offwhite);
 }
 
+.nav-text-items,
 .nav-items,
 .foot-items {
     margin: 0 1.5rem;
@@ -100,6 +105,20 @@ footer,
     height: 2rem;
 }
 
+.nav-text-menu {
+    display: flex;
+    background-color: red;
+    /* margin: 1rem auto; */
+}
+
+.nav-text-menu {
+    font-size: 80%;
+    font-family: Roboto;
+}
+
+.nav-text-link {
+    text-decoration: none;
+}
 /* nav only settings */
 .nav-menu {
     margin: 0;
@@ -116,7 +135,6 @@ footer,
 /* article navigation arrows */
 .arrows {
     margin: 0 auto;
-    margin-bottom: -1rem;
     padding: 0.25rem;
     width: 90vw;
     max-width: 50rem;
@@ -155,9 +173,7 @@ h2 {
 .title {
     text-align: left;
     margin: 0 auto;
-    margin-top: 1.75rem;
-    margin-bottom: 0rem;
-    width: 90vw;
+     width: 90vw;
     max-width: 50rem;
 }
 
