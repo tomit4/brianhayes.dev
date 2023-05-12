@@ -1,0 +1,69 @@
+/* inverts svg icons on dark mode */
+.icons[data-theme='dark'] {
+    filter: invert(100%) 
+            sepia(0%) 
+            brightness(110%) 
+            contrast(100%);
+}
+
+/* nav/foot icon height adjustments*/
+#contact,
+#about,
+#home,
+#sun,
+#git,
+#linkedin,
+#mastodon {
+    height: 110%;
+}
+
+#blog,
+#rss, 
+#moon {
+    height: 100%;
+}
+
+/* sun/moon icons pointer adjustments */
+.temp {
+    cursor: pointer;
+}
+
+/* icon assets */
+#contact {
+    content: url('../assets/icons/mail-sharp.svg');
+}
+#about {
+    content: url('../assets/icons/information-variant-box.svg');
+}
+#home {
+    content: url('../assets/icons/home-filled.svg');
+}
+#blog {
+    content: url('../assets/icons/pencil.svg');
+}
+#rss {
+    content: url('../assets/icons/logo-rss.svg');
+}
+/* arrow svgs */
+#right-arrow {
+    content: url('../assets/icons/arrow-right.svg');
+}
+#left-arrow {
+    content: url('../assets/icons/arrow-left.svg');
+}
+/* footer svgs */
+#sun {
+    content: url('../assets/icons/sun-filled.svg');
+}
+#git {
+    content: url('../assets/icons/git.svg');
+}
+#linkedin {
+    content: url('../assets/icons/linkedin-box-fill.svg');
+}
+#mastodon {
+    content: url('../assets/icons/mastodon.svg');
+}
+#moon {
+    content: url('../assets/icons/moon-bold.svg');
+}
