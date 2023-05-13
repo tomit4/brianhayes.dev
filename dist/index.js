@@ -31,14 +31,12 @@ icons.forEach(icon => {
     })
 })
 
-footerButtons.forEach(button => {
-    if (button.id === 'sun-button')
-        button.addEventListener('click', () =>
-            toggleTemp('light'))
-    else if (button.id === 'moon-button')
-        button.addEventListener('click', () =>
-            toggleTemp('dark'))
-})
+footerButtons.forEach(button =>
+    button.addEventListener('click', () =>
+        button.id === 'sun-button' ?
+        toggleTemp('light') :
+        toggleTemp('dark'))
+)
 
 window.onload = () => {
     if (!localStorage['data-theme'])
