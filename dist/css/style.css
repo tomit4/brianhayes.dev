@@ -63,7 +63,6 @@ body {
 /* nav/footer settings */
 nav,
 .nav-menu,
-/* .nav-text, */
 .nav-text-menu,
 .arrows,
 footer,
@@ -73,8 +72,6 @@ footer,
 }
 
 .nav-menu,
-.nav-text,
-.nav-text-menu,
 .foot-menu {
     position: fixed;
     list-style: none;
@@ -85,7 +82,31 @@ footer,
     background-color: var(--offwhite);
 }
 
-.nav-text-items,
+.nav-text-menu,
+.nav-text-items {
+    list-style: none;
+    margin: 0 2rem;
+}
+
+.nav-text-item {
+    color: var(--offwhite);
+    background-color: var(--offblack);
+    border: 1px solid var(--offblack);
+    border-radius: 3px;
+    padding: 0.25rem;
+}
+
+.nav-text {
+    margin-top: 0.25rem;
+    margin-right: 4rem;
+    height: 1rem;
+}
+
+.nav-text-item {
+    position: fixed;
+    visibility: hidden;
+}
+
 .nav-items,
 .foot-items {
     margin: 0 1.5rem;
@@ -107,24 +128,26 @@ footer,
 
 .nav-text-menu {
     display: flex;
-    background-color: red;
-    /* margin: 1rem auto; */
+    background-color: transparent;
 }
 
 .nav-text-menu {
     font-size: 80%;
-    font-family: Roboto;
+    font-family: Roboto sans-serif;
+    font-weight: bold;
 }
 
-.nav-text-link {
+.nav-text-item {
     text-decoration: none;
 }
+
 /* nav only settings */
 .nav-menu {
     margin: 0;
     padding-bottom: 0.4rem;
     border-bottom: 2.5px solid var(--offblack);
 }
+
 
 /* contains all inbetween nav and foot */
 .container {
@@ -246,4 +269,32 @@ footer {
     bottom: 0;
     height: 1.5rem;
     border-top: 2.5px solid var(--offblack);
+}
+
+.foot-text {
+    margin: 0 auto;
+    position: fixed;
+    bottom: 1.75rem;
+    font-size: 80%;
+    font-family: Roboto sans-serif;
+    font-weight: bold;
+}
+
+.foot-text-menu {
+    display: flex;
+    list-style: none;
+    margin-right: 1rem;
+}
+
+.foot-text-items {
+    margin: 0 0.5rem;
+}
+
+.foot-text-item {
+    color: var(--offwhite);
+    background-color: var(--offblack);
+    border: 1px solid var(--offblack);
+    border-radius: 3px;
+    padding: 0.25rem;
+    visibility: hidden;
 }
