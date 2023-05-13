@@ -1,7 +1,7 @@
 const icons = document.querySelectorAll('.icons')
-const temp = document.querySelectorAll('.temp')
 const navTextItems = document.querySelectorAll('.nav-text-item')
 const footTextItems = document.querySelectorAll('.foot-text-item')
+const arrowTextItems = document.querySelectorAll('.arrow-text')
 const footerButtons = document.querySelectorAll('.footer-button')
 
 // TODO: consider a more eloquent approach, no double for loops...
@@ -17,6 +17,10 @@ icons.forEach(icon => {
             if (`text-${icon.id}` === footText.id)
                 footText.style.visibility = 'visible'
         })
+        arrowTextItems.forEach(arrowText => {
+            if (`text-${icon.id}` === arrowText.id)
+                arrowText.style.visibility = 'visible'
+        })
 
     })
     icon.addEventListener('mouseleave', () => {
@@ -27,6 +31,10 @@ icons.forEach(icon => {
         footTextItems.forEach(footText => {
             if (`text-${icon.id}` === footText.id)
                  footText.style.visibility = 'hidden'
+        })
+        arrowTextItems.forEach(arrowText => {
+            if (`text-${icon.id}` === arrowText.id)
+                arrowText.style.visibility = 'hidden'
         })
     })
 })
