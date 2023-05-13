@@ -19,7 +19,7 @@ html, body {
 
 .logo {
     content: url('../assets/icons/computer-twotone.svg');
-    height: 8rem;
+    height: 8.5rem;
 }
 
 /* firefox specific scaling */
