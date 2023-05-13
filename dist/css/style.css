@@ -181,7 +181,7 @@ footer,
     visibility: hidden;
     margin: 0 38.5%;
     margin-top: -1.6rem;
-    font-family: Roboto sans-serif;
+    font-family: Roboto, sans-serif;
     background-color: var(--offblack);
     color: var(--offwhite);
     border: 1px solid var(--offblack);
