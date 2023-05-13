@@ -42,7 +42,7 @@ button.footer-button#sun-button {
 /* firefox specific scaling */
 @-moz-document url-prefix() {
     #contact,
-    #about,
+    #folio,
     #home,
     #sun,
     #git,
@@ -58,8 +58,8 @@ button.footer-button#sun-button {
     }
 }
 
-/* sun/moon icons pointer adjustments */
-.temp {
+#sun,
+#moon {
     cursor: pointer;
 }
 
@@ -67,8 +67,8 @@ button.footer-button#sun-button {
 #contact {
     content: url('../assets/icons/mail-sharp.svg');
 }
-#about {
-    content: url('../assets/icons/information-variant-box.svg');
+#folio {
+    content: url('../assets/icons/portfolio.svg');
 }
 #home {
     content: url('../assets/icons/home-filled.svg');

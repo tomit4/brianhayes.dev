@@ -54,6 +54,3 @@ const toggleTemp = (theme) => {
     document.documentElement.setAttribute('data-theme', `${theme}`)
     localStorage.setItem('data-theme', `${theme}`)
 }
-
-temp.forEach(t => t.addEventListener('click', () => 
-    t.id === 'sun' ? toggleTemp('light') : toggleTemp('dark')))
