@@ -6,6 +6,20 @@
             contrast(100%);
 }
 
+button.footer-button {
+    padding: 0;
+    border: none;
+    background: none;
+    overflow: hidden;
+    background-color: transparent;
+    scale: 1.4;
+    margin-top: 0.25rem;
+}
+
+button.footer-button#sun-button {
+    scale: 1.5;
+}
+
 /* nav/foot icon height adjustments*/
 #contact,
 #about,
@@ -21,9 +35,7 @@
     height: 110%;
 }
 
-#blog,
-#moon {
-    /* height: 100%; */
+#blog {
     height: 90%;
 }
 
