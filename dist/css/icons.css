@@ -11,6 +11,10 @@
 #about,
 #home,
 #sun,
+#rss {
+    height: 95%;
+}
+
 #git,
 #linkedin,
 #mastodon {
@@ -18,9 +22,28 @@
 }
 
 #blog,
-#rss, 
 #moon {
-    height: 100%;
+    /* height: 100%; */
+    height: 90%;
+}
+
+/* icon adjustments specific to firefox */
+@-moz-document url-prefix() {
+    #contact,
+    #about,
+    #home,
+    #sun,
+    #git,
+    #linkedin,
+    #mastodon {
+        height: 110%;
+    }
+
+    #blog,
+    #rss, 
+    #moon {
+        height: 100%;
+    }
 }
 
 /* sun/moon icons pointer adjustments */
