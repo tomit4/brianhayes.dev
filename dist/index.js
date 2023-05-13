@@ -2,6 +2,7 @@ const icons = document.querySelectorAll('.icons')
 const temp = document.querySelectorAll('.temp')
 const navTextItems = document.querySelectorAll('.nav-text-item')
 const footTextItems = document.querySelectorAll('.foot-text-item')
+const footerButtons = document.querySelectorAll('.footer-button')
 
 // TODO: consider a more eloquent approach, no double for loops...
 // create an array of just the ids of each array and then compare them, 
@@ -30,13 +31,22 @@ icons.forEach(icon => {
     })
 })
 
+footerButtons.forEach(button => {
+    if (button.id === 'sun-button')
+        button.addEventListener('click', () =>
+            toggleTemp('light'))
+    else if (button.id === 'moon-button')
+        button.addEventListener('click', () =>
+            toggleTemp('dark'))
+})
+
 window.onload = () => {
     if (!localStorage['data-theme'])
-        window.matchMedia('(prefers-color-scheme: light)').matches ? 
-            toggleTemp('light') : 
+        window.matchMedia('(prefers-color-scheme: light)').matches ?
+            toggleTemp('light') :
             toggleTemp('dark')
     else
-        localStorage['data-theme'] === 'light' ? 
+        localStorage['data-theme'] === 'light' ?
             toggleTemp('light') :
             toggleTemp('dark')
 }
