@@ -1,7 +1,5 @@
 html, body {
     margin: 0 auto;
-    /* comment out if you want to add content
-    * (i.e. projects, brief about, etc.) */
     overflow: hidden;
     height: 100vh;
     width: 100vw;
@@ -56,9 +54,4 @@ h1.home {
     display: flex;
     justify-content: center;
     margin-right: 2rem;
-}
-
-/* optional content */
-p.home {
-    visibility: hidden;
 }
