@@ -27,7 +27,7 @@
     height: 90%;
 }
 
-/* icon adjustments specific to firefox */
+/* firefox specific scaling */
 @-moz-document url-prefix() {
     #contact,
     #about,

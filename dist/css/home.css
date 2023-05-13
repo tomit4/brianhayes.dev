@@ -21,6 +21,14 @@ html, body {
     content: url('../assets/icons/computer-twotone.svg');
     height: 8rem;
 }
+
+/* firefox specific scaling */
+@-moz-document url-prefix() {
+    .logo {
+        height: 8rem;
+    }
+}
+
 .logo,
 .home-title-card {
     visibility: visible;
