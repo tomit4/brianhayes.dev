@@ -114,3 +114,7 @@ button.footer-button#sun-button {
     content: url('../assets/icons/pencil.svg');
     scale: 125%;
 }
+
+#blog-pencil:hover {
+    transform: scale(1.1);
+}
