@@ -58,6 +58,10 @@ button.footer-button#sun-button {
     }
 }
 
+#laptop {
+    scale: 175%;
+}
+
 #sun,
 #moon {
     cursor: pointer;
@@ -101,4 +105,13 @@ button.footer-button#sun-button {
 }
 #moon {
     content: url('../assets/icons/moon-bold.svg');
+}
+
+/* blog menu icons */
+#laptop {
+    content: url('../assets/icons/laptop-twotone.svg')
+}
+
+#blog-pencil {
+    content: url('../assets/icons/pencil.svg');
 }
