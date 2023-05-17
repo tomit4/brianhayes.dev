@@ -7,9 +7,9 @@
 }
 
 .blog-header {
-    margin-bottom: -0.1rem;
+    margin-bottom: -0.3rem;
     margin-left: -1rem;
-    font-size: 130%;
+    font-size: 160%;
 }
 
 .blog-menu-header {
@@ -21,8 +21,8 @@
 }
 
 .blog-header-icon {
-    margin-bottom: -1rem;
-    margin-left: 1rem;
+    margin-bottom: -1.25rem;
+    margin-left: 1.25rem;
 }
 
 .blog-division {
@@ -62,15 +62,11 @@
 }
 
 .blog-item-title {
-    font-size: 90%;
-    text-decoration: none;
+    font-size: 110%;
     color: black;
 }
 
-.blog-item-title:hover {
-    text-decoration-line: underline;
-}
 
 .blog-pub-date {
-    font-size: 80%;
+    font-size: 100%;
 }

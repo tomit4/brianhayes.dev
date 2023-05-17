@@ -58,9 +58,6 @@ button.footer-button#sun-button {
     }
 }
 
-#laptop {
-    scale: 175%;
-}
 
 #sun,
 #moon {
@@ -109,9 +106,11 @@ button.footer-button#sun-button {
 
 /* blog menu icons */
 #laptop {
-    content: url('../assets/icons/laptop-twotone.svg')
+    content: url('../assets/icons/laptop-twotone.svg');
+    scale: 200%;
 }
 
 #blog-pencil {
     content: url('../assets/icons/pencil.svg');
+    scale: 125%;
 }
