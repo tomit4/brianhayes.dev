@@ -20,6 +20,10 @@
     box-sizing: inherit;
 }
 
+html, body {
+    overflow-x: clip;
+}
+
 html {
     /* hard coded: no change on dark mode */
     background-color: #343231;
