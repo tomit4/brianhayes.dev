@@ -5,7 +5,6 @@ html(lang = "en")
         meta(charset='utf-8')
         meta(name='viewport' content='width=device-width, initial-scale=1')
         link(rel="icon" type="image/x-icon" href="assets/icons/favicon.png")
-        link(rel='stylesheet' type='text/css' href='css/home.css')
         link(rel='stylesheet' type='text/css' href='css/style.css')
     body
         nav
@@ -18,9 +17,9 @@ html(lang = "en")
                     a.icons#home(aria-label="home" role="navigation" href="./")
                 li.nav-items
                     a.icons#blog(aria-label="blog" role="navigation" href="./blog.html")
-                li.nav-items(role="menubar")
+                li.nav-items
                     a.icons#rss(aria-label="rss" role="menuitem" href="./assets/feed.rss")
-            div.nav-division
+        div.nav-division
         div.nav-text
             ul.nav-text-menu(role="menu")
                 li.nav-text-items(role="menubar")
@@ -33,13 +32,8 @@ html(lang = "en")
                     div.nav-text-item#text-blog(aria-label="blog-text" role="menuitem") blog
                 li.nav-text-items(role="menubar")
                     div.nav-text-item#text-rss(aria-label="rss-text" role="menuitem") rss 
-        div.container.demo-button
-            div.home-title
-                div.logo-container
-                    div.logo.icons(aria-label="an animated icon of a computer screen")
-                div.home-title-card
-                    header.home Welcome Traveler,
-                    h1.home to my little corner of the web! &#128578;
+        div.container.fadein
+        h1 placeholder for folio page
         footer(role="menu")
             div.foot-text
                 ul.foot-text-menu(role="menu")
