@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-pug -w src/*.pug -o dist -P & live-server ./dist/
+pug -w src/*.pug -o dist -P &
+pug -w src/blog/*.pug -o dist/blog -P & live-server ./dist/

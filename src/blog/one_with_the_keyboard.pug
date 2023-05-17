@@ -1,0 +1,91 @@
+doctype html
+html(lang = "en")
+    head
+        title brianhayes.dev
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel="icon" type="image/x-icon" href="assets/icons/favicon.png")
+        link(rel='stylesheet' type='text/css' href='../css/style.css')
+    body
+        nav
+            ul.nav-menu(role="menu")
+                li.nav-items(role="menubar")
+                    a.icons#contact(aria-label="email" role="menuitem" href="mailto: leafbytes@protonmail.com")
+                li.nav-items
+                    a.icons#folio(aria-label="folio" role="navigation" href="./about.html")
+                li.nav-items
+                    a.icons#home(aria-label="home" role="navigation" href="./")
+                li.nav-items
+                    a.icons#blog(aria-label="blog" role="navigation" href="./blog.html")
+                li.nav-items
+                    a.icons#rss(aria-label="rss" role="menuitem" href="./assets/feed.rss")
+        div.nav-division
+        div.nav-text
+            ul.nav-text-menu(role="menu")
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-contact(aria-label="email" role="menuitem") email
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-folio(aria-label="folio-text" role="menuitem") folio
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-home(aria-label="home-text" role="menuitem") home
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-blog(aria-label="blog-text" role="menuitem") blog
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-rss(aria-label="rss-text" role="menuitem") rss 
+        div.container.fadein
+            div.arrows
+                a.icons#left-arrow(aria-label="previous" role="navigation" href="./about.html")
+                a.icons#right-arrow(aria-label="next" role="navigation" href="./about.html")
+            div.arrows-text
+                span.arrow-text#text-left-arrow prev
+                span.arrow-text#text-right-arrow next
+            div.title
+                div.title-card
+                    header One With The Keyboard
+                    div.subtitle A Necessary Prerequisite
+                    div.aside Published on 2023-05-08
+                    picture(role="img" aria-label="image of a macbook keyboard")
+                        source(media="(min-width: 62.5em)" srcset="../assets/images/keyboard_desktop.webp")
+                        source(media="(min-width: 37.5em)" srcset="../assets/images/keyboard_tablet.webp")
+                        img.intro-image(src="../assets/images/keyboard_mobile.webp" alt="A Macbook Air Keyboard" cite="https://commons.wikimedia.org")
+                blockquote(cite="https://www.brainyquote.com") "What I was proud of was that I used very few parts to build a computer that could actually speak words on a screen and type words on a keyboard and run a programming language that could play games. And I did all this myself."
+                        div.quote_author -Steve Wozniak
+            article.demo-button
+                h1 Introduction
+                p A basic paragraph tag in home page that just keeps going until the end of time. It just doesn't stop wow! What a paragraph tag!
+                pre 
+                   code // somefile.js&#10 something.foreach(wow => {&#10    console.log('wow');&#10 )}
+                h2 In the beginning
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        footer(role="menu")
+            div.foot-text
+                ul.foot-text-menu(role="menu")
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-sun(aria-label="light-mode-text" role="menuitem") light
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-git(aria-label="git-text" role="menuitem") git
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-linkedin(aria-label="linkedin-text" role="menuitem") linkedin
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-mastodon(aria-label="mastodon-text" role="menuitem") social
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-moon(aria-label="dark-mode-text" role="menuitem") dark
+            div.foot-division
+            ul.foot-menu(role="menubar")
+                li.foot-items
+                    button.footer-button#sun-button
+                        div.icons#sun(aria-label="light-mode" role="button")
+                li.foot-items
+                    a.icons#git(aria-label="git" role="link" target="_blank" rel="noopener noreferrer" href="https://github.com/tomit4")
+                li.foot-items
+                    a.icons#linkedin(aria-label="linkedin" target="_blank" rel="noopener noreferrer" role="link" href="https://linkedin.com/in/brian-hayes-33496067")
+                li.foot-items
+                    a.icons#mastodon(aria-label="resume" target="_blank" rel="noopener noreferrer" role="link" href="https://mastodon.social/@z3rOR0ne")
+                li.foot-items
+                    button.footer-button#moon-button
+                        div.icons#moon(aria-label="dark-mode" role="button")
+        script(src="./index.js" default)
