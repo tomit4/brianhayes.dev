@@ -89,6 +89,7 @@ footer,
 .nav-text-menu,
 .nav-text-items {
     list-style: none;
+    z-index: 2;
     margin: 0 2rem;
 }
 
@@ -312,10 +313,12 @@ footer {
     display: flex;
     list-style: none;
     margin-right: 1rem;
+    z-index: 2;
 }
 
 .foot-text-items {
     margin: 0 0.5rem;
+    z-index: 2;
 }
 
 .foot-text-item {
