@@ -1,0 +1,13 @@
+.folio {
+    font-family: Roboto;
+}
+
+.folio-header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 225%;
+    width: 90vw;
+    max-width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+}

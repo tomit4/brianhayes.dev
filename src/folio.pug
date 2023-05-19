@@ -6,7 +6,8 @@ html(lang = "en")
         meta(name='viewport' content='width=device-width, initial-scale=1')
         link(rel="icon" type="image/x-icon" href="assets/icons/favicon.png")
         link(rel='stylesheet' type='text/css' href='css/style.css')
-    body
+        link(rel='stylesheet' type='text/css' href='css/folio.css')
+    body.folio
         nav
             ul.nav-menu(role="menu")
                 li.nav-items(role="menubar")
@@ -33,7 +34,10 @@ html(lang = "en")
                 li.nav-text-items(role="menubar")
                     div.nav-text-item#text-rss(aria-label="rss-text" role="menuitem") rss 
         div.container.fadein
-        h1 placeholder for folio page
+        header.folio-header Portfolio
+        h1.folio-h1 Projects
+        h1.folio-h1 Volunteer
+        h1.folio-h1 Personal
         footer(role="menu")
             div.foot-text
                 ul.foot-text-menu(role="menu")
