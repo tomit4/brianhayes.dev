@@ -34,10 +34,17 @@ html(lang = "en")
                 li.nav-text-items(role="menubar")
                     div.nav-text-item#text-rss(aria-label="rss-text" role="menuitem") rss 
         div.container.fadein
-        header.folio-header Portfolio
-        h1.folio-h1 Projects
-        h1.folio-h1 Volunteer
-        h1.folio-h1 Personal
+            header.folio-header Portfolio
+            .h1-container
+                span.icons#folder-icon
+                h1.folio-h1 Projects
+                .folio-divider
+                span.icons#folder-icon
+                h1.folio-h1 Volunteer
+                .folio-divider
+                span.icons#folder-icon
+                h1.folio-h1 Personal
+                .folio-divider
         footer(role="menu")
             div.foot-text
                 ul.foot-text-menu(role="menu")

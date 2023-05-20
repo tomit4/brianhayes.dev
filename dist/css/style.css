@@ -20,7 +20,8 @@
     box-sizing: inherit;
 }
 
-html, body {
+html,
+body {
     overflow-x: clip;
 }
 
@@ -153,7 +154,6 @@ footer,
     border-bottom: 2.5px solid var(--offblack);
 }
 
-
 /* contains all inbetween nav and foot */
 .container {
     visibility: visible;
@@ -179,7 +179,6 @@ footer,
     margin: 0 auto;
     width: 75vw;
     max-width: 50rem;
-
 }
 
 .arrow-text {
@@ -195,7 +194,6 @@ footer,
     font-size: 80%;
     font-weight: bold;
 }
-
 
 /* article stylings*/
 header,
@@ -224,7 +222,7 @@ h2 {
 .title {
     text-align: left;
     margin: 0 auto;
-     width: 90vw;
+    width: 90vw;
     max-width: 50rem;
 }
 

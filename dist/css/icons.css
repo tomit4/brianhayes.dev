@@ -1,9 +1,6 @@
 /* inverts svg icons on dark mode */
 .icons[data-theme='dark'] {
-    filter: invert(100%) 
-            sepia(0%) 
-            brightness(110%) 
-            contrast(100%);
+    filter: invert(100%) sepia(0%) brightness(110%) contrast(100%);
 }
 
 button.footer-button {
@@ -52,12 +49,11 @@ button.footer-button#sun-button {
     }
 
     #blog,
-    #rss, 
+    #rss,
     #moon {
         height: 100%;
     }
 }
-
 
 #sun,
 #moon {
@@ -102,6 +98,24 @@ button.footer-button#sun-button {
 }
 #moon {
     content: url('../assets/icons/moon-bold.svg');
+}
+
+/* folio page icons */
+#folder-icon {
+    content: url('../assets/icons/folder-open-rounded.svg');
+    scale: 150%;
+    display: flex;
+    align-items: right;
+    position: sticky;
+    left: 80vw;
+    margin-bottom: -1.5rem;
+    margin-right: 1rem;
+}
+
+@media (max-width: 37.5em) {
+    #folder-icon {
+        left: 90vw;
+    }
 }
 
 /* blog menu icons */
