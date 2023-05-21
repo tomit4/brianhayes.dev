@@ -141,10 +141,9 @@ button.footer-button#sun-button {
     content: url('../assets/icons/knex.svg');
     scale: 210%;
 }
-#hapijs {
-    content: url('../assets/icons/hapi.svg');
-    margin-right: 1.25rem;
-    scale: 220%;
+#mariadb {
+    content: url('../assets/icons/mariadb.svg');
+    scale: 240%;
 }
 #vuejs {
     content: url('../assets/icons/vuejs-fill.svg');
@@ -157,6 +156,10 @@ button.footer-button#sun-button {
 #pugjs {
     content: url('../assets/icons/pug.svg');
     scale: 210%;
+}
+#docker-icon {
+    content: url('../assets/icons/logo-docker.svg');
+    scale: 240%;
 }
 #solidproject {
     content: url('../assets/icons/solid.svg');
