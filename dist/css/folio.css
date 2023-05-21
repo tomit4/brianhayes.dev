@@ -79,3 +79,30 @@
     font-size: 105%;
     margin-left: 1rem;
 }
+
+.project-tech-stack {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+.siimee-tech-stack {
+    margin-right: 1rem;
+}
+
+.project-tech-used {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-size: 100%;
+    margin-bottom: -1rem;
+}
+
+.tech-icons {
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.tech-icons:hover {
+    transform: scale(1.2);
+}

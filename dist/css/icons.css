@@ -100,10 +100,25 @@ button.footer-button#sun-button {
     content: url('../assets/icons/moon-bold.svg');
 }
 
+/* blog menu icons */
+#laptop {
+    content: url('../assets/icons/laptop-twotone.svg');
+    scale: 200%;
+}
+
+#blog-pencil {
+    content: url('../assets/icons/pencil.svg');
+    scale: 125%;
+}
+
+#blog-pencil:hover {
+    transform: scale(1.1);
+}
+
 /* folio page icons */
 #folder-icon {
-    content: url('../assets/icons/folder-open-rounded.svg');
-    scale: 150%;
+    content: url('../assets/icons/portfolio.svg');
+    scale: 160%;
     display: flex;
     align-items: right;
     position: sticky;
@@ -118,17 +133,25 @@ button.footer-button#sun-button {
     }
 }
 
-/* blog menu icons */
-#laptop {
-    content: url('../assets/icons/laptop-twotone.svg');
+/* folio tech stack icons */
+#knexjs {
+    content: url('../assets/icons/knex.svg');
+    scale: 210%;
+}
+#hapijs {
+    content: url('../assets/icons/hapi.svg');
+    margin-right: 1.25rem;
+    scale: 220%;
+}
+#vuejs {
+    content: url('../assets/icons/vuejs-fill.svg');
     scale: 200%;
 }
-
-#blog-pencil {
-    content: url('../assets/icons/pencil.svg');
-    scale: 125%;
+#nodejs {
+    content: url('../assets/icons/nodejs-solid.svg');
+    scale: 190%;
 }
-
-#blog-pencil:hover {
-    transform: scale(1.1);
+#pugjs {
+    content: url('../assets/icons/pug.svg');
+    scale: 210%;
 }
