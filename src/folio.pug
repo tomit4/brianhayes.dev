@@ -74,6 +74,36 @@ html(lang = "en")
                 span.icons#folder-icon
                 h1.folio-h1 Personal Projects
                 .folio-divider
+                .project-card
+                    h2.project-header CityStats API
+                    h3.project-subheader February of 2023 to Present
+                    a.project-link(aria-label="link to citystats api" target="_blank" rel="noopener noreferrer" role="link" href="https://www.citystats.xyz/states") Visit CityStats API
+                    a.project-link.project-repo-link(aria-label="link to citystats repository" target="_blank" rel="noopener noreferrer" role="link" href="https://github.com/tomit4/city_stats") Source Code/Documentation
+                    h4.project-about About CityStats API
+                    p.card.about-card "CityStats API returns essential statistics about all 50 American states as well as the top most populous 229 cities in America."
+                    h4.project-about Project Description
+                    p.card I wrote CityStats as a way of easily accessing essential statistics about American cities and states. While the US census has its own API, I found it unintuitive and decided to write my own version. Utilizing python's Beautiful Soup Library, I created a web scraping script. This script alongside GNU's cron command line utility, automatically updates the API's data each election cycle (with some human intervention to ensure accuracy). Using a NodeJS/Express server along with a SQLite database, I hosted this API on the Linode Cloud Platform (now Akamai), with the intention that it be used by the general public and developers.
+                    h5.project-tech-used Dev Stack
+                    .project-tech-stack.siimee-tech-stack
+                        a(aria-label="link to gnu/bash" target="_blank" rel="noopener noreferrer" role="link" href="https://www.gnu.org/software/bash/").icons.tech-icons#bash-icon
+                        a(aria-label="link to sqlite" target="_blank" rel="noopener noreferrer" role="link" href="https://www.sqlite.org/").icons.tech-icons#sqlite-icon
+                        a(aria-label="link to nodejs" target="_blank" rel="noopener noreferrer" role="link" href="https://nodejs.org/").icons.tech-icons#nodejs
+                        a(aria-label="link to linode/akamai" target="_blank" rel="noopener noreferrer" role="link" href="https://www.linode.com/").icons.tech-icons#akamai-icon
+                        a(aria-label="link to beautiful soup docs" target="_blank" rel="noopener noreferrer" role="link" href="https://beautiful-soup-4.readthedocs.io/").icons.tech-icons#python-icon
+                .project-card
+                    h2.project-header brianhayes.dev
+                    h3.project-subheader May of 2023 to Present
+                    a.project-link(aria-label="link to brianhayes.dev source code" target="_blank" rel="noopener noreferrer" role="link" href="https://github.com/tomit4/brianhayes.dev") Source Code/Documentation
+                    h4.project-about About This Website
+                    p.card.about-card "You're currently visiting my personal portfolio website and blog! Inspired in part by the minimalist style of <a class="inline-link" aria-label="link to scribe" target="_blank" rel="noopener noreferrer" role="link" href="https://scribe.rip">scribe</a>, this site is meant to invite you to take a look at some of my humble works and perhaps read one of my blog posts on software and other topics."
+                    h4.project-about Project Description
+                    p.card This blog is actually the third version of this website, which strives to be more readable and minimal than the previous two iterations. The last version of this blog, titled "LeafBytes", can still be found <a class="inline-link" aria-label="link to leafbytes blog" target="_blank" rel="noopener noreferrer" role="link" href="https://leafbytes.com">here</a>, preserved for purposes of posterity. While the previous version had some nice CSS animations, and the <a class="inline-link" aria-label="link to leafbytes repo" target="_blank" rel="noopener noreferrer" role="link" href="https://github.com/tomit4/leafbytes_vue">source code</a> features some of my essential skills in VueJS, I wanted to get back to basics with this iteration of my blog. 
+                    p.card Thusly, this latest version of my website is written in simple HTML, CSS, and a small amount of JavaScript (okay okay, I used <a class="inline-link" aria-label="link to pugjs" target="_blank" rel="noopener noreferrer" role="link" href="https://pugjs.org/"> PugJS</a> instead of just pure HTML, but you get the idea &#128521;). It is running via an <a class="inline-link" aria-label="link to nginx docs" target="_blank" rel="noopener noreferrer" role="link" href="https://nginx.org/">NGINX server</a> hosted on an <a class="inline-link" aria-label="link to linode/akamai" target="_blank" rel="noopener noreferrer" role="link" href="https://www.linode.com/">Akamai/Linode Cloud instance</a>. All these icons you see can be credited to the awesome designers over at <a class="inline-link" aria-label="link to iconify" target="_blank" rel="noopener noreferrer" role="link" href="https://iconify.design/"> Iconify!</a>
+                    h5.project-tech-used Dev Stack
+                    .project-tech-stack.siimee-tech-stack
+                        a(aria-label="link to ecmascript" target="_blank" rel="noopener noreferrer" role="link" href="https://www.ecma-international.org/").icons.tech-icons#jsicon
+                        a(aria-label="link to official html spec" target="_blank" rel="noopener noreferrer" role="link" href="https://html.spec.whatwg.org/").icons.tech-icons#html-icon
+                        a(aria-label="link to w3 specs on css" target="_blank" rel="noopener noreferrer" role="link" href="https://www.w3.org/TR/CSS/#css").icons.tech-icons#css-icon
                 span.icons#folder-icon
                 h1.folio-h1 About Me
                 .folio-divider

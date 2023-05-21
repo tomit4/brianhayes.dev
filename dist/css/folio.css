@@ -69,6 +69,10 @@
     color: var(--offblack);
 }
 
+.project-repo-link {
+    margin-top: 0.25rem;
+}
+
 .project-about {
     font-style: italic;
     font-weight: bold;
