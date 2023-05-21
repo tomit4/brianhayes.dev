@@ -119,9 +119,19 @@ button.footer-button#sun-button {
 }
 
 /* folio page icons */
+
 #folder-icon {
     content: url('../assets/icons/portfolio.svg');
     scale: 160%;
+}
+
+#info-icon {
+    content: url('../assets/icons/information-variant-box.svg');
+    scale: 180%;
+}
+
+#info-icon,
+#folder-icon {
     display: flex;
     align-items: right;
     position: sticky;
@@ -131,6 +141,7 @@ button.footer-button#sun-button {
 }
 
 @media (max-width: 37.5em) {
+    #info-icon,
     #folder-icon {
         left: 90vw;
     }
