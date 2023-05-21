@@ -21,15 +21,18 @@ button.footer-button#sun-button {
 #contact,
 #folio,
 #home,
-#sun,
 #rss {
     height: 95%;
 }
 
 #git,
-#linkedin,
-#mastodon {
+#linkedin {
     height: 110%;
+}
+
+#sun,
+#mastodon {
+    transform: scale(1.1);
 }
 
 #blog {
