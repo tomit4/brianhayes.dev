@@ -69,11 +69,8 @@
 
 .blog-item-title {
     font-size: 110%;
-    color: var(--offblack);
-}
-
-.blog-item-title:hover {
     font-weight: bold;
+    color: var(--offblack);
 }
 
 .blog-pub-date {
