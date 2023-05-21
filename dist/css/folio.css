@@ -33,7 +33,7 @@
 }
 
 .folio-divider {
-    background-color: black;
+    background-color: var(--offblack);
     height: 0.125rem;
     width: 90vw;
     max-width: 42.5rem;
