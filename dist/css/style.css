@@ -262,6 +262,11 @@ article {
     max-width: 55rem;
 }
 
+a.inline-link {
+    color: var(--offblack);
+    font-weight: bold;
+}
+
 p {
     margin: 1rem auto;
     width: 90vw;

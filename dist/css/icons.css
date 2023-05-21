@@ -158,3 +158,15 @@ button.footer-button#sun-button {
     content: url('../assets/icons/pug.svg');
     scale: 210%;
 }
+#solidproject {
+    content: url('../assets/icons/solid.svg');
+    scale: 200%;
+}
+#reactjs {
+    content: url('../assets/icons/react.svg');
+    scale: 230%;
+}
+#jsicon {
+    content: url('../assets/icons/js.svg');
+    scale: 200%;
+}

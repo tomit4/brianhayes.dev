@@ -11,7 +11,7 @@
 }
 
 .folio-subtitle {
-    font-size: 40%;
+    font-size: 35%;
     font-style: italic;
 }
 
@@ -46,6 +46,7 @@
     font-size: 200%;
     border-radius: 5px 5px 0px 0px;
     max-width: 41rem;
+    white-space: nowrap;
     margin-left: 0.5rem;
     color: var(--offwhite);
     background-color: var(--offblack);
