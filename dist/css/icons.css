@@ -123,11 +123,13 @@ button.footer-button#sun-button {
 #folder-icon {
     content: url('../assets/icons/portfolio.svg');
     scale: 160%;
+    margin-bottom: -1.5rem;
 }
 
 #info-icon {
     content: url('../assets/icons/information-variant-box.svg');
     scale: 180%;
+    margin-bottom: -1.35rem;
 }
 
 #info-icon,
@@ -136,7 +138,6 @@ button.footer-button#sun-button {
     align-items: right;
     position: sticky;
     left: 80vw;
-    margin-bottom: -1.5rem;
     margin-right: 1rem;
 }
 
