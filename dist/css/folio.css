@@ -30,6 +30,13 @@
     font-weight: bold;
     margin: 0 auto;
     margin-left: -1.75rem;
+    text-indent: 5%;
+}
+
+@media (max-width: 37.5em) {
+    .folio-h1 {
+        text-indent: 10%;
+    }
 }
 
 .folio-divider {
