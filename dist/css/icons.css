@@ -66,9 +66,11 @@ button.footer-button#sun-button {
 /* icon assets */
 #contact {
     content: url('../assets/icons/mail-sharp.svg');
+    margin-bottom: -0.5rem;
 }
 #folio {
     content: url('../assets/icons/portfolio.svg');
+    margin-bottom: -0.5rem;
 }
 #home {
     content: url('../assets/icons/home-filled.svg');

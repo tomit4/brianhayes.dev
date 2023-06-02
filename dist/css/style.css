@@ -3,6 +3,7 @@
 @import url('animations.css');
 
 :root {
+    color-scheme: light dark;
     --offblack: #343231;
     --offwhite: #faf0e6;
 }
@@ -17,11 +18,13 @@
 **::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    /* box-sizing: inherit; */
+    box-sizing: border-box;
 }
 
 html,
 body {
+    font-family: system-ui;
     overflow-x: clip;
 }
 
@@ -244,6 +247,7 @@ h2 {
 
 img {
     display: block;
+    max-width: 100%;
     margin: 0 auto;
     border: 2px solid var(--offblack);
     border-radius: 2px;
@@ -260,6 +264,14 @@ blockquote {
 article {
     margin: 0 auto;
     max-width: 55rem;
+    width: min(70ch, 100% - 4rem);
+    margin-inline: auto;
+}
+
+@media (max-width: 37.5em) {
+    article {
+        width: 100%;
+    }
 }
 
 a.inline-link {
