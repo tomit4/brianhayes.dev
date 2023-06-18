@@ -296,7 +296,13 @@ article {
     }
 }
 
-a.inline-link {
+.article-lists {
+    list-style-type: none;
+    line-height: 1.75rem;
+}
+
+a.inline-link,
+a.article-outside-links {
     color: var(--offblack);
     font-weight: bold;
 }
