@@ -119,17 +119,13 @@ html(lang = "en")
                 p The options you are presented with are Desktop Environments. Each one is slightly different, and each option deserves its own research, but the Cinnamon Edition is Linux Mint's flagship Desktop Environment and it is the one you will be downloading and installing if you choose to follow along with this tutorial.
                 p Once you have downloaded the ISO file. You're going to need to burn the file to a usb drive with enough storage capacity for the file (roughly 2.4GB). You'll also need a piece of specialized software to burn it. For this tutorial we will use <a class="inline-link" target="_blank" rel="noopener noreferrer"href="https://www.balena.io/etcher">Balena Etcher</a>:
                 p Etcher is very easy to use, simply insert your usb stick into one of your computer's usb ports, open up the Etcher application, and follow its three step process. First click on "Select image", navigate to and select the ISO file within the presented File Manager. Then do the same for "Select drive" (the usb device). Lastly simply hit "Flash!" and wait for the image to burn (this could take a while depending on your hardware).
-                picture(role="img")
-                    source(media="(min-width: 62.5em)" srcset="../assets/images/gifs/etcher_desktop.gif")
-                    source(media="(min-width: 37.5em)" srcset="../assets/images/gifs/etcher_tablet.gif")
-                    img.intro-image(src="../assets/images/gifs/etcher_mobile.gif" alt="A gif showing the basic usage of Balena Etcher" title="A gif showing the basic usage of Balena Etcher" cite="https://commons.wikimedia.org/wiki/File:Etcher-gif.gif?useskin=vector" loading="lazy")
+                figure
+                    img.gif-image(src="../assets/images/gifs/etcher.gif" alt="A gif showing the basic usage of Balena Etcher" title="A gif showing the basic usage of Balena Etcher" cite="author screenshot" loading="lazy")
                 figcaption Basic Usage of Balena Etcher
                 p Once done your installation media should have the ISO image burned onto it. Inspecting the contents of the usb-drive should reflect this change. <em>Keep the usb stick inserted into your computer</em> and restart.
                 p As your computer restarts, you will usually see an introduction screen from your Motherboard manufacturer, when you see this introduction screen show up, quickly and repeatedly hit either the F2 or F11 key to enter the BIOS settings (if this doesn't work research your motherboard manufacturer, as it is usually one of these two keys). If installing on a Mac, keep your finger pressed on the Alt or Option key after hearing the boot sound.
-                picture(role="img")
-                    source(media="(min-width: 62.5em)" srcset="../assets/images/img/bios_desktop.webp")
-                    source(media="(min-width: 37.5em)" srcset="../assets/images/img/bios_tablet.webp")
-                    img.intro-image(src="../assets/images/img/bios_mobile.webp" alt="An example picture of an ASUS BIOS Menu" title="An example picture of an ASUS BIOS Menu" cite="https://commons.wikimedia.org/wiki/File:Bios_asus.jpg?useskin=vector" loading="lazy")
+                figure
+                    img.img-image(src="../assets/images/img/bios.webp" alt="An example picture of an ASUS BIOS Menu" title="An example picture of an ASUS BIOS Menu" cite="https://commons.wikimedia.org/wiki/File:Bios_asus.jpg?useskin=vector" loading="lazy")
                 figcaption An ASUS BIOS Menu, Your Menu May Look Different
                 p Once in the BIOS menu, you'll need to change the Boot Order so that your computer boots from the USB. To do this, locate and select the "Boot" Submenu.
                 p Once you have located the "Boot" submenu, locate the option labeled "Boot Priority". Under this option you should find a list of devices one of which will start with USB, which is more than likely your installation media. Re-order the options so that the USB option is on top.
@@ -140,30 +136,22 @@ html(lang = "en")
                     li
                         <a class="article-outside-links" target="_blank" rel="noopener noreferrer" href="https://www.chippiko.com/disable-secure-boot">A Guide to Disabling Secure Boot with Pictures</a>
                 p Once you have disabled secure boot and re-ordered the bootable devices in your BIOS, go ahead and Save & Exit. The computer will once again reboot, and with any luck you will be presented with the Linux Bootloader:
-                picture(role="img")
-                    source(media="(min-width: 62.5em)" srcset="../assets/images/screenshots/grub_desktop.webp")
-                    source(media="(min-width: 37.5em)" srcset="../assets/images/screenshots/grub_tablet.webp")
-                    img.intro-image(src="../assets/images/screenshots/grub_mobile.webp" alt="A Picture of the GRUB Bootloader menu" title="A Picture of the GRUB Bootloader menu" cite="author screenshot" loading="lazy")
+                figure
+                    img.img-image(src="../assets/images/screenshots/grub.webp" alt="A Picture of the GRUB Bootloader menu" title="A Picture of the GRUB Bootloader menu" cite="author screenshot" loading="lazy")
                 figcaption The GRUB Bootloader
                 p Shortly after this you will be presented with Linux Mint's "live session" or "live environment." This is indeed the desktop environment, but you have yet to overwrite your previous Operating System, as the installation is not yet complete. <em>Do NOT remove the USB stick</em>, as the live session is running from the USB directly. If you'd prefer to explore the Linux environment prior to installing it, please do so at this point if you are unsure about removing your previous Operating System and installing Linux. Most Linux Distributions come with a suite of software for you to play around and experiment with.
-                picture(role="img")
-                    source(media="(min-width: 62.5em)" srcset="../assets/images/screenshots/live-environment_desktop.webp")
-                    source(media="(min-width: 37.5em)" srcset="../assets/images/screenshots/live-environment_tablet.webp")
-                    img.intro-image(src="../assets/images/screenshots/live-environment_mobile.webp" alt="A Picture of Linux Mint's Live Desktop Environment" title="A Picture of Linux Mint's Live Desktop Environment" cite="author screenshot" loading="lazy")
+                figure
+                    img.img-image(src="../assets/images/screenshots/live-environment.webp" alt="A Picture of Linux Mint's Live Desktop Environment" title="A Picture of Linux Mint's Live Desktop Environment" cite="author screenshot" loading="lazy")
                 figcaption Linux Mint's Live Desktop Environment (Cinnamon Edition)
                 p If all is to your liking, and you're ready to install Linux and remove your previous Operating System, then continue with the next step:
                 p Select The Install Linux Mint option with the round CD icon on the Desktop. This will open up a menu that will walk you through the process, which I will not go into detail here, but generally involves setting up your internet connection, keyboard settings, timezone/locale, username, password and root password. Once you have filled out all form fields and hit "Install," the installation process will begin (this process might take a while).
-                picture(role="img")
-                    source(media="(min-width: 62.5em)" srcset="../assets/images/screenshots/mint_install_desktop.webp")
-                    source(media="(min-width: 37.5em)" srcset="../assets/images/screenshots/mint_install_tablet.webp")
-                    img.intro-image(src="../assets/images/screenshots/mint_install_mobile.webp" alt="A Picture of Linux Mint Install Menu" title="A Picture of Linux Mint Install Menu" cite="author screenshot" loading="lazy")
+                figure
+                    img.img-image(src="../assets/images/screenshots/mint_install.webp" alt="A Picture of Linux Mint Install Menu" title="A Picture of Linux Mint Install Menu" cite="author screenshot" loading="lazy")
                 figcaption A Picture of Linux Mint Install Menu
                 p Once finished, Restart your computer and remove the USB installation media.
                 p If all went well, you will be presented with a login screen with your username already filled out. Enter your recently created password to log in.
-                picture(role="img")
-                    source(media="(min-width: 62.5em)" srcset="../assets/images/screenshots/mint_login_desktop.webp")
-                    source(media="(min-width: 37.5em)" srcset="../assets/images/screenshots/mint_login_tablet.webp")
-                    img.intro-image(src="../assets/images/screenshots/mint_login_mobile.webp" alt="A Picture of The Linux Mint Login Screen" title="A Picture of The Linux Mint Login Screen" cite="author screenshot" loading="lazy")
+                figure
+                    img.img-image(src="../assets/images/screenshots/mint_login.webp" alt="A Picture of The Linux Mint Login Screen" title="A Picture of The Linux Mint Login Screen" cite="author screenshot" loading="lazy")
                 figcaption If All Went Well, You Should See A Login Screen
                 p Once logged in, you should see the Linux Mint Cinnamon Desktop Environment, which is now running natively on your hardware. Congratulations! You have successfully installed Linux!
                 h2 On Updating
