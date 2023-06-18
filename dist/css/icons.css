@@ -26,7 +26,8 @@ button.footer-button#sun-button {
 }
 
 #git,
-#linkedin {
+#linkedin,
+#mastodon {
     height: 110%;
 }
 
