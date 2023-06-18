@@ -47,10 +47,10 @@
           <div class="aside">Published on 2022-11-08</div>
         </div>
         <picture role="img">
-          <source media="(min-width: 62.5em)" srcset="../assets/images/intro_images/vim_desktop.webp">
-          <source media="(min-width: 37.5em)" srcset="../assets/images/intro_images/vim_tablet.webp"><img class="intro-image" src="../assets/images/intro_images/vim_mobile.webp" alt="The Vim Logo" title="The Vim Logo" cite="https://commons.wikimedia.org/wiki/File:Vimlogo.svg?useskin=vector" loading="lazy">
+          <source media="(min-width: 62.5em)" srcset="../assets/images/intro_images/vim_intro_code_desktop.jpg">
+          <source media="(min-width: 37.5em)" srcset="../assets/images/intro_images/vim_intro_code_tablet.jpg"><img class="intro-image" src="../assets/images/intro_images/vim_intro_code_mobile.jpg" alt="A Picture of Minified JavaScript Code" title="A Picture of Minified JavaScript Code" cite="https://commons.wikimedia.org/wiki/File:Programming_code.jpg?useskin=vector" loading="lazy">
         </picture>
-        <figcaption>The Vim Logo</figcaption>
+        <figcaption>Minified JavaScript Code</figcaption>
         <blockquote cite="">How do I quit this thing?"
           <div class="quote_author">-Every Vim User At Some Point</div>
         </blockquote>
@@ -156,7 +156,7 @@
         <p>And so on...</p>
         <p>This is a basic explanation on the power of chaining commands. Now, how would we accomplish these things in a standard text editor without this MODAL editing feature? Well this is where the ergonomics of your standard text editor fail. Let"s just say I wanted to do more than delete a few words, what if I wanted to delete everything from my current position to the end of the line? Well in Vim, as previously pointed out, that is accomplished simply by invoking "d$". In a standard text editor, this would be accomplised by "ctrl+shift+end" followed by "delete" or "backspace". Four keys to Vim's two, and much further from home row.</p>
         <p>At this point, you may protest, saying "Well I could always use the mouse to highlight that text and then just hit the delete or backspace key! It's not a big deal!!" And that is where you'd be wrong, were you to make such an argument. While I am not opposed to the utilization of the mouse in text editing (I am known to use my mouse from time to time), the frequency with which a programmer must switch from moving one hand away from home row on their keyboard to utilize the mouse in a standard text editor is an inconvenience that I cannot imagine enduring after having utilized Vim's modal editing. It's just far superior.</p>
-        <h2>So Uhh...How Do I Quit?</h2>
+        <h2> </h2>
         <p>It is a joke/meme among Vim users that many of us never leave Vim. Not necessarily because we love it, but because we never learned how to exit. Although the introduction screen does actually tell you how to exit Vim, it is easy for a beginner to forget the command after having experimented with it for the first time.</p>
         <p>From NORMAL mode, enter the colon key, ":". Here you are entering "COMMAND" mode, which has syntax somewhat similar to the shell. If you wish to save the document you have worked on, enter "w", which stands for "write". If you wish to quit without saving, enter ":q!". The exclamation point at the end is akin to certain shell commands where "-f" is mnemonically associated with the word "force", without it the editor will warn you that you have unsaved changes and not let you exit. Of course, you can chain these commands, so if you wish to write and quit in a single command, simply enter ":wq".</p>
         <h1>Conclusion</h1>
