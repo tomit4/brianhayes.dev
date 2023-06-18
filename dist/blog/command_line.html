@@ -138,7 +138,7 @@
         <p>If you invoke:</p>
         <pre><code>&#35bash shell&#10[ ~]$ alias cdls="cd ~/Documents & ls"</code></pre>
         <p>You will navigate into your Documents directory and then list out its contents after invoking your custom command, 'cdls'</p>
-        <p>The "&" is another operator that waits for one command to complete before then invoking the following command.The "&" operator can be chained as many times as desired and when applied to an alias, essentially condenses a very long command into a shorter command (unless you name your alias something very long I suppose).</p>
+        <p>The "&" is another operator that waits for one command to complete before then invoking the following command. The "&" operator can be chained as many times as desired and when applied to an alias, essentially condenses a very long command into a shorter command (unless you name your alias something very long I suppose).</p>
         <p>Now, the somewhat annoying thing is that these aliases, when created this way, are forgotten as soon as you close the terminal or your shell session somehow ends. Aliases can be saved, however, by placing them in your ~/.bashrc file. This configuration file is checked by the shell prior to initiation, including alias assignments. Thusly, if you simply append:</p>
         <pre><code>&#35.bashrc &#10&#35!/usr/bin/env bash &#10&#10alias cdls="cd ~/Documents & ls"</code></pre>
         <p>To the end of your ~/.bashrc file, you will have created a custom command that persists even after you have closed your terminal and shut down your computer.</p>
