@@ -253,12 +253,21 @@ img {
     border-radius: 2px;
 }
 
+figcaption {
+    font-size: 80%;
+    margin-top: 0.25rem;
+    margin-left: 4rem;
+    text-align: center;
+    font-style: italic;
+    max-width: 40rem;
+}
+
 blockquote {
     margin-bottom: 3rem;
     margin-left: 4rem;
     text-align: right;
     font-style: italic;
-    max-width: 40rem;
+    max-width: 41.5rem;
 }
 
 article {
@@ -268,6 +277,7 @@ article {
     margin-inline: auto;
 }
 
+/* Mobile specific css */
 @media (max-width: 37.5em) {
     article {
         width: 100%;
@@ -275,6 +285,13 @@ article {
     h1,
     h2 {
         text-indent: 5%;
+    }
+    figcaption {
+        margin-left: 8rem;
+    }
+    blockquote {
+        margin-left: 3rem;
+        text-align: center;
     }
 }
 
@@ -295,12 +312,16 @@ p {
 
 pre {
     margin: 0 auto;
+    tab-size: 4;
     border: 1px solid var(--offblack);
     border-radius: 2px;
     padding: 0.25rem 0;
     line-height: 1rem;
     text-align: left;
     width: 80vw;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    word-wrap: break-word;
     max-width: 40rem;
 }
 
