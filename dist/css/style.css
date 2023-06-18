@@ -254,6 +254,15 @@ img {
     border-radius: 2px;
 }
 
+/* TODO: */
+/* maybe replace all picture srcset with this (less network calls) */
+@media (max-width: 63.5em) {
+    img.gif-image,
+    img.img-image {
+        width: 500px;
+    }
+}
+
 figcaption {
     font-size: 80%;
     margin: 0 auto;
@@ -286,6 +295,10 @@ article {
     h1,
     h2 {
         text-indent: 5%;
+    }
+    img.gif-image,
+    img.img-image {
+        width: 300px;
     }
     figcaption {
         margin: 0 auto;

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>brianhayes.dev</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-menu" role="menu">
+        <li class="nav-items" role="menubar"><a class="icons" id="contact" aria-label="email" role="menuitem" href="mailto: brianhayes.dev@protonmail.com">contact</a></li>
+        <li class="nav-items"><a class="icons" id="folio" aria-label="folio" role="navigation" href="../folio.html">folio</a></li>
+        <li class="nav-items"><a class="icons" id="home" aria-label="home" role="navigation" href="../index.html">home</a></li>
+        <li class="nav-items"><a class="icons" id="blog" aria-label="blog" role="navigation" href="./index.html">blog</a></li>
+        <li class="nav-items"><a class="icons" id="rss" aria-label="rss" role="menuitem" href="../assets/feed.rss">rss</a></li>
+      </ul>
+    </nav>
+    <div class="nav-division"></div>
+    <div class="nav-text">
+      <ul class="nav-text-menu" role="menu">
+        <li class="nav-text-items" role="menubar">
+          <div class="nav-text-item" id="text-contact" aria-label="email" role="menuitem">email</div>
+        </li>
+        <li class="nav-text-items" role="menubar">
+          <div class="nav-text-item" id="text-folio" aria-label="folio-text" role="menuitem">folio</div>
+        </li>
+        <li class="nav-text-items" role="menubar">
+          <div class="nav-text-item" id="text-home" aria-label="home-text" role="menuitem">home</div>
+        </li>
+        <li class="nav-text-items" role="menubar">
+          <div class="nav-text-item" id="text-blog" aria-label="blog-text" role="menuitem">blog</div>
+        </li>
+        <li class="nav-text-items" role="menubar">
+          <div class="nav-text-item" id="text-rss" aria-label="rss-text" role="menuitem">rss </div>
+        </li>
+      </ul>
+    </div>
+    <div class="container fadein">
+      <div class="arrows"><a class="icons" id="left-arrow" aria-label="previous" role="navigation" href="./musings_on_vim.html"></a><a class="icons" id="right-arrow" aria-label="next" role="navigation" href=""></a></div>
+      <div class="arrows-text"><span class="arrow-text" id="text-left-arrow">prev</span><span class="arrow-text" id="text-right-arrow">next</span></div>
+      <div class="title">
+        <div class="title-card">
+          <header>The Keys That Bind</header>
+          <div class="subtitle">On Tiling Window Managers</div>
+          <div class="aside">Published on 2022-11-13</div>
+        </div>
+        <picture role="img">
+          <source media="(min-width: 62.5em)" srcset="../assets/images/intro_images/window_desktop.jpg">
+          <source media="(min-width: 37.5em)" srcset="../assets/images/intro_images/window_tablet.jpg"><img class="intro-image" src="../assets/images/intro_images/window_mobile.jpg" alt="Curtain Windows" title="Curtain Windows" cite="https://commons.wikimedia.org/wiki/File:Gordijnen_aan_venster.JPG?useskin=vector" loading="lazy">
+        </picture>
+        <figcaption>Curtain Windows</figcaption>
+        <blockquote cite="The Arch Wiki">"This allows the user to create a more lightweight and customized environment, tailored to their own specific needs"<br><a class="inline-link quote_author" target="_blank" rel="noopener noreferrer" href="https://wiki.archlinux.org/title/Tiling_window_manager">-The Arch Wiki</a></blockquote>
+      </div>
+      <article class="demo-button">
+        <h1>Introduction</h1>
+        <p>When one first approaches the world of computers, their first interaction is with some kind of graphical user interface, commonly termed as a "GUI." This interface is what is termed as a "Desktop Environment" or "DE" for short. A common Desktop Environent's primary form of interaction is based around the utilization of the computer mouse, although, to varying degrees, can be modified to be more oriented towards a keyboard-based interface.</p>
+        <p>Less familiar to the general public is a piece of software known as the Tiling Window Manager, a much more basic, but possibly more efficient, GUI that is heavily based on the utilization of keyboard interactions from the user. Indeed, much like the Vim Text Editor, a Tiling Window Manager so heavily discourages the use of Mouse Interactions, that an uninitiated user can find themselves presented with an environment where attempts at using the computer mouse results in no feedback at all (i.e., clicking the mouse does nothing by default). At first glance this may seem as a negative, but with the incorporation of more and more keyboard-encouraged interactions with your various pieces of software, one finds that their efficiency utilizing their computer increases, and perhaps also their productivity.</p>
+        <h2>What's A Desktop Environment?</h2>
+        <p>Prior to the advent of computer screens, all visual output from the computer was generally reserved to reading out lengthy printed pages via a line printer, while computer screens were reserved for keeping track of the status of the programs themselves.</p>
+        <p>The average modern desktop or laptop computer user finds themselves interacting with their Operating System via a Desktop Environment, clicking on icons via their mouse, scrolling articles in the Google Chrome Browser, perhaps typing a bit here and there when they have to perform a search query, or perhaps even typing a decent amount when they have to write an extensive document of some kind.</p>
+        <p>The ability to type fast, maneuver between applications, context switch between different applications, and perhaps most importantly, the ability to make concise logical decisions, all play a role in how quickly a project is completed. Due to the vast amount of tools we have as modern computer users, and the multitude of ways of thinking and approaching a given task, there is, to put it simply, rarely a "one size fits all" workflow.</p>
+        <p>The modern Desktop Environment found on Microsoft Windows is the most popular interface with which the average desktop computer user interacts. This is due mainly to the fact that they (the users) are unaware that there are alternatives (or that these alternatives are worth investigating). Even beginner programmers rarely take the time to investigate alternative Desktop Environments, limiting themselves to either working on Windows or MacOs and accepting the default keybindings and workflow instilled in them by the designers and developers of that Desktop Environment. They may investigate what kind of text editors are available to them, although this also is becoming increasingly rare as the majority of beginner programmers reach for VS Code and don't look into what alternatives are out there. This is somewhat unfortunate, as by taking the time to investigate these alternative tools, you may very well find more optimal solutions that better coordinate with your particular workflow. This article is to give you a brief introduction to how the Tiling Window Manager can play into a keyboard-centric workflow.</p>
+        <h2>The Keyboard-Centric Workflow</h2>
+        <p>There have been few articles written on the keyboard-centric workflow. The subject is the realm mainly focused on by productivity enthusiasts and computer programmers (perhaps also the occasional stenographer). I have touched briefly on the concepts of the keyboard-centric workflow in my article on The Vim Text Editor, but will spend more time elaborating on the subject here.</p>
+        <p>I have always enjoyed the sensation of typing from an early age when I first sat down at a keyboard. In high school and especially college, I took the time to learn some of the classic keyboard shortcuts present in nearly every application. The knowledge of these shortcuts allowed me to navigate more quickly throughout applications, edit text more quickly, and generally work with the computer much faster than others. In short, I became what is known colloquially as a "power user".</p>
+        <p>It is intriguing to me, having now used Linux for a little over two years, to come to understand that the subject of keyboard shortcuts, or "keybindings," is a point of divergence within the varying philosophies amongst the developers of the major Operating Systems and their Desktop Environment Designs. Within Microsoft Windows and MacOs, one is heavily restricted to utilizing their specific keybindings. The standardization of keybindings, I'll admit, is somewhat essential so that when a user sits down at a colleague's computer, they are not completely lost as to which keys do what, as they are the same across all machines. Unix-like Operating Systems and their many Desktop Environments operate on the general philosophy that user freedom, and by proxy, customization options, is paramount. Thusly anyone operating a Linux or BSD based Operating System today is capable of setting up their own custom keybindings to their liking on their personal machines. This does make working from machine to machine difficult in terms of cohesion when working on a team, but by the same token, this freedom allows for a customizable work environment that is specific to its user. It is in my opinion that this is preferable as it allows the user the freedom to customize their Desktop Environment to their unique and particular workflow, which should, in theory, mesh well with their own personal thought process and problem solving techniques.</p>
+        <p>Obviously, my preferences in Desktop Environment Design are geared towards creating a personalized keyboard-centric workflow that is unique to the regular user of that particular machine. The remainder of this article will focus on transitioning from a mouse-centric orientation with your computer towards a more keyboard-centric one, with the end goal of installing a Tiling Window Manager on Linux and the introducing the basics of utilizing it.</p>
+        <h2>A Note On The Linux Desktop</h2>
+        <p>As you may have already ascertained if you have read my <a class="inline-link" aria-label="link" role="link" href="./why_use_linux.html">Why Use Linux</a> article, Linux allows for a great deal of user freedom and choice. Linux Desktop Environments are no different. There are a wide variety of options for Desktop Environments, each with their own features, advantages, and disadvantages. I must confess I only have extensive experience in one of the Linux Desktop Environment, that being the XFCE desktop environment. If you are curious, the other popular Linux Desktop Environments currently include GNOME, KDE, Cinammon, and the LXQT Desktop environments. I cannot speak to the quality of these Desktop Environments, but would assume they have a similar, if not more, amount of customization options to the XFCE Desktop Environment.</p>
+        <h2>Customized Keybindings</h2>
+        <p>Most Desktop Environments on Linux have a GUI interface for changing the default keybindings, and I would encourage you to look into your particular Desktop Environment's interface for doing so. The Desktop Environment I utilized when I first started using Linux was XFCE, afterwards I then utilized the i3 Tiling Window Manager (and then the bspwm Tiling Window Manager, which is what I use currently). I will first go into how to adjust the keybindings in XFCE both via XFCE's native GUI application. After that, I will then go into how to utilize the i3 Tiling Window Manager, which is considered by many as a good introduction to Tiling Window Managers.</p>
+        <p>Firstly, let's start by configuring the keybindings in the XFCE Desktop Environment. Here we see the base install of Debian Linux with the default XFCE Desktop Environment installed:</p>
+        <figure><img class="img-image" src="../assets/images/screenshots/ss_debian_xfce.webp" alt="The Default Debian XFCE Desktop Environment" title="The Default Debian XFCE Desktop Environment" cite="author screenshot" loading="lazy"></figure>
+        <figcaption>The Default Debian XFCE Desktop Environment</figcaption>
+        <p>The default terminal emulator in the XFCE Desktop Environment is called xfce4-terminal, thusly if we invoke it from the command line, another terminal emulator should spawn:</p>
+        <figure><img class="img-image" src="../assets/images/screenshots/ss_debian_terminal_spawn.webp" alt="A Picture of the XFCE Terminal Calling Another Instance of Itself" title="A Picture of the XFCE Terminal Calling Another Instance of Itself" cite="author screenshot" loading="lazy"></figure>
+        <figcaption>The XFCE Terminal Calling Another Instance of Itself</figcaption>
+        <p>And indeed it does. So now we know we can call xfce4-terminal by typing out that exact name into the command line, but what if I want to call it using a custom keybinding?</p>
+        <p>In XFCE's version of the start menu (located on the upper left hand side), you will find a menu item called "settings", where you will find the "keyboard" option. This is one of two GUI menus that allow for the modification of keybindings. Click on that so we can get started with one of the first recommended keybindings, that being of "super+enter", which we will bind to open our terminal emulator.</p>
+        <figure><img class="img-image" src="../assets/images/screenshots/ss_debian_xfce_keybindings01.webp" alt="XFCE menu navigation to change keyboard shortcuts" title="XFCE menu navigation to change keyboard shortcuts" cite="author screenshot" loading="lazy"></figure>
+        <figcaption>XFCE Menu To Change Keyboard Shortcuts</figcaption>
+        <p>Once opened, Navigate to the Application Shortcuts sub-menu which should present to you some previously configured keybindings that are present by default. We are going to leave those alone and set up our own custom one by clicking on the "Add" button on the bottom left hand side of the menu. You will be presented with an empty input prompt asking for the command you will wish to invoke with this new keyboard shortcut. We want to open our terminal so let's enter the command 'xfce4-terminal':</p>
+        <figure><img class="img-image" src="../assets/images/screenshots/ss_debian_xfce_keybindings02.webp" alt="XFCE menu navigation to change keyboard shortcuts" title="XFCE menu navigation to change keyboard shortcuts" cite="author screenshot" loading="lazy"></figure>
+        <figcaption>XFCE Menu To Change Keyboard Shortcuts</figcaption>
+        <p>After hitting the "OK" button, we will be presented with a menu that asks us to "Press any Key". Most keyboard shortcuts invoked utilize at at least two buttons so as to not accidentally invoking commands whenever typing, so let's choose a classic keybinding "super+enter". To the uninitiated the "super" key is the "windows" key in Microsoft Windows or the "options" key in MacOs. Once entered, the window prompt will disappear and you may notice the new keyboard command show up on the Application Shortcuts menu.</p>
+        <figure><img class="img-image" src="../assets/images/screenshots/ss_debian_xfce_keybindings03.webp" alt="XFCE menu navigation to change keyboard shortcuts" title="XFCE menu navigation to change keyboard shortcuts" cite="author screenshot" loading="lazy"></figure>
+        <figcaption>XFCE Menu To Change Keyboard Shortcuts</figcaption>
+        <p>Let's test it out. go ahead and enter "super + enter":</p>
+        <figure><img class="gif-image" src="../assets/images/gifs/ss_debian_keybinding_01.gif" alt="Demonstration of new Keybinding in XFCE" title="Demonstration of new Keybinding in XFCE" cite="author screenshot" loading="lazy"></figure>
+        <figcaption>Spawning New Terminals Using Our New Keybinding</figcaption>
+        <p>And indeed, we have created a useful keybinding that calls one of our most used applications. You can chain various keys to open applications, but usually the alt, ctrl, or super keys are utilized first. You can call any application that you can invoke on the terminal in this fashion, and usually these are GUI applications, like your browser, your file manager, your music player, etc.</p>
+        <p>I will now move onto our next subject, which covers the useful feature of Workspaces. The use of Workspaces is more important than Application-related keyboard shortcuts as they essentially maximize the use of space on your screen, allowing you to bring up an entirely new work area for you to fill with your various applications. Instead of moving application windows around and minimizing them when not in use, Workspaces allow you to simply keep those applications open at whatever screen size you like, hiding them from view temporarily, while you navigate to another workspace to do some other sort of work, and then navigate back to your previous workspace to utilize the applications you had been using earlier. The below gif demonstrates the use of Workspaces, which are changed using keybindings.</p>
+        <figure><img class="gif-image" src="../assets/images/gifs/ss_debian_keybinding_02.gif" alt="Demonstration of Navigating Workspaces in XFCE" title="Demonstration of Navigating Workspaces in XFCE" cite="author screenshot" loading="lazy"></figure>
+        <figcaption>Navigation of WorkSpaces in XFCE</figcaption>
+        <p>As you can see, each time I enter the super key followed by a number, it brings me to that numbered workspace. The change of the various applications is the change of the workspace, each one having different applications open. There are usually 10 workspaces available (numbered 1-10) in tiling window managers. XFCE allows for 12 (using by default ctrl + f1-12 keys). In case you were wondering if I modified the keys for these, I did. That is because the super+number keybinding is more traditional in tiling window managers for switching workspces. In XFCE, if you wish to change the workspace keybindings, navigate from the start menu to the settings > window manager sub-menu and select keyboard. You should then edit the keybindings labeled "Workspace" followed by the workspace number. This is basically the same process as editing keybindings for applications.</p>
+        <p>I could continue to explore the XFCE interface, but let us now move onto the subject of Tiling Window Managers with the introduction of the i3 window manager.</p>
+        <h2>The i3 Window Manager</h2>
+        <p>The installation of the i3 Tiling Window Manager is relatively straight forward, as it simply involves utilizing your native package manager to do so. It is highly likely that if you wish to install a tiling window manager for the first time, that you'd like to keep your current Desktop Environment in the event that you don't like using a Tiling Window Manager. This is completely understandable, and thus our tutorial here will cover how to install i3 alongside XFCE so that you can simply choose one or the other at login.</p>
+        <p>Let's get started with first installing the needed pieces of software. From your terminal emulator , install the i3 window manager, the i3status display bar, the picom compositor, and the dynamic menu, dmenu, and also the feh image viewer, for setting our background wallpaper.</p>
+        <p>On Arch Linux:</p>
+        <pre><code>&#35bash shell&#10[~]$ sudo pacman -S i3 i3status picom dmenu feh</code></pre>
+        <p>On Debian Linux:</p>
+        <pre><code>&#35bash shell&#10[~]$ sudo apt-get install i3 i3status picom dmenu feh</code></pre>
+        <p>Now we can simply reboot our machine, upon login, before entering your name and password, be sure to select i3 from the wrench icon available at the top right hand corner of our login screen:</p>
+        <figure><img class="img-image" src="../assets/images/screenshots/ss_debian_i3_01.webp" alt="Screenshot of i3 Selection in LightDm Menu" title="Screenshot of i3 Selection in LightDm Menu" cite="author screenshot" loading="lazy"></figure>
+        <figcaption>Select i3 From Your Login Screen</figcaption>
+        <p>Tiling Immediately you will be presented with a far more minimal set up than XFCE. You will be prompted if you'd like to generate a default configuration for i3, go ahead and choose "Yes" and hit enter.</p>
+        <figure><img class="img-image" src="../assets/images/screenshots/ss_debian_i3_02.webp" alt="Screenshot of i3 Welcome Prompt" title="Screenshot of i3 Welcome Prompt" cite="author screenshot" loading="lazy"></figure>
+        <figcaption>Select "Yes" To Generate a Default Configuration</figcaption>
+        <p>Afterwards which you will be asked which "Mod" key you'd like as default, either the "super" or "alt" key. This key will be the default for chaining with other keys which when used in sequence will call various applications and  change workspaces. I personally prefer the "super" key, so I'm going to choose the first option.</p>
+        <figure><img class="img-image" src="../assets/images/screenshots/ss_debian_i3_03.webp" alt="Screenshot of i3 mod key choice prompt" title="Screenshot of i3 mod key choice prompt" cite="author screenshot" loading="lazy"></figure>
+        <figcaption>Select "Win" or "Alt" for your Mod Key</figcaption>
+        <p>After this choice is made and you hit enter, you'll be left with no further instruction, which can be jarring for beginners. Don't worry, remember the keybinding to call the terminal we made in XFCE? Well the reason I chose "super + enter," was because that is the same command in the default i3 configuration for calling the terminal. So you can do the same here in i3, calling the terminal with "super + enter". In fact, let's call a few terminals to see the default tiling behavior of i3, hit "super + enter" a couple of times:</p>
+        <figure><img class="gif-image" src="../assets/images/gifs/ss_debian_i3_demo_01.gif" alt="Gif showing i3 calling terminals" title="Gif showing i3 calling terminals" cite="author screenshot" loading="lazy"></figure>
+        <figcaption>You can call a Terminal using "super+enter" keybinding</figcaption>
+        <p>As you can see, a Tiling Window Manager "tiles" its windows in a cascading fashion, utilizing as much of the available screen space (known in some circles as screen "real estate"). So how do we navigate this? Well you can indeed use the mouse to select which of your open applications you'd like to utilize, but obvioiusly, this article being about the keyboard-centric workflow, we'll choose to navigate using our keyboard. Hiting "super+j" or "super+;"(super + semicolon) will navgate left and right respectively. Additionally, if we move a window to the bottom so that it is in a horizontal orientation using (super+shift+k), then we can demonstrate navigation up and down windows using (super+k) or (super+l)</p>
+        <figure><img class="gif-image" src="../assets/images/gifs/ss_debian_i3_demo_02.gif" alt="Gif showing basic navigation in i3" title="Gif showing basic navigation in i3" cite="author screenshot" loading="lazy"></figure>
+        <figcaption>Basic Navigation In i3 Tiling Window Manager</figcaption>
+        <p>Already you can see the elegant simplicity this kind of workflow enforces. Utilizing some simple keybindings, one can navigate from one window to the next, all the while entering commands into a terminal, text into a text editor, and search queries into a browser.</p>
+        <p>I won't be going into any kind of extensive coverage of customizing your i3 environment, suffice it to say that Tiling Window Managers in general are highly customizable. Instead, I will refer you to the excellent <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://i3wm.org/docs/">i3 documentation</a>.</p>
+        <p>As an aside, you may have noticed I also had you install dmenu and feh alongside i3 and its status bar. This is because the default configuration of i3 has a built in call to dmenu (super+d). This application is an excellent piece of software that, like the terminal, can call any application simply by entering its name into its prompt. I recommend playing around with it and checking out The Arch Wiki's <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://wiki.archlinux.org/title/Dmenu">documentation</a> on dmenu. The image viewer, feh, has a nice feature of being able to set the background wallpaper to whatever image you'd like when i3 starts. In your ~/.config/i3/config file, simply enter on its own line the following command:</p>
+        <pre><code>&#35bash shell&#10[~]$ exec feh --bg-fill /path/to/your/preferred_image.png</code></pre>
+        <p>If you'd like to restart i3 without having to log out, simply enter super+shift+r(if you make any adjustments to your i3 configuration file, you won't see the changes implemented until you reload i3 using this command or you log out of i3).</p>
+        <p></p>
+        <p>To log out of i3, enter super+shift+e. This will bring up a yellow message at the top of your screen asking if you'd like to exit i3, click 'Yes,' and it will return you to the login screen.</p>
+        <h1>Conclusion</h1>
+        <p>There is so much more I could cover regarding Tiling Window Managers and the keyboard-centric workflow, but I will leave you with this basic introduction on how to get started with creating your own version of it. While a classic Desktop Environment is fine for most, and will probably always be more popular than Tiling Window Managers, for those of you that have an affinity towards working on the keyboard (which, if you are invested in becoming more productive on the computer, you should), a Tiling Window Manager might be something worthwhile for you to investigate. Below I provide you with a short clip of my standard workflow (if you're wondering how to get transparency to work in the terminal like in this gif, you'll want to look into The Arch Wiki's <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://wiki.archlinux.org/title/Picom">documentation</a> on picom). To further emphasize the use of the keyboard, I have installed the <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/">Vimium extension</a> into the <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://librewolf.net/">Librewolf browser</a> to demonstrate further the possibilities of working almost completely without a mouse. Enjoy, and keep keybinding.</p>
+      </article>
+    </div>
+    <footer role="menu">
+      <div class="foot-text">
+        <ul class="foot-text-menu" role="menu">
+          <li class="foot-text-items" role="menubar">
+            <div class="foot-text-item" id="text-sun" aria-label="light-mode-text" role="menuitem">light</div>
+          </li>
+          <li class="foot-text-items" role="menubar">
+            <div class="foot-text-item" id="text-git" aria-label="git-text" role="menuitem">git</div>
+          </li>
+          <li class="foot-text-items" role="menubar">
+            <div class="foot-text-item" id="text-linkedin" aria-label="linkedin-text" role="menuitem">linkedin</div>
+          </li>
+          <li class="foot-text-items" role="menubar">
+            <div class="foot-text-item" id="text-mastodon" aria-label="mastodon-text" role="menuitem">social</div>
+          </li>
+          <li class="foot-text-items" role="menubar">
+            <div class="foot-text-item" id="text-moon" aria-label="dark-mode-text" role="menuitem">dark</div>
+          </li>
+        </ul>
+      </div>
+      <div class="foot-division"></div>
+      <ul class="foot-menu" role="menubar">
+        <li class="foot-items">
+          <button class="footer-button" id="sun-button">
+            <div class="icons" id="sun" aria-label="light-mode" role="button">light</div>
+          </button>
+        </li>
+        <li class="foot-items"><a class="icons" id="git" aria-label="git" role="link" target="_blank" rel="noopener noreferrer" href="https://github.com/tomit4">git</a></li>
+        <li class="foot-items"><a class="icons" id="linkedin" aria-label="linkedin" target="_blank" rel="noopener noreferrer" role="link" href="https://linkedin.com/in/brian-hayes-33496067">linkedin</a></li>
+        <li class="foot-items"><a class="icons" id="mastodon" aria-label="social" target="_blank" rel="noopener noreferrer" role="link" href="https://mas.to/@brianhayesdev">social</a></li>
+        <li class="foot-items">
+          <button class="footer-button" id="moon-button">
+            <div class="icons" id="moon" aria-label="dark-mode" role="button">dark</div>
+          </button>
+        </li>
+      </ul>
+    </footer>
+    <script src="../index.js" default></script>
+  </body>
+</html>
