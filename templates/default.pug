@@ -1,0 +1,91 @@
+doctype html
+html(lang = "en")
+    head
+        title brianhayes.dev
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel="icon" type="image/x-icon" href="assets/icons/favicon.png")
+        link(rel='stylesheet' type='text/css' href='../css/style.css')
+    body
+        nav
+            ul.nav-menu(role="menu")
+                li.nav-items(role="menubar")
+                    a.icons#contact(aria-label="email" role="menuitem" href="mailto: brianhayes.dev@protonmail.com") contact
+                li.nav-items
+                    a.icons#folio(aria-label="folio" role="navigation" href="../folio.html") folio
+                li.nav-items
+                    a.icons#home(aria-label="home" role="navigation" href="../index.html") home
+                li.nav-items
+                    a.icons#blog(aria-label="blog" role="navigation" href="../blog.html") blog
+                li.nav-items
+                    a.icons#rss(aria-label="rss" role="menuitem" href="./assets/feed.rss") rss
+        div.nav-division
+        div.nav-text
+            ul.nav-text-menu(role="menu")
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-contact(aria-label="email" role="menuitem") email
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-folio(aria-label="folio-text" role="menuitem") folio
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-home(aria-label="home-text" role="menuitem") home
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-blog(aria-label="blog-text" role="menuitem") blog
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-rss(aria-label="rss-text" role="menuitem") rss 
+        div.container.fadein
+            div.arrows
+                a.icons#left-arrow(aria-label="previous" role="navigation" href="./about.html")
+                a.icons#right-arrow(aria-label="next" role="navigation" href="./about.html")
+            div.arrows-text
+                span.arrow-text#text-left-arrow prev
+                span.arrow-text#text-right-arrow next
+            div.title
+                div.title-card
+                    header Article Title
+                    div.subtitle Article Subtitle
+                    div.aside Published on 2022-11-04
+                picture(role="img" aria-label="")
+                    source(media="(min-width: 62.5em)" srcset="../assets/images/default_desktop.webp")
+                    source(media="(min-width: 37.5em)" srcset="../assets/images/default_tablet.webp")
+                    img.intro-image(src="../assets/images/default_mobile.webp" alt="" title="" cite="" loading="lazy")
+                figcaption An Image Caption
+                blockquote(cite="") "An Inspiring Quote"
+                        div.quote_author -John Doe
+            article.demo-button
+                h1 Introduction
+                p 
+                h2 Header2
+                p This is a sample paragraph with a <a class="inline-link" target="_blank" rel="noopener noreferrer" href="">sample link</a>.
+                pre
+                    code &#35!/usr/bin/env bash &#10&#10echo "hello world!"
+                br
+                pre
+                    code // sample.js &#10function somefunc(somearg) {&#10    console.log("hello world!");&#10}
+        footer(role="menu")
+            div.foot-text
+                ul.foot-text-menu(role="menu")
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-sun(aria-label="light-mode-text" role="menuitem") light
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-git(aria-label="git-text" role="menuitem") git
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-linkedin(aria-label="linkedin-text" role="menuitem") linkedin
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-mastodon(aria-label="mastodon-text" role="menuitem") social
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-moon(aria-label="dark-mode-text" role="menuitem") dark
+            div.foot-division
+            ul.foot-menu(role="menubar")
+                li.foot-items
+                    button.footer-button#sun-button
+                        div.icons#sun(aria-label="light-mode" role="button") light
+                li.foot-items
+                    a.icons#git(aria-label="git" role="link" target="_blank" rel="noopener noreferrer" href="https://github.com/tomit4") git
+                li.foot-items
+                    a.icons#linkedin(aria-label="linkedin" target="_blank" rel="noopener noreferrer" role="link" href="https://linkedin.com/in/brian-hayes-33496067") linkedin
+                li.foot-items
+                    a.icons#mastodon(aria-label="social" target="_blank" rel="noopener noreferrer" role="link" href="https://mas.to/@brianhayesdev") social
+                li.foot-items
+                    button.footer-button#moon-button
+                        div.icons#moon(aria-label="dark-mode" role="button") dark
+        script(src="../index.js" default)

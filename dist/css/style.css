@@ -323,6 +323,7 @@ pre {
     overflow-x: auto;
     word-wrap: break-word;
     max-width: 40rem;
+    padding: 0.5rem;
 }
 
 /* footer bar */
