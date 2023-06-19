@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>brianhayes.dev</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-menu" role="menu">
+        <li class="nav-items" role="menubar"><a class="icons" id="contact" aria-label="email" role="menuitem" href="mailto: brianhayes.dev@protonmail.com">contact</a></li>
+        <li class="nav-items"><a class="icons" id="folio" aria-label="folio" role="navigation" href="../folio.html">folio</a></li>
+        <li class="nav-items"><a class="icons" id="home" aria-label="home" role="navigation" href="../index.html">home</a></li>
+        <li class="nav-items"><a class="icons" id="blog" aria-label="blog" role="navigation" href="./index.html">blog</a></li>
+        <li class="nav-items"><a class="icons" id="rss" aria-label="rss" role="menuitem" href="../assets/feed.rss">rss</a></li>
+      </ul>
+    </nav>
+    <div class="nav-division"></div>
+    <div class="nav-text">
+      <ul class="nav-text-menu" role="menu">
+        <li class="nav-text-items" role="menubar">
+          <div class="nav-text-item" id="text-contact" aria-label="email" role="menuitem">email</div>
+        </li>
+        <li class="nav-text-items" role="menubar">
+          <div class="nav-text-item" id="text-folio" aria-label="folio-text" role="menuitem">folio</div>
+        </li>
+        <li class="nav-text-items" role="menubar">
+          <div class="nav-text-item" id="text-home" aria-label="home-text" role="menuitem">home</div>
+        </li>
+        <li class="nav-text-items" role="menubar">
+          <div class="nav-text-item" id="text-blog" aria-label="blog-text" role="menuitem">blog</div>
+        </li>
+        <li class="nav-text-items" role="menubar">
+          <div class="nav-text-item" id="text-rss" aria-label="rss-text" role="menuitem">rss </div>
+        </li>
+      </ul>
+    </div>
+    <div class="container fadein">
+      <div class="arrows"><a class="icons" id="left-arrow" aria-label="previous" role="navigation" href="./ortholinear_keyboards.html"></a><a class="icons" id="right-arrow" aria-label="next" role="navigation" href=""></a></div>
+      <div class="arrows-text"><span class="arrow-text" id="text-left-arrow">prev</span><span class="arrow-text" id="text-right-arrow">next</span></div>
+      <div class="title">
+        <div class="title-card">
+          <header>Espanso</header>
+          <div class="subtitle">Expand Your Text</div>
+          <div class="aside">Published on 2023-01-11</div>
+        </div>
+        <picture role="img">
+          <source media="(min-width: 62.5em)" srcset="../assets/images/intro_images/balloon_over_luxor_desktop.jpg">
+          <source media="(min-width: 37.5em)" srcset="../assets/images/intro_images/balloon_over_luxor_tablet.jpg"><img class="intro-image" src="../assets/images/intro_images/balloon_over_luxor_mobile.jpg" alt="An image of the espanso logo" title="An image of the espanso logo" cite="https://commons.wikimedia.org/wiki/File:Balloon_over_Luxor_-_Egypt_denoised.jpg?useskin=vector" loading="lazy">
+        </picture>
+        <figcaption>An Air Balloon Over Luxor, Egypt</figcaption>
+        <blockquote cite="essay: The Deep Zoo, by Rikki Ducornet">"The texts we write are not visible until they are written. Like a creature coaxed from out a deep wood, the text reveals itself little by little. The maze evokes a multiplicity of approaches, the many tricks we employ to tempt the text hither."<br><a class="inline-link quote_author" target="_blank" rel="noopener noreferrer" href="https://library.indstate.edu/about/units/rbsc/obscure/PDFs/ducornet_deep.pdf">The Deep Zoo</a></blockquote>
+      </div>
+      <article class="demo-button">
+        <h1>Introduction</h1>
+        <p>Prior to a friend of mine mentioning espanso to me, I was unaware of such a thing as a text expander. I was familiar with the idea of expanding text, and until I adopted espanso, I was utilizing Neovim's configuration file to set custom text expansion. For example within my init.vim (which I used instead of lua at the time), I had set up a shortcut to write out "console.log()" whenever I inputted "ccl" while in insert mode.</p>
+        <p>I had many such shortcuts, mainly meant for use with various console calls in JavaScript, as well as some generic coding shortcuts. At one point my friend had pointed me in the direction of a new text expander written in rust known as espanso, and today it has become a regular part of my workflow. Whether it be a part of the command line, Neovim, or my browser, I utilize espanso in nearly every aspect of my workflow now, and I felt it was worthwhile to cover in detail.</p>
+        <h2>What Is A Text Expander?</h2>
+        <p>Most standard workflows by "Power Users" involve the use of keyboard shortcuts. Mainly Ctrl+C, Ctrl+V, Ctrl+A, and Ctrl+Z. If one is particularly resourceful, they are aware of various keyboard shortcuts involving the additional use of ALT and SHIFT keys, but I digress. While these shortcuts are still very useful and a necessary tool in the belt of any serious Computer user, these methods still only hold a candle to the ultra capable workflows one can achieve with a tiling window manager, a modal text editor, and an ortholinear keyboard (as well as the Vimium extension installed on the browser). Each of these subjects I have covered in detail in previous articles, and each of them continually improves upon the user's implementation of the keyboard-centric workflow. There is, however, one other tool that greatly adds to the keyboard-centric workflow, and that is the text-expander.</p>
+        <p>Let's say you have a series of commands or parts of a document that you repeatedly find yourself typing over and over again. Commonly known as boilerplate, these repeated pieces of text can become cumbersome and are the bane of any serious computer user, as this information is usually a formality, and has little to do with the meat of the content of the document itself. Of course, if there is a lot of text, one may find oneself simply copying and pasting the text, or making a multitude of copies via some script. Let's say there is some subtle difference between the documents though? Well using standard UNIX utilities like grep, sed, and awk can accomplish what one wants in an automated fashion. So where does that leave the text expander? With so many other tools available to the modern power user like autocomplete in the shell and text editor, as well as keyboard shortcuts like Ctrl+C/Ctrl+V in pretty much every application, what more could you need?</p>
+        <p>Indeed, when I first discovered that there even were applications like text expanders, I found myself wondering why they even existed when one could write aliases for your shell, and write custom shortcuts for NeoVim. After a short period of time, however, it dawned on me the power of text expanders, and that power was the ability to write quick aliases/text shortcuts that could be used in <em>any</em> application. And when used in conjunction with shell scripts and aliases, the power of text expansion becomes even more obvious.</p>
+        <h2>Espanso Basics</h2>
+        <p>While I could go into the details of the espanso program itself, I'll simply leave <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://espanso.org/">this link</a> to the official website for you to peruse. There are many other text expanders out there, but espanso is open source and OS-agnostic. Additionally it is written in rust, which is known to provide fast applications when utilized by a capable programmer. It is the only text expander I have used, so I cannot speak to how it compares to others, but considering the aforementioned features, along with my own positive experiences utilizing the program, is enough reason for me to not investigate the alternatives at the time of this writing. Should you wish to install espanso and try it for yourself, please see their official <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://espanso.org/install/">installation documentation</a>.</p>
+        <p>Using espanso is very simple. For example once you have the daemon running (see the <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://espanso.org/docs/get-started/">documentation</a>), you can check your ip address simply by typing in any application:</p>
+        <pre><code>&#35bash shell&#10[~]$ :ip</code></pre>
+        <p>This will expand out to display your ip address! Of course, one could easily see this using command line. Prior to using espanso, I had created a bash alias to do just that (and admittedly it gives more information than espanso does by default):</p>
+        <pre><code>&#35bash shell&#10[~]$ alias ipaddr="curl ifconfig.me/all.json | jq"</code></pre>
+        <p>Now, if this was all espanso ever did, I'd say the program was trivial and this article wouldn't even exist. The power of espanso is not in its out of the box settings, but rather in its simple config file. On Linux, this configuration file can be found in:</p>
+        <pre><code>&#35espanso config path&#10~/.config/.config/espanso/match/base.yml</code></pre>
+        <p>Here, you will find the default text expansions under the section "match":</p>
+        <pre><code>&#35base.yml&#10&#10matches:&#10    &#35 simple text replacement&#10    - trigger: ":espanso"&#10      replace: "Hi there!"</code></pre>
+        <p>And indeed if we type out the trigger ":espanso", we'll see our text is replaced with "Hi there!":</p>
+        <figure><img class="gif-image" src="../assets/images/gifs/espanso_example.gif" alt="Demonstration of Basic Usage of Espanso" title="Demonstration of Basic Usage of Espanso" cite="screenshot" loading="lazy"></figure>
+        <figcaption>Typing ":espanso" Immediately Converts The Text To "Hi There!"</figcaption>
+        <p>There are various default examples showing espanso's utility. If you look towards the bottom of the example text expansions, you'll see the ":ip" example, which includes a very similar command to my ip alias:</p>
+        <pre><code>&#35base.yml&#10&#10&#35Returns public ip address&#10- trigger: ":ip"&#10  replace: "{{output}}"&#10  vars:&#10    - name: output&#10      type: shell&#10      params:&#10        cmd: "curl ifconfig.me ; echo ''"</code></pre>
+        <h2>Writing Espanso Aliases</h2>
+        <p>Now, all this is well and good, but what sort of things can one accomplish with this tool? Well one of my most constantly repeated series of code that I need on the fly is "console.log()" whenever debugging a JavaScript file. While this isn't a lot of text to write, it can indeed get cumbersome to rewrite it many times over, and so one my first espanso aliases was:</p>
+        <p></p>
+        <pre><code>&#35base.yml&#10&#10- trigger: ";cll"&#10  replace: "console.log()"</code></pre>
+        <p>Note that instead of using the colon, I opted to use the semicolon for my custom espanso aliases as the likelihood of typing out anything directly after a semicolon is even less likely than after a colon (especially if using Vim in command mode). While this might seem trivial at first, if anyone has ever debugged a JavaScript file using this most basic of tools, one can see how useful this could be.</p>
+        <p>Within JavaScript (or any programming language), there are many times one can find themselves writing various words or series of code blocks over and over again, here a few examples of what I have written in my espanso config to occasionally speed this up:</p>
+        <pre><code>&#35base.yml&#10&#10- trigger: ";for&#10  replace: "for (;;) {}"&#10&#10- trigger: ";while"&#10  replace: "while () {}"&#10&#10- trigger: ";if"&#10  replace: "if () {}"&#10&#10- trigger: ";elif"&#10  replace: "else if () {}"&#10&#10- trigger: ";else"&#10  replace: "else {}"&#10&#10- trigger: ";$"&#10  replace: "`${}`"&#10&#10- trigger: ";do"&#10  replace: "do {} while{}"&#10&#10- trigger: ";func"&#10  replace: "function () {}"&#10&#10- trigger: ";=>"&#10  replace: "() => {}"&#10&#10- trigger: ";try"&#10  replace: "try {} catch(error) {}"</code></pre>
+        <p>Okay, so what about use outside of the terminal? Well in writing any website, any good web developer will be typing either "127.0.0.1:" or "localhost:" a lot, right? Well why not use this espanso alias instead?:</p>
+        <pre><code>&#35base.yml&#10&#10- trigger: ";loc"&#10  replace: "localhost:"</code></pre>
+        <p>Again, many of these seem trivial on the surface, and you might even be rolling your eyes reading this thinking "Really? You can't be bothered to type out nine characters vs four?" I'll admit time savings rarely come up to typing out only a few less characters, but one of the powers of Vim is its ability to accomplish more with less keystrokes, and when used in its entirety, I'd argue that no one using the classic keybindings available in the majority of non-modal text editors can accomplish the same speed of workflow as those who use some form of modal text editing. Espanso moves these cumulative time savings into any application where typing is a part of its interface!</p>
+        <p>Let's move onto another use for espanso. I'm a big fan of using DuckDuckgo's bangs. If you're unaware of bangs, check out the <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://duckduckgo.com/bangs">website</a>. Essentially, if one has DuckDuckgo as their default search engine (or searx, which has this feature too), one can simply enter into your search/url bar: !yt and any other words typed after that will be directly searched in YouTube. There are a multitude of these bangs available and I'd encourage you to take a look at what is available. There are, however, a few websites that DuckDuckgo hasn't integrated into bangs, so what to do? While I'm sure there are other ways to accomplish this, I have utilized espanso to do this for certain sites, like Odysee, a Youtube alternative:</p>
+        <pre><code>&#35base.yml&#10&#10- trigger: "!ody"&#10  replace: "https://odysee.com/$/search?q="</code></pre>
+        <p>Note my decision to use the exclamation point instead of the semicolon here, in order to keep with the consistencies of DuckDuckgo's bang syntax. When I type "!ody" into my url, this immediately expands to "https://odysee.com/$/search?q=" and I can now type in my search query. This is even more efficient on the utilized network than DuckDuckgo's bangs as it never even queries DuckDuckgo before re-routing to the requested page. I also use this same technique for other sites, like Quetre, a non-Javascript front-end for Quora:</p>
+        <pre><code>&#35base.yml&#10&#10- trigger: "!que"&#10  replace: "https://qr.vern.cc/search?q="</code></pre>
+        <h2>An Interesting Use Case</h2>
+        <p>Now, any other power user of Linux and Vim would note, "yeah, but I can easily accomplish alot of these same things in the shell or vim itself, I don't need a daemon listening in the background taking up (a little bit) of RAM for this." Which is a fair point, but I'd argue that what one can accomplish with espanso integrated into your workflow with the shell, vim, and the browser, is just a little more streamlined than without. Now, this last and final example on the uses of the espanso text expander will involve use of the shell, a shell script, and NeoVim. I am positive there are other ways of accomplishing what I have done here, but nevertheless I am happy with the result as it stands right now.</p>
+        <p>For a while, I had been writing and rewriting a simple shell script that would save my current working directory. Additionally the script would take an optional argument of a file which would be utilized by a separate script or alias that would return me immediately to the saved directory and open the specified file when invoked. So, for example, if I wanted to save my current directory with a file I was working on, I could call the script like so:</p>
+        <pre><code>&#35bash shell&#10[~]$ sdir myfile.txt</code></pre>
+        <p>The script very simply saves an environment variable called $sdir, and an optional environment variable for the file called $sdoc into a dotfile. A corresponding alias, "rdir" could then return to said directory like so:</p>
+        <pre><code>&#35bash shell&#10[~]$ rdir</code></pre>
+        <p>Originally, rdir was a shell script that looked for the existence of the $sdoc, and if it existed, would call nvim on it, and if it didn't, would simply navigate to the saved directory $sdir. This worked for some time, but I wanted to be able to save a different directory to this dotfile and seamlessly return to it, and the built-in command "cd", doesn't work in shell scripts. I thought "No problem, cd works in an alias, I'll just source the file in the alias and then use cd to move into that new directory." Only to find out that source didn't work inside an alias...</p>
+        <p>Like I said, there are probably other, less hacked together, ways to accomplish my goal here. Nevertheless, it dawned on me that I could remove my rdir script and forego using an alias by simply combining the sdir shell script with an espanso alias like so:</p>
+        <pre><code>&#35base.yml&#10&#10- trigger: ";rr"&#10  replace: "source ~/.config/.sdrc && cd $sdir && nvim $sdoc"&#10&#10- trigger: ";rd"&#10  replace: "source ~/.config/.sdrc && cd $sdir && ls"</code></pre>
+        <p>Although the above commands solved my issues with both cd and source in the shell, typing this entire command out each time I wanted to start working again would have been cumbersome. Using the espanso text-expander daemon takes care of that for me! This solution is definitely not as elegant as some might like, but it serves my simple purposes (save my current directory and a desired file so I can easily navigate back to it, and also easily save a different directory and file at any time).</p>
+        <h2>Conclusion</h2>
+        <p>Admittedly, there are probably many other use cases for espanso I have not explored in this article. If one looks over the documentation in more detail, one will find a myriad of other useful tips more in-depth than the ones I have presented here, so please take the time to check out their great <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://espanso.org/">documentation</a>. Now that I utilize espanso, I can't really imagine working without it. It's like the last puzzle piece to my keyboard-centric work flow was filled in when I discovered this amazing tool.</p>
+        <p>To cap things off, I'll share with you the simple sdir shell script below (as well as this <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/tomit4/notes/main/scripts/sdir">link on my GitHub</a>). Additionally, I'll provide you with some lines of Lua code that when put into your <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://github.com/tomit4/notes/tree/main/.config/nvim"> NeoVim configuration files</a>, will return you to wherever you last saved in your files (this works incredibly well with the aforementioned sdir script and espanso aliases, as I simply return to the exact directory, file, and place in that file I left off on simply by typing ";rr" into the command line). Enjoy, and please do check out espanso, it's a great project!</p>
+        <pre><code>&#35!/usr/bin/env bash &#10&#35 sdir.sh&#10&#35 used with espanso ;rr and ;rd command&#10&#35 A simple bookmarking script used in conjunction with rdir&#10&#35 to save a directory for easy navigation later&#10&#10&#35 save our current working directory&#10sdir=$(pwd)$#10sdoc="${1:-''}"&#10&#35 allow overwriting of sdrc&#10set +o noclobber&#10&#35 define and create .sdrc file&#10sdrc="$HOME/.config/sdir".sdrc&#10if [[ ! -f "$sdrc" ]]; then&#10    /usr/bin/touch "$sdrc"&#10fi&#10&#10if [[ $# -gt 0 ]]; then&#10    sdoc="$1"&#10else&#10    sdoc=""&#10fi&#10&#10echo 'export sdir='"$sdir" > "$sdrc"'&#10echo 'export sdoc='"$sdoc" >> "$sdrc"'</code></pre><br>
+        <pre><code>-- init.lua&#10-- jump to last place visited in file&#10vim.api.nvim_create_autocmd('BufReadPost', {&#10  callback = function()&#10    local mark = vim.api.nvim_buf_get_mark(0, '"')&#10    local lcount = vim.api.nvim_buf_line_count(0)&#10    if mark[1] > 0 and mark[1] &#38lt= lcount then&#10      pcall(vim.api.nvim_win_set_cursor, 0, mark)&#10    end&#10  end,&#10})</code></pre><br>
+      </article>
+    </div>
+    <footer role="menu">
+      <div class="foot-text">
+        <ul class="foot-text-menu" role="menu">
+          <li class="foot-text-items" role="menubar">
+            <div class="foot-text-item" id="text-sun" aria-label="light-mode-text" role="menuitem">light</div>
+          </li>
+          <li class="foot-text-items" role="menubar">
+            <div class="foot-text-item" id="text-git" aria-label="git-text" role="menuitem">git</div>
+          </li>
+          <li class="foot-text-items" role="menubar">
+            <div class="foot-text-item" id="text-linkedin" aria-label="linkedin-text" role="menuitem">linkedin</div>
+          </li>
+          <li class="foot-text-items" role="menubar">
+            <div class="foot-text-item" id="text-mastodon" aria-label="mastodon-text" role="menuitem">social</div>
+          </li>
+          <li class="foot-text-items" role="menubar">
+            <div class="foot-text-item" id="text-moon" aria-label="dark-mode-text" role="menuitem">dark</div>
+          </li>
+        </ul>
+      </div>
+      <div class="foot-division"></div>
+      <ul class="foot-menu" role="menubar">
+        <li class="foot-items">
+          <button class="footer-button" id="sun-button">
+            <div class="icons" id="sun" aria-label="light-mode" role="button">light</div>
+          </button>
+        </li>
+        <li class="foot-items"><a class="icons" id="git" aria-label="git" role="link" target="_blank" rel="noopener noreferrer" href="https://github.com/tomit4">git</a></li>
+        <li class="foot-items"><a class="icons" id="linkedin" aria-label="linkedin" target="_blank" rel="noopener noreferrer" role="link" href="https://linkedin.com/in/brian-hayes-33496067">linkedin</a></li>
+        <li class="foot-items"><a class="icons" id="mastodon" aria-label="social" target="_blank" rel="noopener noreferrer" role="link" href="https://mas.to/@brianhayesdev">social</a></li>
+        <li class="foot-items">
+          <button class="footer-button" id="moon-button">
+            <div class="icons" id="moon" aria-label="dark-mode" role="button">dark</div>
+          </button>
+        </li>
+      </ul>
+    </footer>
+    <script src="../index.js" default></script>
+  </body>
+</html>
