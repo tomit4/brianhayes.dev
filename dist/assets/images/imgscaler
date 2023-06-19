@@ -5,8 +5,8 @@ extension="${full_filename##*.}"
 filename="${full_filename%.*}"
 
 if [[ "${extension}" == "gif" ]]; then
-    # convert "${full_filename}" -coalesce "${filename}.${extension}"
-    convert "${full_filename}" -coalesce "${full_filename}"
+    convert "${full_filename}" -coalesce "${filename}.${extension}"
+    # convert "${full_filename}" -coalesce "${full_filename}"
 fi
 
 magick "${full_filename}" -resize 700 "${full_filename}"
