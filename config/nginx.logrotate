@@ -1,0 +1,15 @@
+# /etc/logrotate.d/nginx
+/var/log/nginx/*log {
+	daily
+	size 100K
+	rotate 5 
+	maxsize 100K
+	missingok
+	notifempty
+	create 640 http log
+	sharedscripts
+	compress
+	postrotate
+		test ! -r /run/nginx.pid || kill -USR1 `cat /run/nginx.pid`
+	endscript
+}
