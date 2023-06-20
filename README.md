@@ -32,7 +32,7 @@ While the implementation of this blog will be very bare bones, it is also meant 
 
 **Todo**
 
--   [ ] Learn how to dockerize a basic nginx server that serves an index.html with routing to an about.html
+-   [ ] Learn how to dockerize a basic nginx server that serves an index.html
 -   [ ] Load that dockerized container onto a Linode nanode and serve it up to the internet
 -   [ ] Use this new knowledge to serve a dockerized version of this basic scaffolding for a blog on your local machine instead of using live-server
 -   [x] Pull your old blog articles from your current more heavy front end oriented blog onto your new minimalist blog so you have some genuine text to play with.
@@ -41,4 +41,3 @@ While the implementation of this blog will be very bare bones, it is also meant 
 -   [ ] Consider how to possibly automate RSS generation using bash, node, or python and implement said strategy if one is found
 -   [x] Write a bash script that will take an large image file, copy it three times over, and convert each to width 700px, 500px, and 300px, and rename each as image_desktop.webp, image_tablet.webp, and image_mobile.webp
 -   [ ] Write custom 4** and 5** error pages and redirect nginx to those instead of defaults
--   [ ] Write a script that minifies the css, js, and compresses them to gz (once nginx can handle compressed files), and uses sed to change the /dist/\*.html files to read those minified files instead
