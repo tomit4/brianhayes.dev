@@ -12,7 +12,7 @@ minify_css() {
 
 # Function to minify JS files
 minify_js() {
-    uglifyjs "$1" -o "$1" -c -m
+    uglifyjs --no-annotations "$1" -o "$1" -c -m
 }
 
 # Backup dist directory
