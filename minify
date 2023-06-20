@@ -22,7 +22,7 @@ fi
 
 cp -r ./dist dist_bak
 
-# Store HTML file paths in an array
+# Store file paths in an array
 mapfile -t html_files < <(find ./dist -type f -name "*.html")
 mapfile -t css_files < <(find ./dist -type f -name "*.css")
 mapfile -t js_files < <(find ./dist -type f -name "*.js")
