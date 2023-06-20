@@ -394,6 +394,6 @@ footer {
 /* TODO: remove once more blog posts are created */
 .placeholder {
     background-color: var(--offwhite);
-    width: 9.25rem;
-    height: 9.25rem;
+    width: 10rem;
+    height: 10rem;
 }
