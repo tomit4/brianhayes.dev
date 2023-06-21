@@ -1,2 +1,3 @@
 dist_bak
-config/nginx.conf
+nginx.conf
+.env
