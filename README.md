@@ -41,3 +41,6 @@ While the implementation of this blog will be very bare bones, it is also meant 
 -   [ ] Consider how to possibly automate RSS generation using bash, node, or python and implement said strategy if one is found
 -   [x] Write a bash script that will take an large image file, copy it three times over, and convert each to width 700px, 500px, and 300px, and rename each as image_desktop.webp, image_tablet.webp, and image_mobile.webp
 -   [ ] Write custom 4** and 5** error pages and redirect nginx to those instead of defaults
+-   [ ] Install docker on your linode ubuntu cloud server and get it up and running (on restart) using systemd
+-   [ ] Create a Dockerfile locally that will create a nginx container, copy all of dist directory and serve it, as well as add the nginx.conf file
+-   [ ] Run this Dockerfile on your linode server, serving it to a new port not in use and set it up via NameCheap (see old tutorial series you followed for citystats to do this)
