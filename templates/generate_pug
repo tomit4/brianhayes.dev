@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+# Read the input text file
+input_file="${1}"
+text=$(cat "$input_file")
+
+# Extract filename and extension
+filename=$(basename "$input_file")
+filename="${filename%.*}"
+
+# Define the Pug template
+template_file="template.pug"
+template=$(cat "$template_file")
+
+# Function to replace placeholders with values
+replace_placeholders() {
+    local key="$1"
+    local value="$2"
+
+    if [[ "$key" == "intro_image" ]]; then
+        # Extract intro image name and extension
+        intro_image_name="${value%.*}"
+        intro_image_extension="${value##*.}"
+
+        # Replace intro image and extension placeholders in template
+        template=$(echo "$template" | sed "s/{{$key}}/$intro_image_name/g")
+        template=$(echo "$template" | sed "s/{{intro_image_extension}}/$intro_image_extension/g")
+    elif [[ "$key" == "article_body" ]]; then
+        # Replace article_body placeholder in template
+        value=$(echo "$text" | awk '/article_body:/ {p=1; next} p && NF {print "                " $0}')
+        template=$(echo "$template" | awk -v replacement="$value" '{gsub("{{article_body}}", replacement)}1')
+    else
+        # Replace other placeholders in template
+        template=$(echo "$template" | sed "s/{{$key}}/$value/g")
+    fi
+}
+
+# Process each line in the input text
+while IFS=':' read -r key value; do
+    key=$(echo "$key" | awk '{gsub(/^[[:space:]]+|[[:space:]]+$/, "")}1')
+    value=$(echo "$value" | awk '{gsub(/^[[:space:]]+|[[:space:]]+$/, "")}1')
+    replace_placeholders "$key" "$value"
+done <<<"$text"
+
+# Output the modified template
+echo "$template" >"${filename}".pug

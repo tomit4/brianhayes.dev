@@ -12,7 +12,9 @@ article_body:
 article_header: this will expand out to an h2
 This can have line breaks.
 The intention is that for every line break there should be a "p" and a space prepended to each line using sedInline links will have to use espanso like so <a aria-label="" target="_blank" rel="noopener noreferrer" role="link" href=""></a>.
-article_img_screenshot: will need to expand to:
+Perhaps more paragraph tags are needed to fill things out.
+article_img_screenshot: imgfilename.jpg
+article_img_description: this is an image of something
                 figure
                     img.img-image(src="../assets/images/screenshots/default.webp" alt="" title="" cite="" loading="lazy")
 article_img_gif: will need to expand to:
@@ -40,4 +42,5 @@ Will need to expand to:
                 pre
                     code // sample.js &#10function somefunc(somearg) {&#10    console.log("hello world!");&#10}
                 br
+conclusion: In conclusion,, this test article is a rounding success and all that.
 article_end
