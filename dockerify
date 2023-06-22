@@ -2,4 +2,4 @@
 
 source .env
 docker build -t my-static-blog . &&
-    docker run --name my-static-blog -d -p "${PORT}":"${DOCKERPORT}" my-static-blog
+    docker run --restart=always --name my-static-blog -d -p "${PORT}":"${DOCKERPORT}" my-static-blog
