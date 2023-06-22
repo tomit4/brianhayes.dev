@@ -1,0 +1,43 @@
+article_title: Test Article Title
+article_subtitle: Test Articel Subtitle
+publish_date: Published 2023-06-22
+intro_image: test.jpg
+intro_image_description: This image has a description that is just a test 
+intro_quote: Verily, for while I walk through the valley of happiness, I shall fear no fear.
+intro_quote_author: Johnathus Doeington
+
+introduction: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Whatever you do, there can be no line breaks on any of these. One long line.
+
+article_body:
+article_header: this will expand out to an h2
+This can have line breaks.
+The intention is that for every line break there should be a "p" and a space prepended to each line using sedInline links will have to use espanso like so <a aria-label="" target="_blank" rel="noopener noreferrer" role="link" href=""></a>.
+article_img_screenshot: will need to expand to:
+                figure
+                    img.img-image(src="../assets/images/screenshots/default.webp" alt="" title="" cite="" loading="lazy")
+article_img_gif: will need to expand to:
+                figure
+                    img.gif-image(src="../assets/images/gifs/default.gif" alt="" title="" cite="" loading="lazy")
+                figcaption Some Gif Animation Image
+Lastly a code snippet will be a bit tricky to use sed and awk expand out markdown style like so:
+```
+#!/usr/bin/env bash
+
+echo "hello world!"
+```
+Will need to expand to:
+                pre
+                    code &#35!/usr/bin/env bash &#10&#10echo "hello world!"
+                br
+And also as another example:
+```
+// sample.js
+function somefunc(somearg) {
+    console.log("hello world!");
+}
+```
+Will need to expand to:
+                pre
+                    code // sample.js &#10function somefunc(somearg) {&#10    console.log("hello world!");&#10}
+                br
+article_end
