@@ -41,6 +41,14 @@ While the implementation of this blog will be very bare bones, it is also meant 
 -   [ ] Consider how to possibly automate RSS generation using bash, node, or python and implement said strategy if one is found
 -   [x] Write a bash script that will take an large image file, copy it three times over, and convert each to width 700px, 500px, and 300px, and rename each as image_desktop.webp, image_tablet.webp, and image_mobile.webp
 -   [ ] Write custom 4** and 5** error pages and redirect nginx to those instead of defaults
--   [ ] Install docker on your linode ubuntu cloud server and get it up and running (on restart) using systemd
--   [ ] Create a Dockerfile locally that will create a nginx container, copy all of dist directory and serve it, as well as add the nginx.conf file
+-   [x] Install docker on your linode ubuntu cloud server and get it up and running (on restart) using systemd
+-   [x] Create a Dockerfile locally that will create a nginx container, copy all of dist directory and serve it, as well as add the nginx.conf file
 -   [ ] Run this Dockerfile on your linode server, serving it to a new port not in use and set it up via NameCheap (see old tutorial series you followed for citystats to do this)
+
+**OF_NOTE(more todo...)**
+
+Running this online and viewing it on mobile has shown some issues:
+
+-   [ ] Mobile intro screen flickers animated svgs, find similar ones on iconify that are static rather than animated to replace them
+-   [ ] Clicking on buttons causes bug where hover tooltips remain after click, try and remedy somehow
+-   [ ] Gifs take exorbitantly long to load, try and remove lazy loading at first, if this causes page speed load issues, look into gif optimization techniques, starting with gifsicle.
