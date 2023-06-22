@@ -33,10 +33,7 @@ While the implementation of this blog will be very bare bones, it is also meant 
 -   [x] Use this new knowledge to serve a dockerized version of this basic scaffolding for a blog on your local machine instead of using live-server
 -   [x] Pull your old blog articles from your current more heavy front end oriented blog onto your new minimalist blog so you have some genuine text to play with.
 -   [x] Implement dark mode toggle in JS using dark reader as a template like you did using darkreader API on your original blog. This should be far easier than your original implementation as you have pretty much just black and white to toggle here.
--   [ ] Generate an RSS feed for this (I know, ugh...)
--   [ ] Consider how to possibly automate RSS generation using bash, node, or python and implement said strategy if one is found
 -   [x] Write a bash script that will take an large image file, copy it three times over, and convert each to width 700px, 500px, and 300px, and rename each as image_desktop.webp, image_tablet.webp, and image_mobile.webp
--   [ ] Write custom 4** and 5** error pages and redirect nginx to those instead of defaults
 -   [x] Install docker on your linode ubuntu cloud server and get it up and running (on restart) using systemd
 -   [x] Create a Dockerfile locally that will create a nginx container, copy all of dist directory and serve it, as well as add the nginx.conf file
 -   [x] Run this Dockerfile on your linode server, serving it to a new port not in use and set it up via NameCheap (see old tutorial series you followed for citystats to do this)
@@ -50,4 +47,11 @@ Running this online and viewing it on mobile has shown some issues:
 -   [ ] FEATURE: Add navigation buttons at bottom of each blog post/defaults
 -   [ ] Add an up arrow to bring to beginning of article at bottom of every article/default.
 -   [ ] On Mobile only, intro screen gif is too low due to adjustments of menu bars on phones, adjust css accordingly (space svg and intro message a bit higher)
-    -   [ ] On uglify script, change so it uses prettier instead to unminify files
+-   [ ] On uglify script, change so it uses prettier instead to unminify files
+
+**Additionally:**
+
+-   [ ] Generate an RSS feed for this (I know, ugh...)
+-   [ ] Consider how to possibly automate RSS generation using bash, node, or python and implement said strategy if one is found
+-   [ ] Write custom 4** and 5** error pages and redirect nginx to those instead of defaults
+-   [ ] Write a bash script that will convert markdown into pug (specifically noting how to accomplish code blogs)
