@@ -50,3 +50,4 @@ Running this online and viewing it on mobile has shown some issues:
 -   [ ] FEATURE: Add navigation buttons at bottom of each blog post/defaults
 -   [ ] Add an up arrow to bring to beginning of article at bottom of every article/default.
 -   [ ] On Mobile only, intro screen gif is too low due to adjustments of menu bars on phones, adjust css accordingly (space svg and intro message a bit higher)
+    -   [ ] On uglify script, change so it uses prettier instead to unminify files
