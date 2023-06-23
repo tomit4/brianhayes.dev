@@ -28,6 +28,8 @@ replace_placeholders() {
     elif [[ "$key" == "article_body" ]]; then
         # Replace article_body placeholder in template
         value=$(echo "$text" | awk '/article_body:/ {p=1; next} p && NF {print "                " $0}')
+        value=$(echo "$value" | sed 's/article_img_screenshot/figure\\n                    img.img-image(src="..\/assets\/images\/screenshots\/default.webp" alt="" title="" cite="" loading="lazy")/g')
+        value=$(echo "$value" | sed 's/article_img_description/figcaption/g')
         template=$(echo "$template" | awk -v replacement="$value" '{gsub("{{article_body}}", replacement)}1')
     else
         # Replace other placeholders in template
@@ -41,6 +43,10 @@ while IFS=':' read -r key value; do
     value=$(echo "$value" | awk '{gsub(/^[[:space:]]+|[[:space:]]+$/, "")}1')
     replace_placeholders "$key" "$value"
 done <<<"$text"
+
+# Replace the placeholder with a newline character
+template=$(echo "$template" | sed 's/PLACEHOLDER/\
+/g')
 
 # Output the modified template
 echo "$template" >"${filename}".pug
