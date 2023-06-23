@@ -124,6 +124,8 @@ html(lang = "en")
                 pre
                     code -- init.lua&#10-- jump to last place visited in file&#10vim.api.nvim_create_autocmd('BufReadPost', {&#10  callback = function()&#10    local mark = vim.api.nvim_buf_get_mark(0, '"')&#10    local lcount = vim.api.nvim_buf_line_count(0)&#10    if mark[1] > 0 and mark[1] &#38lt= lcount then&#10      pcall(vim.api.nvim_win_set_cursor, 0, mark)&#10    end&#10  end,&#10})
                 br
+            div.foot-arrows
+                button.icons#up-arrow(title="back to top" aria-label="back-to-top" alt="back to top" role="navigation")
         footer(role="menu")
             div.foot-text
                 ul.foot-text-menu(role="menu")
