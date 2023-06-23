@@ -42,16 +42,14 @@ While the implementation of this blog will be very bare bones, it is also meant 
 
 Running this online and viewing it on mobile has shown some issues:
 
--   [ ] Clicking on buttons causes bug where hover tooltips remain after click, try and remedy somehow
--   [ ] Gifs take exorbitantly long to load, try and remove lazy loading at first, if this causes page speed load issues, look into gif optimization techniques, starting with gifsicle.
--   [ ] FEATURE: Add navigation buttons at bottom of each blog post/defaults
+-   [x] Clicking on buttons causes bug where hover tooltips remain after click, try and remedy somehow
+-   [x] Gifs take exorbitantly long to load, try and remove lazy loading at first, if this causes page speed load issues, look into gif optimization techniques, starting with gifsicle.
 -   [ ] Add an up arrow to bring to beginning of article at bottom of every article/default.
--   [ ] On Mobile only, intro screen gif is too low due to adjustments of menu bars on phones, adjust css accordingly (space svg and intro message a bit higher)
--   [ ] On uglify script, change so it uses prettier instead to unminify files
+-   [x] On Mobile only, intro screen gif is too low due to adjustments of menu bars on phones, adjust css accordingly (space svg and intro message a bit higher)
 
 **Additionally:**
 
 -   [ ] Generate an RSS feed for this (I know, ugh...)
 -   [ ] Consider how to possibly automate RSS generation using bash, node, or python and implement said strategy if one is found
 -   [ ] Write custom 4** and 5** error pages and redirect nginx to those instead of defaults
--   [ ] Write a bash script that will convert markdown into pug (specifically noting how to accomplish code blogs)
+-   [x] Write a bash script that will convert markdown into pug (specifically noting how to accomplish code blogs)
