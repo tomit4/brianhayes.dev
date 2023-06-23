@@ -44,7 +44,7 @@ Running this online and viewing it on mobile has shown some issues:
 
 -   [x] Clicking on buttons causes bug where hover tooltips remain after click, try and remedy somehow
 -   [x] Gifs take exorbitantly long to load, try and remove lazy loading at first, if this causes page speed load issues, look into gif optimization techniques, starting with gifsicle.
--   [ ] Add an up arrow to bring to beginning of article at bottom of every article/default.
+-   [x] Add an up arrow to bring to beginning of article at bottom of every article/default.
 -   [x] On Mobile only, intro screen gif is too low due to adjustments of menu bars on phones, adjust css accordingly (space svg and intro message a bit higher)
 
 **Additionally:**
