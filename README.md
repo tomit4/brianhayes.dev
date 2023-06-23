@@ -51,5 +51,4 @@ Running this online and viewing it on mobile has shown some issues:
 
 -   [ ] Generate an RSS feed for this (I know, ugh...)
 -   [ ] Consider how to possibly automate RSS generation using bash, node, or python and implement said strategy if one is found
--   [ ] Write custom 4** and 5** error pages and redirect nginx to those instead of defaults
 -   [x] Write a bash script that will convert markdown into pug (specifically noting how to accomplish code blogs)
