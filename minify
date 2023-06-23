@@ -15,13 +15,6 @@ minify_js() {
     uglifyjs --no-annotations "$1" -o "$1" -c -m
 }
 
-# Backup dist directory
-if [[ -d "dist_bak" ]]; then
-    sudo rm -r dist_bak
-fi
-
-cp -r ./dist dist_bak
-
 # Store file paths in an array
 mapfile -t html_files < <(find ./dist -type f -name "*.html")
 mapfile -t css_files < <(find ./dist -type f -name "*.css")
