@@ -218,6 +218,11 @@ I also wanted to learn the basics of NGINX, Docker, and already had purchased a 
 -   [ ] CSS (The Web's Makeup)
 -   [ ] Javascript (The Web's Muscles)
 -   [ ] Javascript Frameworks(The Modern Web Dev)
+-   [ ] NodeJS, Journey Into The Backend
+-   [ ] Express, HapiJS, and Fastify Frameworks
+-   [ ] TypeScript VS JSDox VS Joi Type (Type Validation)
+-   [ ] NoMongo (The Argument For SQLite, MariaDB, and PostgreSQL)
+-   [ ] Why Use KnexJS (Not Quite an ORM)
 -   [ ] When to Web Scrape
 -   [ ] Bash Scripting for Web Dev
 -   [ ] Respecting User Privacy
