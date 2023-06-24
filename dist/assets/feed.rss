@@ -2170,7 +2170,7 @@ _single underscore also creates italicized text_&lt;/code&gt;&lt;/pre&gt;
                     Markdown is especially easy on the eyes when it comes to creating links. In
                     HTML, creating a basic link can be created like so:
                 &lt;/p&gt;
-                    &lt;pre&gt;&lt;code class="language-cshtml"&gt;&lt;&lt;a href="https://www.example.com"&gt;my example link&lt;&lt;/a&gt&lt;/code&gt;&lt;/pre&gt;
+                    &lt;pre&gt;&lt;code class="language-cshtml"&gt;&lt;&lt;a href="https://www.example.com"&gt;my example link&lt;&lt;\/a&gt&lt;/code&gt;&lt;/pre&gt;
                 &lt;p class="article-content"&gt;
                     The same can be accomplished in Markdown like so:
                     &lt;pre&gt;&lt;code class="language-markdown"&gt;[my example link](https://www.example.com)&lt;/code&gt;&lt;/pre&gt;
