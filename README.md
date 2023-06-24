@@ -1,10 +1,6 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/tomit4/leafbytes_vue/main/readme_assets/readme_logo.png" width="100" />
+  <img alt="Logo" src="https://raw.githubusercontent.com/tomit4/brianhayes.dev/main/dist/assets/images/readme.png"/>
 </div>
-
-<h1 align="center">
-brianhayes.dev
-</h1>
 
 <p align="center">
 This repository contains the source code for the V3 iteration of my
