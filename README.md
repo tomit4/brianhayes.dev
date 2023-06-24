@@ -210,3 +210,24 @@ I also wanted to learn the basics of NGINX, Docker, and already had purchased a 
 -   [xmlstarlet](https://github.com/fishjam/xmlstarlet)
 -   [imgmagick](https://imagemagick.org/)
 -   [gifsicle](https://github.com/kohler/gifsicle)
+
+**Blog Post Ideas (not a preview)**
+
+-   [ ] OSS Licensing For Beginners
+-   [ ] HTML (The Web's Skeleton)
+-   [ ] CSS (The Web's Makeup)
+-   [ ] Javascript (The Web's Muscles)
+-   [ ] Javascript Frameworks(The Modern Web Dev)
+-   [ ] When to Web Scrape
+-   [ ] Bash Scripting for Web Dev
+-   [ ] Respecting User Privacy
+-   [ ] Reflecting On The User Experience
+-   [ ] When to Build From The Ground Up
+-   [ ] Neovim Extensions I Use
+-   [ ] Browsers and Browser Extensions
+-   [ ] DuckDuckGo Lite(The Search Engine I Use)
+-   [ ] VPS, VPNs, and VMs (Virtual Everything)
+-   [ ] Digital Minimalism When You Work In Tech
+-   [ ] Don't Subscribe And Don't Follow (RSS feeds)
+-   [ ] Rethinking Social Media and The Fediverse
+-   [ ] A Not Too Brief History of Linux, GNU, and BSD (likely, parts 1, 2, and 3)
