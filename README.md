@@ -16,8 +16,6 @@ This website has had two previous iterations, the source code for the first iter
 
 The previous iterations of this blog used more out of the box tools like Vue3/Vite and Netlify for the second version, and Github Pages for the first version. With this version I decided to use a more hands on approach and hand rolled a simple website while teaching myself a few more tools. While technically this blog is written in pure HTML, CSS, and Javascript, the tooling behind how to quickly write a blog post and get it into production while still being a hand rolled solution was an interesting challenge.
 
-To give you a general idea of what I mean, consider that this site utilizes two cli tools called from a bash script during development, that of the pug-cli and also the live-server cli
-
 To give you a general idea of what I mean, consider that this site utilizes two cli tools called from a bash script during development, that of the pug-cli and also the live-server cli. To minify files, the cli tools html-minifier, uglifycss, and uglifyjs are all utilized in a bash script. Optimizing images for web page load speed times utilize the imgmagick and gifsicle clis. NGINX also serves the files within a docker container, optimizing the images and font families using the native gzip module. This is then routed through a docker container and forwarded to another NGINX server running on a Linode/Akamai Cloud Instance.
 
 Even the rss feed is generated using the rsspls and xmlstarlet cli tools within a bash script.
