@@ -50,7 +50,7 @@ html(lang = "en")
                 picture(role="img")
                     source(media="(min-width: 62.5em)" srcset="../assets/images/intro_images/{{intro_image}}_desktop.{{intro_image_extension}}")
                     source(media="(min-width: 37.5em)" srcset="../assets/images/intro_images/{{intro_image}}_tablet.{{intro_image_extension}}")
-                    img.intro-image(src="../assets/images/intro_images/{{intro_image}}_mobile.{{intro_image_extension}}" alt="{{intro_image_description}}" title="{{intro_image_description}}" cite="{{intro_image_source}}" loading="lazy")
+                    img.intro-image(src="../assets/images/intro_images/{{intro_image}}_mobile.{{intro_image_extension}}" alt="{{intro_image_description}}" title="{{intro_image_description}}" cite="{{intro_image_source}}")
                 figcaption {{intro_image_description}}
                 blockquote(cite="{{intro_quote_citation}}") "{{intro_quote}}"
                     div.quote_author -{{intro_quote_author}}
