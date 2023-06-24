@@ -14,7 +14,7 @@
       <description>
                 &lt;h1&gt;one with the keyboard&lt;/h1&gt;
                 &lt;h2&gt;a necessary prerequisite&lt;/h2&gt;
-                <image><url>https://brianhayes.dev/assets/images/intro_images/keyboard_desktop.webp</url><title>MacBook Air Keyboard With Backlight</title></image>
+          <image><url>https://brianhayes.dev/assets/images/intro_images/keyboard_desktop.webp</url><title>MacBook Air Keyboard With Backlight</title></image>
                 &lt;blockquote class="article-quotes" cite="https://www.brainyquote.com"&gt;
                     "What I was proud of was that I used very few parts to build a computer that could actually
                     speak words on a screen and type words on a keyboard and run a programming language that could
@@ -139,7 +139,7 @@
       <description>
                 &lt;h1&gt;command line&lt;/h1&gt;
                 &lt;h2&gt;getting comfy in the shell&lt;/h2&gt;
-                <image><url>https://brianhayes.dev/assets/images/intro_images/twin_turtles_desktop.jpg</url><title>Two Pond Slider Turtles</title></image>
+            <image><url>https://brianhayes.dev/assets/images/intro_images/twin_turtles_desktop.jpg</url><title>Two Pond Slider Turtles</title></image>
                 &lt;blockquote class="article-quotes" cite="https://www.cs.princeton.edu/~bwk/memoir.html"&gt;
                     "By this point, the shell had become a real programming language, suitable for writing
                     pretty much anything that could reasonably be formulated as a sequence of commands.
@@ -237,7 +237,7 @@
                     so let's explore our first command, ls:
                 &lt;/p&gt;
                 &lt;pre&gt;&lt;code class="language-bash"&gt;[~]$ ls&lt;/code&gt;&lt;/pre&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ls_command.webp</url><title>ls command results</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ls_command.webp</url><title>ls command results</title></image>
                 &lt;p class="article-content"&gt;
                     Colloquially, each command will, in theory, be an abbreviation or shortened anagram for a word that will
                     remind you of the action often associated with the command. In this case ls stands simply for 'list' as in
@@ -250,7 +250,7 @@
                     If we then, for our second command, type 'ls' again, but this time follow it with a '-a',
                     we are presented with slightly different results:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ls_with_aflag.webp</url><title>ls command with -a results</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ls_with_aflag.webp</url><title>ls command with -a results</title></image>
 
                 &lt;p class="article-content"&gt;
                     Here we see that we now have a lot more files and directories, many preceded with a '.',
@@ -312,7 +312,7 @@
                 &lt;pre&gt;&lt;code class="language-bash"&gt;[~]$ cat from_the_command_line.txt&lt;/code&gt;&lt;/pre&gt;
                 &lt;p class="article-content"&gt;
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/redirection_01.webp</url><title>cat command results</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/redirection_01.webp</url><title>cat command results</title></image>
                 &lt;p class="article-content"&gt;
                     We'll see that indeed, the text 'this text is inputted from the command line' is
                     there. What is happening here?
@@ -339,7 +339,7 @@
                 &lt;p class="article-content"&gt;
                     Displays:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/echo_command.webp</url><title>echo command results</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/echo_command.webp</url><title>echo command results</title></image>
                 &lt;p class="article-content"&gt;
                     But what about the '&gt;' character in our initial example? Well this is what is
                     known as a redirection operator. This '&gt;' will 'redirect' whatever is the output
@@ -352,7 +352,7 @@
                 &lt;p class="article-content"&gt;
                 &lt;pre&gt;&lt;code class="language-bash"&gt;[~]$ echo 'appended text' &gt;&gt; from_the_command_line.txt&lt;/code&gt;&lt;/pre&gt;
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/echo_append.webp</url><title>Using The "&gt;&gt;" Operator Appends Text When Used With "echo"</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/echo_append.webp</url><title>Using The "&gt;&gt;" Operator Appends Text When Used With "echo"</title></image>
                 &lt;p class="article-content"&gt;
                     If you wish to research one of the most powerful operators in bash, research
                     the pipe ('|') operator!
@@ -368,7 +368,7 @@
                     invoke pretty much any program in my operating system with simple commands. If I wished
                     to open my browser (librewolf), I simply had to type into the terminal its name:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/librewolf.webp</url><title>librewolf browser being called from the command line</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/librewolf.webp</url><title>librewolf browser being called from the command line</title></image>
                 &lt;p class="article-content"&gt;
                     While this may not seem like a big deal to some, it was upon doing this that I realized
                     why the terminal was powerful, it allowed any program to be invoked as long as you knew
@@ -477,7 +477,7 @@
       <description>
                 &lt;h1&gt;why use linux&lt;/h1&gt;
                 &lt;h2&gt;learning to love the penguin&lt;/h2&gt;
-                <image><url>https://brianhayes.dev/assets/images/intro_images/gentoo_penguin_desktop.jpg</url><title>A Gentoo Penguin</title></image>
+            <image><url>https://brianhayes.dev/assets/images/intro_images/gentoo_penguin_desktop.jpg</url><title>A Gentoo Penguin</title></image>
                 &lt;blockquote class="article-quotes" cite="book: How Linux Works, by Brian Ward"&gt;
                     "You should be able to learn what your computer does. You should be able to make your software do what you want it to do (within the reasonable limits of its capabilities, of course). The key to attaining this power lies in understanding the fundamentals of what the software does and how it works.... You should never have to fight with a computer."
                     &lt;br&gt; -Brian Ward, &lt;a class="blockquote-links" target="_blank" rel="noopener noreferrer" href="https://nostarch.com/howlinuxworks3"&gt;How Linux Works;&lt;/a&gt;
@@ -626,14 +626,14 @@
                 &lt;p class="article-content"&gt;
                     Etcher is very easy to use, simply insert your usb stick into one of your computer's usb ports, open up the Etcher application, and follow its three step process. First click on "Select image", navigate to and select the ISO file within the presented File Manager. Then do the same for "Select Drive" (the usb device). Lastly simply hit "Flash!" and wait for the image to burn (this could take a while depending on your hardware).
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/gifs/etcher.gif</url><title>Basic Usage of Balena Etcher</title></image>
+            <image><url>https://brianhayes.dev/assets/images/gifs/etcher.gif</url><title>Basic Usage of Balena Etcher</title></image>
                 &lt;p class="article-content"&gt;
                     Once done your installation media should have the ISO image burned onto it. Inspecting the contents of the usb-drive should reflect this change. &lt;em&gt;Keep the usb stick inserted into your computer&lt;/em&gt; and restart.
                 &lt;/p&gt;
                 &lt;p class="article-content"&gt;
                     As your computer restarts, you will usually see an introduction screen from your Motherboard manufacturer, when you see this introduction screen show up, quickly and repeatedly hit either the F2 or F11 key to enter the BIOS settings (if this doesn't work research your motherboard manufacturer, as it is usually one of these two keys). If installing on a Mac, keep your finger pressed on the Alt or Option key after hearing the boot sound.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/grub.webp</url><title>An example picture of an ASUS BIOS Menu</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/grub.webp</url><title>An example picture of an ASUS BIOS Menu</title></image>
                 &lt;p class="article-content"&gt;
                     Once in the BIOS menu, you'll need to change the Boot Order so that your computer boots from the USB. To do this, locate and select the "Boot" Submenu.
                 &lt;/p&gt;
@@ -653,25 +653,25 @@
                 &lt;p class="article-content"&gt;
                     Once you have disabled secure boot and re-ordered the bootable devices in your BIOS, go ahead and Save &amp; Exit. The computer will once again reboot, and with any luck you will be presented with the Linux Bootloader:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/grub.webp</url><title>A Picture of the GRUB Bootloader menu</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/grub.webp</url><title>A Picture of the GRUB Bootloader menu</title></image>
                 &lt;p class="article-content"&gt;
                         Shortly after this you will be presented with Linux Mint's "live session" or "live environment." This is indeed the desktop environment, but you have yet to overwrite your previous Operating System, as the installation process is not yet complete. &lt;em&gt;Do NOT remove the USB stick&lt;/em&gt;, as the live session is running from the USB directly. If you'd prefer to explore the Linux environment prior to installing it, please do so at this point if you are unsure about removing your previous Operating System and installing Linux. Most Linux Distributions come with a suite of software for you to play around and experiment with.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/live-environment-915bc82d.webp</url><title>Linux Mint's Live Desktop Environment (Cinnamon Edition)</title></image>
+            <image><url>https://brianhayes.dev/assets/live-environment-915bc82d.webp</url><title>Linux Mint's Live Desktop Environment (Cinnamon Edition)</title></image>
                 &lt;p class="article-content"&gt;
                     If all is to your liking, and you're ready to install Linux and remove your previous Operating System, then continue with the next step:
                 &lt;/p&gt;
                 &lt;p class="article-content"&gt;
                     Select The Install Linux Mint option with the round CD icon on the Desktop. This will open up a menu that will walk you through the process, which I will not go into detail here, but generally involves setting up your internet connection, keyboard settings, timezone/locale, username, password and root password. Once you have filled out all form fields and hit "Install," the installation process will begin (this process might take a while).
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/mint_install.webp</url><title>A Picture of Linux Mint Install Menu</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/mint_install.webp</url><title>A Picture of Linux Mint Install Menu</title></image>
                 &lt;p class="article-content"&gt;
                     Once finished, Restart your computer and remove the USB installation media.
                 &lt;/p&gt;
                 &lt;p class="article-content"&gt;
                     If all went well, you will be presented with a login screen with your username already filled out. Enter your recently created password to log in.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/mint_login.webp</url><title>A Picture of The Linux Mint Login Screen</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/mint_login.webp</url><title>A Picture of The Linux Mint Login Screen</title></image>
                 &lt;p class="article-content"&gt;
                     Once logged in, you should see the Linux Mint Cinnamon Desktop Environment, which is now running natively on your hardware. Congratulations! You have successfully installed Linux!
                 &lt;/p&gt;
@@ -699,7 +699,7 @@
       <description>
                 &lt;h1&gt;musings on vim&lt;/h1&gt;
                 &lt;h2&gt;one editor to rule them all&lt;/h2&gt;
-                <image><url>https://brianhayes.dev/assets/images/intro_images/composition_notebook_desktop.jpg</url><title>A Composition Notebook</title></image>
+            <image><url>https://brianhayes.dev/assets/images/intro_images/composition_notebook_desktop.jpg</url><title>A Composition Notebook</title></image>
                 &lt;blockquote class="article-quotes" cite="book: How Linux Works, by Brian Ward"&gt;
                     "How do I quit this thing?"
                     &lt;br&gt; -Every Vim User At Some Point
@@ -764,45 +764,45 @@ Just like with choosing Linux, the choice of a text editor, like Vim, can become
                     sparse. At least the introduction screen provides us with
                     some information abut how to get started (:help vim &lt;Enter&gt;). I would encourage you to take a look at this help page, as Vim and Neovim documentation is quite good. I will now cover some of the basic keybindings and Vim "movements" in concluding this article, in order that you might get a sense of Vim's appeal.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ss_nvim_01.webp</url><title>The Introduction Screen to Neovim</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ss_nvim_01.webp</url><title>The Introduction Screen to Neovim</title></image>
                 &lt;p class="article-content"&gt;
                     When you first attempt to type anything into Vim, you may very well be immediately frustrated at the fact that no text appears on the screen! What the hell?! Isn't this supposed to be a text editor? Well, hold on, remember what I said earlier about it being a MODAL editor? Well if your cursor is in the default white block state, then Vim is currently in NORMAL mode, which one can think of as being a basic navigation and editing mode. In order to type something out, press 'i' in order to enter INSERT mode.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ss_nvim_03.webp</url><title>Neovim in Insert Mode with Sample Text</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ss_nvim_03.webp</url><title>Neovim in Insert Mode with Sample Text</title></image>
                 &lt;br&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ss_nvim_02.webp</url><title>Close up of the INSERT mode prompt</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ss_nvim_02.webp</url><title>Close up of the INSERT mode prompt</title></image>
                 &lt;p class="article-content"&gt;
                     Changing over to insert mode will change the shape of your cursor to the thin bar variety. You can now insert text like you would in a normal text editor. All the basic keybindings still work, be it ctrl+right arrow for navigating, as well as your standard editing keys like backspace and delete. I wouldn't recommend using these, however, as you would be overlooking NORMAL mode's editing capabilities. Generate some dummy text using &lt;a class="article-outside-links" target="_blank" rel="noopener noreferrer" href="https://loremipsum.io/"&gt;Lorem Ipsum&lt;/a&gt;, enough so that it fills your screen (about 10 paragraphs should do), and then return to NORMAL mode by hitting the &lt;ESC&gt; key. Next I'm going to cover the basic navigation.
                 &lt;/p&gt;
                 &lt;p class="article-content"&gt;
                     In Vim, deviation from the home row of your keyboard is highly discouraged by design. On a standard QWERTY keyboard, when positioned correctly, all the "arrow" navigation keys can be found beneath your right hand, instead, while in NORMAL mode, left is 'h', down is 'j', up is 'k', and right is 'l'.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/gifs/ss_nvim_04.gif</url><title>Demonstration of basic navigation in Vim</title></image>
+            <image><url>https://brianhayes.dev/assets/images/gifs/ss_nvim_04.gif</url><title>Demonstration of basic navigation in Vim</title></image>
                 &lt;p class="article-content"&gt;
                     While this initial lesson is rather underwhelming, this basic feature of Vim reinforces a subtle, but powerful productivity standard, which is that your workflow should be keyboard-centric. I believe that coders/programmers should at least have a few (if not many) keybindings that they have memorized and engrained into muscle memory regardless of which text editor they use. It's simply more efficient than navigating solely with arrow keys, and there should be as little physical strain on the hands and wrists as possible while typing. The quicker you can accomplish your editing, the more time you have to devoting to programming and thinking hard about your next line of code.
                 &lt;/p&gt;
                 &lt;p class="article-content"&gt;
                     Very basic navigation out of the way, let's cover word traversal. While still in NORMAL mode, at any point on your dummy text, hit the key 'w', and then the key 'b'. 'w' traverses the document word by word, 'b' does the same but backwards.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/gifs/ss_nvim_05.gif</url><title>Demonstration of word traversal in Vim</title></image>
+            <image><url>https://brianhayes.dev/assets/images/gifs/ss_nvim_05.gif</url><title>Demonstration of word traversal in Vim</title></image>
                 &lt;p class="article-content"&gt;
                     Okay, now you're moving a bit faster, instead of letter by letter, you're traversing the document word by word. Next, we'll cover traversing an entire line. Navigate to the middle of one line and while in NORMAL mode, type the dollar sign symbol, '$', and then after taking a moment to notice the result in your editor, type the number zero, '0', and again, notice the results:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/gifs/ss_nvim_06.gif</url><title>Demonstration of line traversal in Vim</title></image>
+            <image><url>https://brianhayes.dev/assets/images/gifs/ss_nvim_06.gif</url><title>Demonstration of line traversal in Vim</title></image>
                 &lt;p class="article-content"&gt;
                     These two commands lead you to the end of your current line with dollar sign, '$', or to the beginning of your current line with the number zero, '0'.
                 &lt;/p&gt;
                 &lt;p class="article-content"&gt;
                     Now you have a few options for quickly navigating your document horizontally, what about vertically? In NORMAL mode, while positioned more towards the top of your document than towards the bottom, enter 'ctrl+d', and notice the results.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/gifs/ss_nvim_07.gif</url><title>Demonstration of vertical traversal in Vim</title></image>
+            <image><url>https://brianhayes.dev/assets/images/gifs/ss_nvim_07.gif</url><title>Demonstration of vertical traversal in Vim</title></image>
                 &lt;p class="article-content"&gt;
                     Essentially 'ctrl+u' and 'ctrl+d' are Vim's version of pageup, and pagedown.
                 &lt;/p&gt;
                 &lt;p class="article-content"&gt;
                     The next keybindings important to vertical traversal are that of 'gg' and 'shift+g'(capital G). While in NORMAL mode, enter both of these and notice their results.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/gifs/ss_nvim_08.gif</url><title>Demonstration of entire document traversal in Vim</title></image>
+            <image><url>https://brianhayes.dev/assets/images/gifs/ss_nvim_08.gif</url><title>Demonstration of entire document traversal in Vim</title></image>
                 &lt;p class="article-content"&gt;
                     These keybindings navigate the entirety of your document. 'gg' will bring your cursor to the first line of your document, while capital G, or shift+g will bring you to the last line of your document.
                 &lt;/p&gt;
@@ -821,7 +821,7 @@ Just like with choosing Linux, the choice of a text editor, like Vim, can become
                 &lt;p class="article-content"&gt;
                     Also notice the chaining of commands here, 'd' is meant to be a mnemonic, reminding you of 'delete', but on its own doesn't do anything, it takes another command as an argument, so 'dw', means 'delete word.' We traverse using 'w' and when we come across a word we want to delete, we use the command 'd' and the argument, 'w', resulting in 'dw'. What if we wanted to delete the previous word? Well we traverse using back to the previous word using the 'b' keybinding, so it makes sense that 'db', would be 'delete back' or 'delete previous word'.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/gifs/ss_nvim_09.gif</url><title>Demonstration of deleting a word using 'dw' and 'db' in Vim</title></image>
+            <image><url>https://brianhayes.dev/assets/images/gifs/ss_nvim_09.gif</url><title>Demonstration of deleting a word using 'dw' and 'db' in Vim</title></image>
                 &lt;p class="article-content"&gt;
                     And indeed it does. And yes, this functionality can be accomplished using the standard text editor's keybinding 'ctrl+backspace'.
                 &lt;/p&gt;
@@ -843,7 +843,7 @@ Just like with choosing Linux, the choice of a text editor, like Vim, can become
                 &lt;p class="article-content"&gt;
                     'dG' will delete everything from my current cursor position to the end of the document, while 'dgg' will delete everything from my current cursor position to the beginning of the document.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/gifs/ss_nvim_10.gif</url><title>Various chaining of the "d" command in Vim</title></image>
+            <image><url>https://brianhayes.dev/assets/images/gifs/ss_nvim_10.gif</url><title>Various chaining of the "d" command in Vim</title></image>
                 &lt;p class="article-content"&gt;
                     And so on...
                 &lt;/p&gt;
@@ -874,7 +874,7 @@ Just like with choosing Linux, the choice of a text editor, like Vim, can become
       <description>
                 &lt;h1&gt;the keys that bind&lt;/h1&gt;
                 &lt;h2&gt;on tiling window managers&lt;/h2&gt;
-                <image><url>https://brianhayes.dev/assets/images/intro_images/window_desktop.jpg</url><title>Curtain Windows</title></image>
+            <image><url>https://brianhayes.dev/assets/images/intro_images/window_desktop.jpg</url><title>Curtain Windows</title></image>
                 &lt;blockquote class="article-quotes" cite="book: How Linux Works, by Brian Ward"&gt;
                     "This allows the user to create a more lightweight and customized environment, tailored to their own specific needs."
                     &lt;br&gt; -&lt;a class="blockquote-links" target="_blank" rel="noopener noreferrer" href="https://wiki.archlinux.org/title/Tiling_window_manager"&gt;&lt;em&gt;The Arch Wiki &lt;br&gt;On Window Managers&lt;/em&gt;&lt;/a&gt;
@@ -932,36 +932,36 @@ Just like with choosing Linux, the choice of a text editor, like Vim, can become
                 &lt;p class="article-content"&gt;
                     Firstly, let's start by configuring the keybindings in XFCE. Here we see the base install of Debian Linux with the default XFCE Desktop Environment installed:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_xfce.webp</url><title>The Default Debian XFCE Desktop Environment</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_xfce.webp</url><title>The Default Debian XFCE Desktop Environment</title></image>
                 &lt;p class="article-content"&gt;
                     The default terminal emulator in the XFCE Desktop Environment is called xfce4-terminal, thusly if we invoke it from the command line, another terminal emulator should spawn:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_terminal_spawn.webp</url><title>A Picture of the XFCE Terminal Calling Another Instance of Itself</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_terminal_spawn.webp</url><title>A Picture of the XFCE Terminal Calling Another Instance of Itself</title></image>
                 &lt;p class="article-content"&gt;
                     And indeed it does. So now we know we can call xfce4-terminal by typing out that exact name into the command line, but what if I want to call it using a custom keybinding?
                 &lt;/p&gt;
                 &lt;p class="article-content"&gt;
                     In XFCE's version of the start menu (located on the upper left hand side), you will find a menu item called "settings", where you will find the "keyboard" option. This is one of two GUI menus that allow for the modification of keybindings. Click on that so we can get started with one of the first recommended keybindings, that being of "super+enter", which we will bind to open our terminal emulator.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_xfce_keybindings01.webp</url><title>XFCE menu navigation to change keyboard shortcuts</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_xfce_keybindings01.webp</url><title>XFCE menu navigation to change keyboard shortcuts</title></image>
                     Once opened, Navigate to the Application Shortcuts sub-menu which should present to you some previously configured keybindings that are present by default. We are going to leave those alone and set up our own custom one by clicking on the "Add" button on the bottom left hand side of the menu. You will be presented with an empty input prompt asking for the command you will wish to invoke with this new keyboard shortcut. We want to open our terminal so let's enter the command 'xfce4-terminal':
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_xfce_keybindings02.webp</url><title>XFCE menu navigation to change keyboard shortcuts</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_xfce_keybindings02.webp</url><title>XFCE menu navigation to change keyboard shortcuts</title></image>
                 &lt;p class="article-content"&gt;
                     After hitting the "OK" button, we will be presented with a menu that asks us to "Press any Key". Most keyboard shortcuts invoked utilize at at least two buttons so as to not accidentally invoke commands whenever typing, so let's choose a classic keybinding "super+enter". To the uninitiated the "super" key is the "windows" key in Microsoft Windows or the "options" key in MacOs. Once entered, the window prompt will disappear and you may notice the new keyboard command show up on the Application Shortcuts menu.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_xfce_keybindings03.webp</url><title>XFCE menu navigation to change keyboard shortcuts</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_xfce_keybindings03.webp</url><title>XFCE menu navigation to change keyboard shortcuts</title></image>
                 &lt;p class="article-content"&gt;
                     Let's test it out, go ahead and enter "super + enter":
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/gifs/ss_debian_keybinding_01.gif</url><title>Demonstration of new Keybinding in XFCE</title></image>
+            <image><url>https://brianhayes.dev/assets/images/gifs/ss_debian_keybinding_01.gif</url><title>Demonstration of new Keybinding in XFCE</title></image>
                 &lt;p class="article-content"&gt;
                     And indeed, we have created a useful keybinding that calls one of our most used applications. You can chain various keys to open applications, but usually the alt, ctrl, or super keys are utilized. You can call any application that you can invoke on the terminal in this fashion, and usually these are GUI applications, like your browser, your file manager, your music player, etc.
                 &lt;/p&gt;
                 &lt;p class="article-content"&gt;
                     I will now move onto our next subject, which covers the useful feature of workspaces. The use of workspaces is more important than application-related keyboard shortcuts as they essentially maximize the use of space on your screen, allowing you to bring up an entirely new work area for you to fill with your various applications. Instead of moving application windows around and minimizing them when not in use, Workspaces allow you to simply keep those applications open at whatever screen size you like, hiding them from view temporarily, while you navigate to another workspace to do some other sort of work, and then navigate back to your previous workspace to utilize the applications you had been using earlier. The below GIF demonstrates the use of Workspaces, which are changed using keybindings.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/gifs/ss_debian_keybinding_02.gif</url><title>Demonstration of Navigating Workspaces in XFCE</title></image>
+            <image><url>https://brianhayes.dev/assets/images/gifs/ss_debian_keybinding_02.gif</url><title>Demonstration of Navigating Workspaces in XFCE</title></image>
                 &lt;p class="article-content"&gt;
                     As you can see, each time I enter the super key followed by a number, it brings me to that numbered workspace. The change of the various applications is the change of the workspace, each one having different applications open. There are usually 10 workspaces available in tiling window managers. XFCE allows for 12 (using by default ctrl + f1-12 keys). In case you were wondering if I modified the keys for these, I did. That is because the super+number keybinding is more traditional in tiling window managers for switching workspaces. In XFCE, if you wish to change the workspace keybindings, navigate from the start menu to the settings &gt; window manager sub-menu and select keyboard. You should then edit the keybindings labeled "Workspace" followed by the workspace number. This is basically the same process as editing keybindings for applications.
                 &lt;/p&gt;
@@ -986,23 +986,23 @@ Just like with choosing Linux, the choice of a text editor, like Vim, can become
                 &lt;p class="article-content"&gt;
                     Now we can simply reboot our machine, upon login, before entering your name and password, be sure to select i3 from the wrench icon available at the top right hand corner of our login screen:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_i3_01.webp</url><title>Screenshot of i3 Selection in LightDm Menu</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_i3_01.webp</url><title>Screenshot of i3 Selection in LightDm Menu</title></image>
                 &lt;p class="article-content"&gt;
                     Immediately you will be presented with a far more minimal set up than XFCE. You will be prompted if you'd like to generate a default configuration for i3, go ahead and choose "Yes" and hit enter.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_i3_02.webp</url><title>Screenshot of i3 Welcome Prompt</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_i3_02.webp</url><title>Screenshot of i3 Welcome Prompt</title></image>
                 &lt;p class="article-content"&gt;
                     Afterwards which you will be asked which "Mod" key you'd like as default, either the "super" or "alt" key. This key will be the default for chaining with other keys which when used in sequence will call various applications and change workspaces. I personally prefer the "super" key, so I'm going to choose the first option.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_i3_03.webp</url><title>Screenshot of i3 mod key choice prompt</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ss_debian_i3_03.webp</url><title>Screenshot of i3 mod key choice prompt</title></image>
                 &lt;p class="article-content"&gt;
                     After this choice is made and you hit enter, you'll be left with no further instruction, which can be jarring for beginners. Don't worry, remember the keybinding to call the terminal we made in XFCE? Well the reason I chose "super + enter," was because that is the same command in the default i3 configuration for calling the terminal. So you can do the same here in i3, calling the terminal with "super + enter". In fact, let's call a few terminals to see the default tiling behavior of i3, hit "super + enter" a couple of times:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/gifs/ss_debian_i3_demo_01.gif</url><title>Gif showing i3 calling terminals</title></image>
+            <image><url>https://brianhayes.dev/assets/images/gifs/ss_debian_i3_demo_01.gif</url><title>Gif showing i3 calling terminals</title></image>
                 &lt;p class="article-content"&gt;
                     As you can see, a Tiling Window Manager "tiles" its windows in a cascading fashion, utilizing as much of the available screen space (known in some circles as screen "real estate"). So how do we navigate this? Well you can indeed use the mouse to select which of your open applications you'd like to utilize, but obviously, this article being about the keyboard-centric workflow, we'll choose to navigate using our keyboard. Hitting "super+j" or "super+;"(super + semicolon) will navigate left and right respectively. Additionally, if we move a window to the bottom so that it is in a horizontal orientation using (super+shift+k), then we can demonstrate navigation up and down windows using (super+k) or (super+l)
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/gifs/ss_debian_i3_demo_02.gif</url><title>Gif showing basic navigation in i3</title></image>
+            <image><url>https://brianhayes.dev/assets/images/gifs/ss_debian_i3_demo_02.gif</url><title>Gif showing basic navigation in i3</title></image>
                 &lt;p class="article-content"&gt;
                     Already you can see the elegant simplicity this kind of workflow enforces. Utilizing some simple keybindings, one can navigate from one window to the next, all the while entering commands into a terminal, text into a text editor, and search queries into a browser.
                 &lt;/p&gt;
@@ -1023,7 +1023,7 @@ Just like with choosing Linux, the choice of a text editor, like Vim, can become
                 &lt;p class="article-content"&gt;
                     There is so much more I could cover regarding Tiling Window Managers and the keyboard-centric workflow, but I will leave you with this basic introduction on how to get started with creating your own version of it. While a classic Desktop Environment is fine for most, and will probably always be more popular than Tiling Window Managers, for those of you that have an affinity towards working on the keyboard (which, if you are invested in becoming more productive on the computer, you should), a Tiling Window Manager might be something worthwhile for you to investigate. Below I provide you with a short clip of my standard workflow (if you're wondering how to get transparency to work in the terminal like in this GIF, you'll want to look into The Arch Wiki's &lt;a class="article-outside-links" target="_blank" rel="noopener noreferrer" href="https://wiki.archlinux.org/title/Picom"&gt;documentation&lt;/a&gt; on picom). To further emphasize the use of the keyboard, I have installed the &lt;a class="article-outside-links" target="_blank" rel="noopener noreferrer" href="https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/"&gt;Vimium extension&lt;/a&gt; into the &lt;a class="article-outside-links" target="_blank" rel="noopener noreferrer" href="https://librewolf.net/"&gt;Librewolf browser&lt;/a&gt; to demonstrate further the possibilities of working almost completely without a mouse. Enjoy, and keep keybinding.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/gifs/ss_debian_i3_demo_03.gif</url><title>Demo of a highly customized i3 setup</title></image>
+            <image><url>https://brianhayes.dev/assets/images/gifs/ss_debian_i3_demo_03.gif</url><title>Demo of a highly customized i3 setup</title></image>
     </description>
     </item>
     <item>
@@ -1034,7 +1034,7 @@ Just like with choosing Linux, the choice of a text editor, like Vim, can become
       <description>
                 &lt;h1&gt;ortholinear keybords&lt;/h1&gt;
                 &lt;h2&gt;they're just better&lt;/h2&gt;
-                <image><url>https://brianhayes.dev/assets/images/intro_images/olkb_planck_desktop.webp</url><title>A 40% Planck Ortholinear Keyboard</title></image>
+            <image><url>https://brianhayes.dev/assets/images/intro_images/olkb_planck_desktop.webp</url><title>A 40% Planck Ortholinear Keyboard</title></image>
                 &lt;blockquote class="article-quotes" cite="book: How Linux Works, by Brian Ward"&gt;
                     "The orthogonal features, when combined, can explode into complexity."
                     &lt;br&gt; -&lt;a class="blockquote-links" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Yukihiro_Matsumoto"&gt;&lt;em&gt;Yukihiro Matsumoto&lt;br&gt;Author of The Ruby Language&lt;/em&gt;&lt;/a&gt;
@@ -1068,9 +1068,9 @@ Just like with choosing Linux, the choice of a text editor, like Vim, can become
                     &lt;/p&gt;
                     &lt;p class="article-content"&gt;Although I'm sure that if you're intrigued by the subject, you'll do your own research, I have provided some images of various ortholinear keyboards below as a reference. Additionally I encourage you to watch &lt;a class="article-outside-links" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=Ho_CFfdsmc8"&gt;this video&lt;/a&gt; from Ben Vallack, where he goes into depth covering the differences between standard and ortholinear keyboards. I should note that I have no personal or professional affiliation with Ben Vallack, but I've thoroughly enjoyed Ben's videos for some time now, and I feel like he covers this subject very well.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/img/olkb_01.webp</url><title>A Minimaliist Split OLKB</title></image>
-                <image><url>https://brianhayes.dev/assets/images/img/olkb_02.webp</url><title>An Ergodox Split OLKB</title></image>
-                <image><url>https://brianhayes.dev/assets/images/img/olkb_03.webp</url><title>An Miniaxe 40% Split OLKB</title></image>
+            <image><url>https://brianhayes.dev/assets/images/img/olkb_01.webp</url><title>A Minimaliist Split OLKB</title></image>
+            <image><url>https://brianhayes.dev/assets/images/img/olkb_02.webp</url><title>An Ergodox Split OLKB</title></image>
+            <image><url>https://brianhayes.dev/assets/images/img/olkb_03.webp</url><title>An Miniaxe 40% Split OLKB</title></image>
     </description>
     </item>
     <item>
@@ -1081,7 +1081,7 @@ Just like with choosing Linux, the choice of a text editor, like Vim, can become
       <description>
                 &lt;h1&gt;espanso&lt;/h1&gt;
                 &lt;h2&gt;expand your text&lt;/h2&gt;
-                <image><url>https://brianhayes.dev/assets/images/intro_images/balloon_over_luxor_desktop.jpg</url><title>An Air Balloon Over Luxor, Egypt</title></image>
+            <image><url>https://brianhayes.dev/assets/images/intro_images/balloon_over_luxor_desktop.jpg</url><title>An Air Balloon Over Luxor, Egypt</title></image>
                 &lt;blockquote class="article-quotes" cite="essay: The Deep Zoo, by Rikki Ducornet"&gt;
                     "The texts we write are not visible until they are written. Like a
                     creature coaxed from out a deep wood, the text reveals itself little by little.
@@ -1197,7 +1197,7 @@ Just like with choosing Linux, the choice of a text editor, like Vim, can become
                     And indeed if we type out the trigger ":espanso", we'll see our text is replaced
                     with "Hi there!":
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/gifs/espanso_example.gif</url><title>Demonstration of Basic Usage of Espanso</title></image>
+            <image><url>https://brianhayes.dev/assets/images/gifs/espanso_example.gif</url><title>Demonstration of Basic Usage of Espanso</title></image>
                     There are various default examples showing espanso's
                     utility. If you look towards the bottom of the
                     example text expansions, you'll see the ":ip"
@@ -1458,7 +1458,7 @@ vim.api.nvim_create_autocmd('BufReadPost', {
       <description>
                 &lt;h1&gt;git basics&lt;/h1&gt;
                 &lt;h2&gt;understanding version control&lt;/h2&gt;
-                <image><url>https://brianhayes.dev/assets/images/intro_images/tree_desktop.jpg</url><title>A Two Branched Tree Beneath a Blue Sky</title></image>
+            <image><url>https://brianhayes.dev/assets/images/intro_images/tree_desktop.jpg</url><title>A Two Branched Tree Beneath a Blue Sky</title></image>
                 &lt;blockquote class="article-quotes" cite="https://commons.wikimedia.org/wiki/File:Git_format.png"&gt;
                     "I'm an egotistical bastard, and I name all my projects after myself.
                     First 'Linux', now 'Git'"
@@ -1606,7 +1606,7 @@ vim.api.nvim_create_autocmd('BufReadPost', {
                     provides you with a helpful series of commands to enter into your terminal to
                     start using Git to version control your project.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ss_github_01.webp</url><title>Initial Github Repository Page</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ss_github_01.webp</url><title>Initial Github Repository Page</title></image>
                     While you could technically start creating files and pushing them
                     to Github using their GUI interface here in the browser, that was
                     never the intended way of working with Git, which is a command line tool.
@@ -1700,7 +1700,7 @@ vim.api.nvim_create_autocmd('BufReadPost', {
                     Refresh the repository page on Github and you'll see that your project is now up
                     and running.
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ss_github_02.webp</url><title>Initial Repository Instantiation Page</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ss_github_02.webp</url><title>Initial Repository Instantiation Page</title></image>
                 &lt;p class="article-content"&gt;
                     Excellent, you have successfully instantiated your first Github repository. Now,
                     on the surface, this can appear just like a glorified backup system, and while
@@ -1751,7 +1751,7 @@ console.log("this is my second line of code to commit");
                     key or PAT). Once entered, you will get a confirmation message in your terminal
                     emulator, and can visit your Github repository to see the changes online:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/ss_github_03.webp</url><title>Github repository now shows updated changes</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/ss_github_03.webp</url><title>Github repository now shows updated changes</title></image>
                     As you can see, our update is reflected next to our hello.js file on our
                     repository page. At this point, you will have a very basic understanding about
                     how to use Git. Now I'll cover some other useful aspects.
@@ -1849,7 +1849,7 @@ console.log("this is my second line of code to commit");
       <description>
                 &lt;h1&gt;the readme&lt;/h1&gt;
                 &lt;h2&gt;documentation for beginners&lt;/h2&gt;
-                <image><url>https://brianhayes.dev/assets/images/intro_images/reader_desktop.jpg</url><title>Monument To The Reader, Yerevan</title></image>
+            <image><url>https://brianhayes.dev/assets/images/intro_images/reader_desktop.jpg</url><title>Monument To The Reader, Yerevan</title></image>
                 &lt;blockquote class="article-quotes" cite="https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg"&gt;
                     "Documentation is a love letter that you write to your
                     future self."
@@ -1875,7 +1875,7 @@ console.log("this is my second line of code to commit");
                     service websites, you have most certainly come across a README.md. The finished
                     document looks something like this:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-01.webp</url><title>A sample page of a readme</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-01.webp</url><title>A sample page of a readme</title></image>
                 &lt;h4 class="article-header4"&gt;The Basic Readme&lt;/h4&gt;
                 &lt;p class="article-content"&gt;
                     The README is a document that one can think of as being the entry point to learning
@@ -1943,26 +1943,26 @@ console.log("this is my second line of code to commit");
                     Let's write out a header, with the title of our project. I'm going to call my
                     project, "markdown_ex".
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-02.webp</url><title>a h1 header displayed in both neovim and the browser</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-02.webp</url><title>a h1 header displayed in both neovim and the browser</title></image>
                     As you can see, a single hashtag "#" character is interpreted by Markdown as
                     indicating the beginning of a header. This is equivalent to an &lt;h1&gt; tag in HTML.
                     Let's create some other headers as an example.
                 &lt;/p&gt;
-               <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-03.webp</url><title>a series of headers expressed in markdown</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-03.webp</url><title>a series of headers expressed in markdown</title></image>
                     Now, what's nice about Markdown is at this point you can simply start typing out
                     your documentation. Unlike in HTML, there is no need to encapsulate everything
                     in paragraph tags, so working in Markdown becomes more akin to working in an
                     extremely basic word processor. You can revert to using HTML elements if you'd
                     like, but especially in this mentioned example, it is not necessary:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-03.webp</url><title>basic display of paragraph text in markdown</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-03.webp</url><title>basic display of paragraph text in markdown</title></image>
                 &lt;p class="article-content"&gt;
                     Let's now explore some of the basic features that Markdown has to offer. Let's
                     say we wish to stylize our text a little beyond just making headers. Well, we
                     have many options at our disposal. Let's create some bold, italic, underline,
                     and strike-through pieces of text:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-04.webp</url><title>various stylizing of markdown text</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-04.webp</url><title>various stylizing of markdown text</title></image>
                 &lt;p class="article-content"&gt;
                     Here we see the various syntax utilized for styling pieces of text in markdown.
                     I'll cover briefly the basic syntax here:
@@ -1994,7 +1994,7 @@ _single underscore also creates italicized text_&lt;/code&gt;&lt;/pre&gt;
                     The following picture demonstrates the simple creation of ordered and unordered
                     lists in markdown:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-06.webp</url><title>a demonstration of creating lists in markdown</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-06.webp</url><title>a demonstration of creating lists in markdown</title></image>
                 &lt;p class="article-content"&gt;
                     Markdown is especially easy on the eyes when it comes to creating links. In
                     HTML, creating a basic link can be created like so:
@@ -2030,7 +2030,7 @@ _single underscore also creates italicized text_&lt;/code&gt;&lt;/pre&gt;
                 &lt;p class="article-content"&gt;
                     The following picture demonstrates the effect:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-07.webp</url><title>demonstration of writing code blocks in markdown</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-07.webp</url><title>demonstration of writing code blocks in markdown</title></image>
                 &lt;h4 class="article-header4"&gt;Checkboxes&lt;/h4&gt;
                 &lt;p class="article-content"&gt;
                     One of my personal favorite uses of Markdown is to place a list of checkboxes
@@ -2046,7 +2046,7 @@ _single underscore also creates italicized text_&lt;/code&gt;&lt;/pre&gt;
                 &lt;p class="article-content"&gt;
                     And here is an example Picture showing the results:
                 &lt;/p&gt;
-                <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-08.webp</url><title>demonstration of how to write checkboxes in markdown</title></image>
+            <image><url>https://brianhayes.dev/assets/images/screenshots/readme-pic-08.webp</url><title>demonstration of how to write checkboxes in markdown</title></image>
                 &lt;h4 class="article-header4"&gt;Conclusion&lt;/h4&gt;
                 &lt;p class="article-content"&gt;
                     The capabilities of Markdown are vast. In addition to what has been covered here,
