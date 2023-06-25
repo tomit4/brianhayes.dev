@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+# Remove snippet.pug if it already exists
+if [[ -f snippet.pug ]]; then
+    rm snippet.pug
+fi
+
+# make an html file from markdown file
+pandoc -t html -f markdown snippet.md >snippet.html
+
+#make a pug file from html file
+html2pug <snippet.html >snippet.pug
+
+# Read the contents of the Pug file and remove indentation
+pug_content=$(<snippet.pug)
+
+# Remove indentation
+pug_content=$(echo "$pug_content" | sed -e 's/^[[:space:]]*//')
+
+# Remove unnecessary HTML, head, and body tags
+pug_content=$(echo "$pug_content" | sed '1,3d')
+
+# Adjust indentation and spacing for the code line
+pug_content=$(echo "$pug_content" | sed 's/^code/    code /')
+
+# Remove the first period after the code tag using awk
+pug_content=$(echo "$pug_content" | awk '/code/ {sub(/\./,"", $0)} 1')
+
+# Replace newlines with "&#10" starting from the second line
+pug_content=$(echo "$pug_content" | awk 'NR>1{ORS="&#10"}1')
+
+# Remove the first "&#10" character after the code tag
+pug_content=$(echo "$pug_content" | sed 's/code &#10/code /')
+
+# Adjust indentation and spacing for the code line
+pug_content=$(echo "$pug_content" | sed 's/^/                /')
+
+# Remove old files
+rm snippet.pug snippet.html
+
+# Write the modified content back to the Pug file
+echo "$pug_content" >snippet.pug
+
+# Copy output of transpilation to clipboard
+cat snippet.pug | xclip -sel clip
