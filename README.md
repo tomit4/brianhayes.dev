@@ -43,10 +43,13 @@ nginx (technically you won't need this until production, but a local version is 
 html-minifier
 uglifycss
 uglifyjs
+pandoc
+html2pug
 rsspls
 xmlstarlet
 imgmagick
 gifsicle
+xclip
 ```
 
 Once all these are installed (or at least pug-cli and live-server), you can spin up the dev server by running within the root of the project:
@@ -212,10 +215,13 @@ I also wanted to learn the basics of NGINX, Docker, and already had purchased a 
 -   [html-minifier](https://www.npmjs.com/package/html-minifier)
 -   [uglifycss](https://www.npmjs.com/package/uglifycss)
 -   [uglifyjs](https://www.npmjs.com/package/uglify-js)
+-   [pandoc](https://pandoc.org/getting-started.html)
+-   [html2pug](https://www.npmjs.com/package/html2pug)
 -   [rsspls](https://github.com/wezm/rsspls)
 -   [xmlstarlet](https://github.com/fishjam/xmlstarlet)
 -   [imgmagick](https://imagemagick.org/)
 -   [gifsicle](https://github.com/kohler/gifsicle)
+-   [xclip](https://opensource.com/article/19/7/xclip)
 
 **Blog Post Ideas (not a preview)**
 
