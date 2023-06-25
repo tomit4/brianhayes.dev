@@ -122,7 +122,13 @@ The hardest part is writing codeblocks, which utilizes ASCII characters within p
 
 **UPDATE ON CODE SNIPPETS**
 
-I have created a script that will generate pug code blocks that you can simply drop into the pug blog. Located in the snippet directory, there is a file called snippets.md as well as a snippets shell script. Write your markdown code snippet inbetween the triple backticks and then save it. Run the snippets script and your clipboard will now have the pug equivalent. In order to accomplish this I utilized three other cli tools (pandoc, html2pug, and xclip). xclip is mainly for quickly grabbing the code and technically isn't necessary as the output is in snippet.pug, but it helps when trying to write code blocks on the fly.
+I have created a script that will generate pug code blocks that you can simply drop into the pug blog. Located in the snippet directory, there is a file called snippets.md as well as a snippets shell script. Write your markdown code snippet inbetween the triple backticks and then save it. Run the snippet script and your clipboard will now have the pug equivalent.
+
+```
+./snippet
+```
+
+In order to accomplish this I utilized three other cli tools (pandoc, html2pug, and xclip). xclip is mainly for quickly grabbing the code and technically isn't necessary as the output is in snippet.pug, but it helps when trying to write code blocks on the fly.
 
 Once done you're ready to push to production, just make sure to minify your files first from the root directory:
 
@@ -222,6 +228,16 @@ I also wanted to learn the basics of NGINX, Docker, and already had purchased a 
 -   [imgmagick](https://imagemagick.org/)
 -   [gifsicle](https://github.com/kohler/gifsicle)
 -   [xclip](https://opensource.com/article/19/7/xclip)
+
+**TODO**:
+
+-   [ ] Write another bash script that removes the need for css @import and instead compiles all the css files into one styles.css file (while preserving your other css files for organization purposes). This will basically just append the other css files into the styles.css, then within each of your pug/html files, adjust to only include this.
+-   [ ] Place [this defer script](https://www.giftofspeed.com/defer-loading-css/) into each css file. Gist of it is:
+
+```
+<link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+```
 
 **Blog Post Ideas (not a preview)**
 
