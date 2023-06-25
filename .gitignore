@@ -1,4 +1,3 @@
-dist_bak
 nginx.conf
+nginx_sample.conf
 .env
-blog_temp.txt
