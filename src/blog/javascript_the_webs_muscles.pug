@@ -1,0 +1,88 @@
+doctype html
+html(lang = "en")
+    head
+        title brianhayes.dev
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        meta(name="robots" content="follow, index, max-snippet:-1, max-image-preview:large")
+        meta(name='description' content='A simple blog written by a Web Developer, for Web Developers. Covering Basics of HTML, CSS, JavaScript, and much more, including Linux and other subjects related to technology.')
+        link(rel="icon" type="image/x-icon" href="../assets/icons/favicon.png")
+        link(rel='icon' type='application/rss+xml' title='RSS Feed' href='../assets/feed.rss')
+        link(rel='stylesheet' type='text/css' href='../css/style.css')
+    body
+        nav
+            ul.nav-menu(role="menu")
+                li.nav-items(role="menubar")
+                    a.icons#contact(aria-label="email" role="menuitem" href="mailto: brianhayes.dev@protonmail.com") contact
+                li.nav-items
+                    a.icons#folio(aria-label="folio" role="navigation" href="../folio.html") folio
+                li.nav-items
+                    a.icons#home(aria-label="home" role="navigation" href="../index.html") home
+                li.nav-items
+                    a.icons#blog(aria-label="blog" role="navigation" href="./blog/") blog
+                li.nav-items
+                    a.icons#rss(aria-label="rss" role="menuitem" href="../assets/feed.rss") rss
+        div.nav-division
+        div.nav-text
+            ul.nav-text-menu(role="menu")
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-contact(aria-label="email" role="menuitem") email
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-folio(aria-label="folio-text" role="menuitem") folio
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-home(aria-label="home-text" role="menuitem") home
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-blog(aria-label="blog-text" role="menuitem") blog
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-rss(aria-label="rss-text" role="menuitem") rss 
+        div.container.fadein
+            div.arrows
+                a.icons#left-arrow(aria-label="previous" role="navigation" href="")
+                a.icons#right-arrow(aria-label="next" role="navigation" href="")
+            div.arrows-text
+                span.arrow-text#text-left-arrow prev
+                span.arrow-text#text-right-arrow next
+            div.title
+                div.title-card
+                    header JavaScript
+                    div.subtitle The Web's Muscles
+                    div.aside Published 2023-06-25
+                picture(role="img")
+                    source(media="(min-width: 62.5em)" srcset="../assets/images/intro_images/start_100m_desktop.jpg")
+                    source(media="(min-width: 37.5em)" srcset="../assets/images/intro_images/start_100m_tablet.jpg")
+                    img.intro-image(src="../assets/images/intro_images/start_100m_mobile.jpg" alt="A 100M Dash in Lisse, Zuid-Holland, circa 1968" title="A 100M Dash in Lisse, Zuid-Holland, circa 1968" cite="https://commons.wikimedia.org/wiki/File:Start_100m_dames._Lidy_Makkinje-Vonk,_Corrie_Bakker,_Wilma_van_der_Berg,_C._Civa,_Bestanddeelnr_921-3633.jpg?useskin=vector")
+                figcaption A 100M Dash in Lisse, Zuid-Holland, circa 1968
+                blockquote(cite="https://pdfroom.com/books/you-dont-know-js-async-performance/zW5n16ox2Nq") "The only thing worse than not knowing why some code breaks is not knowing why it worked in the first place! It's the classic 'house of cards' mentality: 'it works, but I'm not sure why, so nobody touch it!' You may have heard, 'Hell is other people' (Sartre), and the programmer meme twist, 'Hell is other people's code.' I believe truly: 'Hell is not understanding my own code.' "
+                    div.quote_author -Kyle Simpson
+            article.demo-button
+                h1 Introduction
+            div.foot-arrows
+                button.icons#up-arrow(title="back to top" aria-label="back-to-top" alt="back to top" role="navigation")
+        footer(role="menu")
+            div.foot-text
+                ul.foot-text-menu(role="menu")
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-sun(aria-label="light-mode-text" role="menuitem") light
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-git(aria-label="git-text" role="menuitem") git
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-linkedin(aria-label="linkedin-text" role="menuitem") linkedin
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-mastodon(aria-label="mastodon-text" role="menuitem") social
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-moon(aria-label="dark-mode-text" role="menuitem") dark
+            div.foot-division
+            ul.foot-menu(role="menubar")
+                li.foot-items
+                    button.footer-button#sun-button
+                        div.icons#sun(aria-label="light-mode" role="button") light
+                li.foot-items
+                    a.icons#git(aria-label="git" role="link" target="_blank" rel="noopener noreferrer" href="https://github.com/tomit4") git
+                li.foot-items
+                    a.icons#linkedin(aria-label="linkedin" target="_blank" rel="noopener noreferrer" role="link" href="https://linkedin.com/in/brian-hayes-33496067") linkedin
+                li.foot-items
+                    a.icons#mastodon(aria-label="social" target="_blank" rel="noopener noreferrer" role="link" href="https://mas.to/@brianhayesdev") social
+                li.foot-items
+                    button.footer-button#moon-button
+                        div.icons#moon(aria-label="dark-mode" role="button") dark
+        script(src="../index.js" default)
