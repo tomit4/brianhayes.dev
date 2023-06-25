@@ -91,6 +91,7 @@ html(lang = "en")
                 p Here we simultaneously created a file called 'from_the_command_line.txt' and wrote the text 'this text is inputted from the command line' into it. If we then inspect the contents of this file using cat:
                 pre
                     code &#35bash shell&#10[ ~]$ cat from_the_command_line.txt
+                br
                 figure
                    img.intro-image(src="../assets/images/screenshots/redirection_01.webp" alt="results of the cat command on a file" title="results of the cat command on a file" cite="author screenshot" loading="lazy")
                 figcaption Example Results Of The "cat" Commmand On A File
@@ -110,6 +111,7 @@ html(lang = "en")
                 p But what about the '&#62' character in our initial example? Well this is what is known as a redirection operator. This '&#62' will 'redirect' whatever is the output of the first command(echo) as the input written to the following file or program. Please note that this will overwrite any existing text already present in the file, so don't experiment on any file with valuable information to you. If you do wish to append to the file, without overwriting its existing text, simply double up on the greater than symbol:
                 pre
                     code &#35bash shell&#10[ ~]$ echo 'appended text' >> from_the_command_line.txt
+                br
                 figure
                    img.intro-image(src="../assets/images/screenshots/echo_append.webp" alt="bash shell example of appending text using echo and the >> redirection flag" title="bash shell example of appending text using echo and the >> redirection flag" cite="author screenshot" loading="lazy")
                 figcaption Using The "&#62&#62" Operator Appends Text When Used With "echo"
@@ -169,11 +171,11 @@ html(lang = "en")
                 li.foot-items(role="menuitem")
                     button.footer-button#sun-button
                         div.icons#sun(aria-label="light-mode" role="button") light
-                li.foot-item(role="menuitem")
+                li.foot-items(role="menuitem")
                     a.icons#git(aria-label="git" role="link" target="_blank" rel="noopener noreferrer" href="https://github.com/tomit4") git
                 li.foot-items(role="menuitem")
                     a.icons#linkedin(aria-label="linkedin" target="_blank" rel="noopener noreferrer" role="link" href="https://linkedin.com/in/brian-hayes-33496067") linkedin
-                li.foot-item(role="menuitem")
+                li.foot-items(role="menuitem")
                     a.icons#mastodon(aria-label="social" target="_blank" rel="noopener noreferrer" role="link" href="https://mas.to/@brianhayesdev") social
                 li.foot-items(role="menuitem")
                     button.footer-button#moon-button
