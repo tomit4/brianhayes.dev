@@ -74,7 +74,9 @@ Copy the test.txt file to an article_name.txt file where article_name is obvious
 ```
 
 This will generate an article_name.pug file which will have the basic format for your blog post ready to go.
+
 **Stage Files**
+
 Next invoke the stage script with two arguments, one is your newly minted pug file and the other is your intro image file:
 
 ```
@@ -114,6 +116,10 @@ figure
 ```
 
 The hardest part is writing codeblocks, which utilizes ASCII characters within pre and code tags. For this I'll simply recommend writing extensive code blocks in markdown and then translating them by hand using [this handy reference from w3schools](https://www.w3schools.com/charsets/ref_html_ascii.asp).
+
+**UPDATE ON CODE SNIPPETS**
+
+I have created a script that will generate pug code blocks that you can simply drop into the pug blog. Located in the snippet directory, there is a file called snippets.md as well as a snippets shell script. Write your markdown code snippet inbetween the triple backticks and then save it. Run the snippets script and your clipboard will now have the pug equivalent. In order to accomplish this I utilized three other cli tools (pandoc, html2pug, and xclip). xclip is mainly for quickly grabbing the code and technically isn't necessary as the output is in snippet.pug, but it helps when trying to write code blocks on the fly.
 
 Once done you're ready to push to production, just make sure to minify your files first from the root directory:
 
