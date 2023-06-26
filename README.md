@@ -231,7 +231,6 @@ I also wanted to learn the basics of NGINX, Docker, and already had purchased a 
 
 **TODO**:
 
--   [ ] Write another bash script that removes the need for css @import and instead compiles all the css files into one styles.css file (while preserving your other css files for organization purposes). This will basically just append the other css files into the styles.css, then within each of your pug/html files, adjust to only include this.
 -   [ ] Place [this defer script](https://www.giftofspeed.com/defer-loading-css/) into each css file. Gist of it is:
 
 ```
