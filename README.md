@@ -263,3 +263,4 @@ I also wanted to learn the basics of NGINX, Docker, and already had purchased a 
 -   [ ] Don't Subscribe And Don't Follow (RSS feeds)
 -   [ ] Rethinking Social Media and The Fediverse
 -   [ ] A Not Too Brief History of Linux, GNU, and BSD (likely, parts 1, 2, and 3)
+-   [ ] The Probability of Anonymity (Is it still possible to stay private online?)
