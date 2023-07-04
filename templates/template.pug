@@ -49,7 +49,8 @@ html(lang = "en")
                 div.title-card
                     header {{article_title}}
                     div.subtitle {{article_subtitle}}
-                    div.aside {{publish_date}}
+                    div.aside Published on
+                        time(datetime="{{pubish_date}}") {{publish_date}}
                 picture(role="img")
                     source(media="(min-width: 62.5em)" srcset="../assets/images/intro_images/{{intro_image}}_desktop.{{intro_image_extension}}")
                     source(media="(min-width: 37.5em)" srcset="../assets/images/intro_images/{{intro_image}}_tablet.{{intro_image_extension}}")

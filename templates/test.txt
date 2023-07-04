@@ -1,6 +1,6 @@
 article_title: Test Article Title
 article_subtitle: Test Article Subtitle
-publish_date: Published 2023-06-22
+publish_date: 2023-06-22
 intro_image: test
 intro_image_extension: jpg
 intro_image_source: http:\/\/wikimedia.org

@@ -52,6 +52,9 @@ sed -i 's#<description/>#<description>Personal Blog About Web Dev and Tech</desc
 sed -i '0,/<title>.*<\/title>/s//<title>brianhayes.dev<\/title>/' "$feed_file"
 # Find the first occurrence of the <link> tag and replace its content
 sed -i '0,/<link>.*<\/link>/s//<link>https:\/\/brianhayes.dev<\/link>/' "$feed_file"
-
+# Get the current date and time in the desired format (RFC 822)
+current_time=$(date +"%a, %d %b %Y %H:%M:%S %Z")
+# Add the lastBuildDate tag after the generator tag
+sed -i "/<generator>/a <lastBuildDate>$current_time<\/lastBuildDate>" "$feed_file"
 # Replace old feed.rss with new feed
-mv ./feed.rss ../dist/assets/
+# mv ./feed.rss ../dist/assets/
