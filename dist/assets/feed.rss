@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
 	<channel>
-		<title>brianhayes.dev</title>
+		<title>The ReadMe</title>
 		<link>https://brianhayes.dev/blog/the_readme</link>
 		<description>Personal Blog About Web Dev and Tech</description>
 		<generator>rsspls version 0.5.0</generator>
