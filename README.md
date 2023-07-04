@@ -229,10 +229,6 @@ I also wanted to learn the basics of NGINX, Docker, and already had purchased a 
 -   [gifsicle](https://github.com/kohler/gifsicle)
 -   [xclip](https://opensource.com/article/19/7/xclip)
 
-**TODO**:
-
--   [ ] Place [this defer script](https://www.giftofspeed.com/defer-loading-css/) into each css file. Gist of it is:
-
 ```
 <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="style.css"></noscript>
