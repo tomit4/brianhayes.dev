@@ -46,5 +46,8 @@ done
 # Remove all .rss files except for feed.rss
 find . -maxdepth 1 -type f -name "*.rss" ! -name "$feed_file" -exec rm {} +
 
-# replace old feed.rss with new feed
+# Add the overall description to the generated feed
+sed -i 's#<description/>#<description>Personal Blog About Web Dev and Tech</description>#' "$feed_file"
+
+# Replace old feed.rss with new feed
 mv ./feed.rss ../dist/assets/
