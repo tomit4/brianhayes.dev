@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-./uglify
 pug -w src/*.pug -o dist -P &
 pug -w src/blog/*.pug -o dist/blog -P &
 live-server ./dist/
