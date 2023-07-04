@@ -50,6 +50,8 @@ find . -maxdepth 1 -type f -name "*.rss" ! -name "$feed_file" -exec rm {} +
 sed -i 's#<description/>#<description>Personal Blog About Web Dev and Tech</description>#' "$feed_file"
 # Find the first occurrence of the <title> tag and replace its content
 sed -i '0,/<title>.*<\/title>/s//<title>brianhayes.dev<\/title>/' "$feed_file"
+# Find the first occurrence of the <link> tag and replace its content
+sed -i '0,/<link>.*<\/link>/s//<link>https:\/\/brianhayes.dev<\/link>/' "$feed_file"
 
 # Replace old feed.rss with new feed
 mv ./feed.rss ../dist/assets/

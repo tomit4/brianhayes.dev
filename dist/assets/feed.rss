@@ -2,7 +2,7 @@
 <rss version="2.0">
 	<channel>
 		<title>brianhayes.dev</title>
-		<link>https://brianhayes.dev/blog/the_readme</link>
+		<link>https://brianhayes.dev</link>
 		<description>Personal Blog About Web Dev and Tech</description>
 		<generator>rsspls version 0.5.0</generator>
 		<item>
