@@ -1,26 +1,4 @@
 ```
-#!/usr/bin/env bash
-# sdir.sh
-# used with espanso ;rr and ;rd command
-# A simple bookmarking script used in conjunction with rdir
-# to save a directory for easy navigation later
-
-# save our current working directory
-sdir=$(pwd)$#10sdoc="${1:-''}"
-# allow overwriting of sdrc
-set +o noclobber
-# define and create .sdrc file
-sdrc="$HOME/.config/sdir".sdrc
-if [[ ! -f "$sdrc" ]]; then
-    /usr/bin/touch "$sdrc"
-fi
-
-if [[ $# -gt 0 ]]; then
-    sdoc="$1"
-else
-    sdoc=""
-fi
-
-echo 'export sdir='"$sdir" > "$sdrc"'
-echo 'export sdoc='"$sdoc" >> "$sdrc"'
+#bash shell
+[ ~]$ mkdir my_webpage
 ```
