@@ -99,6 +99,18 @@ html(lang = "en")
                 figcaption Simply Calling The Firefox Browser With The File Name As an Argument Renders A .txt File In The Browser
                 p Now on its own, this is rather underwhelming. The text is small and while possible, the browser is doing some work to parse out exactly what we're trying to have it render. Let's learn our first html tag, the "h1" tag:
                 h2 HTML Tags
+                p The general demarcation characters utilized primarily in HTML are the "lesser than", "&lt", and the "greater than", "&gt", characters. These characters are used to enclose an html element. A simple example would be to enclose a h1, or primary header tag inside of the "&lt" and the "&gt". Let's rename our "hello_world.txt" to "hello_world.html" using the bash "mv" command:
+                pre
+                    code #bash shell&#10[ my_webpage]$ mv hello_world.txt hello_world.html
+                p This will rename our hello_world file to the appropriate extension, this will enable better syntax highlighting in our editor as well as make it clear to us and our various programs what kind of file this is. Now within our hello_world.html file, let's enclose our "Hello World!" in html h1 tags like so:
+                pre
+                    code #hello_world.html&#10&#10&lth1&gtHello World!&lt/h1&gt
+                p If we now open up this file in our browser, we'll notice that the formatting of our text is resized to reflect this new assignment of the text as a header:
+                figure
+                    img.img-image(src="../assets/images/screenshots/html_ss_02.webp" alt="a screenshot an html file with an h1 rendering the text 'hello world' in firefox" title="a screenshot an html file with an h1 rendering the text 'hello world' in firefox" cite="screenshot" loading="lazy")
+                figcaption The h1 HTML Tag Renders A Header In The Browser
+                p HTML Tags, also called HTML Elements, are utilized by the browser to interpret how the developer wishes to organize the text, images, videos, and other forms of media in the HTML document. Additionally, HTML tags can be referenced directly within CSS and JavaScript files for further styling and programming interactivity with those elements. HTML also recognizes what's called "Nested" Tags/Elements, which is what will be discussed next.
+                h2 Nested HTML
             div.foot-arrows
                 button.icons#up-arrow(title="back to top" aria-label="back-to-top" alt="back to top" role="navigation")
         footer(role="menu")

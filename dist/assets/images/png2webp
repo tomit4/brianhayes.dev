@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+full_filename="${1}"
+filename="${full_filename%.*}"
+
+magick "${full_filename}" -resize 700 "${full_filename}"
+convert "${full_filename}" -quality 90 "${filename}.webp"
+rm -i "${full_filename}"
