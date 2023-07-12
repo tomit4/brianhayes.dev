@@ -229,10 +229,10 @@ I also wanted to learn the basics of NGINX, Docker, and already had purchased a 
 -   [gifsicle](https://github.com/kohler/gifsicle)
 -   [xclip](https://opensource.com/article/19/7/xclip)
 
-```
-<link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="style.css"></noscript>
-```
+**TODO:**
+
+-   [ ] Implement Pre Commit Git Hook for minify script
+-   [ ] Recreate dockerify script to instead use docker-compose
 
 **Blog Post Ideas (not a preview)**
 
