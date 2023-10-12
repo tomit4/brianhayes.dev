@@ -85,7 +85,7 @@ html(lang = "en")
                 p And indeed if we type out the trigger ":espanso", we'll see our text is replaced with "Hi there!":
                 figure
                     img.gif-image(src="../assets/images/gifs/espanso_example.gif" alt="Demonstration of Basic Usage of Espanso" title="Demonstration of Basic Usage of Espanso" cite="screenshot" loading="lazy")
-                figcaption Typing ":espanso" Immediately Converts The Text To "Hi There!"
+                figcaption Basic usage of espanso
                 p There are various default examples showing espanso's utility. If you look towards the bottom of the example text expansions, you'll see the ":ip" example, which includes a very similar command to my ip alias:
                 pre
                     code &#35base.yml&#10&#10&#35Returns public ip address&#10- trigger: ":ip"&#10  replace: "{{output}}"&#10  vars:&#10    - name: output&#10      type: shell&#10      params:&#10        cmd: "curl ifconfig.me ; echo ''"

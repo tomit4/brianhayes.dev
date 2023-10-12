@@ -95,7 +95,7 @@ html(lang = "en")
                 figcaption Neovim in Insert Mode with Sample Text
                 figure
                     img.img-image(src="../assets/images/screenshots/ss_nvim_02.webp" alt="CloseUp of the INSERT mode prompt" title="CloseUp of the INSERT mode prompt" cite="author screenshot" loading="lazy")
-                figcaption NORMAL mode has no prompt by default in Vim, but the other modes do.
+                figcaption INSERT mode creates a prompt in Vim
                 p Changing over to insert mode will change the shape of your cursor to the thin bar variety. You can now insert text like you would in a normal text editor. All the basic keybindings still work, be it ctrl+right arrow for navigating, as well as your standard editing keys like backspace and delete. I wouldn't recommend using these, however, as you would be overlooking NORMAL mode's editing capabilities. Generate some dummy text using <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://loremipsum.io/">Lorem Ipsum</a>, enough so that it fills your screen (about 10 paragraphs should do), and then return to NORMAL mode by hitting the &ltESC&gt key. Next I'm going to cover the basic navigation.
                 p In Vim, deviation from the home row of your keyboard is highly discouraged by design. On a standard QWERTY keyboard, when positioned correctly, all the "arrow" navigation keys can be found beneath your right hand, instead, while in NORMAL mode, left is "h", down is "j", up is "k", and right is "l".
                 figure
@@ -119,7 +119,7 @@ html(lang = "en")
                 p The next keybindings important to vertical traversal are that of 'gg' and 'shift+g'(capital G). While in NORMAL mode, enter both of these and notice their results.
                 figure
                     img.gif-image(src="../assets/images/gifs/ss_nvim_08.gif" alt="Demonstration of entire document traversal in Vim" title="Demonstration of entire document traversal in Vim" cite="author screenshot" loading="lazy")
-                figcaption You can traverse the entire document using "gg" and "G"
+                figcaption Traversing the document using "gg" and "G"
                 p These keybindings navigate the entirety of your document. 'gg' will bring your cursor to the first line of your document, while capital G, or shift+g will bring you to the last line of your document.
                 p At this point you might be underwhelmed, as it all seems like a more esoteric way of navigating using alternative keys other than pgdown, pgup, end, home, ctrl+left arrow, ctrl+right arrow, etc. And you'd be right...if this was all Vim had to offer.
                 p While there is more to navigation than what I have presented here thus far, I will now move on to the basics of Vim Editing, which will hopefully further elucidate the power of Vim's modal editing features.
