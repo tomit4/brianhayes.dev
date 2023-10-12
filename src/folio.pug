@@ -9,12 +9,12 @@ html(lang = "en")
         script(src="./toggle-temp.js")
         link(rel='icon' type='image/x-icon' href='assets/icons/favicon.png')
         link(rel='icon' type='application/rss+xml' title='RSS Feed' href='./assets/feed.rss')
-        link(rel='stylesheet' type='text/css' href='css/style.css')
         link(rel='stylesheet' type='text/css' href='css/folio.css')
+        link(rel='stylesheet' type='text/css' href='css/style.css')
         link(rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'")
         noscript
             link(rel="stylesheet" href="css/style.css")
-    body.folio
+    body
         nav
             ul.nav-menu(role="menu")
                 li.nav-items(role="menuitem")
@@ -40,7 +40,7 @@ html(lang = "en")
                     div.nav-text-item#text-blog(aria-label="blog-text" role="menuitem") blog
                 li.nav-text-items(role="menubar")
                     div.nav-text-item#text-rss(aria-label="rss-text" role="menuitem") rss 
-        main.container.fadein.demo-button
+        main.container.fadein.demo-button.folio
             header.folio-header Portfolio
                 .folio-subtitle A Showcase of Projects I've Worked On
             .projects-container
