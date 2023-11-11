@@ -233,6 +233,7 @@ I also wanted to learn the basics of NGINX, Docker, and already had purchased a 
 
 -   [ ] Implement Pre Commit Git Hook for minify script
 -   [ ] Recreate dockerify script to instead use docker-compose
+-   [ ] Adjust hover tooltips to have aria-hidden="true" attribute (hides from screen readers)
 
 **Blog Post Ideas (not a preview)**
 
