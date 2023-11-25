@@ -235,6 +235,7 @@ I also wanted to learn the basics of NGINX, Docker, and already had purchased a 
 -   [ ] Recreate dockerify script to instead use docker-compose
 -   [ ] Adjust hover tooltips to have aria-hidden="true" attribute (hides from screen readers)
 -   [ ] Add aria-controls to all buttons indicating what the button is doing to those using screen readers
+-   [ ] Create a custom 404 Not Found Page and redirect it utilizing NGINX (see wittcode's easy guide)
 
 **Blog Post Ideas (not a preview)**
 
