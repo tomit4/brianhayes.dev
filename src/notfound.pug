@@ -1,0 +1,76 @@
+doctype html
+html(lang = "en")
+    head
+        title brianhayes.dev
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        meta(name="robots" content="follow, index, max-snippet:-1, max-image-preview:large")
+        meta(name='description' content='A simple blog written by a Web Developer, for Web Developers. Covering Basics of HTML, CSS, JavaScript, and much more, including Linux and other subjects related to technology.')
+        script(src="./toggle-temp.js")
+        link(rel='icon' type='image/x-icon' href='assets/icons/favicon.png')
+        link(rel='icon' type='application/rss+xml' title='RSS Feed' href='./assets/feed.rss')
+        link(rel='stylesheet' type='text/css' href='css/home.css')
+        link(rel='stylesheet' type='text/css' href='css/style.css')
+        link(rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'")
+        noscript
+            link(rel="stylesheet" href="css/style.css")
+    body
+        nav
+            ul.nav-menu(role="menu")
+                li.nav-items(role="menuitem")
+                    a.icons#contact(aria-label="email" role="menuitem" href="mailto: brianhayes.dev@protonmail.com") contact
+                li.nav-items(role="menuitem")
+                    a.icons#folio(aria-label="folio" role="navigation" href="./folio.html") folio
+                li.nav-items(role="menuitem")
+                    a.icons#home(aria-label="home" role="navigation" href="/") home
+                li.nav-items(role="menuitem")
+                    a.icons#blog(aria-label="blog" role="navigation" href="./blog/") blog
+                li.nav-items(role="menuitem")
+                    a.icons#rss(aria-label="rss" role="menuitem" href="./assets/feed.rss") rss
+            div.nav-division
+        div.nav-text
+            ul.nav-text-menu(role="menu")
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-contact(aria-label="email" role="menuitem") email
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-folio(aria-label="folio-text" role="menuitem") folio
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-home(aria-label="home-text" role="menuitem") home
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-blog(aria-label="blog-text" role="menuitem") blog
+                li.nav-text-items(role="menubar")
+                    div.nav-text-item#text-rss(aria-label="rss-text" role="menuitem") rss 
+        main.container.demo-button
+            div.home-title
+                div.home-title-card
+                    header.not-found 404
+                    h1.not-found-sub Resource Not Found...
+                    h1.not-found-sub sorry traveler! &#128577;
+        footer(role="menu")
+            div.foot-text
+                ul.foot-text-menu(role="menu")
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-sun(aria-label="light-mode-text" role="menuitem") light
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-git(aria-label="git-text" role="menuitem") git
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-linkedin(aria-label="linkedin-text" role="menuitem") linkedin
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-mastodon(aria-label="mastodon-text" role="menuitem") social
+                    li.foot-text-items(role="menubar")
+                        div.foot-text-item#text-moon(aria-label="dark-mode-text" role="menuitem") dark
+            div.foot-division
+            ul.foot-menu(role="menu")
+                li.foot-items(role="menuitem")
+                    button.footer-button#sun-button
+                        div.icons#sun(aria-label="light-mode" role="button") light
+                li.foot-items(role="menuitem")
+                    a.icons#git(aria-label="git" role="link" target="_blank" rel="noopener noreferrer" href="https://github.com/tomit4") git
+                li.foot-items(role="menuitem")
+                    a.icons#linkedin(aria-label="linkedin" target="_blank" rel="noopener noreferrer" role="link" href="https://linkedin.com/in/brian-hayes-33496067") linkedin
+                li.foot-items(role="menuitem")
+                    a.icons#mastodon(aria-label="social" target="_blank" rel="noopener noreferrer" role="link" href="https://mas.to/@brianhayesdev") social
+                li.foot-items(role="menuitem")
+                    button.footer-button#moon-button
+                        div.icons#moon(aria-label="dark-mode" role="button") dark
+        script(src="./index.js" defer default)
