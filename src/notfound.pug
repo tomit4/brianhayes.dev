@@ -7,13 +7,19 @@ html(lang = "en")
         meta(name="robots" content="follow, index, max-snippet:-1, max-image-preview:large")
         meta(name='description' content='A simple blog written by a Web Developer, for Web Developers. Covering Basics of HTML, CSS, JavaScript, and much more, including Linux and other subjects related to technology.')
         script(src="./toggle-temp.js")
+        script(src="../toggle-temp.js")
         link(rel='icon' type='image/x-icon' href='assets/icons/favicon.png')
-        link(rel='icon' type='application/rss+xml' title='RSS Feed' href='./assets/feed.rss')
+        link(rel='icon' type='image/x-icon' href='../assets/icons/favicon.png')
         link(rel='stylesheet' type='text/css' href='css/home.css')
         link(rel='stylesheet' type='text/css' href='css/style.css')
         link(rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'")
         noscript
             link(rel="stylesheet" href="css/style.css")
+        link(rel='stylesheet' type='text/css' href='../css/home.css')
+        link(rel='stylesheet' type='text/css' href='../css/style.css')
+        link(rel="preload" href="../css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'")
+        noscript
+            link(rel="stylesheet" href="../css/style.css")
     body
         nav
             ul.nav-menu(role="menu")
@@ -24,9 +30,9 @@ html(lang = "en")
                 li.nav-items(role="menuitem")
                     a.icons#home(aria-label="home" role="navigation" href="/") home
                 li.nav-items(role="menuitem")
-                    a.icons#blog(aria-label="blog" role="navigation" href="./blog/") blog
+                    a.icons#blog(aria-label="blog" role="navigation" href="./blog/index.html") blog
                 li.nav-items(role="menuitem")
-                    a.icons#rss(aria-label="rss" role="menuitem" href="./assets/feed.rss") rss
+                    a.icons#rss(aria-label="rss" role="menuitem" href="./assets/feed.rss" style="pointer-events: none;") rss
             div.nav-division
         div.nav-text
             ul.nav-text-menu(role="menu")
@@ -73,3 +79,4 @@ html(lang = "en")
                     button.footer-button#moon-button
                         div.icons#moon(aria-label="dark-mode" role="button") dark
         script(src="./index.js" defer default)
+        script(src="../index.js" defer default)
