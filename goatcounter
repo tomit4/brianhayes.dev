@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# NOTE: replace with env values
+source .env
 docker run --restart=always --name goatcounter \
     -e GOATCOUNTER_DOMAIN=stats.domain.com \
     -e GOATCOUNTER_EMAIL=admin@domain.com \
