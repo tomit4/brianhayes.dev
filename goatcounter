@@ -6,4 +6,5 @@ docker run --restart=always --name goatcounter \
     -e GOATCOUNTER_EMAIL="${GOAT_EMAIL}" \
     -e GOATCOUNTER_PASSWORD="${GOAT_PASSWORD}" \
     -d \
+    -p "${GOAT_PORT}":"${GOAT_DOCKERPORT}" \
     baethon/goatcounter
