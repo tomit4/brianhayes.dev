@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-# NOTE: replace DOMAIN and EMAIL with env values
-docker run --name goatcounter \
+# NOTE: replace with env values
+docker run --restart=always --name goatcounter \
     -e GOATCOUNTER_DOMAIN=stats.domain.com \
     -e GOATCOUNTER_EMAIL=admin@domain.com \
+    -e GOATCOUNTER_PASSWORD=password \
+    -d \
+    -p "${GOAT_PORT}":"${GOAT_DOCKERPORT}" \
     baethon/goatcounter
