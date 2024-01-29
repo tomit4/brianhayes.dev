@@ -4,25 +4,764 @@
 		<title>brianhayes.dev</title>
 		<link>https://brianhayes.dev</link>
 		<description>Personal Blog About Web Dev and Tech</description>
-		<generator>rsspls version 0.5.0</generator>
-		<lastBuildDate>Tue, 07 Nov 2023 17:36:16 PST</lastBuildDate>
+		<generator>rsspls version 0.7.1</generator>
+		<lastBuildDate>Sun, 28 Jan 2024 17:24:26 PST</lastBuildDate>
 		<item>
+			<title>JavaScript</title>
+			<link>https://brianhayes.dev/blog/javascript_the_webs_muscles</link>
+			<description><![CDATA[<article class="demo-button">
+        <h1>Introduction</h1>
+        <p>You may have noticed that this article's publish date is far later than my previous article on <a aria-label="link to article, css, the web's makeup" class="inline-link" href="https://brianhayes.dev/blog/css_the_webs_makeup.html" role="link">CSS: The Web's Makeup</a>. While this is mainly due to other responsibilities which have as of recent required my attention, I must also admit that I have been a bit intimidated on writing on the subject of JavaScript. JavaScript is the first programming language I ever learned, and I am still continuing to learn it. Thusly, I don't yet feel I have any authority to write on the subject of JavaScript, even in the context of this article, which is meant as an introduction.</p>
+        <p>Nevertheless, it is quite likely that I will never feel ready to give an overview of JavaScript. Thusly, I shall simply have to do my best. In covering the topic, I cannot overemphasize the incredibly large role JavaScript has played in bringing the web to the state it is in today. I have come across many social media posts that joke/deride JavaScript for no longer being a programming language reserved solely to the realm of the web, but rather has pervaded into nearly every facet of modern computer applications. </p>
+        <p>With the arrival of the JavaScript runtime, NodeJS, the software framework, Electron, and the mobile framework, React Native, JavaScript has made its way into many ecosystems previously the purview of other programming languages. From its humble beginnings as a simple scripting language meant solely to add small bits of interactivity to web pages, JavaScript is now a fully fledged programming language that can interact with native C libraries directly on your computer (NodeJS), utilize User Interface libraries to write desktop applications (Electron), and even write platform agnostic mobile applications (React Native). It is not an understatement to say that JavaScript is everywhere!</p>
+        <p>Perhaps you might now understand my reluctance to cover such a vast subject, as a single article, even one that attempts to be an introduction to the very basic aspects of the language, can only barely scratch the surface of the subject that is JavaScript. Indeed, entire blogs, books, videos, and podcasts have been produced that solely revolve around The JavaScript Programming Language and the vast ecosystem around it. </p>
+        <p>JavaScript is both beloved and hated by programmers for a wide variety of reasons. Regardless of these sentiments, JavaScript has long been, and continues to be, one of the most popular programming languages in the world due to its ubiquity within the world wide web. In short, with the rise of the web, so too went JavaScript. </p>
+        <p>Even if it is not one's intent to become a web developer, it is in my humble opinion that it is worthwhile for anyone looking to create any substantial application on the web to at least have a basic familiarity with JavaScript's syntax, especially when it comes to how it interacts with the Document Object Model.</p>
+        <p>This will certainly not be my only article written which involves JavaScript in the context of programming, and I am sure to not cover the entirety of the JavaScript programming language in this article. It is my hope, however, to give you a basic understanding of JavaScript and by extension, core programming concepts. This will include introductory examples involving the subjects of  variable declaration and usage, boolean statements, conditionals, function declarations, arrays, objects, and finally basic interactions with the console and document objects. Firstly, however, I feel it is important to briefly overview what is JavaScript and it's history.</p>
+        <h2>What Is JavaScript?</h2>
+        <p>JavaScript is a high level programming language that originally was created to add interactivity to HTML elements after the initial web page had loaded. The language is dynamically typed, supporting prototype based object oriented as well as functional and imperative programming styles. All major web browsers include a dedicated JavaScript engine which executes code on the user's device. On its own, JavaScript does not have native interfaces for interacting with standard Input/Output (I/O), unlike lower level languages, but JavaScript is often utilized with a wide array of APIs via a runtime system native to the browser, which facilitates interactivity with I/O.</p>
+        <p>As mentioned in the introduction, JavaScript is no longer solely the domain of client side scripting on the browser. That said, JavaScript still is predominantly utilized for client side scripting to add interactivity to the browser via scripted events. Examples of this interactive behavior include:</p>
+        <div class="inline-list">
+          <ul>
+            <li>
+              <p>Loading new content to the web page without reloading the entire page.</p>
+            </li>
+            <li>
+              <p>Interacting with HTML elements via dynamically changing CSS attributes to add animations</p>
+            </li>
+            <li>
+              <p>Validating Input Forms</p>
+            </li>
+            <li> 
+              <p>Redirecting the User to Another Page</p>
+            </li>
+            <li>
+              <p>Storing and retrieving data on the user's device (i.e. <a aria-label="wikipedia link to http cookie article" class="inline-link" href="https://en.wikipedia.org/w/index.php?title=HTTP_cookie" rel="noopener noreferrer" role="link" target="_blank">HTTP cookies</a>).</p>
+            </li>
+          </ul>
+        </div>
+        <p>The use of JavaScript has more recently moved outside of the realm of the browser and into the server space with the advent of NodeJS arriving on the programming scene in 2009. This alone would have solidified JavaScript as the predominant programming language of the web, as it now allowed for servers as well as client side applications to be entirely written in JavaScript. Additionally, JavaScript now is utilized to create platform agnostic desktop and mobile applications using the Electron Software Framework and the React Native Framework respectively.</p>
+        <p>It is obvious that JavaScript's reach has expanded far and wide, but how did this humble programming language get to where it is today?</p>
+        <h2>The History Of JavaScript</h2>
+        <p>The history of JavaScript is closely tied to that of the Browser, and by extension, The World Wide Web. <a aria-label="link to wikipedia article on the history of the world wide web" class="inline-link" href="https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web" rel="noopener noreferrer" role="link" target="_blank">The History Of The World Wide Web</a> is a subject outside the scope of this article. Sufficient to say that in 1990, one year after the inception of the World Wide Web itself, Tim Berners-Lee (the inventor of The World Wide Web) released the first web browser, simply known as the Line Mode Browser. Run from the terminal, this basic browser bore little resemblence to today's modern browsers, but demonstrated the promise of what the World Wide Web would come to fulfill: that of an easily accessible, interconnected world. As an aside, one can still run basic browsers from the terminal, <a aria-label="a link to the links browser website" class="inline-link" href="http://links.twibright.com/user_en.html" rel="noopener noreferrer" role="link" target="_blank">The Links Browser</a> is one of the oldest examples of these types of browser still in use today.</p>
+        <p>Three years later, in 1993, Lee would go on to release the <a aria-label="a link to the wikipedia article on the mosaic browser" class="inline-link" href="https://en.wikipedia.org/wiki/Mosaic_(web_browser)" rel="noopener noreferrer" role="link" target="_blank">Mosaic Browser</a>, which is credited as being the first web browser to gain widespread popularity. With its use of a graphical user interface instead of a terminal, the Mosaic Browser was widely considered to be much more accessible to the average person. The popularity and ease of use of The Mosaic Browser would usher in the Internet boom of the 1990s.</p>
+        <p>One year after The Mosaic Browser's release, Marc Andreessen, the leader of the Mosaic team, would found the company, Netscape. Their flagship product, the Netscape Navigator Browser, itself heavily inspired by The Mosaic Browser, would soon overshadow its predecessor in popularity. Shortly thereafter, in 1995, Microsoft would release the  Internet Explorer Browser, sparking a browser war with Netscape.</p>
+        <p>These early days of the web were filled with static sites, which, while sufficent for the reading of documents, lacked interactivity once the page loaded. In order to interact with early web pages, one would have to initiate an event (such as a click on a button), which would cause the entire page to refresh in order for new content to be loaded and rendered. While still impressive for its time, it limited the kinds of interactions early web users could have with the pages they visited. It became apparent to those working at the forefront of this new burgeoning field to change this and add more dynamism to these user interactions. </p>
+        <p>Thusly, in 1995, Netscape decided to add a scripting language to The Netscape Navigator Browser. Two routes were taken to achieve this ultimate goal. The first, in collaboration with Sun Microsystems, aimed to embed the Java Programming Language into the browser. The other route was put into the hands of a computer programmer named Brendan Eich, who was tasked with embedding the Scheme Programming Language. </p>
+        <p>It wasn't long before Netscape management had determined that the best option was rather for Eich to develop a new programming language, which would incorporate syntax more similar to Java than Scheme. Although originally called "LiveScript" when first shipped with the Navigator beta in September of 1995, it was soon renamed to JavaScript when the official version release occurred in December of that year. Originally intended "to help nonprogrammers create dynamic, interactive web sites," it probably occurred to no one at the time how ubiquitous their new creation would become.</p>
+        <h2>JavaScript Basics</h2>
+        <p>While the history of JavaScript is much more extensive than this, this article will be lengthy enough without going into the entirety of JavaScript's history. Nevertheless, should you wish to find out more, I highly encourage you to <a aria-label="a link to the wikipedia article on the history of javascript" class="inline-link" href="https://en.wikipedia.org/w/index.php?title=JavaScript#History" rel="noopener noreferrer" role="link" target="_blank">read the Wikipedia article on the subject</a>, from which the majority of the previous section was referenced. </p>
+        <p>The remainder of this article will be an extensive introduction to general programming concepts as they relate to JavaScript, including variables, data types, conditionals, control flow statements, and functions. As I mentioned at the beginning of this article, the topic of JavaScript is vast, but it is my hope that in reading this, you will have been given a basic grasp on the fundamentals of working with JavaScript and how to add basic interactivity to your web pages.  Firstly, however, it is important that we set up a working environment so that we can see the results of the JavaScript we write. For this we'll be working in the browser's console, available via the browser's native developer tools.</p>
+        <h2>The Console</h2>
+        <p>Later on, in part two of this article, I will explain how to interact with JavaScript within the context of files that are directly linked to an HTML document, much like the document we created in <a aria-label="a link to the article HTML, the web's skeleton" class="inline-link" href="https://brianhayes.dev/blog/html_the_webs_skeleton.html" role="link">HTML: The Web's Skeleton</a>. For now, however, it is time to introduce one of the most valuable tools available to the modern web developer, that of the developer console. Open up your preferred browser and hit the F12 key. You should be presented with a separate partition or window that displays the underpinnings of the webpage you are currently on.</p>
+        <figure><img alt="a screenshot showing the developer console alongside an open web page" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/devtools_ss_01.webp" title="the devtools console opened up at brianhayes.dev"></figure>
+        <figcaption>Pressing the F12 key opens the browser's devtools</figcaption>
+        <p>Notice the tabs on the top of the new window/partition. Navigate to the tab labeled "Console". Here, you should see a blinking cursor. You can think of this as being like a coding sandbox in which JavaScript can be written to test out code. Should you choose to follow along, simply copy the code snippets in the subsequent examples into this console. Let's start off with variable declarations.</p>
+        <h2>Variables</h2>
+        <p>Much like in mathematics, variables in programming tie a particular piece of data to a symbol representing that data. The most simple example of this can be demonstrated by declaring the equivalency between a named symbol, and the data it represents. In JavaScript, this is done by using the var keyword. Inside your console, type out the following code:</p>
+        <pre><code>var greeting = "Hello World!";</code></pre>
+        <p>This simple statement should be somewhat self explanatory, but let's break it down regardless. Firstly, let us address the <code class="inline-code">var</code> keyword. In JavaScript, like all programming languages, there are reserved keywords, with <code class="inline-code">var</code> being one of them. This keyword is to let the JavaScript interpreter know that we are declaring a variable. The next word, <code class="inline-code">greeting</code>, is the name of the variable we are declaring. JavaScript has no reference to <code class="inline-code">greeting</code> until we have declared it. Next, we utilize an equal sign to declare that <code class="inline-code">greeting</code> is equal to the following value. In this case we apply what is known in programming as a <em>string</em>, or a series of characters. The quotations are required to delineate that we are declaring a string. To summarize, we are declaring a variable called <code class="inline-code">greeting</code> which holds the string value of "Hello World!".</p>
+        <p>If we write out this statement and then hit the "Enter" key inside of our browser's console window, the console will give us a return value of <code class="inline-code">undefined</code>. This may seem perplexing to the unitiated. Simply put, while the console is acknowledging our assignment, we have not returned anything yet, we have simply declared our variable <code class="inline-code">greeting</code> to exist. In other words, we have not asked the JavaScript interpreter to do anything other than hold onto the declaration of <code class="inline-code">greeting</code> in memory. Let's now retrieve our value using a simple call to the console like so:</p>
+        <pre><code>console.log(greeting);</code></pre>
+        <p>After typing out this bit of code and hitting enter, the JavaScript interpreter will then print out the value we have assigned to the <code class="inline-code">greeting</code> variable, "Hello World!":</p>
+        <figure><img alt="a screenshot of the devtools displaying a basic javascript hello world example" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/devtools_ss_02.webp" title="declaring a variable and then logging the value to the console in javascript"></figure>
+        <figcaption>Variable declaration and logging to the console</figcaption>
+        <p>While simple, the declarations of variables in programming is akin to learning your ABCs in the alphabet. By creating associations between variable names with values they represent, we can establish semantic associations to make our code more readable to both ourselves and others. Let's declare some other variables in the next section, where I will introduce you to the other basic data types within JavaScript.</p>
+        <h2>Data Types</h2>
+        <h3>Numbers</h3>
+        <p>All programming languages have a series of data types which serve various purposes. Much of JavaScript's data types have to do with abstractions that are easily parsed/understood by the underlying computer architecture. Strings are one of the easiest to grasp examples for the beginner, as they are simply a sequence of characters meant usually to represent names, words, or statements. Another easy to understand data structure is that of numbers. Unlike variable declaration of strings, numbers are not encapsulated inside of quotation marks, and one can simply assign a variable like so:</p>
+        <pre><code>var age = 40;</code></pre>
+        <p>As you can see, the semantic aspects of declaring variables are already starting to show. Age is often associated with a numeric value, while the greeting variable above is indeed a statement often interpreted as a greeting. It is often said that naming variables is one of the programmer's greatest challenges. As you become more versed in programming, this difficulty will become more apparent. For now, however, simply think on the confusion a fellow programmer would have if we had simply switched our values for these two declarations:</p>
+        <pre><code>var age = "Hello World!";
+var greeting = 40;</code></pre>
+        <p>This is an obviously confusing series of declarations as each value the variables represent, while valid JavaScript, would not be looked on favorably by anyone having to parse through and read this code. These kinds of naming conventions often relate to the particular type of data being stored within the variable. Perhaps the importance of proper naming conventions will become even more apparent in the next data type we will cover, booleans.</p>
+        <h3>Booleans</h3>
+        <p>Booleans are perhaps the most simple to understand data type, as the value stored within a boolean variable can hold only the value of <code class="inline-code">true</code> or <code class="inline-code">false</code>, and their declaration is just that simple:</p>
+        <pre><code>var isOverForty = false;
+var isUnderFifty = true;</code></pre>
+        <p>Here, we introduce a few conventions. As you can see, I am declaring two variables, one called <code class="inline-code">isOverForty</code>. Notice the capitalization of each word, demarcating a kind of statement which corresponds to whether the value holds a boolean <code class="inline-code">true</code> or <code class="inline-code">false</code> value. This kind of capitalization is what is known as <em>Camel Case</em>, where each new word, rather than demarcated by a space like in traditional writing, is instead demarcated with a capitalized letter. This is because spaces in programming often indicate a new declaration or statement in programming, and thusly to ensure that a single variable is declared, no spaces can be used when naming variables that involve multiple words in the name. Additionally, to ensure the readability of the variable name, each letter is demarcated with a visually noticable capitalized letter.</p>
+        <p>Also notice the choice of semantics, <code class="inline-code">isOverForty</code> indicates a <code class="inline-code">true</code> or <code class="inline-code">false</code> value. It would be very poor practice to name this variable <code class="inline-code">mightBeOverForty</code>, as that indicates that it's value could be <em>either</em> <code class="inline-code">true</code> <em>or</em> <code class="inline-code">false</code>. Because we are storing a boolean value of <code class="inline-code">false</code> here, it is better to give this variable a name that indicates to us that the expected return value is <em>definitively</em> <code class="inline-code">true</code> or <code class="inline-code">false</code>.</p>
+        <p>Strings, numbers, and booleans within the JavaScript Programming Language (and other programming languages), are what are known as <em>Primitive</em> data types. There are other primitive data types (null, undefined, and symbols) which will not be covered in this introduction. The other two data types that we'll be covering are what are known as <em>Reference</em> data types. Specifically, we are referring to <em>Arrays</em>, and <em>Objects</em>. These data types can be thought of as stores or collections of data. Technically, <em>Functions</em> are also a Reference data type, but to ensure this introduction is kept as simple as possible, we'll be covering Arrays and Objects first before moving onto the slightly more complex subject of Functions. Let's start by introducing the Array data type.</p>
+        <h3>Arrays</h3>
+        <p>If you work in JavaScript long enough, you will eventually come across the saying "Everything is an object in JavaScript". We have yet to cover Objects as a data type, but know that this statement is more than just a sentiment, it is a statement of fact. For now, simply keep in your mind that Arrays and Objects in JavaScript share a lot in common.</p>
+        <p>The most simple way to think of Arrays in JavaScript are as a grouping of variables that itself can be contained within a variable. This is expressed by utilizing the square "[ ]" brackets to denote you are declaring an array of values being stored. Thusly a simple array of names could be declared like so:</p>
+        <pre><code>var groupOfNames = ["Mary", "John", "Larry", "Zoe"];</code></pre>
+        <p>Practically speaking, one can create an array of any amount of values, of any type of values, and even include Arrays (or Objects) within Arrays. Usually Arrays are made up of variables of only one data type, but it is perfectly valid to create an Array of values, each of different data types. Here are a few examples:</p>
+        <pre><code>var groupOfAges = [12, 16, 59, 42, 0];
+var groupOfGroups = [["Mary", "John"], ["Larry"], ["Zoe", "Lenny"]];
+var groupOfRandomValues = [42, "Mary", true, "Don", 64, ["Nested String", 0], false];</code></pre>
+        <p>Arrays are the most basic way of grouping values together in JavaScript, with a few caveats that contradict the expectations of those new to the language. One is that Arrays are what is known as "Zero Indexed". This essentially means that the first element in an array is not referenced "the 1st element", but rather "the 0th element" by the JavaScript interpeter. This is a convention in many programming languages. Thusly when wishing to reference a particular element of an array, one must subtract 1 from the count of elements up to the element they wish to reference. The following code snippet demonstrates this:</p>
+        <pre><code>var groupOfNames = ["Mary", "John", "Larry", "Brett"];
+var firstNameInGroupOfNames = groupOfNames[0];
+var secondNameInGroupOfNames = groupOfNames[1];
+
+console.log(firstNameInGroupOfNames);
+// returns "Mary"
+
+console.log(secondNameInGroupOfNames);
+// returns "John"</code></pre>
+        <p>This convention seems straight forward enough to the beginner, but you'll see this convention unfortunately can often result in what are known as "off by one" errors when working with control flow statements (introduced later on in this article), as it is easily forgotten when first starting out. </p>
+        <p>Lastly, I'll point out that should you desire to grab the last element in an array, regardless of it's length, one can always refer to the last element in an array like so:</p>
+        <pre><code>var groupOfNames = ["Mary", "John", "Larry", "Brett"];
+var lastNameInGroupOfNames = groupOfNames[groupOfNames.length - 1];
+
+console.log(lastNameInGroupOfNames);
+// returns "Brett"</code></pre>
+        <p>This code snippet, to the beginner, might raise an eyebrow, as to why the "-1" is necessary. The .length property is an Array specific property that refers to the counted number of elements in the Array, but this number is always equivalent to index of the last element of the Array plus 1, as it is a count of the elements in the Array, and not simply a reference to the index. Thusly, to get the last element of an Array, one must reference it's length and then subtract 1 from it.</p>
+        <p>We'll be returning to Arrays later on in this article when we start working with control flow statements. For now, let's cover the other Reference data type in JavaScript, which also happens to be the most ubiquitously used, the JavaScript Object.</p>
+        <h3>Objects</h3>
+        <p>As mentioned earlier, the saying "Everything is an Object in JavaScript" is very often referenced when delving deep into the intricacies of the language. Objects are somewhat similar to Arrays in that they are stores of any kind of data types, with one small difference that makes Objects vastly more powerful than Arrays (at least when it comes to levels of abstraction). Unlike Arrays, which are automatically indexed by number, Objects can be indexed by strings. Thusly high level abstractions can be encapsulated within an Object. To start, one declares an Object very much like an array, but instead using the curly braces syntax, "{ }". Let's declare a basic object called <code class="inline-code">person</code> to demonstrate:</p>
+        <pre><code>var person = {
+  name: "Mary",
+  age: 25,
+  favoriteFood: "chicken",
+  isEmployed: true
+};</code></pre>
+        <p>Notice the way this object is declared. After instantiating our object, <code class="inline-code">person</code>, we open a set of curly braces and declare a <em>key</em>, <code class="inline-code">name</code>, and its corresponding <em>value</em>, <code class="inline-code">"Mary"</code>. This <em>key/value</em> pair declaration is then followed by a comma and carriage return before going onto declare more <em>key/value</em> pairs in a similar fashion until we finish off with the <em>key</em>, <code class="inline-code">"isEmployed"</code>, and finally close off the curly braces, encapsulating our new created Object, and finishing its declaration.</p>
+        <p>Notice the <em>keys</em> are always followed by a colon <code class="inline-code">":"</code> character, and then the <em>values</em> are declared very much like variables, ensuring strings are encapsulated by quotation marks, numbers and booleans are similarly declared like variables (without the quotation marks). Unlike arrays, where referencing these values by index can sometimes be unreadable, Objects allow the programmer to create <em>key/value</em> pair references that start to appear like English nouns, adjectives, and verbs.</p>
+        <p>So if we wish to reference our <code class="inline-code">person</code> Object's <code class="inline-code">name</code>, <code class="inline-code">age</code>, and <code class="inline-code">isEmployed</code> values. We can simply reference it like so, using the <em>object dot key</em> syntax:</p>
+        <pre><code>var person = {
+  name: "Mary",
+  age: 25,
+  favoriteFood: "chicken",
+  isEmployed: true
+};
+
+console.log(person.name);
+// returns "Mary"
+
+console.log(person.age);
+// returns 25
+
+console.log(person.isEmployed);
+// returns true</code></pre>
+        <p>Objects can do so much in the realm of JavaScript. Hence why JavaScript is referred to as an "Object Oriented" programming language. Even the previous data types I've referenced can technically be thought of as Objects. We'll return to Objects later on when we cover Functions. We have now covered the basics of most common JavaScript data types. </p>
+        <p>But declaring variables and storing data is only part of programming/coding. In order to work with this data in any meaningful way, we'll need other tools. What if we wish to change each element in an Array? What if we wish to list out only the <em>keys</em> or <em>values</em> in an object? This involves an essential concept in programming, the control flow statement.</p>
+        <h2>Loops</h2>
+        <p>Control Flow Statements, more commonly known as "loops", allow for a specific set of instructions to be invoked over and over again until a certain condition is met. After this condition is met, the loop is "broken out of", and the iteration is stopped. There are many forms of control flow statements, the most common being that of the "for loop". Other control flow statements include the "while loop" and the "do while" loop. There are also what are known as "higher order" functions which perform different operations on the data being passed to it. For the sake of keeping this article as introductory as possible, we'll only be covering one of these control flow statements, that of the classic "for loop".</p>
+        <p>Technically the for loop is a JavaScript function, which we haven't covered yet, but I feel that loops are a fine segue from the subject of Arrays and Objects, as loops are often used to iterate over, and sometimes change, the data within these Reference data types. Let's simply declare an array of names, then instead of referencing each one by index, we'll use a for loop to simply log each name to the console:</p>
+        <pre><code>var groupOfNames = ["Mary", "John", "Larry", "Lenny", "Bruce"];
+
+for (var i = 0; i &lt;= groupOfNames.length -1; i++) {
+  console.log(groupOfNames[i]);
+}
+
+/*
+ * returns:
+ * Mary
+ * John
+ * Larry
+ * Lenny
+ * Bruce
+*/</code></pre>
+        <p>Here we declare an array of strings called <code class="inline-code">groupOfNames</code>. The for loop's syntax can look quite foreign to those who have never seen one before, so let's break it down. The reserved keyword <code class="inline-code">for</code> is first used to indicate that we wish to start a for loop. Afterwards which, we declare the logic to take place inside our for loop using an opening parentheses character, <code class="inline-code">(</code>. This is what indicates we are invoking a function call (more on that later). Inside these parentheses, we are defining a series of <em>arguments</em>, which tell the <code class="inline-code">for</code> function how to behave. Each argument is delineated by a comma character. In the case of a standard for loop, the function expects three arguments. Let's break down each argument in further detail.</p>
+        <p>Firstly we have the statement:</p>
+        <pre><code>var i = 0;</code></pre>
+        <p>This statement should seem familiar, we simply declare a variable <code class="inline-code">i</code> and set it hold the value of the number <code class="inline-code">0</code>. The use of the letter <code class="inline-code">i</code> is based off of convention. It is meant to stand for <em>iterator</em>, and is generally what is used to keep count as we go through the loop.</p>
+        <p>The second argument to our for function call looks like a mathematical comparison, which indeed it is:</p>
+        <pre><code>i &lt;= groupOfNames.length - 1;</code></pre>
+        <p>Much like in mathematics, the <code class="inline-code">&lt;=</code> indeed refers to "less than or equal to". This is our first equality statement covered thus far, and by the end of this article we will cover a few more. So what does this translate to? Well if our iterator, <code class="inline-code">i</code>, is <em>less than or equal to</em> the length of our <code class="inline-code">groupOfNames</code> array (minus one to account for the zero indexing). The statement here returns a boolean value of <code class="inline-code">true</code> or <code class="inline-code">false</code>. It is basically telling the for loop, as long as this condition is true, run the following code again.</p>
+        <p>Lastly we have the third argument of the for loop:</p>
+        <pre><code>i++;</code></pre>
+        <p>This <code class="inline-code">++</code> is what is known as an increment operator. It is basically telling the for loop that at the end of each iteration, add one to the iterator number, <code class="inline-code">i</code>. Thusly on the first loop, after the first name is printed to the console, <code class="inline-code">i</code>, which was initially set to the number, <code class="inline-code">0</code>, is now set to the number, <code class="inline-code">1</code>. Let's also log to the console the iterator itself to hammer home the point:</p>
+        <pre><code>var groupOfNames = ["Mary", "John", "Larry", "Lenny", "Bruce"];
+
+for (var i = 0; i &lt;= groupOfNames.length -1; i++) {
+  console.log("index: ", i);
+  console.log(groupOfNames[i]);
+}
+
+/*
+ * returns:
+ * index: 0
+ * Mary
+ * index: 1
+ * John
+ * index: 2
+ * Larry
+ * index: 3
+ * Lenny
+ * index: 4
+ * Bruce
+*/</code></pre>
+        <p>Hopefully the above example illustrates not only the basics of a classic for loop, but also reiterates the concepts around zero indexing of arrays introduced earlier. Let's now loop over an array of objects, and in the process, change each of the object's <code class="inline-code">age</code> value:</p>
+        <pre><code>var groupOfPeople = [
+  {
+    name: "Mary",
+    age: 25
+  },
+  {
+    name: "John",
+    age: 37
+  },
+  {
+    name: "Leslie",
+    age: 64
+  }
+];
+
+for (var i = 0; i &lt;= groupOfPeople.length - 1; i++) {
+  var person = groupOfPeople[i];
+  var statementOfAge = person.name + " is my name, my age is: " + person.age;
+  console.log(statementOfAge);
+
+  person.age = ++person.age;
+  var statementOfAgeAfterOneYear = "After one year's time, I, " + person.name + " will be " + person.age + " years old";
+  console.log(statementOfAgeAfterOneYear);
+}
+
+console.log(groupOfPeople);</code></pre>
+        <p>This code is a bit more complicated than what we covered thus far, but hopefully my naming conventions have made it clear what the expected output of this for loop will be.</p>
+        <p>Let's cover first our declaration of our <code class="inline-code">groupOfPeople</code> array. Unlike our previous example, which simply was a collection of names, here we are declaring a series of objects, each object representing one single person. Each person is declared with a <code class="inline-code">name</code> and an <code class="inline-code">age</code> <em>key</em>, and have a corresponding string (their name), and number (their age). Very much like our previous example on referencing an array, we do so using the square bracket syntax, which is demonstrated within our for loop on the first line:</p>
+        <pre><code>var person = groupOfPeople[i];</code></pre>
+        <p>This is more for semantics as to not be confusing. By shortening my reference to each individual <code class="inline-code">person</code> from <code class="inline-code">groupofPeople[i]</code>, I can more easily read the rest of the code inside my for loop.</p>
+        <p>Next a series of what is know as "string concatenation" operations occur. Unlike with numbers, when strings are <em>added</em> to each other using the <code class="inline-code">+</code> operator, the previous string is concatenated with whatever the following value is. If what follows is not a string, like the <code class="inline-code">age</code> value, JavaScript will <em>coerce</em> the value into a string.</p>
+        <pre><code>var statementOfAge = person.name + " is my name, my age is: " + person.age;</code></pre>
+        <p>And of course, we then log out this statement to the console.</p>
+        <p>Next we then do something we have not covered in this article thus far. We reassign the person's <code class="inline-code">age</code> value to itself, but prepended with a <code class="inline-code">++</code> operator. Unlike in our for loop declaration, where the iterator is appended the <code class="inline-code">++</code> operator, the prepending of the <code class="inline-code">++</code> operator ensures that the value is changed prior to the remainder of the subsequent statement(s).</p>
+        <pre><code>person.age = ++person.age;</code></pre>
+        <p>Then, we declare a new variable, <code class="inline-code">statementOfAgeAfterOneYear</code>, in which we then concatenate a new string, stating what the person's <code class="inline-code">age</code> will be after one year.</p>
+        <pre><code>var statementOfAgeAfterOneYear = "After one year's time, I, " + person.name + " will be " + person.age + " years old";</code></pre>
+        <p>We once again log this statement to the console to reflect the change in the person's <code class="inline-code">age</code>.</p>
+        <p>Once the for loop is finished, delineated by the closing curly brace <code class="inline-code">}</code> character, we simply log to the console the entire <code class="inline-code">groupOfPeople</code> array. This demonstrates that the change of the <code class="inline-code">age</code> value on each of our persons in the <code class="inline-code">groupOfPeople</code> array did <em>actually change</em> our original array of objects. Let's take a look at our final print outs to the console:</p>
+        <pre><code>/*
+ * returns:
+ * Mary is my name, my age is: 25
+ * After one year's time, I, Mary will be 26 years old
+ * John is my name, my age is: 37
+ * After one year's time, I, John will be 38 years old
+ * Leslie is my name, my age is: 64
+ * After one year's time, I, Leslie will be 65 years old
+ * 
+ * 
+ * [
+ *   {
+ *     name: Mary,
+ *     age: 26
+ *   },
+ *   {
+ *     name: John,
+ *     age: 38
+ *   },
+ *   {
+ *     name: Leslie,
+ *     age: 65
+ *   }  
+ * ]
+*/ </code></pre>
+        <p>We have now covered the quintessential for loop. There are other control flow statements to investigate (while, do while loops), and modern JavaScript has many variations on these as well. Covering the varying control flow statements would take an entire article (or two) to really investigate the myriad of control flow statements available, but understanding the basic for loop can carry a JavaScript programmer very far, especially when used in the context of functions and conditional statements.</p>
+        <h2>Functions and Conditionals</h2>
+        <p>Functions are a series of procedures encapsulated within a block of code. Unlike procedures that take place within the global scope of the program (an explanation of scope will come shortly), functions take in a form of input and generate a form of output that is related to the input. Prior to covering functions however, I feel it is necessary to briefly touch on conditional statements.</p>
+        <p>Recall in our standard for loop examples, we have encapsulated inside the initial parentheses, <code class="inline-code">( )</code>, a series of <em>arguments</em>, delineated by a semicolon character, <code class="inline-code">;</code>.</p>
+        <pre><code>for (var i = 0; i &lt;= groupOfPeople.length - 1; i++) {</code></pre>
+        <p>Note the second <em>argument</em> in this for loop:</p>
+        <pre><code>i &lt;= groupOfPeople.length - 1;</code></pre>
+        <p>You may recall in our previous section that this utilizes a mathematical comparison, the <code class="inline-code">&lt;=</code> or <em>less than or equal</em> operator which in essence tells our for loop that as long as "<code class="inline-code">i</code> is <em>less than or equal</em> to the <code class="inline-code">groupOfPeople</code> array's length," to continue repeating the following sequence of code encapsulated inside of the curly braces <code class="inline-code">{ }</code>.</p>
+        <p>This is what is known as a <em>conditional statement</em>. A conditional statement declares a comparative operation between two or more values that either returns <code class="inline-code">true</code> or <code class="inline-code">false</code>.</p>
+        <p>Technically these statements return <em>truthy</em> or <em>falsy</em> values, and this is one of the major reasons JavaScript is often criticized, as these comparitive statements can sometimes return a boolean value that is not expected. In the interest of keeping this introduction to the concept of conditional statements simple, however, we will not delve into these nuances at this time.</p>
+        <h3>If Statements</h3>
+        <p>The most common conditional statement one will see in many programs is the <code class="inline-code">if</code> statement. The <code class="inline-code">if</code> statement is very readable even to novice programmers, and relatively easy to pick up. Let us examine this simple block of code:</p>
+        <pre><code>var person = {
+  name: "Janice",
+  age: 42
+}
+
+if (person.age == 42) {
+  console.log("person's age is 42!");
+}
+
+// returns "person's age is 42!"</code></pre>
+        <p>This <code class="inline-code">if</code> statement is almost self explanatory, but let's break it down regardless. The reserved keyword, <code class="inline-code">if</code>, is used to instantiate a conditional statement. Within the parentheses characters <code class="inline-code">( )</code>, a conditional statement is passed which can only return a <code class="inline-code">true</code> or <code class="inline-code">false</code> boolean value. In this case, the <code class="inline-code">person</code> object's <code class="inline-code">age</code> <em>value</em> is compared to the number, <code class="inline-code">42</code>, using the double equal sign equivalency operator, <code class="inline-code">==</code>. Should the <code class="inline-code">person.age</code> <em>value</em> be equal to <code class="inline-code">42</code>, the code encapsulated within the curly braces is executed. In this case, the <code class="inline-code">person.age</code> variable is equal to <code class="inline-code">42</code>, so the logged message is dispalyed in the console.</p>
+        <p>Had the <code class="inline-code">person.age</code> <em>not</em> have been equal to <code class="inline-code">42</code>, no call to the console would have been invoked, and nothing would have been logged or outputted.</p>
+        <h3>Else Clauses</h3>
+        <p>While sometimes in programs, having a simple statement that only runs if a condition is true works just fine, but other times we wish to run some other code should that statement <em>not</em> return true. Very much like the syntax of the English language, we can follow up our <code class="inline-code">if</code> statement with an <code class="inline-code">else</code> statement, which should run if our initial <code class="inline-code">if</code> statement not return <code class="inline-code">true</code>. Here is a simple example:</p>
+        <pre><code>var person = {
+  name: "Janice",
+  age: 43
+}
+
+if (person.age == 42) {
+  console.log("person's age is 42!");
+} else {
+  console.log("person's age is NOT 42!");
+}
+
+// returns "person's age is NOT 42!"</code></pre>
+        <p>Else clauses in <code class="inline-code">if</code> statements are useful when there is some other outcome we wish to occur should our initial conditional statement fails.</p>
+        <h3>Else If Clauses</h3>
+        <p>But what if we have multiple conditionals we wish to check against? Let's utilize a for loop with conditional statements to demonstrate how to do so, now also using the <code class="inline-code">else if</code> clause:</p>
+        <pre><code>var groupOfPeople = [
+  {
+    name: "Mary",
+    age: 21
+  },
+  {
+    name: "John",
+    age: 18
+  },
+  {
+    name: "Leslie",
+    age: 25
+  }
+];
+
+for (var i = 0; i &lt;= groupOfPeople.length - 1; i++) {
+  var person = groupOfPeople[i];
+  var statement = "";
+
+  if (person.age &lt; 21) {
+    statement = "My name is: " + person.name + " and I am under 21";
+  } else if (person.age == 21) {
+    statement = "My name is: " + person.name + " and I recently turned 21";
+  } else {
+    statement = "My name is: " + person.name + " and I am over 21";
+  }
+
+  console.log(statement);
+}
+
+/*
+ * returns:
+ * My name is: Mary and I recently turned 21
+ * My name is: John and I am under 21
+ * My name is: Leslie and I am over 21
+*/</code></pre>
+        <p>Here we utilize a for loop which utilizes two conditional clauses, whether <code class="inline-code">person.age</code> is less than <code class="inline-code">21</code>:</p>
+        <pre><code>(person.age &lt; 21)</code></pre>
+        <p>And also to see if the person's age is equal to <code class="inline-code">21</code>:</p>
+        <pre><code>(person.age == 21)</code></pre>
+        <p>Within our for loop, we iterate over the <code class="inline-code">groupOfPeople</code> array, checking each object's <code class="inline-code">age</code> property to see if the number value it returns is either <em>less than 21</em> or <em>equal to 21</em>. If neither of these conditions returns <code class="inline-code">true</code>, the <code class="inline-code">else</code> clause is run:</p>
+        <pre><code>statement = "My name is: " + person.name + " and I am over 21";</code></pre>
+        <p>Also note here how we initialize the variable statement to an empty string:</p>
+        <pre><code>var statement = "";</code></pre>
+        <p>This <code class="inline-code">statement</code> variable is set to an empty string every time our for loop runs, and then is assigned a new value based off of the set of <code class="inline-code">if</code>/<code class="inline-code">else if</code>/<code class="inline-code">else</code> conditionals that evaluate afterwards. Finally, at the end of each iteration, the <code class="inline-code">statement</code> is logged to the console. </p>
+        <h3>Functions</h3>
+        <p>Functions are a series of code that is encapsulated into a reusable series of control flow statements and conditionals. It takes a series of inputs and outputs a result related to that input. Let's say I have two different arrays which include objects that represent people and their respective ages. I wish to extract all the people from these arrays that are over 21 and store them in a new array called <code class="inline-code">canDrink</code>. I then wish to log this new <code class="inline-code">canDrink</code> array to the console. I could do so with two consecutive for loops like so:</p>
+        <pre><code>var groupOne = [
+  {
+    name: "Mary",
+    age: 25
+  },
+  {
+    name: "Albert",
+    age: 16
+  },  
+  {
+    name: "Louis",
+    age: 23
+  }
+];
+
+var groupTwo = [
+  {
+    name: "Clarence",
+    age: 42
+  },
+  {
+    name: "Alphonse",
+    age: 12
+  },  
+  {
+    name: "Lucy",
+    age: 24
+  }
+];
+
+var canDrink = [];
+
+for (var i = 0; i &lt;= groupOne.length -1; i++) {
+  var person = groupOne[i];
+  if (person.age &gt; 21) {
+    canDrink.push(person);
+  }
+}
+
+for (var i = 0; i &lt;= groupTwo.length -1; i++) {
+  var person = groupTwo[i];
+  if (person.age &gt; 21) {
+    canDrink.push(person);
+  }
+}
+
+console.log(canDrink);
+
+/*
+ * returns:
+ * [
+ *  {
+ *    name: "Mary", 
+ *    age: 25
+ *  },
+ *  {
+ *    name: "Louise",
+ *    age: 23
+ *  },
+ *  {
+ *    name: "Clarence",
+ *    age: 42
+ *  },
+ *  {
+ *    name: "Lucy",
+ *    age: 24
+ *  }
+ * ] 
+*/</code></pre>
+        <p>As you can see, the two for loops are only slightly different, one grabbing the persons from <code class="inline-code">groupOne</code> who are over <code class="inline-code">21</code>, and one grabbing the persons from <code class="inline-code">groupTwo</code> who are over <code class="inline-code">21</code>. The code, <code class="inline-code">canDrink.push</code>, by the way, is what is known as a method, specifically a method owned by the Array prototype (more on prototypes in a future article). The <code class="inline-code">push</code> method is relatively self explanatory. It simply adds the element passed to it onto the array it is called on. Thusly the <code class="inline-code">person</code> object is being <em>pushed</em> onto the end of the <code class="inline-code">canDrink</code> array in this particular example.</p>
+        <p>There's a simple saying in programming, "Don't Repeat Yourself" (known by the acronym, DRY), and while this rule isn't exactly dogma, one should consider rewriting code that repeats itself like our example here. Note that there really is just one difference between the two for loops (the array being operated on).</p>
+        <p>This is a classic case where a function can be utilized to encapsulate our for loop and the logic it uses so that we can accomplish the same task with a bit less code. See the following example:</p>
+        <pre><code>var groupOne = [
+  {
+    name: "Mary",
+    age: 25
+  },
+  {
+    name: "Albert",
+    age: 16
+  },  
+  {
+    name: "Louis",
+    age: 23
+  }
+];
+
+var groupTwo = [
+  {
+    name: "Clarence",
+    age: 42
+  },
+  {
+    name: "Alphonse",
+    age: 12
+  },  
+  {
+    name: "Lucy",
+    age: 24
+  }
+];
+
+var canDrink = [];
+
+function grabPersonsOfLegalAgeFrom(group) {
+  for (var i = 0; i &lt;= group.length -1; i++) {
+    var person = group[i];
+    if (person.age &gt; 21) {
+      canDrink.push(person);
+    }
+  }
+}
+
+grabPersonsOfLegalAgeFrom(groupOne);
+grabPersonsOfLegalAgeFrom(groupTwo);
+
+console.log(canDrink);
+
+/*
+ * returns:
+ * [
+ *  {
+ *    name: "Mary", 
+ *    age: 25
+ *  },
+ *  {
+ *    name: "Louise",
+ *    age: 23
+ *  },
+ *  {
+ *    name: "Clarence",
+ *    age: 42
+ *  },
+ *  {
+ *    name: "Lucy",
+ *    age: 24
+ *  }
+ * ] 
+*/</code></pre>
+        <p>Functions are one of the essential building blocks of nearly all programming languages. By encapsulating our for loop inside of a declared function, <code class="inline-code">grabPersonsOfLegalAgeFrom</code>, and passing it the more generic argument, <code class="inline-code">group</code>, we have created a piece of reusable logic. Notice that we even call it <em>twice</em>, using our first for loop to grab all persons within the <code class="inline-code">groupOne</code> array that are over <code class="inline-code">21</code> and pushing them into the <code class="inline-code">canDrink</code> array, and then calling the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function once again to do the same with the <code class="inline-code">groupTwo</code> array. Let's break down this new chunk of code:</p>
+        <pre><code>var canDrink = [];
+
+function grabPersonsOfLegalAgeFrom(group) {
+  for (var i = 0; i &lt;= group.length -1; i++) {
+    var person = group[i];
+    if (person.age &gt; 21) {
+      canDrink.push(person);
+    }
+  }
+}
+
+grabPersonsOfLegalAgeFrom(groupOne);
+grabPersonsOfLegalAgeFrom(groupTwo);</code></pre>
+        <p>Firstly, we instantiate our <code class="inline-code">canDrink</code> variable, assigning it the value of an empty array. We then invoke the creation of a new function by utilizing the reserved keyword, <code class="inline-code">function</code>. The new function is assigned the name <code class="inline-code">grabPersonsOfLegalAgeFrom</code>. Note that the lengthy name is a convention to ensure the readability of our code. </p>
+        <pre><code><b>function</b> grabPersonsOfLegalAgeFrom</code></pre>
+        <p>While I could have easily named the function <code class="inline-code">grabAdults</code> or <code class="inline-code">grabPeople</code> or even just <code class="inline-code">g</code>, I try my best to name my functions in a way that other programmers (or my future self) can easily understand what the function is supposed to do, even if they don't necessarily understand the code inside the function itself.</p>
+        <p>The declared <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function is then appended a pair of parentheses <code class="inline-code"> ( )</code>, inside of which the <em>argument</em>, <code class="inline-code">group</code> is provided.</p>
+        <pre><code>function grabPersonsOfLegalAgeFrom(<b>group</b>)</code></pre>
+        <p>Arguments are the input to functions. Ideally, arguments should be somehow related to the function's output. A function can be declared with as many arguments as you'd like, including no arguments. When declared, a JavaScript function makes no assumptions as to the data types of the variables being passed to it as arguments. Thusly in truth we could have passed a string variable, a number variable, an object, etc. to the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function and JavaScript would still <e>attempt to execute the code (possibly returning some unexpected output). </e></p>
+        <p>After the declaration of our argumeents, we close off our parentheses, <code class="inline-code">( )</code>, and then instantiate the function body using curly braces, <code class="inline-code"> { }</code>. Inside the body of our function, we then encapsulate our previous logic from before. This time, however, the generic <code class="inline-code">group</code> argument is passed instead of the specific <code class="inline-code">groupOne</code> and <code class="inline-code">groupTwo</code> arrays. Afterwards which, we close off our function declaration using a closing curly brace, <code class="inline-code">}</code>.</p>
+        <p>Lastly we <em>invoke</em> or <em>call</em> our function directly by simply writing it's name, then passing the <code class="inline-code">groupOne</code> array as an argument to the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function. This syntax essentially tells the JavaScript interpreter, "run the code inside this function, and pass this variable as the argument(s) to it".</p>
+        <pre><code>grabPersonsOfLegalAgeFrom(groupOne);
+grabPersonsOfLegalAgeFrom(groupTwo);</code></pre>
+        <p>Had these two lines been omitted, the <code class="inline-code">canDrink</code> array would remain empty, as the function, <code class="inline-code">grabPersonsOfLegalAgeFrom</code>, although indeed is <em>defined</em>, was never <em>called</em>, and the code inside of it, thusly, never ran.</p>
+        <h3>Scope and Returns</h3>
+        <p>You'll note the declaration of the array <code class="inline-code">canDrink</code> in the previous example is instantiated prior to the declaration of the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function:</p>
+        <pre><code>var canDrink = [];
+
+function grabPersonsOfLegalAgeFrom(group) {</code></pre>
+        <p>If you take some extra time to think on this, one might wonder: "Why not just instantiate the <code class="inline-code">candDrink</code> array <em>inside</em> of the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function? Why declare it <em>prior</em> to the function?" For the sake of demonstration, let's go ahead and input this code into our Developer Console and see the result of doing so:</p>
+        <pre><code>var groupOne = [
+  {
+    name: "Mary",
+    age: 25
+  },
+  {
+    name: "Albert",
+    age: 16
+  },  
+  {
+    name: "Louis",
+    age: 23
+  }
+];
+
+var groupTwo = [
+  {
+    name: "Clarence",
+    age: 42
+  },
+  {
+    name: "Alphonse",
+    age: 12
+  },  
+  {
+    name: "Lucy",
+    age: 24
+  }
+];
+
+function grabPersonsOfLegalAgeFrom(group) {
+  var canDrink = [];
+  for (var i = 0; i &lt;= group.length -1; i++) {
+    var person = group[i];
+    if (person.age &gt; 21) {
+      canDrink.push(person);
+    }
+  }
+}
+
+grabPersonsOfLegalAgeFrom(groupOne);
+grabPersonsOfLegalAgeFrom(groupTwo);
+
+console.log(canDrink);</code></pre>
+        <p>If we copy this code into the browser's console and run it, we'll receive the following error:</p>
+        <pre><code>Uncaught ReferenceError: canDrink is not defined</code></pre>
+        <p>To the beginner, this might cause some annoyance. One can clearly see the <code class="inline-code">canDrink</code> variable is declared, just this time inside of the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function. Why did this subtle change cause an error? Before explaining, let's adjust our code slightly by putting a log to the console inside of the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function:</p>
+        <pre><code>function grabPersonsOfLegalAgeFrom(group) {
+  var canDrink = [];
+  for (var i = 0; i &lt;= group.length -1; i++) {
+    var person = group[i];
+    if (person.age &gt; 21) {
+      canDrink.push(person);
+    }
+  }
+  console.log(canDrink);
+}
+
+grabPersonsOfLegalAgeFrom(groupOne);
+grabPersonsOfLegalAgeFrom(groupTwo);
+
+console.log(canDrink);</code></pre>
+        <p>The output to this gives us some insights into what is happening. By having a log to the console inside of our <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function, as well as outside of it, we see that the inner logs to the console are actually showing us results:</p>
+        <pre><code>/*
+ * returns
+ * [
+ *   {
+ *     name: "Mary",
+ *     age: 25
+ *   },
+ *   {
+ *     name: "Louis",
+ *     age: 23
+ *   }
+ * ]
+ * and then returns
+ * [
+ *   {
+ *     name: "Clarence",
+ *     age: 42,
+ *   },
+ *   {
+ *     name: "Lucy",
+ *     age: 24,
+ *   }
+ * ]
+ * and then logs the error:
+ * Uncaught ReferenceError: canDrink is not defined
+*/</code></pre>
+        <p>First and foremost, unlike our previous return value, which was all encapsulated within a single array, the inner <code class="inline-code">canDrink</code> array is logged <em>twice</em>: two separate arrays are presented each from the respective original <code class="inline-code">groupOne</code> and <code class="inline-code">groupTwo</code> arrays. The people inside it are indeed over <code class="inline-code">21</code>, but why two arrays?</p>
+        <p>Scope within the JavaScript programming language can be thought of as the <em>context</em> in which variables can be "seen". Prior to our little investigation here, our <code class="inline-code">canDrink</code> array was instantiated inside of what is known as the <em>global scope</em>. This means there are no contexts outside of the one we instantiated it. It is visible to all functions, for loops, if statements, etc. because it was instantiated at the top most level, or "global", scope.</p>
+        <p>When we decided to investigate and see what happened if we instead instantiated the <code class="inline-code">canDrink</code> array inside of the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function, we made the <code class="inline-code">canDrink</code> variable "visible" only within the context of the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function. This means that the inner <code class="inline-code">for</code> loop and <code class="inline-code">if</code> statement all had access to and could "see" that <code class="inline-code">canDrink</code> exists, but any reference to it outside of the function would be as if we were to try and reference a variable we never declared. In programming, you cannot directly reference a variable that you did not first instantiate. In this case, we cannot reference the <code class="inline-code">canDrink</code> array outside of the function.</p>
+        <p>One might then say, "Ok, so why not just end our little experiment here and just declare <code class="inline-code">canDrink</code> as a global variable?". For the sake of this trivial program, we indeed could do so, but in larger scale applications, it is considered poor practice to declare every variable as a global variable. Global variables indeed exist in nearly every program, but every time we instantiate a variable, we are asking the browser, and by extension, the computer it's running on, to reserve a new place in memory (RAM) to hold onto the reference of our new variable. In a large enough program, if all variables were declared simply in the global scope, the memory footprint of our program would become unnecessary large.</p>
+        <p>Additionally, variables declared in the global scope that do not use the reserved keyword <code class="inline-code">const</code> (more on that in the next article), can be redeclared by any function that has access to the global scope. In other words, if you have multiple programmers working on a single file and one of them accidentally overwrites a global variable, they may throw off all the other functions that reference that variable, thus creating unexpected behavior in our program. Worse yet, our program wouldn't even throw any useful error messages as this is technically viable JavaScript, and thusly it would be difficult to pinpoint where exactly this unexpected behavior was originating from.</p>
+        <p>Please note that one cannot eliminate the use of global variables entirely. It's just good practice to keep the global scope of our programs as clean and concise as possible, ensuring variables are only declared in the global scope when they are to be returned to the user in some form or fashion, or are utilized by too many functions to justify repeatedly encapsulating said variables in multiple local scopes.</p>
+        <p>Ultimately when JavaScript threw this ReferenceError, it was not only letting us know that we didn't have a global variable called <code class="inline-code">canDrink</code>, but it was helping us determine what course of action to take to resolve this error (hopefully in an elegant fashion). Rather than simply reverting back to putting <code class="inline-code">canDrink</code> into the global scope, let's use a <code class="inline-code">return</code> statement within our <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function, and then encapsulate the return values into variables that we can then utilize to return our <code class="inline-code">canDrink</code> array as before:</p>
+        <pre><code>var groupOne = [
+  {
+    name: "Mary",
+    age: 25
+  },
+  {
+    name: "Albert",
+    age: 16
+  },  
+  {
+    name: "Louis",
+    age: 23
+  }
+];
+
+var groupTwo = [
+  {
+    name: "Clarence",
+    age: 42
+  },
+  {
+    name: "Alphonse",
+    age: 12
+  },  
+  {
+    name: "Lucy",
+    age: 24
+  }
+];
+
+function grabPersonsOfLegalAgeFrom(group) {
+  var canDrink = [];
+  for (var i = 0; i &lt;= group.length -1; i++) {
+    var person = group[i];
+    if (person.age &gt; 21) {
+      canDrink.push(person);
+    }
+  }
+  return canDrink;
+}
+
+var personsOfLegalAgeFromGroupOne = grabPersonsOfLegalAgeFrom(groupOne);
+var personsOfLegalAgeFromGroupTwo = grabPersonsOfLegalAgeFrom(groupTwo);
+
+var globalCanDrink = personsOfLegalAgeFromGroupOne.concat(personsOfLegalAgeFromGroupTwo);
+
+console.log(globalCanDrink);</code></pre>
+        <p>This is a contrived example, and probably is no better than the prior examples where <code class="inline-code">canDrink</code> was initially declared in the global scope as an empty array. This example, however, demonstrates the use of the <code class="inline-code">return</code> keyword, which is often used when you wish to output a value from a function and then subsequently encapsulate it in another variable (or work with it directly in another function).</p>
+        <p>By returning the <code class="inline-code">canDrink</code> array from our <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function, we are now able to reference that value directly. Often this is more easily managed by declaring a variable that then holds the return value of the invoked function. </p>
+        <p>To hammer home the point let's look at how our calls to <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function have changed. In our previous piece of code, in which the <code class="inline-code">canDrink</code> array was initially declared in the global scope, our calls to <code class="inline-code">grabPersonsOfLegalAgeFrom</code> were simply invoked, <em>pushing</em> the people who's age is over <code class="inline-code">21</code> into the global <code class="inline-code">canDrink</code> array:</p>
+        <pre><code>grabPersonsOfLegalAgeFrom(groupOne);
+grabPersonsOfLegalAgeFrom(groupTwo);</code></pre>
+        <p>Our new version instead encapsulates the returned <code class="inline-code">canDrink</code> array inside two new variables:</p>
+        <pre><code>var personsOfLegalAgeFromGroupOne = grabPersonsOfLegalAgeFrom(groupOne);
+var personsOfLegalAgeFromGroupTwo = grabPersonsOfLegalAgeFrom(groupTwo);</code></pre>
+        <p>And then uses the Array prototype's <code class="inline-code">.concat</code> method to essentially merge/join the two arrays together so that our result is the same as our previous example's. I chose to encapsulate this in a variable called <code class="inline-code">globalCanDrink</code> to ensure that the differentiation from the canDrink's local scope is made overtly clear.</p>
+        <pre><code>var globalCanDrink = personsOfLegalAgeFromGroupOne.concat(personsOfLegalAgeFromGroupTwo);
+
+console.log(globalCanDrink);</code></pre>
+        <p>Finally a call to the console shows our results, which are the same as our original example's:</p>
+        <pre><code>/*
+ * returns:
+ * [
+ *  {
+ *    name: "Mary", 
+ *    age: 25
+ *  },
+ *  {
+ *    name: "Louise",
+ *    age: 23
+ *  },
+ *  {
+ *    name: "Clarence",
+ *    age: 42
+ *  },
+ *  {
+ *    name: "Lucy",
+ *    age: 24
+ *  }
+ * ] 
+*/</code></pre>
+        <h1>Conclusion </h1>
+        <p>The subject of JavaScript is so vast that one could spend a lifetime trying to cover it all in detail. The same technically could be said of CSS and even HTML. Ultimately, however, the use of these three tools together are the backbone of the web itself, and it is my opinion that exploring each of these subjects together in the process of making web pages and applications to be the best way to learn each of them, as they were originally designed to work in concert together.</p>
+        <p>In my next article, I will be walking you through a small codebase that exemplifies a basic todo list application. It will utilize many of the concepts we have covered thus far as well as concepts covered in my previous two articles, <a aria-label="a link to the article HTML: The Web's Skeleton" class="inline-link" href="https://brianhayes.dev/blog/html_the_webs_skeleton.html" role="link">HTML: The Web's Skeleton</a>, and <a aria-label="a link to the article CSS: The Web's Makeup" class="inline-link" href="https://brianhayes.dev/blog/css_the_webs_makeup.html" role="link">CSS: The Web's Makeup</a>. Additionally, very basic git commands and other developer tools will be utilized to give you an introduction into the essential workflow of creating a basic interactive web page.</p>
+        <p>I do hope that this introduction to the JavaScript Programming Language has proven insightful and useful to you. Originally my hope was to encapsulate the subject matter into a single article, but as you can see, JavaScript is a vast language, and we haven't even started utilizing it on an acutal web page. I look forward to shedding further light on the topic in the next article, <a aria-label="link to the article: HTML, CSS, and JS" class="inline-link" href="https://brianhayes.dev/blog/javascript_the_webs_muscles#" role="link">HTML, CSS, and JS: All Together</a>.</p>
+      </article>]]></description>
+			<guid isPermaLink="false">https://brianhayes.dev/blog/javascript_the_webs_muscles</guid>
+			<pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+		</item>
+<item>
+			<title>Command Line</title>
+			<link>https://brianhayes.dev/blog/command_line</link>
+			<description>&lt;article class="demo-button"&gt;&lt;h1&gt;Introduction&lt;/h1&gt;&lt;p&gt;Learning to Program can be an intimidating venture. Not only is there a plethora of programming languages, libraries, frameworks, text editors, and more, there is also the overwhelming amount of opinions amongst more experienced programmers one might consider when deciding between which of these tools is best. Navigating all of this is no easy task and it is something I still struggle with when examining a field of software development I have little knowledge of (pretty much all of it).&lt;/p&gt;&lt;p&gt;How does one know which text editor to choose? Which programming language should I learn first? Should I use MacOS or Windows? (hint: neither). One of the more uncommon (although not necessarily rare) questions asked amongst beginner developers is, which shell should I use?&lt;/p&gt;&lt;p&gt;Before I dive into this topic, I feel like it may be prudent to address the simple question of:&lt;/p&gt;&lt;h2&gt;What Is A Shell?&lt;/h2&gt;&lt;p&gt;If you have done any amount of beginner programming, systems administration, database management, or other computer related work, it is likely you have already interacted with The Terminal (Emulator), The Command Line and its close companion, The Shell. I shall very briefly address what each of these are, and why, together, they are the most important tool for anyone interested in interacting with computers at any meaningful level.&lt;/p&gt;&lt;p&gt;In Windows, it is known as The Command Prompt(or Powershell), in MacOS it is known as The Terminal, and in Linux and BSD, it is also known simply as the Terminal. The history of the terminal is extensive, and I would only doing you a disservice to you were I to attempt to explain it in depth to you. For the sake of brevity, I shall simply explain how The Command Line and shell pertain to you, the prospective Computer Programmer, and why it is so important for all programmers to become familiar with it.&lt;/p&gt;&lt;p&gt;If you were to open up Command Prompt in Windows, or the Terminal in MacOS, you would be presented with a black (or blue) colored screen, usually prefaced by a series of characters known as a prompt, and a cursor indicating the program is awaiting you to type something (to provide input via the keyboard). To the uninitiated, this is intimidating, especially after inputting something and getting a mean looking error message (oftentimes highlighted in red). I must admit, whenever anyone who is unfamiliar with computers has seen me working in the terminal, they have often thrown around terms like "hacker," which I find to be so funny, because it simply shows how the mainstream media has failed to portray technology in an accurate light (save for modern exceptions like Mr. Robot, Halt and Catch Fire, and Silicon Valley). Although hackers do indeed use the command line, so do nearly all computer related professions!&lt;/p&gt;&lt;p&gt;When I first began programming, I started focusing mainly on the tool of the text editor. It was only when I began to seriously dive into the world of Linux that I began to seriously play around in the terminal. Even in my earliest days playing around in Linux, however, I rarely interacted with the Terminal. This is partially because for at least some time at the beginning, typing in the shell felt laborious, more boring than programming (which it still is), and not worth investigating beyond the few times I had to invoke a command, or start a program. And it's true that the shell is just a tool that allows you to invoke commands that call other programs...but that's why it will always be one of the best pieces of software ever written.&lt;/p&gt;&lt;p&gt;Just like everything in the world of programming, there is rarely just one option when it comes to tools, and almost never just one way to do things. The same is true of shells, but just like these other aspects of the programming world, it doesn't mean there haven't been some clear winners in that space as well.&lt;/p&gt;&lt;p&gt;Although I know I will get some push back on this from Windows Users, it simply is the case that the UNIX-style shell won out. Specifically the BASH shell is the one most utilized by default in nearly all Linux Distributions, and was also the primary shell utilized in MacOS until recently (which currently utilizes the Z shell). Regardless of which shell you utilize, many of them have similar commands that perform a plethora of operations via your operating system. It is due to this common history with the BASH Shell, and the features that are available specifically within the BASH shell scripting language, that it is worthwhile to dive deep into the subject of the shell and shell scripting, as it is your direct link to working on and with the operating system while utilizing a high level language to do so. BASH, while not a full featured programming language, is an extremely powerful scripting language which owes its (somewhat niche) popularity to the simple fact that GNU/Linux is everywhere, and thusly, so is its default shell, bash. Indeed, it is due to the basic UNIX tool set and the eventual choice by the maintainers of GNU/Linux, BSD, and MacOS that BASH proliferated.&lt;/p&gt;&lt;p&gt;At this point in the article I will digress on the subject of scripting, as a beginner is best suited to learning a few basic commands, understanding some of BASH's basic features, and how the use of the terminal in programming is essential. Please note that while you can follow along in Windows, I will not be covering Windows specific Powershell commands. Unfortunately Windows does not have BASH in its software suite by default, and you must install Windows SubSystem For Linux or Cygwin to utilize many of the same commands.&lt;/p&gt;&lt;p&gt;Following the instructions below, note the effects.&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#opening_a_terminal.txt
+
+- MacOS - Click the Launchpad Icon in the Dock, type Terminal and click Terminal
+- Linux/BSD - Look up which Terminal Emulator your distribution uses by default and open it&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You will be presented with a simple black, amber, or blue colored window with a prompt ending in either % or $ (ZSH uses %, BASH uses $). There is also usually a rectangular cursor indicating the shell is awaiting input from you. Typing just anything into the terminal and getting error messages gets old quick, so let's explore our first command, ls:&lt;/p&gt;&lt;figure&gt;&lt;img alt="results of the ls command" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/ls_command.webp" title="results of the ls command"&gt;&lt;/figure&gt;&lt;figcaption&gt;Example Results of the "ls" Command&lt;/figcaption&gt;&lt;p&gt;Colloquially, each command will, in theory, be an abbreviation or shortened anagram for a word that will remind you of the action often associated with the command. In this case ls stands simply for 'list' as in 'list all my files and directories'. Here you can see that when I type in ls, I am presented with the contents of what is known as my $HOME directory (we'll cover the $ later). Usually, the ls command has been slightly modified so that colors appear on some of the results, indicating the type of file the result is, or whether or not the result is a directory.&lt;/p&gt;&lt;p&gt;If we then, for our second command, type 'ls' again, but this time follow it with a '-a', we are presented with slightly different results:&lt;/p&gt;&lt;figure&gt;&lt;img alt="results of the ls command with -a flag" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/ls_with_aflag.webp" title="results of the ls command with -a flag"&gt;&lt;/figure&gt;&lt;figcaption&gt;Example Results of the "ls" Command With "-a" flag&lt;/figcaption&gt;&lt;p&gt;Here we see that we now have alot more files and directories, many preceded with a '.', which are our 'hidden' files and directories. There have been more than a few discussions on the concept of hidden files, but needless to say, these files/directories are not visible without the '-a' appended to our 'ls' command. I point this out more as an introduction to the concept of flags '-a' is considered a flag of the 'ls' command that changes the results in some fashion. In this case it stands for 'all', as in show 'list all of my files, yes even the hidden ones.'&lt;/p&gt;&lt;p&gt;Many commands, although not all commands, have flags which somehow change the behavior of the program being called.&lt;/p&gt;&lt;p&gt;I won't go into all the commands available in the shell as there are quite a lot, but I will provide you with some standard commands to research and become familiar with, as they will become invaluable later on:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#basic_shell_commands.txt
+
+- man
+- cd 
+- mkdir/rmdir
+- touch/rm
+- cp
+- mv
+- mv
+- echo/print/printf&amp;amp;#- cat/tac
+- less
+- head
+- read
+- find
+- sed
+- grep
+- awk
+- tr
+- df
+- top
+- ps
+- diff
+- dd
+- who&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now, all of these tools are great, but lack luster by comparison to your standard Graphical User Interface (GUI) programs that most users interact with on their desktops. The power of the shell isn't in that it can execute programs (although that is its main purpose), it is its ability to chain together and redirect and manipulate the input and output of various programs to yield a desired result...that's right, the BASH shell is a scripting language, which with the use of various operators can chain together to manipulate textual inputs and outputs. Take this simple example:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
+[ ~]$ echo \ 
+"this text is inputted from the command line" \
+&amp;gt; from_the_command_line.txt&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here we simultaneously created a file called 'from_the_command_line.txt' and wrote the text 'this text is inputted from the command line' into it. If we then inspect the contents of this file using cat:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
+[ ~]$ cat from_the_command_line.txt&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;&lt;figure&gt;&lt;img alt="results of the cat command on a file" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/redirection_01.webp" title="results of the cat command on a file"&gt;&lt;/figure&gt;&lt;figcaption&gt;Example Results Of The "cat" Commmand On A File&lt;/figcaption&gt;&lt;p&gt;We'll see that indeed, the text 'this text is inputted from the command line' is indeed there. What is happening here?&lt;/p&gt;&lt;h2&gt;Redirection Basics&lt;/h2&gt;&lt;p&gt;Well just like every problem in programming, we divide the program up into sizeable chunks, and explain each part to the best of our abilities (and hopefully our peers very kindly correct us if we are wrong).&lt;/p&gt;&lt;p&gt;Firstly, what does echo do? Well if you researched my list up above a bit, you'll know that the first recommended command was the 'man' command. Why? well it's the manual of course! Any command you wish to know more about can be investigated by invoking 'man' before the command you wish to know more about, if you type:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
+[ ~]$ man echo&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You'll see an extensive explanation of the 'echo' command and its various flags. A relatively easy to understand program, echo simply displays any text following the command back to you. So the input that was entered after the 'echo' command is also the output of the command. Thusly invoking:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
+[ ~]$ echo 'this litle sheep went bah'&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Displays:&lt;/p&gt;&lt;figure&gt;&lt;img alt="bash shell example of basic echo command" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/echo_command.webp" title="bash shell example of basic echo command"&gt;&lt;/figure&gt;&lt;figcaption&gt;Results Of The "echo" Commmand&lt;/figcaption&gt;&lt;p&gt;But what about the '&amp;gt;' character in our initial example? Well this is what is known as a redirection operator. This '&amp;gt;' will 'redirect' whatever is the output of the first command(echo) as the input written to the following file or program. Please note that this will overwrite any existing text already present in the file, so don't experiment on any file with valuable information to you. If you do wish to append to the file, without overwriting its existing text, simply double up on the greater than symbol:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
+[ ~]$ echo 'appended text' &amp;gt;&amp;gt; from_the_command_line.txt&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;&lt;figure&gt;&lt;img alt="bash shell example of appending text using echo and the &gt;&gt; redirection flag" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/echo_append.webp" title="bash shell example of appending text using echo and the &gt;&gt; redirection flag"&gt;&lt;/figure&gt;&lt;figcaption&gt;Using The "&amp;gt;&amp;gt;" Operator Appends Text When Used With "echo"&lt;/figcaption&gt;&lt;p&gt;If you wish to research one of the most powerful operators in bash, research the pipe ('|') operator!&lt;/p&gt;&lt;p&gt;Hopefully at this point, you are starting to understand the role of the shell and the command line a bit better. For this next example, I am going to demonstrate how many programs have a command line interface with which one may interact, or at least initialize, a program, be it a Graphical or Terminal based application.&lt;/p&gt;&lt;h2&gt;The Power Of The Shell&lt;/h2&gt;&lt;p&gt;One of the first epiphanies for me regarding the terminal was when I realized I could invoke pretty much any program in my operating system with simple commands. If I wished to open my browser (librewolf), I simply had to type into the terminal its name:&lt;/p&gt;&lt;figure&gt;&lt;img alt="librewolf browser being called from the bash shell" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/librewolf.webp" title="librewolf browser being called from the bash shell"&gt;&lt;/figure&gt;&lt;figcaption&gt;Librewolf Browser being called from The Command Line&lt;/figcaption&gt;&lt;p&gt;While this may not seem like a big deal to some, it was upon doing this that I realized why the terminal was powerful, it allowed any program to be invoked as long as you knew its name. Rather than clicking through a myriad of nested directories to find where I had put an executable (like when using Windows File Explorer), I simply had to type it out and it would open up on my screen.&lt;/p&gt;&lt;p&gt;When I first installed Linux, the first piece of graphical software I had become familiar with was the backup utility, Timeshift, which essentially takes a 'snapshot' of the current state of your desktop and allows you to 'revert' back to that snapshot should you want/need to.&lt;/p&gt;&lt;p&gt;Timeshift has both a Graphical User Interface(GUI) as well as a Command Line Interface(CLI). I first learned to use Timeshift utilizing the GUI, but then I became curiouos about the CLI. It wasn't long before I realized that most of the information available via the GUI interface could be accessed via the CLI. I really only needed four commands from the CLI, these were:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#timeshift_commands.txt
+
+- timeshift --create
+- timeshift --delete
+- timeshift --list
+- timeshift --restore&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And every once in a while, after an update on my system, I would invoke the 'timeshift create' command to create a snapshot of my current system. Timeshift has occasionally saved me from big mistakes I've made, and is a good piece of software.&lt;/p&gt;&lt;p&gt;The reason I point this out is that even though timeshift isn't a part of the shell as a subject, I am simply pointing it out as a practical example of when utilizing the text interface of Timeshift's CLI, via the shell, became more useful to me than interfacing with the GUI version. This became even more the case when I discovered the existence of shell aliases.&lt;/p&gt;&lt;h2&gt;A Rose By Any Other Name&lt;/h2&gt;&lt;p&gt;Of course, I've provided you now with the knowledge of how to do your own research regarding any command, so be sure to pull up:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
+[ ~]$ man alias&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And do more research, but I'll give you a general idea of why this is such a powerful tool for anyone invested in computers to know. Essentially aliases are a series of commands invoked by a custom command of your naming.&lt;/p&gt;&lt;p&gt;If you invoke:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
+[ ~]$ alias cdls="cd ~/Documents &amp;amp; ls"&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You will navigate into your Documents directory and then list out its contents after invoking your custom command, 'cdls'&lt;/p&gt;&lt;p&gt;The "&amp;amp;" is another operator that waits for one command to complete before then invoking the following command. The "&amp;amp;" operator can be chained as many times as desired and when applied to an alias, essentially condenses a very long command into a shorter command (unless you name your alias something very long I suppose).&lt;/p&gt;&lt;p&gt;Now, the somewhat annoying thing is that these aliases, when created this way, are forgotten as soon as you close the terminal or your shell session somehow ends. Aliases can be saved, however, by placing them in your ~/.bashrc file. This configuration file is checked by the shell prior to initiation, including alias assignments. Thusly, if you simply append:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#.bashrc 
+#!/usr/bin/env bash 
+
+alias cdls="cd ~/Documents &amp;amp; ls"&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To the end of your ~/.bashrc file, you will have created a custom command that persists even after you have closed your terminal and shut down your computer.&lt;/p&gt;&lt;p&gt;This is the very essentials of scripting, the chaining of programs together to create different results. An alias is essentially a one line script.&lt;/p&gt;&lt;p&gt;While it wasn't one of my first aliases I ever wrote, I do have a single alias I will share with you that I use often, it simply invokes timeshift three times, once to delete the old backup, once to create a new backup, and once to list out all backups so I can confirm that the backup was made, I called it tshift, this is the command in my .bashrc:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#.bashrc 
+#!/usr/bin/env bash 
+
+alias tshift="sudo timeshift --delete &amp;amp;&amp;amp; sudo timeshift --create &amp;amp;&amp;amp; sudo timeshift --list"&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As you can see, tshift is far less characters to type, and it is a very handy, but very simple, alias I have created for myself. (if you are on Linux and unfamiliar with the sudo command, please see the man pages for sudo, if you are on MacOs, a simple query into your favorite search engine I am sure will yield good results).&lt;/p&gt;&lt;h1&gt;Conclusion&lt;/h1&gt;&lt;p&gt;Aliases is where I leave this short introduction to the Command Line and shell. It is at this point that the subject of BASH scripting should be covered, and that is an extensive topic of its own.&lt;/p&gt;&lt;p&gt;I do hope that you have now gained a better understanding and appreciation for the command line and the shell. The shell provides a direct, unobfuscated, and elegantly simple interface through which all computer users can accomplish more with less, and is one of the best tools you can become familiar with. So get comfy in it!&lt;/p&gt;&lt;/article&gt;</description>
+			<guid isPermaLink="false">https://brianhayes.dev/blog/why_use_linux.html</guid>
+			<pubDate>Sat, 05 Nov 2022 00:00:00 +0000</pubDate>
+		</item>
+<item>
 			<title>CSS</title>
 			<link>https://brianhayes.dev/blog/css_the_webs_makeup</link>
-			<description><![CDATA[<article class="demo-button"><h1>Introduction</h1><p>In my <a aria-label="link to article, html the web's skeleton" class="inline-link" href="https://brianhayes.dev/blog/html_the_webs_skeleton.html" role="link">previous article</a>, I gave a general introduction to the basics of The HyperText Markup Language (HTML) as well as The Document Object Model (DOM). To briefly review, HTML provides a general scaffolding onto which stylings (via Cascading Style Sheets) and interactivity (via JavaScript) can be utilized to render pages and applications on the Web. Having a basic understanding of HTML, and how the DOM renders and organizes HTML elements, is a necessary prerequisite to garnering further knowledge on how to style the web. This article, very much in the spirit of the previous, is meant as a general introduction to the basics of how to do said styling, using Cascading Style Sheets, more commonly known as CSS.</p><h2>The Cascade</h2><p>CSS, at its essence, is a <a aria-label="link to wiki page on style sheet language" class="inline-link" href="https://en.wikipedia.org/wiki/Style_sheet_language" rel="noopener noreferrer" role="link" target="_blank">style sheet language</a>, which when utilized by web developers or users of web pages/applications, allows for the selective styling of HTML elements. Through an algorithm native to the Web Browser known simply as the <a aria-label="a link to an mdn article on the CSS cascade" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade" rel="noopener noreferrer" role="link" target="_blank">CSS Cascade</a>, CSS is used to color, style, and format elements within the HTML document based on a prerogative series of determinant rules that are based off of the browser's native user-agent and/or the web developer's authored stylesheets.</p><p>The topics of the <a aria-label="the wikipedia article on user-agent" class="inline-link" href="https://en.wikipedia.org/wiki/User_agent" rel="noopener noreferrer" role="link" target="_blank">User-Agent</a> and the user-agent styles are separate subjects in their own right, but for both brevity and simplicity's sake, one can think of the user-agent styles as being the default stylings rendered by your browser when no author stylesheets are provided. This is why basic HTML documents are still rendered in a human readable fashion, even when no custom stylings are configured.</p><p>An entire blog post could be written regarding the topic of the CSS Cascade, but to be honest, the in depth understanding of the concept is not at all necessary to getting started with CSS. Nevertheless, I felt it was important to address the subject at least in part, as even basic knowledge of the CSS Cascade will eventually prove invaluable in understanding how CSS is rendered in the browser as one becomes more versed in designing web pages. In the following sections regarding Inline Styles and Author Stylesheets, how The CSS Cascade influences the rendering of the web page will hopefully become more apparent.</p><h2>Inline Styles</h2><p>The easiest way to demonstrate CSS basics is to build off of our previous knowledge on HTML. Let's use our previous article's basic HTML document as a starting point:</p><pre><code>&lt;!--hello_world.html--&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;title&gt;My Hello World Example&lt;/title&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
-    &lt;link href="css/style.css" rel="stylesheet" /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;main&gt;
-      &lt;article&gt;
-        &lt;h1&gt;Hello World!&lt;/h1&gt;
-        &lt;p&gt;
+			<description>&lt;article class="demo-button"&gt;&lt;h1&gt;Introduction&lt;/h1&gt;&lt;p&gt;In my &lt;a aria-label="link to article, html the web's skeleton" class="inline-link" href="https://brianhayes.dev/blog/html_the_webs_skeleton.html" role="link"&gt;previous article&lt;/a&gt;, I gave a general introduction to the basics of The HyperText Markup Language (HTML) as well as The Document Object Model (DOM). To briefly review, HTML provides a general scaffolding onto which stylings (via Cascading Style Sheets) and interactivity (via JavaScript) can be utilized to render pages and applications on the Web. Having a basic understanding of HTML, and how the DOM renders and organizes HTML elements, is a necessary prerequisite to garnering further knowledge on how to style the web. This article, very much in the spirit of the previous, is meant as a general introduction to the basics of how to do said styling, using Cascading Style Sheets, more commonly known as CSS.&lt;/p&gt;&lt;h2&gt;The Cascade&lt;/h2&gt;&lt;p&gt;CSS, at its essence, is a &lt;a aria-label="link to wiki page on style sheet language" class="inline-link" href="https://en.wikipedia.org/wiki/Style_sheet_language" rel="noopener noreferrer" role="link" target="_blank"&gt;style sheet language&lt;/a&gt;, which when utilized by web developers or users of web pages/applications, allows for the selective styling of HTML elements. Through an algorithm native to the Web Browser known simply as the &lt;a aria-label="a link to an mdn article on the CSS cascade" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade" rel="noopener noreferrer" role="link" target="_blank"&gt;CSS Cascade&lt;/a&gt;, CSS is used to color, style, and format elements within the HTML document based on a prerogative series of determinant rules that are based off of the browser's native user-agent and/or the web developer's authored stylesheets.&lt;/p&gt;&lt;p&gt;The topics of the &lt;a aria-label="the wikipedia article on user-agent" class="inline-link" href="https://en.wikipedia.org/wiki/User_agent" rel="noopener noreferrer" role="link" target="_blank"&gt;User-Agent&lt;/a&gt; and the user-agent styles are separate subjects in their own right, but for both brevity and simplicity's sake, one can think of the user-agent styles as being the default stylings rendered by your browser when no author stylesheets are provided. This is why basic HTML documents are still rendered in a human readable fashion, even when no custom stylings are configured.&lt;/p&gt;&lt;p&gt;An entire blog post could be written regarding the topic of the CSS Cascade, but to be honest, the in depth understanding of the concept is not at all necessary to getting started with CSS. Nevertheless, I felt it was important to address the subject at least in part, as even basic knowledge of the CSS Cascade will eventually prove invaluable in understanding how CSS is rendered in the browser as one becomes more versed in designing web pages. In the following sections regarding Inline Styles and Author Stylesheets, how The CSS Cascade influences the rendering of the web page will hopefully become more apparent.&lt;/p&gt;&lt;h2&gt;Inline Styles&lt;/h2&gt;&lt;p&gt;The easiest way to demonstrate CSS basics is to build off of our previous knowledge on HTML. Let's use our previous article's basic HTML document as a starting point:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;!--hello_world.html--&amp;gt;
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang="en"&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;My Hello World Example&amp;lt;/title&amp;gt;
+    &amp;lt;meta charset="UTF-8" /&amp;gt;
+    &amp;lt;meta name="viewport" content="width=device-width, initial-scale=1" /&amp;gt;
+    &amp;lt;link href="css/style.css" rel="stylesheet" /&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;main&amp;gt;
+      &amp;lt;article&amp;gt;
+        &amp;lt;h1&amp;gt;Hello World!&amp;lt;/h1&amp;gt;
+        &amp;lt;p&amp;gt;
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -30,14 +769,14 @@
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
-        &lt;/p&gt;
-      &lt;/article&gt;
-    &lt;/main&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>As you may recall, this is a very basic HTML document, with many HTML elements commonly seen in standard web pages. While the appearance of this document is rather bland, as it utilizes the default user-agent styles native to our web browser, we can start to change this default styling using CSS. To simply dive in, let's start by adding a style attribute to our <code class="inline-code">&lt;h1&gt;</code> and <code class="inline-code">&lt;p&gt;</code> tags:</p><pre><code>&lt;!--hello_world.html--&gt;
-&lt;h1 <b>style="text-decoration-line: underline"</b>&gt;Hello World!&lt;/h1&gt;
-    &lt;p <b>style="color: red"</b>&gt;
+        &amp;lt;/p&amp;gt;
+      &amp;lt;/article&amp;gt;
+    &amp;lt;/main&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As you may recall, this is a very basic HTML document, with many HTML elements commonly seen in standard web pages. While the appearance of this document is rather bland, as it utilizes the default user-agent styles native to our web browser, we can start to change this default styling using CSS. To simply dive in, let's start by adding a style attribute to our &lt;code class="inline-code"&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; and &lt;code class="inline-code"&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tags:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;!--hello_world.html--&amp;gt;
+&amp;lt;h1 &lt;b&gt;style="text-decoration-line: underline"&lt;/b&gt;&amp;gt;Hello World!&amp;lt;/h1&amp;gt;
+    &amp;lt;p &lt;b&gt;style="color: red"&lt;/b&gt;&amp;gt;
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -45,18 +784,18 @@
     velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
     occaecat cupidatat non proident, sunt in culpa qui officia deserunt
     mollit anim id est laborum.
-    &lt;/p&gt;
-</code></pre><p>If we then render this page in our browser, we will see our HTML page now has some additional stylings added:</p><figure><img alt="A screenshot displaying the h1 tag with underline stylings and paragraph with red stylings" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/css_ss_01.webp" title="Inline CSS stylings applied to a basic HTML document"></figure><figcaption>Underline and Color Stylings Applied Via Inline CSS</figcaption><p>As you can see, applying the style attribute to the <code class="inline-code">&lt;h1&gt;</code> and the <code class="inline-code">&lt;p&gt;</code> tags, and then inputting specific property/value text that CSS recognizes, visually changes the text of the targetted HTML elements (specifically underlining the text of the <code class="inline-code">&lt;h1&gt;</code> tag and coloring the text of the <code class="inline-code">&lt;p&gt;</code> tag red). This is what is known as "inline-styles," which is appropriately named due to the CSS being defined directly in the HTML itself.</p><p>We will cover the properties specifically defined within this style attribute shortly. As you may imagine, this convention of defining CSS styles directly in the HTML document itself could quickly become cumbersome, as the more CSS properties you may wish to define, the rather lengthy (and possibly unreadable) your HTML document will be. This convention of defining inline styles is useful however, in understanding the CSS Cascade, but only when in comparison and contrasted with other aspects of it, like Author Stylesheets.</p><h2>Author Stylesheets</h2><p>The above markup code demonstrating inline-styles is an example of what is known as Author Styles. As the name implies, these are styles that are authored by a web developer or user, which changes the default stylings native to the browser's User-Agent. As mentioned previously, the practice of authoring syles directly in our HTML document via inline-styles, while useful, can quickly become cumbersome as more stylings are authored and applied.</p><p>To ensure readability and organization of code, oftentimes styles are relegated to their own .css file, and then imported via the HTML <code class="inline-code">&lt;style&gt;</code> tag. You may have taken note of this tag in our example HTML document as one of the children elements within the <code class="inline-code">&lt;head&gt;</code> element:</p><pre><code>&lt;!--hello_world.html--&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;title&gt;My Hello World Example&lt;/title&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
-    <b>&lt;link href="css/style.css" rel="stylesheet" /&gt;
-</b>  &lt;/head&gt;
-</code></pre><p>Very essentially, this tag tells the browser to import the styling configurations within the style.css file, which is located within the css directory related to the current working directory. The "rel" attribute explicitly tells the browser that the relationship between this import and the HTML document as a stylesheet. Let's now style our HTML document in a similar fashion as before when we exemplified the use of inline-styles, but now utilize this stylesheet. From the command line, make a directory called "css", and then create a file within that directory, called "style.css":</p><pre><code>#bash shell
-[ ~]$ mkdir css &amp;&amp; touch css/style.css</code></pre><p>Now, open this style.css file in your text editor and input the following CSS code:</p><pre><code>/*style.css*/
+    &amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If we then render this page in our browser, we will see our HTML page now has some additional stylings added:&lt;/p&gt;&lt;figure&gt;&lt;img alt="A screenshot displaying the h1 tag with underline stylings and paragraph with red stylings" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/css_ss_01.webp" title="Inline CSS stylings applied to a basic HTML document"&gt;&lt;/figure&gt;&lt;figcaption&gt;Underline and Color Stylings Applied Via Inline CSS&lt;/figcaption&gt;&lt;p&gt;As you can see, applying the style attribute to the &lt;code class="inline-code"&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; and the &lt;code class="inline-code"&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tags, and then inputting specific property/value text that CSS recognizes, visually changes the text of the targetted HTML elements (specifically underlining the text of the &lt;code class="inline-code"&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; tag and coloring the text of the &lt;code class="inline-code"&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag red). This is what is known as "inline-styles," which is appropriately named due to the CSS being defined directly in the HTML itself.&lt;/p&gt;&lt;p&gt;We will cover the properties specifically defined within this style attribute shortly. As you may imagine, this convention of defining CSS styles directly in the HTML document itself could quickly become cumbersome, as the more CSS properties you may wish to define, the rather lengthy (and possibly unreadable) your HTML document will be. This convention of defining inline styles is useful however, in understanding the CSS Cascade, but only when in comparison and contrasted with other aspects of it, like Author Stylesheets.&lt;/p&gt;&lt;h2&gt;Author Stylesheets&lt;/h2&gt;&lt;p&gt;The above markup code demonstrating inline-styles is an example of what is known as Author Styles. As the name implies, these are styles that are authored by a web developer or user, which changes the default stylings native to the browser's User-Agent. As mentioned previously, the practice of authoring syles directly in our HTML document via inline-styles, while useful, can quickly become cumbersome as more stylings are authored and applied.&lt;/p&gt;&lt;p&gt;To ensure readability and organization of code, oftentimes styles are relegated to their own .css file, and then imported via the HTML &lt;code class="inline-code"&gt;&amp;lt;style&amp;gt;&lt;/code&gt; tag. You may have taken note of this tag in our example HTML document as one of the children elements within the &lt;code class="inline-code"&gt;&amp;lt;head&amp;gt;&lt;/code&gt; element:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;!--hello_world.html--&amp;gt;
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang="en"&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;My Hello World Example&amp;lt;/title&amp;gt;
+    &amp;lt;meta charset="UTF-8" /&amp;gt;
+    &amp;lt;meta name="viewport" content="width=device-width, initial-scale=1" /&amp;gt;
+    &lt;b&gt;&amp;lt;link href="css/style.css" rel="stylesheet" /&amp;gt;
+&lt;/b&gt;  &amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Very essentially, this tag tells the browser to import the styling configurations within the style.css file, which is located within the css directory related to the current working directory. The "rel" attribute explicitly tells the browser that the relationship between this import and the HTML document as a stylesheet. Let's now style our HTML document in a similar fashion as before when we exemplified the use of inline-styles, but now utilize this stylesheet. From the command line, make a directory called "css", and then create a file within that directory, called "style.css":&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
+[ ~]$ mkdir css &amp;amp;&amp;amp; touch css/style.css&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now, open this style.css file in your text editor and input the following CSS code:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;/*style.css*/
 
 h1 {
   text-decoration-line: underline;
@@ -64,7 +803,7 @@ h1 {
 
 p {
   color: red;
-}</code></pre><p>As you can see, this CSS is immediately more readable than when it was configured instead as an inline-style directly within our HTML document. Let us now take a brief moment to analyze the anatomy of this very basic .css file.</p><p>As you may have guessed, the first line indicating the name of a file is also there to demonstrate the appropriate way to make comments in CSS. Encapsulated within a forward slash and asterix, and ending with an asterix followed by a forward slash, this line will not be rendered by the browser's CSS parser, but like all code comments, is useful for brief notes to developers about the code itself.</p><p>The first element that we encounter is specifically the <code class="inline-code">h1</code> element, which is listed simply on its own line followed by an opening curly brace. The <code class="inline-code">h1</code> text is what is known as a CSS selector. As the name implies, this selector will "select" all instances of the <code class="inline-code">&lt;h1&gt;</code> tag within our HTML document and apply the stylings that are encapsulated between the curly braces.</p><p>Within the curly braces, there is the text "text-decoration-line", which is the CSS property that we, the web developer, are indicating we wish to change from its default value. The following specification, "underline", configures all instances of the <code class="inline-code">&lt;h1&gt;</code> tag to have their inner text underlined.</p><p>Together with the property, <code class="inline-code">text-decoration-line</code>, as well as the property value, <code class="inline-code">underline</code>, we the web developer have created what is known as a CSS "declaration". The following image, taken from the official <a aria-label="a link to the MDN web documentation on CSS basics" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" rel="noopener noreferrer" role="link" target="_blank">MDN web docs</a>, illustrates this concept for us visually:</p><figure><img alt="a diagram demonstrating the basic structure of a CSS Author Declaration" cite="MDN Web Docs" class="img-image" loading="lazy" src="../assets/images/img/css_css-declaration-small.webp" title="css declaration diagram"></figure><figcaption>A Diagram Of A Basic CSS Declaration</figcaption><h2>Basic CSS Styling</h2><p>The majority of CSS styling paradigms across the web reflects this general pattern of creating a CSS declaration, configuring various properties/values within the confines of their respective selectors. Let's continue styling the text within our example <code class="inline-code">&lt;p&gt;</code> tag with multiple property configurations within the same CSS declaration:</p><pre><code>/*style.css*/
+}&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As you can see, this CSS is immediately more readable than when it was configured instead as an inline-style directly within our HTML document. Let us now take a brief moment to analyze the anatomy of this very basic .css file.&lt;/p&gt;&lt;p&gt;As you may have guessed, the first line indicating the name of a file is also there to demonstrate the appropriate way to make comments in CSS. Encapsulated within a forward slash and asterix, and ending with an asterix followed by a forward slash, this line will not be rendered by the browser's CSS parser, but like all code comments, is useful for brief notes to developers about the code itself.&lt;/p&gt;&lt;p&gt;The first element that we encounter is specifically the &lt;code class="inline-code"&gt;h1&lt;/code&gt; element, which is listed simply on its own line followed by an opening curly brace. The &lt;code class="inline-code"&gt;h1&lt;/code&gt; text is what is known as a CSS selector. As the name implies, this selector will "select" all instances of the &lt;code class="inline-code"&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; tag within our HTML document and apply the stylings that are encapsulated between the curly braces.&lt;/p&gt;&lt;p&gt;Within the curly braces, there is the text "text-decoration-line", which is the CSS property that we, the web developer, are indicating we wish to change from its default value. The following specification, "underline", configures all instances of the &lt;code class="inline-code"&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; tag to have their inner text underlined.&lt;/p&gt;&lt;p&gt;Together with the property, &lt;code class="inline-code"&gt;text-decoration-line&lt;/code&gt;, as well as the property value, &lt;code class="inline-code"&gt;underline&lt;/code&gt;, we the web developer have created what is known as a CSS "declaration". The following image, taken from the official &lt;a aria-label="a link to the MDN web documentation on CSS basics" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" rel="noopener noreferrer" role="link" target="_blank"&gt;MDN web docs&lt;/a&gt;, illustrates this concept for us visually:&lt;/p&gt;&lt;figure&gt;&lt;img alt="a diagram demonstrating the basic structure of a CSS Author Declaration" cite="MDN Web Docs" class="img-image" loading="lazy" src="../assets/images/img/css_css-declaration-small.webp" title="css declaration diagram"&gt;&lt;/figure&gt;&lt;figcaption&gt;A Diagram Of A Basic CSS Declaration&lt;/figcaption&gt;&lt;h2&gt;Basic CSS Styling&lt;/h2&gt;&lt;p&gt;The majority of CSS styling paradigms across the web reflects this general pattern of creating a CSS declaration, configuring various properties/values within the confines of their respective selectors. Let's continue styling the text within our example &lt;code class="inline-code"&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag with multiple property configurations within the same CSS declaration:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;/*style.css*/
 
 h1 {
   text-decoration-line: underline;
@@ -75,20 +814,20 @@ p {
   font-size: 150%;
   font-weight: bold;
   margin-left: 16px;
-}</code></pre><p>If we then render these multiple style configurations in the browser, we can easily see the adjustments made to our <code class="inline-code">&lt;p&gt;</code> tag's text.</p><figure><img alt="A screenshot demonstrating the styling changes to the p tag" cite="Author Screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/css_ss_02.webp" title="A screenshot demonstrating CSS basics"></figure><figcaption>The &lt;p&gt; Tag Is More Heavily Styled</figcaption><p>Each <code class="inline-code">&lt;p&gt;</code> tag will have this styling now applied to it. To ensure this is the case, let's adjust our HTML document to have a secondary <code class="inline-code">&lt;p&gt;</code> tag so that we can see these same stylings applied to this secondary element:</p><pre><code>&lt;!--hello_world.html--&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;title&gt;My Hello World Example&lt;/title&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
-    &lt;link href="css/style.css" rel="stylesheet" /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;main&gt;
-      &lt;article&gt;
-        &lt;h1&gt;Hello World!&lt;/h1&gt;
-        &lt;p&gt;
+}&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If we then render these multiple style configurations in the browser, we can easily see the adjustments made to our &lt;code class="inline-code"&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag's text.&lt;/p&gt;&lt;figure&gt;&lt;img alt="A screenshot demonstrating the styling changes to the p tag" cite="Author Screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/css_ss_02.webp" title="A screenshot demonstrating CSS basics"&gt;&lt;/figure&gt;&lt;figcaption&gt;The &amp;lt;p&amp;gt; Tag Is More Heavily Styled&lt;/figcaption&gt;&lt;p&gt;Each &lt;code class="inline-code"&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag will have this styling now applied to it. To ensure this is the case, let's adjust our HTML document to have a secondary &lt;code class="inline-code"&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag so that we can see these same stylings applied to this secondary element:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;!--hello_world.html--&amp;gt;
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang="en"&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;My Hello World Example&amp;lt;/title&amp;gt;
+    &amp;lt;meta charset="UTF-8" /&amp;gt;
+    &amp;lt;meta name="viewport" content="width=device-width, initial-scale=1" /&amp;gt;
+    &amp;lt;link href="css/style.css" rel="stylesheet" /&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;main&amp;gt;
+      &amp;lt;article&amp;gt;
+        &amp;lt;h1&amp;gt;Hello World!&amp;lt;/h1&amp;gt;
+        &amp;lt;p&amp;gt;
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -96,8 +835,8 @@ p {
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
-        &lt;/p&gt;
-        &lt;p&gt;
+        &amp;lt;/p&amp;gt;
+        &amp;lt;p&amp;gt;
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -105,12 +844,12 @@ p {
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
-        &lt;/p&gt;
-      &lt;/article&gt;
-    &lt;/main&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>As one would expect, by using the CSS selector <code class="inline-code">p</code>, we have essentially declared that all configurations made within the CSS block (otherwise known as a "ruleset" or "rule") will be applied to all <code class="inline-code">&lt;p&gt;</code> tag HTML elements. Indeed, if we now render this newly edited HTML document in the browser, we will see that these stylings are applied to the secondary <code class="inline-code">&lt;p&gt;</code> tag's inner text as well, without having to write any additional CSS code:</p><figure><img alt="A screenshot demonstrating the styling changes to multiple p tags" cite="Author Screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/css_ss_03.webp" title="A screenshot demonstrating CSS basics"></figure><figcaption>Multiple &lt;p&gt; Tags Styled By One CSS Declaration</figcaption><p>Let's now further style our <code class="inline-code">h1</code> CSS declaration to further demonstrate how CSS parses the HTML document. Additionally, we'll further configure our style.css file to utilize conventions more commonly seen in web development. For one, we'll change the <code class="inline-code">p</code> CSS declaration to utilize color hex codes instead of the more basic color name code. This is so that a wider variety of colors are available to utilize, and because it corresponds with standards seen throughout the graphic design world.</p><p>We'll also change out our default fonts to show a bit of diversity to our text elements. And lastly, we'll utilize a different measurement unit instead of the <code class="inline-code">px</code> or "pixels" unit. We will replace it with the <code class="inline-code">em</code> unit as it is a better practice to use a relative unit over an absolute unit. We will go into more details regarding the use of the <code class="inline-code">px</code> and the <code class="inline-code">em</code> units shortly. For now, let's adjust some of our CSS code:</p><pre><code>/*style.css*/
+        &amp;lt;/p&amp;gt;
+      &amp;lt;/article&amp;gt;
+    &amp;lt;/main&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As one would expect, by using the CSS selector &lt;code class="inline-code"&gt;p&lt;/code&gt;, we have essentially declared that all configurations made within the CSS block (otherwise known as a "ruleset" or "rule") will be applied to all &lt;code class="inline-code"&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag HTML elements. Indeed, if we now render this newly edited HTML document in the browser, we will see that these stylings are applied to the secondary &lt;code class="inline-code"&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag's inner text as well, without having to write any additional CSS code:&lt;/p&gt;&lt;figure&gt;&lt;img alt="A screenshot demonstrating the styling changes to multiple p tags" cite="Author Screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/css_ss_03.webp" title="A screenshot demonstrating CSS basics"&gt;&lt;/figure&gt;&lt;figcaption&gt;Multiple &amp;lt;p&amp;gt; Tags Styled By One CSS Declaration&lt;/figcaption&gt;&lt;p&gt;Let's now further style our &lt;code class="inline-code"&gt;h1&lt;/code&gt; CSS declaration to further demonstrate how CSS parses the HTML document. Additionally, we'll further configure our style.css file to utilize conventions more commonly seen in web development. For one, we'll change the &lt;code class="inline-code"&gt;p&lt;/code&gt; CSS declaration to utilize color hex codes instead of the more basic color name code. This is so that a wider variety of colors are available to utilize, and because it corresponds with standards seen throughout the graphic design world.&lt;/p&gt;&lt;p&gt;We'll also change out our default fonts to show a bit of diversity to our text elements. And lastly, we'll utilize a different measurement unit instead of the &lt;code class="inline-code"&gt;px&lt;/code&gt; or "pixels" unit. We will replace it with the &lt;code class="inline-code"&gt;em&lt;/code&gt; unit as it is a better practice to use a relative unit over an absolute unit. We will go into more details regarding the use of the &lt;code class="inline-code"&gt;px&lt;/code&gt; and the &lt;code class="inline-code"&gt;em&lt;/code&gt; units shortly. For now, let's adjust some of our CSS code:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;/*style.css*/
 
 h1 {
   text-align: center;
@@ -125,7 +864,7 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin-left: 1em;
-}</code></pre><p>This is now a bit closer to some more real world CSS configurations. Our <code class="inline-code">h1</code> element now has it's alignments set to center. Much like a word processor generated document, text in CSS can indeed be aligned to either the right, center, or left (the default). The font-family property has a rather extensive series of configurations. Essentially CSS will look for font-families by these name within the Client computer's font libraries (fonts located directly on the user's computer). Should the first font not be found, the second, then third, then fourth, etc. font families will be attempted, with the last font family being one that is commonly found on the majority of Client computers, which is set to the default should the others not be found.</p><p>Following this, the font-size for the <code class="inline-code">h1</code> selector is set to <code class="inline-code">3em</code>. The <code class="inline-code">em</code> unit of measurement is one of many units of measurement available in CSS for a variety of selectors. While <code class="inline-code">px</code> is perhaps the most commonly recognized unit of measurement to those who are familiar with Graphic Design, pixels are generally frowned upon to be utilized within styling web pages in CSS. This is not to say that there is <em>never</em> a use case for using the <code class="inline-code">px</code> unit of measurement, but due to it being a "fixed" unit of measurement, it is not suitable for most modern web pages as it does not scale relative to the designated font it is being applied to.</p><p>The utilization of <code class="inline-code">em</code> units is a good segue into the subject of responsiveness within Web Design. Because modern web pages generally are meant to be viewed on devices with many different screen dimensions (commonly known as "viewports" in web development), it is imperative that elements be scaled relative to the client device's default settings for font size and other user-agent defaults. While one could, in theory, utilize <code class="inline-code">px</code> units to create responsive web designs, the amount of configuration necessary to do so in a way that still created a visually appealing (or at least readable) web page would be far more difficult than utilizing a relative measurement unit like <code class="inline-code">em</code>. This brief <a aria-label="A Link to a CSS Tricks Blog Post explaining the benefits of em units over px in CSS" class="inline-link" href="https://css-tricks.com/why-ems/" rel="noopener noreferrer" role="link" target="_blank">CSS Tricks blog post</a> explains the reasoning behind this in more detail.</p><p>Lastly, we see that the <code class="inline-code">text-decoration</code> property's value is written twice, this is to demonstrate a simple, but important aspect of the CSS cascade, which is that properties within a CSS selector can be overwritten anywhere in the .css document. This is accomplished simply by rewriting the <code class="inline-code">text-decoration-line</code> property's value at any point in the .css file <em>after</em> the initial reference to it. To be clear, in our first declaration of <code class="inline-code">text-decoration-line: underline;</code>, we are overwriting the default user-agent setting of "none" for this property to "underline". In our second declaration, we then explicitly declare that the value of the <code class="inline-code">text-decoration-line</code> property is <code class="inline-code">none</code>.</p><p>From a practical standpoint, this is a useless re-declaration, but I put this within the sample CSS code for demonstration purporses. Oftentimes when working in a large CSS configuration file, it is easy to forget a previously authored style, and it can sometimes come as a shock to the web developer that their styling now seems somehow off due to an overwritten property value that was designated further down in the .css file. This is due to how the CSS Cascade Algorithm determines certain properties to be adjusted (either by conditions met within the User-Agent, or by the conditions met in the Authored Stylesheet).</p><p>I will digress on this demonstration of a basic feature of the CSS Cascade for now. Let us return our attention to the effects of our new CSS code. If we now render our HTML page, we will see that it is now noticably different due to these slightly more significant changes:</p><figure><img alt="An image of the HTML document with its fonts now more heavily styled" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/css_ss_04.webp" title="A screenshot of our HTML document now more heavily styled"></figure><figcaption>The HTML Document Now More Heavily Styled</figcaption><h2>Sensible Defaults</h2><p>To say that the CSS styling language is vast is not only an understatement, but perhaps does a great disservice to those that have devoted the immense amount of time necessary to gain mastery over it. Additionally there are a variety of CSS frameworks that aim to increase developer productivity and improve the developer experience when working with CSS. This article aims only to give you an introduction to CSS, its basic concepts, and its syntax. That said, however, it is also my wish as the author of this article to leave you with a good starting off point from which to further research CSS and develop your skills in it.</p><p>To that end, below is a sample default .css file that I use when I initially start a new project. There are a multitude of these default .css files available from a wide variety of developers far more skilled and knowledgable on the subject of CSS than myself. Indeed, this configuration is essentially lifted from the Youtuber and CSS King, <a aria-label="A Link to Kevin Powell's Youtube Channel" class="inline-link" href="https://www.youtube.com/@KevinPowell" rel="noopener noreferrer" role="link" target="_blank">Kevin Powell</a>, who I highly encourage everyone reading this article and interested in learning more about CSS to check out. Below you will find these default css settings and a brief explanation on what these defaults do:</p><pre><code>/*defaults-style.css*/
+}&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is now a bit closer to some more real world CSS configurations. Our &lt;code class="inline-code"&gt;h1&lt;/code&gt; element now has it's alignments set to center. Much like a word processor generated document, text in CSS can indeed be aligned to either the right, center, or left (the default). The font-family property has a rather extensive series of configurations. Essentially CSS will look for font-families by these name within the Client computer's font libraries (fonts located directly on the user's computer). Should the first font not be found, the second, then third, then fourth, etc. font families will be attempted, with the last font family being one that is commonly found on the majority of Client computers, which is set to the default should the others not be found.&lt;/p&gt;&lt;p&gt;Following this, the font-size for the &lt;code class="inline-code"&gt;h1&lt;/code&gt; selector is set to &lt;code class="inline-code"&gt;3em&lt;/code&gt;. The &lt;code class="inline-code"&gt;em&lt;/code&gt; unit of measurement is one of many units of measurement available in CSS for a variety of selectors. While &lt;code class="inline-code"&gt;px&lt;/code&gt; is perhaps the most commonly recognized unit of measurement to those who are familiar with Graphic Design, pixels are generally frowned upon to be utilized within styling web pages in CSS. This is not to say that there is &lt;em&gt;never&lt;/em&gt; a use case for using the &lt;code class="inline-code"&gt;px&lt;/code&gt; unit of measurement, but due to it being a "fixed" unit of measurement, it is not suitable for most modern web pages as it does not scale relative to the designated font it is being applied to.&lt;/p&gt;&lt;p&gt;The utilization of &lt;code class="inline-code"&gt;em&lt;/code&gt; units is a good segue into the subject of responsiveness within Web Design. Because modern web pages generally are meant to be viewed on devices with many different screen dimensions (commonly known as "viewports" in web development), it is imperative that elements be scaled relative to the client device's default settings for font size and other user-agent defaults. While one could, in theory, utilize &lt;code class="inline-code"&gt;px&lt;/code&gt; units to create responsive web designs, the amount of configuration necessary to do so in a way that still created a visually appealing (or at least readable) web page would be far more difficult than utilizing a relative measurement unit like &lt;code class="inline-code"&gt;em&lt;/code&gt;. This brief &lt;a aria-label="A Link to a CSS Tricks Blog Post explaining the benefits of em units over px in CSS" class="inline-link" href="https://css-tricks.com/why-ems/" rel="noopener noreferrer" role="link" target="_blank"&gt;CSS Tricks blog post&lt;/a&gt; explains the reasoning behind this in more detail.&lt;/p&gt;&lt;p&gt;Lastly, we see that the &lt;code class="inline-code"&gt;text-decoration&lt;/code&gt; property's value is written twice, this is to demonstrate a simple, but important aspect of the CSS cascade, which is that properties within a CSS selector can be overwritten anywhere in the .css document. This is accomplished simply by rewriting the &lt;code class="inline-code"&gt;text-decoration-line&lt;/code&gt; property's value at any point in the .css file &lt;em&gt;after&lt;/em&gt; the initial reference to it. To be clear, in our first declaration of &lt;code class="inline-code"&gt;text-decoration-line: underline;&lt;/code&gt;, we are overwriting the default user-agent setting of "none" for this property to "underline". In our second declaration, we then explicitly declare that the value of the &lt;code class="inline-code"&gt;text-decoration-line&lt;/code&gt; property is &lt;code class="inline-code"&gt;none&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;From a practical standpoint, this is a useless re-declaration, but I put this within the sample CSS code for demonstration purporses. Oftentimes when working in a large CSS configuration file, it is easy to forget a previously authored style, and it can sometimes come as a shock to the web developer that their styling now seems somehow off due to an overwritten property value that was designated further down in the .css file. This is due to how the CSS Cascade Algorithm determines certain properties to be adjusted (either by conditions met within the User-Agent, or by the conditions met in the Authored Stylesheet).&lt;/p&gt;&lt;p&gt;I will digress on this demonstration of a basic feature of the CSS Cascade for now. Let us return our attention to the effects of our new CSS code. If we now render our HTML page, we will see that it is now noticably different due to these slightly more significant changes:&lt;/p&gt;&lt;figure&gt;&lt;img alt="An image of the HTML document with its fonts now more heavily styled" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/css_ss_04.webp" title="A screenshot of our HTML document now more heavily styled"&gt;&lt;/figure&gt;&lt;figcaption&gt;The HTML Document Now More Heavily Styled&lt;/figcaption&gt;&lt;h2&gt;Sensible Defaults&lt;/h2&gt;&lt;p&gt;To say that the CSS styling language is vast is not only an understatement, but perhaps does a great disservice to those that have devoted the immense amount of time necessary to gain mastery over it. Additionally there are a variety of CSS frameworks that aim to increase developer productivity and improve the developer experience when working with CSS. This article aims only to give you an introduction to CSS, its basic concepts, and its syntax. That said, however, it is also my wish as the author of this article to leave you with a good starting off point from which to further research CSS and develop your skills in it.&lt;/p&gt;&lt;p&gt;To that end, below is a sample default .css file that I use when I initially start a new project. There are a multitude of these default .css files available from a wide variety of developers far more skilled and knowledgable on the subject of CSS than myself. Indeed, this configuration is essentially lifted from the Youtuber and CSS King, &lt;a aria-label="A Link to Kevin Powell's Youtube Channel" class="inline-link" href="https://www.youtube.com/@KevinPowell" rel="noopener noreferrer" role="link" target="_blank"&gt;Kevin Powell&lt;/a&gt;, who I highly encourage everyone reading this article and interested in learning more about CSS to check out. Below you will find these default css settings and a brief explanation on what these defaults do:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;/*defaults-style.css*/
 
 *,
 *::before,
@@ -153,62 +892,9 @@ svg,
 video {
   max-width: 100%;
   display: block;
-}</code></pre><p>This .css file obviously includes some CSS selectors that we have not yet covered in this introduction. Let's start simply by breaking down this file line by line. I will forego explaining the first commented out section of this file, as I have already covered what this is earlier in this article.</p><p>The asterix, <code class="inline-code">*</code>, selector here is what is known in programming circles as a "wildcard" character. It essentially means any and all elements. Since there are no parent selectors preceding it, this wildcard is selecting <em>every</em> element within the HTML document. Very essentially, <code class="inline-code">*</code> is taking every element within the HTML page and changing its uger-agent value for the box-sizing property and changing it from its default, <code class="inline-code">content-box</code>, to <code class="inline-code">border-box</code>.</p><p>The commas following the selectors indicate that the declaration below is to be applied to these selectors as well. In this case, we have another piece of syntax that has yet to be introduced, which is that of psuedo elements, delineated by the double colon syntax, <code class="inline-code">::</code>, followed in this case by the <code class="inline-code">before</code>, and <code class="inline-code">after</code> keywords. To greatly oversimplify what this indicates, these pseudo-elements are elements that don't exist as actual HTML elements within the DOM, but are still capable of being styled by CSS. Visually speaking, these elements will appear as if they are a part of the usual HTML document, but will not affect the overall flow of it. If this sounds confusing to you, do not fret, pseudo-elements are only used in specific scenarios where styling of visual elements are needed to appear before or after specific HTML elements. In this particular case we again, are applying any and all pseudo-elements to be styled to have their <code class="inline-code">border-sizing</code> property's value changed to <code class="inline-code">border-box</code>.</p><p>So why change every element in the HTML document as well as all pseudo-elements to not utilize the default <code class="inline-code">content-box</code> value? To understand this in more depth than is presented here, please see MDN's documentation on the <a aria-label="A link to MDN's documentation on the CSS Box Model" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model" rel="noopener noreferrer" role="link" target="_blank">CSS Box Model</a>. In brief, however, when changing the width and height of an HTML element within CSS, the adjustments to these property values only are applicable to the content within said element (in most cases, the element's text content). Oftentimes this is not what the majority of web developers want, as they wish to change the width and height of the entire element, including any borders, margins, and padding applied to said element. This change to the <code class="inline-code">border-box</code> value for the <code class="inline-code">box-sizing</code> property value ensures that the document defaults to what is usually the expected and desired behavior.</p><p>Moving on, we encounter the <code class="inline-code">:root</code> CSS selector. It is easy to confuse the <code class="inline-code">:root</code> pseudo class selector with the <code class="inline-code">*</code> selector or the <code class="inline-code">html</code> selector. <code class="inline-code">:root</code> is utilized here to select the <code class="inline-code">&lt;html&gt;</code> tag. Note here that it is used instead of the <code class="inline-code">html</code> CSS selector solely because it holds higher precedence within the CSS Cascade (for all intents and purposes they are nearly identical selectors). Within the declaration block, we see that the <code class="inline-code">color-scheme</code> property is being set to <code class="inline-code">light dark</code>. This essentially tells HTML to respect the browser's preference for either light or dark theme and therefore instructs the browser's CSS parser to coerce any stylings to reflects this preference if available.</p><p>Next we have the <code class="inline-code">body</code> selector, where we see that the font-family is set to the <code class="inline-code">system-ui</code> value. As the value name suggests, this is simply telling the browser to initially set all text to whatever the browser's preference for the font family is.</p><p>Additionally the <code class="inline-code">font-size</code> property is set to <code class="inline-code">1.125rem</code>. Yet another subject not covered previously in this article, this measurement unit, <code class="inline-code">rem</code>, is utilized to reference the root element's default font-size. This is contrasted with the unit, <code class="inline-code">em</code>, which references the parent element's default font-size. Both these units have similar behaviors, but <code class="inline-code">rem</code> can be thought of as being a safer bet for default stylings when there are compounding font-size changes over many nested elements within an HTML document.</p><p>Lastly, the <code class="inline-code">line-height</code> property is changed to <code class="inline-code">1.5</code>, which simply adjusts from the default <code class="inline-code">line-height</code> of <code class="inline-code">1</code> so that the text has a bit more breathing room for each line (<code class="inline-code">1</code> tends to leave little space inbetween lines).</p><p>Moving onto the <code class="inline-code">main</code> selector, we find a very sane default for the width property, which utilizes the min() CSS function. We didn't cover CSS functions (and indeed, haven't covered the basics of programming functions in general), but the concepts in this case are relatively straight forward. Demarcated by comma separated values, the min() function takes two arguments, the first being the minimum value passed to the width property. In this case, each line of text within the <code class="inline-code">main</code> selector, will be a minimum of <code class="inline-code">70ch</code>, or 70 characters, long. The second argument, expressed as <code class="inline-code">100% - 4rem</code>, basically tells the browser that the widest any block of text within the <code class="inline-code">main</code> selector can be is 100% of the width of the browser window, but subtract 4rem from that to find the maximum width the content can be. The <code class="inline-code">margin-inline</code> property takes the <code class="inline-code">auto</code> value to indicate that the inline margins (side margins) should be automatically calculated. Thanks to the width property's min() function's return value, the margin surrounding this content will conform to this defined range.</p><p>Finally we move onto the <code class="inline-code">img</code>, <code class="inline-code">svg</code>, and <code class="inline-code">video</code> selectors. What these are in reference to is somewhat self explanatory, but essentially we are referencing all HTML visual elements that refer to images (i.e. <code class="inline-code">&lt;img&gt;</code>), <code class="inline-code">&lt;svg&gt;</code> elements (otherwise known as scalable vector graphics), and also the <code class="inline-code">&lt;video&gt;</code> element (self-explanatory). The defaults changed here are subtle, essentially the width of the video is limited to being <code class="inline-code">100%</code> of the <code class="inline-code">max-width</code> property, ensuring that all images, svg elements, and videos never exceed 100% width of the browser window size (preventing content overflow), and additionally the <code class="inline-code">display</code> property is set to <code class="inline-code">block</code>, essentially starting all new images, svgs, and videos on new lines instead of visually adjacent (i.e. horizontally oriented/side by side) to other HTML elements.</p><p>As I initially mentioned in the opening paragraph to this section, these are just a <em>few</em> of sane defaults that can be found throughout the internet in regards to default author stylings for css documents. I encourage you to go looking for others as there are some css default sheets that can get quite extensive. Personally, I've found this is enough for me, but you might desire to have others depending on your goals and work flow.</p><h1>Conclusion</h1><p>Hopefully this introduction to Cascading Style Sheets has proved to be of some use to you. This article just barely scratches the surface of what is possible just with HTML and CSS, let alone JavaScript. If you are inclined to do further research into CSS, I would highly recommend you to look at the official MDN documentation on <a aria-label="A link to the Offical MDN documentation on CSS basics" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" rel="noopener noreferrer" role="link" target="_blank">CSS Basics</a>, as well as the highly acclaimed <a aria-label="A link to the CSS Tricks website" class="inline-link" href="https://css-tricks.com/" rel="noopener noreferrer" role="link" target="_blank">CSS Tricks website</a>. These resources have proved to be immensely valuable in my endeavors when creating web pages, and I am sure they will serve you as well.</p><p>We have now covered The HyperText Markup Language, a skeletal scaffolding onto which we can apply Cascading Style Sheets, a beautiful mask of makeup applied to this structure. But much like Pygmalion wishing for his creation to come to life, web developers are left only with a beautiful, but still immobile, statue. Only when we apply the magic of that ubiquitous programming language, JavaScript, can our creation be given <a aria-label="link to article, javascript the web's muscles" class="inline-link" href="https://brianhayes.dev/blog/javascript_the_webs_muscles.html" role="link">Muscles</a>, and come to life.</p></article>]]></description>
+}&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This .css file obviously includes some CSS selectors that we have not yet covered in this introduction. Let's start simply by breaking down this file line by line. I will forego explaining the first commented out section of this file, as I have already covered what this is earlier in this article.&lt;/p&gt;&lt;p&gt;The asterix, &lt;code class="inline-code"&gt;*&lt;/code&gt;, selector here is what is known in programming circles as a "wildcard" character. It essentially means any and all elements. Since there are no parent selectors preceding it, this wildcard is selecting &lt;em&gt;every&lt;/em&gt; element within the HTML document. Very essentially, &lt;code class="inline-code"&gt;*&lt;/code&gt; is taking every element within the HTML page and changing its uger-agent value for the box-sizing property and changing it from its default, &lt;code class="inline-code"&gt;content-box&lt;/code&gt;, to &lt;code class="inline-code"&gt;border-box&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;The commas following the selectors indicate that the declaration below is to be applied to these selectors as well. In this case, we have another piece of syntax that has yet to be introduced, which is that of psuedo elements, delineated by the double colon syntax, &lt;code class="inline-code"&gt;::&lt;/code&gt;, followed in this case by the &lt;code class="inline-code"&gt;before&lt;/code&gt;, and &lt;code class="inline-code"&gt;after&lt;/code&gt; keywords. To greatly oversimplify what this indicates, these pseudo-elements are elements that don't exist as actual HTML elements within the DOM, but are still capable of being styled by CSS. Visually speaking, these elements will appear as if they are a part of the usual HTML document, but will not affect the overall flow of it. If this sounds confusing to you, do not fret, pseudo-elements are only used in specific scenarios where styling of visual elements are needed to appear before or after specific HTML elements. In this particular case we again, are applying any and all pseudo-elements to be styled to have their &lt;code class="inline-code"&gt;border-sizing&lt;/code&gt; property's value changed to &lt;code class="inline-code"&gt;border-box&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;So why change every element in the HTML document as well as all pseudo-elements to not utilize the default &lt;code class="inline-code"&gt;content-box&lt;/code&gt; value? To understand this in more depth than is presented here, please see MDN's documentation on the &lt;a aria-label="A link to MDN's documentation on the CSS Box Model" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model" rel="noopener noreferrer" role="link" target="_blank"&gt;CSS Box Model&lt;/a&gt;. In brief, however, when changing the width and height of an HTML element within CSS, the adjustments to these property values only are applicable to the content within said element (in most cases, the element's text content). Oftentimes this is not what the majority of web developers want, as they wish to change the width and height of the entire element, including any borders, margins, and padding applied to said element. This change to the &lt;code class="inline-code"&gt;border-box&lt;/code&gt; value for the &lt;code class="inline-code"&gt;box-sizing&lt;/code&gt; property value ensures that the document defaults to what is usually the expected and desired behavior.&lt;/p&gt;&lt;p&gt;Moving on, we encounter the &lt;code class="inline-code"&gt;:root&lt;/code&gt; CSS selector. It is easy to confuse the &lt;code class="inline-code"&gt;:root&lt;/code&gt; pseudo class selector with the &lt;code class="inline-code"&gt;*&lt;/code&gt; selector or the &lt;code class="inline-code"&gt;html&lt;/code&gt; selector. &lt;code class="inline-code"&gt;:root&lt;/code&gt; is utilized here to select the &lt;code class="inline-code"&gt;&amp;lt;html&amp;gt;&lt;/code&gt; tag. Note here that it is used instead of the &lt;code class="inline-code"&gt;html&lt;/code&gt; CSS selector solely because it holds higher precedence within the CSS Cascade (for all intents and purposes they are nearly identical selectors). Within the declaration block, we see that the &lt;code class="inline-code"&gt;color-scheme&lt;/code&gt; property is being set to &lt;code class="inline-code"&gt;light dark&lt;/code&gt;. This essentially tells HTML to respect the browser's preference for either light or dark theme and therefore instructs the browser's CSS parser to coerce any stylings to reflects this preference if available.&lt;/p&gt;&lt;p&gt;Next we have the &lt;code class="inline-code"&gt;body&lt;/code&gt; selector, where we see that the font-family is set to the &lt;code class="inline-code"&gt;system-ui&lt;/code&gt; value. As the value name suggests, this is simply telling the browser to initially set all text to whatever the browser's preference for the font family is.&lt;/p&gt;&lt;p&gt;Additionally the &lt;code class="inline-code"&gt;font-size&lt;/code&gt; property is set to &lt;code class="inline-code"&gt;1.125rem&lt;/code&gt;. Yet another subject not covered previously in this article, this measurement unit, &lt;code class="inline-code"&gt;rem&lt;/code&gt;, is utilized to reference the root element's default font-size. This is contrasted with the unit, &lt;code class="inline-code"&gt;em&lt;/code&gt;, which references the parent element's default font-size. Both these units have similar behaviors, but &lt;code class="inline-code"&gt;rem&lt;/code&gt; can be thought of as being a safer bet for default stylings when there are compounding font-size changes over many nested elements within an HTML document.&lt;/p&gt;&lt;p&gt;Lastly, the &lt;code class="inline-code"&gt;line-height&lt;/code&gt; property is changed to &lt;code class="inline-code"&gt;1.5&lt;/code&gt;, which simply adjusts from the default &lt;code class="inline-code"&gt;line-height&lt;/code&gt; of &lt;code class="inline-code"&gt;1&lt;/code&gt; so that the text has a bit more breathing room for each line (&lt;code class="inline-code"&gt;1&lt;/code&gt; tends to leave little space inbetween lines).&lt;/p&gt;&lt;p&gt;Moving onto the &lt;code class="inline-code"&gt;main&lt;/code&gt; selector, we find a very sane default for the width property, which utilizes the min() CSS function. We didn't cover CSS functions (and indeed, haven't covered the basics of programming functions in general), but the concepts in this case are relatively straight forward. Demarcated by comma separated values, the min() function takes two arguments, the first being the minimum value passed to the width property. In this case, each line of text within the &lt;code class="inline-code"&gt;main&lt;/code&gt; selector, will be a minimum of &lt;code class="inline-code"&gt;70ch&lt;/code&gt;, or 70 characters, long. The second argument, expressed as &lt;code class="inline-code"&gt;100% - 4rem&lt;/code&gt;, basically tells the browser that the widest any block of text within the &lt;code class="inline-code"&gt;main&lt;/code&gt; selector can be is 100% of the width of the browser window, but subtract 4rem from that to find the maximum width the content can be. The &lt;code class="inline-code"&gt;margin-inline&lt;/code&gt; property takes the &lt;code class="inline-code"&gt;auto&lt;/code&gt; value to indicate that the inline margins (side margins) should be automatically calculated. Thanks to the width property's min() function's return value, the margin surrounding this content will conform to this defined range.&lt;/p&gt;&lt;p&gt;Finally we move onto the &lt;code class="inline-code"&gt;img&lt;/code&gt;, &lt;code class="inline-code"&gt;svg&lt;/code&gt;, and &lt;code class="inline-code"&gt;video&lt;/code&gt; selectors. What these are in reference to is somewhat self explanatory, but essentially we are referencing all HTML visual elements that refer to images (i.e. &lt;code class="inline-code"&gt;&amp;lt;img&amp;gt;&lt;/code&gt;), &lt;code class="inline-code"&gt;&amp;lt;svg&amp;gt;&lt;/code&gt; elements (otherwise known as scalable vector graphics), and also the &lt;code class="inline-code"&gt;&amp;lt;video&amp;gt;&lt;/code&gt; element (self-explanatory). The defaults changed here are subtle, essentially the width of the video is limited to being &lt;code class="inline-code"&gt;100%&lt;/code&gt; of the &lt;code class="inline-code"&gt;max-width&lt;/code&gt; property, ensuring that all images, svg elements, and videos never exceed 100% width of the browser window size (preventing content overflow), and additionally the &lt;code class="inline-code"&gt;display&lt;/code&gt; property is set to &lt;code class="inline-code"&gt;block&lt;/code&gt;, essentially starting all new images, svgs, and videos on new lines instead of visually adjacent (i.e. horizontally oriented/side by side) to other HTML elements.&lt;/p&gt;&lt;p&gt;As I initially mentioned in the opening paragraph to this section, these are just a &lt;em&gt;few&lt;/em&gt; of sane defaults that can be found throughout the internet in regards to default author stylings for css documents. I encourage you to go looking for others as there are some css default sheets that can get quite extensive. Personally, I've found this is enough for me, but you might desire to have others depending on your goals and work flow.&lt;/p&gt;&lt;h1&gt;Conclusion&lt;/h1&gt;&lt;p&gt;Hopefully this introduction to Cascading Style Sheets has proved to be of some use to you. This article just barely scratches the surface of what is possible just with HTML and CSS, let alone JavaScript. If you are inclined to do further research into CSS, I would highly recommend you to look at the official MDN documentation on &lt;a aria-label="A link to the Offical MDN documentation on CSS basics" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" rel="noopener noreferrer" role="link" target="_blank"&gt;CSS Basics&lt;/a&gt;, as well as the highly acclaimed &lt;a aria-label="A link to the CSS Tricks website" class="inline-link" href="https://css-tricks.com/" rel="noopener noreferrer" role="link" target="_blank"&gt;CSS Tricks website&lt;/a&gt;. These resources have proved to be immensely valuable in my endeavors when creating web pages, and I am sure they will serve you as well.&lt;/p&gt;&lt;p&gt;We have now covered The HyperText Markup Language, a skeletal scaffolding onto which we can apply Cascading Style Sheets, a beautiful mask of makeup applied to this structure. But much like Pygmalion wishing for his creation to come to life, web developers are left only with a beautiful, but still immobile, statue. Only when we apply the magic of that ubiquitous programming language, JavaScript, can our creation be given &lt;a aria-label="link to article, javascript the web's muscles" class="inline-link" href="https://brianhayes.dev/blog/javascript_the_webs_muscles.html" role="link"&gt;Muscles&lt;/a&gt;, and come to life.&lt;/p&gt;&lt;/article&gt;</description>
 			<guid isPermaLink="false">https://brianhayes.dev/blog/css_the_webs_makeup</guid>
 			<pubDate>Tue, 07 Nov 2023 00:00:00 +0000</pubDate>
-		</item>
-<item>
-			<title>Command Line</title>
-			<link>https://brianhayes.dev/blog/command_line</link>
-			<description>&lt;article class="demo-button"&gt;&lt;h1&gt;Introduction&lt;/h1&gt;&lt;p&gt;Learning to Program can be an intimidating venture. Not only is there a plethora of programming languages, libraries, frameworks, text editors, and more, there is also the overwhelming amount of opinions amongst more experienced programmers one might consider when deciding between which of these tools is best. Navigating all of this is no easy task and it is something I still struggle with when examining a field of software development I have little knowledge of (pretty much all of it).&lt;/p&gt;&lt;p&gt;How does one know which text editor to choose? Which programming language should I learn first? Should I use MacOS or Windows? (hint: neither). One of the more uncommon (although not necessarily rare) questions asked amongst beginner developers is, which shell should I use?&lt;/p&gt;&lt;p&gt;Before I dive into this topic, I feel like it may be prudent to address the simple question of:&lt;/p&gt;&lt;h2&gt;What Is A Shell?&lt;/h2&gt;&lt;p&gt;If you have done any amount of beginner programming, systems administration, database management, or other computer related work, it is likely you have already interacted with The Terminal (Emulator), The Command Line and its close companion, The Shell. I shall very briefly address what each of these are, and why, together, they are the most important tool for anyone interested in interacting with computers at any meaningful level.&lt;/p&gt;&lt;p&gt;In Windows, it is known as The Command Prompt(or Powershell), in MacOS it is known as The Terminal, and in Linux and BSD, it is also known simply as the Terminal. The history of the terminal is extensive, and I would only doing you a disservice to you were I to attempt to explain it in depth to you. For the sake of brevity, I shall simply explain how The Command Line and shell pertain to you, the prospective Computer Programmer, and why it is so important for all programmers to become familiar with it.&lt;/p&gt;&lt;p&gt;If you were to open up Command Prompt in Windows, or the Terminal in MacOS, you would be presented with a black (or blue) colored screen, usually prefaced by a series of characters known as a prompt, and a cursor indicating the program is awaiting you to type something (to provide input via the keyboard). To the uninitiated, this is intimidating, especially after inputting something and getting a mean looking error message (oftentimes highlighted in red). I must admit, whenever anyone who is unfamiliar with computers has seen me working in the terminal, they have often thrown around terms like "hacker," which I find to be so funny, because it simply shows how the mainstream media has failed to portray technology in an accurate light (save for modern exceptions like Mr. Robot, Halt and Catch Fire, and Silicon Valley). Although hackers do indeed use the command line, so do nearly all computer related professions!&lt;/p&gt;&lt;p&gt;When I first began programming, I started focusing mainly on the tool of the text editor. It was only when I began to seriously dive into the world of Linux that I began to seriously play around in the terminal. Even in my earliest days playing around in Linux, however, I rarely interacted with the Terminal. This is partially because for at least some time at the beginning, typing in the shell felt laborious, more boring than programming (which it still is), and not worth investigating beyond the few times I had to invoke a command, or start a program. And it's true that the shell is just a tool that allows you to invoke commands that call other programs...but that's why it will always be one of the best pieces of software ever written.&lt;/p&gt;&lt;p&gt;Just like everything in the world of programming, there is rarely just one option when it comes to tools, and almost never just one way to do things. The same is true of shells, but just like these other aspects of the programming world, it doesn't mean there haven't been some clear winners in that space as well.&lt;/p&gt;&lt;p&gt;Although I know I will get some push back on this from Windows Users, it simply is the case that the UNIX-style shell won out. Specifically the BASH shell is the one most utilized by default in nearly all Linux Distributions, and was also the primary shell utilized in MacOS until recently (which currently utilizes the Z shell). Regardless of which shell you utilize, many of them have similar commands that perform a plethora of operations via your operating system. It is due to this common history with the BASH Shell, and the features that are available specifically within the BASH shell scripting language, that it is worthwhile to dive deep into the subject of the shell and shell scripting, as it is your direct link to working on and with the operating system while utilizing a high level language to do so. BASH, while not a full featured programming language, is an extremely powerful scripting language which owes its (somewhat niche) popularity to the simple fact that GNU/Linux is everywhere, and thusly, so is its default shell, bash. Indeed, it is due to the basic UNIX tool set and the eventual choice by the maintainers of GNU/Linux, BSD, and MacOS that BASH proliferated.&lt;/p&gt;&lt;p&gt;At this point in the article I will digress on the subject of scripting, as a beginner is best suited to learning a few basic commands, understanding some of BASH's basic features, and how the use of the terminal in programming is essential. Please note that while you can follow along in Windows, I will not be covering Windows specific Powershell commands. Unfortunately Windows does not have BASH in its software suite by default, and you must install Windows SubSystem For Linux or Cygwin to utilize many of the same commands.&lt;/p&gt;&lt;p&gt;Following the instructions below, note the effects.&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#opening_a_terminal.txt
-
-- MacOS - Click the Launchpad Icon in the Dock, type Terminal and click Terminal
-- Linux/BSD - Look up which Terminal Emulator your distribution uses by default and open it&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You will be presented with a simple black, amber, or blue colored window with a prompt ending in either % or $ (ZSH uses %, BASH uses $). There is also usually a rectangular cursor indicating the shell is awaiting input from you. Typing just anything into the terminal and getting error messages gets old quick, so let's explore our first command, ls:&lt;/p&gt;&lt;figure&gt;&lt;img alt="results of the ls command" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/ls_command.webp" title="results of the ls command"&gt;&lt;/figure&gt;&lt;figcaption&gt;Example Results of the "ls" Command&lt;/figcaption&gt;&lt;p&gt;Colloquially, each command will, in theory, be an abbreviation or shortened anagram for a word that will remind you of the action often associated with the command. In this case ls stands simply for 'list' as in 'list all my files and directories'. Here you can see that when I type in ls, I am presented with the contents of what is known as my $HOME directory (we'll cover the $ later). Usually, the ls command has been slightly modified so that colors appear on some of the results, indicating the type of file the result is, or whether or not the result is a directory.&lt;/p&gt;&lt;p&gt;If we then, for our second command, type 'ls' again, but this time follow it with a '-a', we are presented with slightly different results:&lt;/p&gt;&lt;figure&gt;&lt;img alt="results of the ls command with -a flag" cite="author screenshot" class="intro-image" loading="lazy" src="../assets/images/screenshots/ls_with_aflag.webp" title="results of the ls command with -a flag"&gt;&lt;/figure&gt;&lt;figcaption&gt;Example Results of the "ls" Command With "-a" flag&lt;/figcaption&gt;&lt;p&gt;Here we see that we now have alot more files and directories, many preceded with a '.', which are our 'hidden' files and directories. There have been more than a few discussions on the concept of hidden files, but needless to say, these files/directories are not visible without the '-a' appended to our 'ls' command. I point this out more as an introduction to the concept of flags '-a' is considered a flag of the 'ls' command that changes the results in some fashion. In this case it stands for 'all', as in show 'list all of my files, yes even the hidden ones.'&lt;/p&gt;&lt;p&gt;Many commands, although not all commands, have flags which somehow change the behavior of the program being called.&lt;/p&gt;&lt;p&gt;I won't go into all the commands available in the shell as there are quite a lot, but I will provide you with some standard commands to research and become familiar with, as they will become invaluable later on:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#basic_shell_commands.txt
-
-- man
-- cd 
-- mkdir/rmdir
-- touch/rm
-- cp
-- mv
-- mv
-- echo/print/printf&amp;amp;#- cat/tac
-- less
-- head
-- read
-- find
-- sed
-- grep
-- awk
-- tr
-- df
-- top
-- ps
-- diff
-- dd
-- who&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now, all of these tools are great, but lack luster by comparison to your standard Graphical User Interface (GUI) programs that most users interact with on their desktops. The power of the shell isn't in that it can execute programs (although that is its main purpose), it is its ability to chain together and redirect and manipulate the input and output of various programs to yield a desired result...that's right, the BASH shell is a scripting language, which with the use of various operators can chain together to manipulate textual inputs and outputs. Take this simple example:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
-[ ~]$ echo \ 
-"this text is inputted from the command line" \
-&amp;gt; from_the_command_line.txt&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here we simultaneously created a file called 'from_the_command_line.txt' and wrote the text 'this text is inputted from the command line' into it. If we then inspect the contents of this file using cat:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
-[ ~]$ cat from_the_command_line.txt&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;&lt;figure&gt;&lt;img alt="results of the cat command on a file" cite="author screenshot" class="intro-image" loading="lazy" src="../assets/images/screenshots/redirection_01.webp" title="results of the cat command on a file"&gt;&lt;/figure&gt;&lt;figcaption&gt;Example Results Of The "cat" Commmand On A File&lt;/figcaption&gt;&lt;p&gt;We'll see that indeed, the text 'this text is inputted from the command line' is indeed there. What is happening here?&lt;/p&gt;&lt;h2&gt;Redirection Basics&lt;/h2&gt;&lt;p&gt;Well just like every problem in programming, we divide the program up into sizeable chunks, and explain each part to the best of our abilities (and hopefully our peers very kindly correct us if we are wrong).&lt;/p&gt;&lt;p&gt;Firstly, what does echo do? Well if you researched my list up above a bit, you'll know that the first recommended command was the 'man' command. Why? well it's the manual of course! Any command you wish to know more about can be investigated by invoking 'man' before the command you wish to know more about, if you type:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
-[ ~]$ man echo&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You'll see an extensive explanation of the 'echo' command and its various flags. A relatively easy to understand program, echo simply displays any text following the command back to you. So the input that was entered after the 'echo' command is also the output of the command. Thusly invoking:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
-[ ~]$ echo 'this litle sheep went bah'&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Displays:&lt;/p&gt;&lt;figure&gt;&lt;img alt="bash shell example of basic echo command" cite="author screenshot" class="intro-image" loading="lazy" src="../assets/images/screenshots/echo_command.webp" title="bash shell example of basic echo command"&gt;&lt;/figure&gt;&lt;figcaption&gt;Results Of The "echo" Commmand&lt;/figcaption&gt;&lt;p&gt;But what about the '&amp;gt;' character in our initial example? Well this is what is known as a redirection operator. This '&amp;gt;' will 'redirect' whatever is the output of the first command(echo) as the input written to the following file or program. Please note that this will overwrite any existing text already present in the file, so don't experiment on any file with valuable information to you. If you do wish to append to the file, without overwriting its existing text, simply double up on the greater than symbol:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
-[ ~]$ echo 'appended text' &amp;gt;&amp;gt; from_the_command_line.txt&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;&lt;figure&gt;&lt;img alt="bash shell example of appending text using echo and the &gt;&gt; redirection flag" cite="author screenshot" class="intro-image" loading="lazy" src="../assets/images/screenshots/echo_append.webp" title="bash shell example of appending text using echo and the &gt;&gt; redirection flag"&gt;&lt;/figure&gt;&lt;figcaption&gt;Using The "&amp;gt;&amp;gt;" Operator Appends Text When Used With "echo"&lt;/figcaption&gt;&lt;p&gt;If you wish to research one of the most powerful operators in bash, research the pipe ('|') operator!&lt;/p&gt;&lt;p&gt;Hopefully at this point, you are starting to understand the role of the shell and the command line a bit better. For this next example, I am going to demonstrate how many programs have a command line interface with which one may interact, or at least initialize, a program, be it a Graphical or Terminal based application.&lt;/p&gt;&lt;h2&gt;The Power Of The Shell&lt;/h2&gt;&lt;p&gt;One of the first epiphanies for me regarding the terminal was when I realized I could invoke pretty much any program in my operating system with simple commands. If I wished to open my browser (librewolf), I simply had to type into the terminal its name:&lt;/p&gt;&lt;figure&gt;&lt;img alt="librewolf browser being called from the bash shell" cite="author screenshot" class="intro-image" loading="lazy" src="../assets/images/screenshots/librewolf.webp" title="librewolf browser being called from the bash shell"&gt;&lt;/figure&gt;&lt;figcaption&gt;Librewolf Browser being called from The Command Line&lt;/figcaption&gt;&lt;p&gt;While this may not seem like a big deal to some, it was upon doing this that I realized why the terminal was powerful, it allowed any program to be invoked as long as you knew its name. Rather than clicking through a myriad of nested directories to find where I had put an executable (like when using Windows File Explorer), I simply had to type it out and it would open up on my screen.&lt;/p&gt;&lt;p&gt;When I first installed Linux, the first piece of graphical software I had become familiar with was the backup utility, Timeshift, which essentially takes a 'snapshot' of the current state of your desktop and allows you to 'revert' back to that snapshot should you want/need to.&lt;/p&gt;&lt;p&gt;Timeshift has both a Graphical User Interface(GUI) as well as a Command Line Interface(CLI). I first learned to use Timeshift utilizing the GUI, but then I became curiouos about the CLI. It wasn't long before I realized that most of the information available via the GUI interface could be accessed via the CLI. I really only needed four commands from the CLI, these were:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#timeshift_commands.txt
-
-- timeshift --create
-- timeshift --delete
-- timeshift --list
-- timeshift --restore&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And every once in a while, after an update on my system, I would invoke the 'timeshift create' command to create a snapshot of my current system. Timeshift has occasionally saved me from big mistakes I've made, and is a good piece of software.&lt;/p&gt;&lt;p&gt;The reason I point this out is that even though timeshift isn't a part of the shell as a subject, I am simply pointing it out as a practical example of when utilizing the text interface of Timeshift's CLI, via the shell, became more useful to me than interfacing with the GUI version. This became even more the case when I discovered the existence of shell aliases.&lt;/p&gt;&lt;h2&gt;A Rose By Any Other Name&lt;/h2&gt;&lt;p&gt;Of course, I've provided you now with the knowledge of how to do your own research regarding any command, so be sure to pull up:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
-[ ~]$ man alias&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And do more research, but I'll give you a general idea of why this is such a powerful tool for anyone invested in computers to know. Essentially aliases are a series of commands invoked by a custom command of your naming.&lt;/p&gt;&lt;p&gt;If you invoke:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
-[ ~]$ alias cdls="cd ~/Documents &amp;amp; ls"&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You will navigate into your Documents directory and then list out its contents after invoking your custom command, 'cdls'&lt;/p&gt;&lt;p&gt;The "&amp;amp;" is another operator that waits for one command to complete before then invoking the following command. The "&amp;amp;" operator can be chained as many times as desired and when applied to an alias, essentially condenses a very long command into a shorter command (unless you name your alias something very long I suppose).&lt;/p&gt;&lt;p&gt;Now, the somewhat annoying thing is that these aliases, when created this way, are forgotten as soon as you close the terminal or your shell session somehow ends. Aliases can be saved, however, by placing them in your ~/.bashrc file. This configuration file is checked by the shell prior to initiation, including alias assignments. Thusly, if you simply append:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#.bashrc 
-#!/usr/bin/env bash 
-
-alias cdls="cd ~/Documents &amp;amp; ls"&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To the end of your ~/.bashrc file, you will have created a custom command that persists even after you have closed your terminal and shut down your computer.&lt;/p&gt;&lt;p&gt;This is the very essentials of scripting, the chaining of programs together to create different results. An alias is essentially a one line script.&lt;/p&gt;&lt;p&gt;While it wasn't one of my first aliases I ever wrote, I do have a single alias I will share with you that I use often, it simply invokes timeshift three times, once to delete the old backup, once to create a new backup, and once to list out all backups so I can confirm that the backup was made, I called it tshift, this is the command in my .bashrc:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#.bashrc 
-#!/usr/bin/env bash 
-
-alias tshift="sudo timeshift --delete &amp;amp;&amp;amp; sudo timeshift --create &amp;amp;&amp;amp; sudo timeshift --list"&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As you can see, tshift is far less characters to type, and it is a very handy, but very simple, alias I have created for myself. (if you are on Linux and unfamiliar with the sudo command, please see the man pages for sudo, if you are on MacOs, a simple query into your favorite search engine I am sure will yield good results).&lt;/p&gt;&lt;h1&gt;Conclusion&lt;/h1&gt;&lt;p&gt;Aliases is where I leave this short introduction to the Command Line and shell. It is at this point that the subject of BASH scripting should be covered, and that is an extensive topic of its own.&lt;/p&gt;&lt;p&gt;I do hope that you have now gained a better understanding and appreciation for the command line and the shell. The shell provides a direct, unobfuscated, and elegantly simple interface through which all computer users can accomplish more with less, and is one of the best tools you can become familiar with. So get comfy in it!&lt;/p&gt;&lt;/article&gt;</description>
-			<guid isPermaLink="false">https://brianhayes.dev/blog/why_use_linux.html</guid>
-			<pubDate>Sat, 05 Nov 2022 00:00:00 +0000</pubDate>
 		</item>
 <item>
 			<title>Espanso</title>
@@ -348,7 +1034,7 @@ console.log("this is my second line of code to commit");&lt;/code&gt;&lt;/pre&gt
 <item>
 			<title>HTML</title>
 			<link>https://brianhayes.dev/blog/html_the_webs_skeleton</link>
-			<description>&lt;article class="demo-button"&gt;&lt;h1&gt;Introduction&lt;/h1&gt;&lt;p&gt;Web Development is the production of applications and documents that live primarily on the web, mainly interacted with via the web browser. The predominant tools involved are HTML (HyperText Markup Language), CSS (Cascading Style Sheets), and JavaScript (also known as ECMAScript). While there are often other tools involved depending on the specific needs and complexities of each application/web page, the common theme is that these three tools are the foundation on which nearly all user facing web pages are built on. Over the course of this and the next two articles, I will do my best to give a general overview and introduction to each of these tools, starting with HTML.&lt;/p&gt;&lt;h2&gt;A Bit About How I Got Started&lt;/h2&gt;&lt;p&gt;I know that when I first started to learn the basics of Web Development only a short two and a half years ago, I found learning HTML to be the most boring aspect. Aside from some short tutorials around making basic websites on youtube, I had actually already begun programming a basic todo list using NodeJS. This application's end result was a CLI interface, meaning that there was no interaction with the browser, and rather, utilized NodeJS's REPL to create, read, and update a basic todo list via the terminal.&lt;/p&gt;&lt;p&gt;Rather than starting off with trying to create a visually appealing website, my mentor (who had assigned me this as my first programming project) instead had me start my programming journey writing a todo list without any "Front End" to speak of. I actually thought I never committed this very first project to Github, but in reviewing material for this blog post, it became apparent that indeed &lt;a aria-label="link-to-first-coding-project" class="inline-link" href="https://github.com/tomit4/to-do-list" rel="noopener noreferrer" role="link" target="_blank"&gt;I had&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Most self taught developers first learning to code would not be instructed to create a CLI todo list as their first coding project, but my mentor was never one to shy away from difficult projects and still to this day knows exactly how far into the deep end to throw me (just enough to make me feel uncomfortable, but not enough to feel overwhelmed). Please note that this first project is fraught with poor decisions and is not a good reference on how to create a todo app. Outside of tutorials that essentially held my hand through the process (i.e. &lt;a aria-label="link-to-free-code-camp" class="inline-link" href="https://www.freecodecamp.org/" rel="noopener noreferrer" role="link" target="_blank"&gt;Free Code Camp&lt;/a&gt;), I had not really thought much on HTML, let alone CSS. Instead server side JavaScript was my initial introduction, and I had never played much in what is commonly known as "The Front End".&lt;/p&gt;&lt;h2&gt;The Front End Vs The Back End&lt;/h2&gt;&lt;p&gt;When reading about the "Front End" in regards to web development, many make the correlative analogy to a restaurant when trying to explain how a basic web application works. This is an over simplification, but is nevertheless useful as an explanation for beginners, and it goes something like this:&lt;/p&gt;&lt;p&gt;From your desktop computer, laptop computer, tablet, and/or mobile device, when you interact with any application that requires access to the internet; generally speaking this means that that device is interacting with another computer over a series of wires, wifi, or bluetooth. Your device, commonly referred to as a "Client" under these circumstances, makes a "request" (specifically what is known as a "GET request") for data from another computer somewhere else in the world. This other computer, commonly known as a "Server", receives the request, processes it, and if it has the desired data, will generally provide that data back over the internet to the "Client".&lt;/p&gt;&lt;p&gt;Given this simple explanation, hopefully one can see how this is like a waiter at a restaurant. You, the client, head into the restaurant (log onto the internet), and browse the menu ("The Front End", i.e. use the web browser via the url bar or search engine). You eventually see a meal (data) that you wish to eat (have access to). You make a request to the waiter (your internet service provider) for which item of food (data) you wish to eat (have access to). The waiter (your internet service provider) then proceeds (transmits the request over the internet) to the kitchen ("The Back End"). The waiter then relays your request to the kitchen staff (the server), who then proceed to prepare your dish utilizing ingredients (data) and a recipe (business logic). Once prepared, the waiter (your internet service provider), then returns with your meal (your requested data), which you then proceed to consume (either by reading an article, looking at pictures, taking care of work related business, etc.).&lt;/p&gt;&lt;figure&gt;&lt;img alt="A Diagram of A Basic Client Server HTTP Request/Response" cite="https://commons.wikimedia.org/wiki/File:Client_Sever.png" class="img-image" loading="lazy" src="../assets/images/img/client_server.png" title="A Diagram of A Basic Client Server HTTP Request/Response"&gt;&lt;/figure&gt;&lt;figcaption&gt;A Diagram Of A Basic HTTP Request&lt;/figcaption&gt;&lt;p&gt;This relationship between a Client and a Server is an essential piece of knowledge that you will undoubtedly revisit many times over the course of your learning journey/career. Indeed this abstraction is not only the domain of the web, but is useful when thinking about processes that take place even within the confines of the hardware on your devices. I will, for the sake of simplicity, digress on this point in the interest of moving onto our main topic, HTML.&lt;/p&gt;&lt;h2&gt;The HyperText Markup Language&lt;/h2&gt;&lt;p&gt;The HyperText Markup Language, colloquially known as "HTML", has a &lt;a aria-label="link to wikipedia history of html" class="inline-link" href="https://en.wikipedia.org/wiki/Html#History" rel="noopener noreferrer" role="link" target="_blank"&gt;long history&lt;/a&gt; dating back to the early days of the internet in the 1980s. Please take note that HTML is not a &lt;a aria-label="wikipedia page on programming language" class="inline-link" href="https://en.wikipedia.org/wiki/Programming_language" rel="noopener noreferrer" role="link" target="_blank"&gt;Programming Language&lt;/a&gt;, but rather is a &lt;a aria-label="wikipedia page on markup language" class="inline-link" href="https://en.wikipedia.org/wiki/Markup_language" rel="noopener noreferrer" role="link" target="_blank"&gt;Markup Language&lt;/a&gt;, which utilizes a series of recognized textual patterns and/or symbols within a text document to control the structure and formatting of said document. This establishes a recognizable relationship of various visual elements (text, images, videos, etc.) within the document, commonly known as a "Page", and more specific to HTML, a "Web Page".&lt;/p&gt;&lt;p&gt;These elements create a structure which the Web Browser (Chrome, Firefox, Edge, Safari, etc.) can parse through and format appropriately. HTML by itself can generate very basic documents and presentations on the web, but usually needs CSS (Cascading Style Sheets) to color and stylelize the elements, and oftentimes the JavaScript programming language is utilized to create interactivity with these elements. The following two articles will give you a basic introduction to CSS and JS (JavaScript), but it is important to note that without understanding the basics of HTML, one will not get far when researching CSS and JS, as both CSS and JS are meant to work with HTML as a part of a "stack" of programming tools to create a fully functioning web page.&lt;/p&gt;&lt;h2&gt;Diving In, HTML Basics&lt;/h2&gt;&lt;p&gt;To hammer home the fact that the Web Browser will attempt to interpret whatever textual document you give it into an HTML page. Let's start by writing up a simple txt file and seeing what happens when we open it in the browser. In previous articles, I have written about how working from the &lt;a aria-label="link to command line article" class="inline-link" href="https://brianhayes.dev/blog/command_line.html" role="link"&gt;Command Line&lt;/a&gt; is a worthy pursuit of your time to learn. Thusly, while you can indeed make directories, and create files from a traditional file manager, in the following tutorials we will be using the command line and a basic shell (bash or zsh will be fine), to demonstrate.&lt;/p&gt;&lt;p&gt;Within your terminal make a new directory called "my_webpage" and navigate into it:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
+			<description>&lt;article class="demo-button"&gt;&lt;h1&gt;Introduction&lt;/h1&gt;&lt;p&gt;Web Development is the production of applications and documents that live primarily on the web, mainly interacted with via the web browser. The predominant tools involved are HTML (HyperText Markup Language), CSS (Cascading Style Sheets), and JavaScript (also known as ECMAScript). While there are often other tools involved depending on the specific needs and complexities of each application/web page, the common theme is that these three tools are the foundation on which nearly all user facing web pages are built on. Over the course of this and the next two articles, I will do my best to give a general overview and introduction to each of these tools, starting with HTML.&lt;/p&gt;&lt;h2&gt;How I Got Started&lt;/h2&gt;&lt;p&gt;I know that when I first started to learn the basics of Web Development only a short two and a half years ago, I found learning HTML to be the most boring aspect. Aside from some short tutorials around making basic websites on youtube, I had actually already begun programming a basic todo list using NodeJS. This application's end result was a CLI interface, meaning that there was no interaction with the browser, and rather, utilized NodeJS's REPL to create, read, and update a basic todo list via the terminal.&lt;/p&gt;&lt;p&gt;Rather than starting off with trying to create a visually appealing website, my mentor (who had assigned me this as my first programming project) instead had me start my programming journey writing a todo list without any "Front End" to speak of. I actually thought I never committed this very first project to Github, but in reviewing material for this blog post, it became apparent that indeed &lt;a aria-label="link-to-first-coding-project" class="inline-link" href="https://github.com/tomit4/to-do-list" rel="noopener noreferrer" role="link" target="_blank"&gt;I had&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Most self taught developers first learning to code would not be instructed to create a CLI todo list as their first coding project, but my mentor was never one to shy away from difficult projects and still to this day knows exactly how far into the deep end to throw me (just enough to make me feel uncomfortable, but not enough to feel overwhelmed). Please note that this first project is fraught with poor decisions and is not a good reference on how to create a todo app. Outside of tutorials that essentially held my hand through the process (i.e. &lt;a aria-label="link-to-free-code-camp" class="inline-link" href="https://www.freecodecamp.org/" rel="noopener noreferrer" role="link" target="_blank"&gt;Free Code Camp&lt;/a&gt;), I had not really thought much on HTML, let alone CSS. Instead server side JavaScript was my initial introduction, and I had never played much in what is commonly known as "The Front End".&lt;/p&gt;&lt;h2&gt;The Front End Vs The Back End&lt;/h2&gt;&lt;p&gt;When reading about the "Front End" in regards to web development, many make the correlative analogy to a restaurant when trying to explain how a basic web application works. This is an over simplification, but is nevertheless useful as an explanation for beginners, and it goes something like this:&lt;/p&gt;&lt;p&gt;From your desktop computer, laptop computer, tablet, and/or mobile device, when you interact with any application that requires access to the internet; generally speaking this means that that device is interacting with another computer over a series of wires, wifi, or bluetooth. Your device, commonly referred to as a "Client" under these circumstances, makes a "request" (specifically what is known as a "GET request") for data from another computer somewhere else in the world. This other computer, commonly known as a "Server", receives the request, processes it, and if it has the desired data, will generally provide that data back over the internet to the "Client".&lt;/p&gt;&lt;p&gt;Given this simple explanation, hopefully one can see how this is like a waiter at a restaurant. You, the client, head into the restaurant (log onto the internet), and browse the menu ("The Front End", i.e. use the web browser via the url bar or search engine). You eventually see a meal (data) that you wish to eat (have access to). You make a request to the waiter (your internet service provider) for which item of food (data) you wish to eat (have access to). The waiter (your internet service provider) then proceeds (transmits the request over the internet) to the kitchen ("The Back End"). The waiter then relays your request to the kitchen staff (the server), who then proceed to prepare your dish utilizing ingredients (data) and a recipe (business logic). Once prepared, the waiter (your internet service provider), then returns with your meal (your requested data), which you then proceed to consume (either by reading an article, looking at pictures, taking care of work related business, etc.).&lt;/p&gt;&lt;figure&gt;&lt;img alt="A Diagram of A Basic Client Server HTTP Request/Response" cite="https://commons.wikimedia.org/wiki/File:Client_Sever.png" class="img-image" loading="lazy" src="../assets/images/img/client_server.png" title="A Diagram of A Basic Client Server HTTP Request/Response"&gt;&lt;/figure&gt;&lt;figcaption&gt;A Diagram Of A Basic HTTP Request&lt;/figcaption&gt;&lt;p&gt;This relationship between a Client and a Server is an essential piece of knowledge that you will undoubtedly revisit many times over the course of your learning journey/career. Indeed this abstraction is not only the domain of the web, but is useful when thinking about processes that take place even within the confines of the hardware on your devices. I will, for the sake of simplicity, digress on this point in the interest of moving onto our main topic, HTML.&lt;/p&gt;&lt;h2&gt;The HyperText Markup Language&lt;/h2&gt;&lt;p&gt;The HyperText Markup Language, colloquially known as "HTML", has a &lt;a aria-label="link to wikipedia history of html" class="inline-link" href="https://en.wikipedia.org/wiki/Html#History" rel="noopener noreferrer" role="link" target="_blank"&gt;long history&lt;/a&gt; dating back to the early days of the internet in the 1980s. Please take note that HTML is not a &lt;a aria-label="wikipedia page on programming language" class="inline-link" href="https://en.wikipedia.org/wiki/Programming_language" rel="noopener noreferrer" role="link" target="_blank"&gt;Programming Language&lt;/a&gt;, but rather is a &lt;a aria-label="wikipedia page on markup language" class="inline-link" href="https://en.wikipedia.org/wiki/Markup_language" rel="noopener noreferrer" role="link" target="_blank"&gt;Markup Language&lt;/a&gt;, which utilizes a series of recognized textual patterns and/or symbols within a text document to control the structure and formatting of said document. This establishes a recognizable relationship of various visual elements (text, images, videos, etc.) within the document, commonly known as a "Page", and more specific to HTML, a "Web Page".&lt;/p&gt;&lt;p&gt;These elements create a structure which the Web Browser (Chrome, Firefox, Edge, Safari, etc.) can parse through and format appropriately. HTML by itself can generate very basic documents and presentations on the web, but usually needs CSS (Cascading Style Sheets) to color and stylelize the elements, and oftentimes the JavaScript programming language is utilized to create interactivity with these elements. The following two articles will give you a basic introduction to CSS and JS (JavaScript), but it is important to note that without understanding the basics of HTML, one will not get far when researching CSS and JS, as both CSS and JS are meant to work with HTML as a part of a "stack" of programming tools to create a fully functioning web page.&lt;/p&gt;&lt;h2&gt;Diving In, HTML Basics&lt;/h2&gt;&lt;p&gt;To hammer home the fact that the Web Browser will attempt to interpret whatever textual document you give it into an HTML page. Let's start by writing up a simple txt file and seeing what happens when we open it in the browser. In previous articles, I have written about how working from the &lt;a aria-label="link to command line article" class="inline-link" href="https://brianhayes.dev/blog/command_line.html" role="link"&gt;Command Line&lt;/a&gt; is a worthy pursuit of your time to learn. Thusly, while you can indeed make directories, and create files from a traditional file manager, in the following tutorials we will be using the command line and a basic shell (bash or zsh will be fine), to demonstrate.&lt;/p&gt;&lt;p&gt;Within your terminal make a new directory called "my_webpage" and navigate into it:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
 [ ~]$ mkdir my_webpage &amp;amp;&amp;amp; cd my_webpage&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;From here you'll want to create a simple .txt file:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
 [ my_webpage]$ touch hello_world.txt&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Using your favorite code editor open this up, most will probably use VSCode so:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#bash shell
 [ my_webpage]$ code hello_world.txt&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Simply type in a basic "Hello World!" example:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;#hello_world.txt
