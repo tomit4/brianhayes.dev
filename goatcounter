@@ -2,9 +2,9 @@
 
 source .env
 docker run --restart=always --name goatcounter \
-    -e GOATCOUNTER_DOMAIN=stats.domain.com \
-    -e GOATCOUNTER_EMAIL=admin@domain.com \
-    -e GOATCOUNTER_PASSWORD=password \
+    -e GOATCOUNTER_DOMAIN="${GOAT_DOMAIN}" \
+    -e GOATCOUNTER_EMAIL="${GOAT_EMAIL}" \
+    -e GOATCOUNTER_PASSWORD="${GOAT_PASSWORD}" \
     -d \
     -p "${GOAT_PORT}":"${GOAT_DOCKERPORT}" \
     baethon/goatcounter
