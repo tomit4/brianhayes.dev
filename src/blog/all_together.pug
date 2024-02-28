@@ -61,6 +61,39 @@ html(lang = "en")
                     a.inline-link.quote_author(target="_blank" rel="noopener noreferrer" href="https://jlwagner.net/blog/make-it-boring") -Jeremy Wagner
             article.demo-button
                 h1 Introduction
+                p In our previous three articles on <a class="inline-link"aria-label="a link to article on HTML" role="link" href="./html_the_webs_skeleton.html">HTML</a>, <a class="inline-link" aria-label="a link to article on CSS" role="link" href="./css_the_webs_makeup.html">CSS</a>, and <a class="inline-link" aria-label="a lnk to article on JavaScript" role="link" href="./javascript_the_webs_muscles.html">JavaScript</a>, I provided you with a general overview of the three main languages utilized to interface with modern web browsers. In reading this articles, however, you may have noticed that how these three languages interface directly with each other may not be obvious. This is especially true of the article on JavaScript, as there was no manipulation of the Document Object Model using JavaScript.
+                p As mentioned in my previous article, JavaScript is a vast subject in its own right. It is my hope that through this series of blog posts that you gain a good introductory understanding of how web pages and web applications come to life. Because JavaScript is a full-fledged programming language, the basic aspects of programming needed to be addressed before diving into how it interfaces directly with the browser's Application Interface (i.e. API).
+                h2 The To Do List
+                p In preparation for this article, I created a small To Do List Application. Beginner programmers, regardless of the programming language they are learning, are often encouraged to start with building a To Do List Application. The reason for this is because the essential concepts learned while building such an application are easily applied to the majority of real world applications. Specifically, building a To Do List Application teaches you about the basic operations commonly found in many applications. These operations are "Create", "Read", "Update", and "Delete", abbreviated as the acronym, "CRUD". 
+                p These correspond roughly to the standard HTTP operations, which will be the subject of a future blog post where this To Do List application is expanded out of just the browser, and is hooked up to a backend server and database. For now, however, this application will be kept on the front end in order to introduce you to how JavaScript specifically interacts with the DOM, and the Browser's key/value API, localStorage.
+                p Be aware that this blog article's subject and follow along tutorial assumes you have an introductory understanding of HTML, CSS, and JavaScript. Should you need to brush up on the basics, I encourage you to read up on these subjects in my previous three blog posts. This blog post will dive deeper than the previous three. We will be introducing many new aspects of HTML, CSS, and JavaScript within this article, but hopefully by the end you will have further expanded your knowledge on exactly what's going on under the hood of web applications and web pages. Let's get started.
+                h2 The Setup
+                p If you simply wish to follow along without writing any code, you can find the source files for the To Do Application <a class="inline-link" aria-label="a link to the source code for the todo app" target="_blank" rel="noopener noreferrer" role="link" href="https://www.github.com/tomit4/app_todo">here</a>. To grab the source code, one can simply clone the repository using git from the command line:
+                pre
+                    code #bash&#10&#10git clone https://github.com/tomit4/app_todo
+                p Navigate into the cloned directory and use live-server to start a local version of the application:
+                pre
+                    code #bash&#10&#10cd app_todo && live-server index.html
+                p The output of the command should open up the application in your browser with which you can now start experimenting with the functionality of the To Do App.
+                p If, however, you wish to follow along from start to finish, then you'll need to make a directory in which your To Do Application will live. Go ahead and, from the command line, create a new directory called "app_todo" and navigate into it:
+                pre
+                    code #bash&#10&#10mkdir app_todo && cd app_todo
+                p From here you'll want to make three files, index.html, styles.css, and script.js:
+                pre
+                    code #bash&#10&#10touch index.html styles.css script.js
+                p Now open up index.html in your text editor of choice and enter the following:
+                pre
+                    code &lt!DOCTYPE html&gt&#10&lthtml lang="en"&gt&#10  &lthead&gt&#10    &lttitle&gtApp ToDo&lt/title&gt&#10    &ltmeta charset="UTF-8" /&gt&#10    &ltmeta name="viewport" content="width=device-width, initial-scale=1" /&gt&#10    &ltmeta name="description" content="A Basic ToDo Application" /&gt&#10    &ltlink href="./styles.css" rel="stylesheet" /&gt&#10  &lt/head&gt&#10  &ltbody&gt&#10    &ltmain&gt&#10      &lth1&gtApp ToDo&lt/h1&gt&#10    &lt/main&gt&#10  &lt/body&gt&#10  &ltscript src="./script.js" default defer&gt&lt/script&gt&#10&lt/html&gt&#10
+                p As you can see, we are directly sourcing our styles.css and script.js files directly within our HTML. Let's set up some sane defaults in our styles.css file now:
+                pre
+                    code /*styles.css*/&#10&#10*,&#10*::before,&#10*::after {&#10  box-sizing: border-box;&#10}&#10&#10html {&#10  color-scheme: light dark;&#10}&#10&#10body {&#10  font-family: system-ui;&#10  font-size: 1.125rem;&#10  line-height: 1.5;&#10}&#10&#10main {&#10  width: min(70ch, 100% - 4rem);&#10  margin-inline: auto;&#10}&#10&#10img,&#10svg,&#10video {&#10  max-width: 100%;&#10  display: block;&#10}&#10&#10input,&#10textarea {&#10  min-width: 0;&#10}
+                p Great! Now that we have that set up, let's lastly just put a simple log to the console in our script.js file to test that we set everything up properly:
+                pre
+                    code //script.js&#10&#10console.log("Hello World!");
+                p Once you've finished, go ahead and use live-server (either from the <a class="inline-link" aria-label="a link to the live-server github repository" target="_blank" rel="noopener noreferrer" role="link" href="https://github.com/tapio/live-server">command line</a> or from within VSCode using the <a class="inline-link" aria-label="a link to the visualstudio marketplace's live server extension" target="_blank" rel="noopener noreferrer" role="link" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">the extension</a>) to start your development server. I personally use the command line to do so from within my project directory like so:
+                pre
+                    code #bash&#10&#10live-server index.html
+                p This should automatically open up your browser on your localhost and show you the basic webpage you've just created with these three files. Open up your devtools as well once the browser is open by hitting the F12 key. If all is configured properly, you should see your html page with some very basic CSS stylings (from the styles.css file) and in your developer's console page, you should see the "Hello World!" message (from the scripts.js file). Your browser/devtools setup should look something like this:
             div.foot-arrows
                 button.icons#up-arrow(title="back to top" aria-label="back-to-top" alt="back to top" role="navigation")
         footer
