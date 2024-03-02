@@ -156,6 +156,23 @@ html(lang = "en")
                     code //script.js&#10&#10function handleSubmit(<b>event</b>) {&#10  <b>event.preventDefault();</b>&#10  console.log("handleSubmit function invoked!");&#10}
                 p Lastly we then have our code we wish to invoke whenever the <code class="inline-code">handleSubmit</code> function is invoked. This, for the time being, is simply to log to the console the phrase "handleSubmit function invoked". We will now implement the logic to add a todo item, and have it render on our HTML page.
                 h2 Adding Todos
+                p Firstly we'll need to establish a JavaScript array to hold our todo items in memory. Once this is established, we'll then need to populate this array with our todo string whenever we hit the <em>"Enter"</em> button or click the <em>"Add Todo"</em> button. Finally, every time this event occurs, the array is rendered back to the HTML page in the form of an unordered list. Let's first establish the unordered list in our HTML file. Because this list will be blank at first, we'll simply leave it as a <code class="inline-code">ul</code> element for now:
+                pre
+                    code &ltinput type="submit" value="Add Todo" class="todo-button" <b>id="add-todo-btn"</b> /&gt&#10<b>&ltul id="todo-list"&gt&lt/ul&gt</b>
+                p Let's take a brief moment to stylize our unordered list. Specifically, we'll be targeting any <code class="inline-code">li</code> elements that are created, that way they are somewhat readable when generated and rendered:
+                pre
+                    code /*styles.css*/&#10&#10.todo-button:hover {&#10  scale: 1.1;&#10}&#10&#10<b>.form-container > #todo-list {&#10  list-style: none;&#10  width: 100%;&#10  max-width: 18em;&#10  padding: 0;&#10}&#10&#10#todo-list > li {&#10  margin: 0.75em 0;&#10  padding: 0.25em;&#10  border-bottom: 2px solid #000;&#10  font-weight: 500;&#10}</b>
+                p We'll now create an array called <code class="inline-code">myTodos</code>. For now, this array will live within the global scope of our program, but towards the end of this article, I will point you to a Github repository that will hold a more advanced form of this script for your reference with somewhat better practices involved in its execution. Start a new <code class="inline-code">myTodos</code> array at the tope of your <code class="inline-code">script.js</code> file. We'll also instantiate a reference to our <code class="inline-code">todo-list</code> as well:
+                pre 
+                    code //script.js&#10&#10const todoInput = document.getElementById("todo-input");&#10<b>const todoList = document.getElementById("todo-list");&#10const myTodos = [];</b>
+                p Next we'll add the logic that will actually render our todos to the HTML document. Input the following code to the <code class="inline-code">handleSubmit</code> function:
+                pre 
+                    code //script.js&#10&#10function handleSubmit(event) {&#10  event.preventDefault();&#10  <b>todoList.innerHTML = "";&#10  myTodos.unshift(todoInput.value);&#10  for (let i = 0; i &lt myTodos.length; i++) {&#10    const newTodo = document.createElement("li");&#10    newTodo.textContent = myTodos[i];&#10    todoList.appendChild(newTodo);&#10  }&#10  todoInput.value = "";</b>&#10}
+                p For the new developer, this can be a bit confusing. We'll break it down, don't worry, but first let's take a look at our HTML page and test our Todo App first:
+                figure
+                    img.img-image(src="../assets/images/gifs/all_together_02.gif" alt="A Screenshot gif demonstrating our working todo application" title="A Screenshot gif demonstrating our working todo application" cite="author screenshot" loading="lazy")
+                figcaption Our Todo Application Works!
+
             div.foot-arrows
                 button.icons#up-arrow(title="back to top" aria-label="back-to-top" alt="back to top" role="navigation")
         footer
