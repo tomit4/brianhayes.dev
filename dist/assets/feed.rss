@@ -5,692 +5,298 @@
 		<link>https://brianhayes.dev</link>
 		<description>Personal Blog About Web Dev and Tech</description>
 		<generator>rsspls version 0.7.1</generator>
-		<lastBuildDate>Sun, 28 Jan 2024 17:24:26 PST</lastBuildDate>
+		<lastBuildDate>Sat, 02 Mar 2024 19:48:10 PST</lastBuildDate>
 		<item>
-			<title>JavaScript</title>
-			<link>https://brianhayes.dev/blog/javascript_the_webs_muscles</link>
-			<description><![CDATA[<article class="demo-button">
-        <h1>Introduction</h1>
-        <p>You may have noticed that this article's publish date is far later than my previous article on <a aria-label="link to article, css, the web's makeup" class="inline-link" href="https://brianhayes.dev/blog/css_the_webs_makeup.html" role="link">CSS: The Web's Makeup</a>. While this is mainly due to other responsibilities which have as of recent required my attention, I must also admit that I have been a bit intimidated on writing on the subject of JavaScript. JavaScript is the first programming language I ever learned, and I am still continuing to learn it. Thusly, I don't yet feel I have any authority to write on the subject of JavaScript, even in the context of this article, which is meant as an introduction.</p>
-        <p>Nevertheless, it is quite likely that I will never feel ready to give an overview of JavaScript. Thusly, I shall simply have to do my best. In covering the topic, I cannot overemphasize the incredibly large role JavaScript has played in bringing the web to the state it is in today. I have come across many social media posts that joke/deride JavaScript for no longer being a programming language reserved solely to the realm of the web, but rather has pervaded into nearly every facet of modern computer applications. </p>
-        <p>With the arrival of the JavaScript runtime, NodeJS, the software framework, Electron, and the mobile framework, React Native, JavaScript has made its way into many ecosystems previously the purview of other programming languages. From its humble beginnings as a simple scripting language meant solely to add small bits of interactivity to web pages, JavaScript is now a fully fledged programming language that can interact with native C libraries directly on your computer (NodeJS), utilize User Interface libraries to write desktop applications (Electron), and even write platform agnostic mobile applications (React Native). It is not an understatement to say that JavaScript is everywhere!</p>
-        <p>Perhaps you might now understand my reluctance to cover such a vast subject, as a single article, even one that attempts to be an introduction to the very basic aspects of the language, can only barely scratch the surface of the subject that is JavaScript. Indeed, entire blogs, books, videos, and podcasts have been produced that solely revolve around The JavaScript Programming Language and the vast ecosystem around it. </p>
-        <p>JavaScript is both beloved and hated by programmers for a wide variety of reasons. Regardless of these sentiments, JavaScript has long been, and continues to be, one of the most popular programming languages in the world due to its ubiquity within the world wide web. In short, with the rise of the web, so too went JavaScript. </p>
-        <p>Even if it is not one's intent to become a web developer, it is in my humble opinion that it is worthwhile for anyone looking to create any substantial application on the web to at least have a basic familiarity with JavaScript's syntax, especially when it comes to how it interacts with the Document Object Model.</p>
-        <p>This will certainly not be my only article written which involves JavaScript in the context of programming, and I am sure to not cover the entirety of the JavaScript programming language in this article. It is my hope, however, to give you a basic understanding of JavaScript and by extension, core programming concepts. This will include introductory examples involving the subjects of  variable declaration and usage, boolean statements, conditionals, function declarations, arrays, objects, and finally basic interactions with the console and document objects. Firstly, however, I feel it is important to briefly overview what is JavaScript and it's history.</p>
-        <h2>What Is JavaScript?</h2>
-        <p>JavaScript is a high level programming language that originally was created to add interactivity to HTML elements after the initial web page had loaded. The language is dynamically typed, supporting prototype based object oriented as well as functional and imperative programming styles. All major web browsers include a dedicated JavaScript engine which executes code on the user's device. On its own, JavaScript does not have native interfaces for interacting with standard Input/Output (I/O), unlike lower level languages, but JavaScript is often utilized with a wide array of APIs via a runtime system native to the browser, which facilitates interactivity with I/O.</p>
-        <p>As mentioned in the introduction, JavaScript is no longer solely the domain of client side scripting on the browser. That said, JavaScript still is predominantly utilized for client side scripting to add interactivity to the browser via scripted events. Examples of this interactive behavior include:</p>
-        <div class="inline-list">
-          <ul>
-            <li>
-              <p>Loading new content to the web page without reloading the entire page.</p>
-            </li>
-            <li>
-              <p>Interacting with HTML elements via dynamically changing CSS attributes to add animations</p>
-            </li>
-            <li>
-              <p>Validating Input Forms</p>
-            </li>
-            <li> 
-              <p>Redirecting the User to Another Page</p>
-            </li>
-            <li>
-              <p>Storing and retrieving data on the user's device (i.e. <a aria-label="wikipedia link to http cookie article" class="inline-link" href="https://en.wikipedia.org/w/index.php?title=HTTP_cookie" rel="noopener noreferrer" role="link" target="_blank">HTTP cookies</a>).</p>
-            </li>
-          </ul>
-        </div>
-        <p>The use of JavaScript has more recently moved outside of the realm of the browser and into the server space with the advent of NodeJS arriving on the programming scene in 2009. This alone would have solidified JavaScript as the predominant programming language of the web, as it now allowed for servers as well as client side applications to be entirely written in JavaScript. Additionally, JavaScript now is utilized to create platform agnostic desktop and mobile applications using the Electron Software Framework and the React Native Framework respectively.</p>
-        <p>It is obvious that JavaScript's reach has expanded far and wide, but how did this humble programming language get to where it is today?</p>
-        <h2>The History Of JavaScript</h2>
-        <p>The history of JavaScript is closely tied to that of the Browser, and by extension, The World Wide Web. <a aria-label="link to wikipedia article on the history of the world wide web" class="inline-link" href="https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web" rel="noopener noreferrer" role="link" target="_blank">The History Of The World Wide Web</a> is a subject outside the scope of this article. Sufficient to say that in 1990, one year after the inception of the World Wide Web itself, Tim Berners-Lee (the inventor of The World Wide Web) released the first web browser, simply known as the Line Mode Browser. Run from the terminal, this basic browser bore little resemblence to today's modern browsers, but demonstrated the promise of what the World Wide Web would come to fulfill: that of an easily accessible, interconnected world. As an aside, one can still run basic browsers from the terminal, <a aria-label="a link to the links browser website" class="inline-link" href="http://links.twibright.com/user_en.html" rel="noopener noreferrer" role="link" target="_blank">The Links Browser</a> is one of the oldest examples of these types of browser still in use today.</p>
-        <p>Three years later, in 1993, Lee would go on to release the <a aria-label="a link to the wikipedia article on the mosaic browser" class="inline-link" href="https://en.wikipedia.org/wiki/Mosaic_(web_browser)" rel="noopener noreferrer" role="link" target="_blank">Mosaic Browser</a>, which is credited as being the first web browser to gain widespread popularity. With its use of a graphical user interface instead of a terminal, the Mosaic Browser was widely considered to be much more accessible to the average person. The popularity and ease of use of The Mosaic Browser would usher in the Internet boom of the 1990s.</p>
-        <p>One year after The Mosaic Browser's release, Marc Andreessen, the leader of the Mosaic team, would found the company, Netscape. Their flagship product, the Netscape Navigator Browser, itself heavily inspired by The Mosaic Browser, would soon overshadow its predecessor in popularity. Shortly thereafter, in 1995, Microsoft would release the  Internet Explorer Browser, sparking a browser war with Netscape.</p>
-        <p>These early days of the web were filled with static sites, which, while sufficent for the reading of documents, lacked interactivity once the page loaded. In order to interact with early web pages, one would have to initiate an event (such as a click on a button), which would cause the entire page to refresh in order for new content to be loaded and rendered. While still impressive for its time, it limited the kinds of interactions early web users could have with the pages they visited. It became apparent to those working at the forefront of this new burgeoning field to change this and add more dynamism to these user interactions. </p>
-        <p>Thusly, in 1995, Netscape decided to add a scripting language to The Netscape Navigator Browser. Two routes were taken to achieve this ultimate goal. The first, in collaboration with Sun Microsystems, aimed to embed the Java Programming Language into the browser. The other route was put into the hands of a computer programmer named Brendan Eich, who was tasked with embedding the Scheme Programming Language. </p>
-        <p>It wasn't long before Netscape management had determined that the best option was rather for Eich to develop a new programming language, which would incorporate syntax more similar to Java than Scheme. Although originally called "LiveScript" when first shipped with the Navigator beta in September of 1995, it was soon renamed to JavaScript when the official version release occurred in December of that year. Originally intended "to help nonprogrammers create dynamic, interactive web sites," it probably occurred to no one at the time how ubiquitous their new creation would become.</p>
-        <h2>JavaScript Basics</h2>
-        <p>While the history of JavaScript is much more extensive than this, this article will be lengthy enough without going into the entirety of JavaScript's history. Nevertheless, should you wish to find out more, I highly encourage you to <a aria-label="a link to the wikipedia article on the history of javascript" class="inline-link" href="https://en.wikipedia.org/w/index.php?title=JavaScript#History" rel="noopener noreferrer" role="link" target="_blank">read the Wikipedia article on the subject</a>, from which the majority of the previous section was referenced. </p>
-        <p>The remainder of this article will be an extensive introduction to general programming concepts as they relate to JavaScript, including variables, data types, conditionals, control flow statements, and functions. As I mentioned at the beginning of this article, the topic of JavaScript is vast, but it is my hope that in reading this, you will have been given a basic grasp on the fundamentals of working with JavaScript and how to add basic interactivity to your web pages.  Firstly, however, it is important that we set up a working environment so that we can see the results of the JavaScript we write. For this we'll be working in the browser's console, available via the browser's native developer tools.</p>
-        <h2>The Console</h2>
-        <p>Later on, in part two of this article, I will explain how to interact with JavaScript within the context of files that are directly linked to an HTML document, much like the document we created in <a aria-label="a link to the article HTML, the web's skeleton" class="inline-link" href="https://brianhayes.dev/blog/html_the_webs_skeleton.html" role="link">HTML: The Web's Skeleton</a>. For now, however, it is time to introduce one of the most valuable tools available to the modern web developer, that of the developer console. Open up your preferred browser and hit the F12 key. You should be presented with a separate partition or window that displays the underpinnings of the webpage you are currently on.</p>
-        <figure><img alt="a screenshot showing the developer console alongside an open web page" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/devtools_ss_01.webp" title="the devtools console opened up at brianhayes.dev"></figure>
-        <figcaption>Pressing the F12 key opens the browser's devtools</figcaption>
-        <p>Notice the tabs on the top of the new window/partition. Navigate to the tab labeled "Console". Here, you should see a blinking cursor. You can think of this as being like a coding sandbox in which JavaScript can be written to test out code. Should you choose to follow along, simply copy the code snippets in the subsequent examples into this console. Let's start off with variable declarations.</p>
-        <h2>Variables</h2>
-        <p>Much like in mathematics, variables in programming tie a particular piece of data to a symbol representing that data. The most simple example of this can be demonstrated by declaring the equivalency between a named symbol, and the data it represents. In JavaScript, this is done by using the var keyword. Inside your console, type out the following code:</p>
-        <pre><code>var greeting = "Hello World!";</code></pre>
-        <p>This simple statement should be somewhat self explanatory, but let's break it down regardless. Firstly, let us address the <code class="inline-code">var</code> keyword. In JavaScript, like all programming languages, there are reserved keywords, with <code class="inline-code">var</code> being one of them. This keyword is to let the JavaScript interpreter know that we are declaring a variable. The next word, <code class="inline-code">greeting</code>, is the name of the variable we are declaring. JavaScript has no reference to <code class="inline-code">greeting</code> until we have declared it. Next, we utilize an equal sign to declare that <code class="inline-code">greeting</code> is equal to the following value. In this case we apply what is known in programming as a <em>string</em>, or a series of characters. The quotations are required to delineate that we are declaring a string. To summarize, we are declaring a variable called <code class="inline-code">greeting</code> which holds the string value of "Hello World!".</p>
-        <p>If we write out this statement and then hit the "Enter" key inside of our browser's console window, the console will give us a return value of <code class="inline-code">undefined</code>. This may seem perplexing to the unitiated. Simply put, while the console is acknowledging our assignment, we have not returned anything yet, we have simply declared our variable <code class="inline-code">greeting</code> to exist. In other words, we have not asked the JavaScript interpreter to do anything other than hold onto the declaration of <code class="inline-code">greeting</code> in memory. Let's now retrieve our value using a simple call to the console like so:</p>
-        <pre><code>console.log(greeting);</code></pre>
-        <p>After typing out this bit of code and hitting enter, the JavaScript interpreter will then print out the value we have assigned to the <code class="inline-code">greeting</code> variable, "Hello World!":</p>
-        <figure><img alt="a screenshot of the devtools displaying a basic javascript hello world example" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/devtools_ss_02.webp" title="declaring a variable and then logging the value to the console in javascript"></figure>
-        <figcaption>Variable declaration and logging to the console</figcaption>
-        <p>While simple, the declarations of variables in programming is akin to learning your ABCs in the alphabet. By creating associations between variable names with values they represent, we can establish semantic associations to make our code more readable to both ourselves and others. Let's declare some other variables in the next section, where I will introduce you to the other basic data types within JavaScript.</p>
-        <h2>Data Types</h2>
-        <h3>Numbers</h3>
-        <p>All programming languages have a series of data types which serve various purposes. Much of JavaScript's data types have to do with abstractions that are easily parsed/understood by the underlying computer architecture. Strings are one of the easiest to grasp examples for the beginner, as they are simply a sequence of characters meant usually to represent names, words, or statements. Another easy to understand data structure is that of numbers. Unlike variable declaration of strings, numbers are not encapsulated inside of quotation marks, and one can simply assign a variable like so:</p>
-        <pre><code>var age = 40;</code></pre>
-        <p>As you can see, the semantic aspects of declaring variables are already starting to show. Age is often associated with a numeric value, while the greeting variable above is indeed a statement often interpreted as a greeting. It is often said that naming variables is one of the programmer's greatest challenges. As you become more versed in programming, this difficulty will become more apparent. For now, however, simply think on the confusion a fellow programmer would have if we had simply switched our values for these two declarations:</p>
-        <pre><code>var age = "Hello World!";
-var greeting = 40;</code></pre>
-        <p>This is an obviously confusing series of declarations as each value the variables represent, while valid JavaScript, would not be looked on favorably by anyone having to parse through and read this code. These kinds of naming conventions often relate to the particular type of data being stored within the variable. Perhaps the importance of proper naming conventions will become even more apparent in the next data type we will cover, booleans.</p>
-        <h3>Booleans</h3>
-        <p>Booleans are perhaps the most simple to understand data type, as the value stored within a boolean variable can hold only the value of <code class="inline-code">true</code> or <code class="inline-code">false</code>, and their declaration is just that simple:</p>
-        <pre><code>var isOverForty = false;
-var isUnderFifty = true;</code></pre>
-        <p>Here, we introduce a few conventions. As you can see, I am declaring two variables, one called <code class="inline-code">isOverForty</code>. Notice the capitalization of each word, demarcating a kind of statement which corresponds to whether the value holds a boolean <code class="inline-code">true</code> or <code class="inline-code">false</code> value. This kind of capitalization is what is known as <em>Camel Case</em>, where each new word, rather than demarcated by a space like in traditional writing, is instead demarcated with a capitalized letter. This is because spaces in programming often indicate a new declaration or statement in programming, and thusly to ensure that a single variable is declared, no spaces can be used when naming variables that involve multiple words in the name. Additionally, to ensure the readability of the variable name, each letter is demarcated with a visually noticable capitalized letter.</p>
-        <p>Also notice the choice of semantics, <code class="inline-code">isOverForty</code> indicates a <code class="inline-code">true</code> or <code class="inline-code">false</code> value. It would be very poor practice to name this variable <code class="inline-code">mightBeOverForty</code>, as that indicates that it's value could be <em>either</em> <code class="inline-code">true</code> <em>or</em> <code class="inline-code">false</code>. Because we are storing a boolean value of <code class="inline-code">false</code> here, it is better to give this variable a name that indicates to us that the expected return value is <em>definitively</em> <code class="inline-code">true</code> or <code class="inline-code">false</code>.</p>
-        <p>Strings, numbers, and booleans within the JavaScript Programming Language (and other programming languages), are what are known as <em>Primitive</em> data types. There are other primitive data types (null, undefined, and symbols) which will not be covered in this introduction. The other two data types that we'll be covering are what are known as <em>Reference</em> data types. Specifically, we are referring to <em>Arrays</em>, and <em>Objects</em>. These data types can be thought of as stores or collections of data. Technically, <em>Functions</em> are also a Reference data type, but to ensure this introduction is kept as simple as possible, we'll be covering Arrays and Objects first before moving onto the slightly more complex subject of Functions. Let's start by introducing the Array data type.</p>
-        <h3>Arrays</h3>
-        <p>If you work in JavaScript long enough, you will eventually come across the saying "Everything is an object in JavaScript". We have yet to cover Objects as a data type, but know that this statement is more than just a sentiment, it is a statement of fact. For now, simply keep in your mind that Arrays and Objects in JavaScript share a lot in common.</p>
-        <p>The most simple way to think of Arrays in JavaScript are as a grouping of variables that itself can be contained within a variable. This is expressed by utilizing the square "[ ]" brackets to denote you are declaring an array of values being stored. Thusly a simple array of names could be declared like so:</p>
-        <pre><code>var groupOfNames = ["Mary", "John", "Larry", "Zoe"];</code></pre>
-        <p>Practically speaking, one can create an array of any amount of values, of any type of values, and even include Arrays (or Objects) within Arrays. Usually Arrays are made up of variables of only one data type, but it is perfectly valid to create an Array of values, each of different data types. Here are a few examples:</p>
-        <pre><code>var groupOfAges = [12, 16, 59, 42, 0];
-var groupOfGroups = [["Mary", "John"], ["Larry"], ["Zoe", "Lenny"]];
-var groupOfRandomValues = [42, "Mary", true, "Don", 64, ["Nested String", 0], false];</code></pre>
-        <p>Arrays are the most basic way of grouping values together in JavaScript, with a few caveats that contradict the expectations of those new to the language. One is that Arrays are what is known as "Zero Indexed". This essentially means that the first element in an array is not referenced "the 1st element", but rather "the 0th element" by the JavaScript interpeter. This is a convention in many programming languages. Thusly when wishing to reference a particular element of an array, one must subtract 1 from the count of elements up to the element they wish to reference. The following code snippet demonstrates this:</p>
-        <pre><code>var groupOfNames = ["Mary", "John", "Larry", "Brett"];
-var firstNameInGroupOfNames = groupOfNames[0];
-var secondNameInGroupOfNames = groupOfNames[1];
+			<title>All Together</title>
+			<link>https://brianhayes.dev/blog/all_together</link>
+			<description><![CDATA[<article class="demo-button"><h1>Introduction</h1><p>In our previous three articles on <a aria-label="a link to article on HTML" class="inline-link" href="https://brianhayes.dev/blog/html_the_webs_skeleton.html" role="link">HTML</a>, <a aria-label="a link to article on CSS" class="inline-link" href="https://brianhayes.dev/blog/css_the_webs_makeup.html" role="link">CSS</a>, and <a aria-label="a lnk to article on JavaScript" class="inline-link" href="https://brianhayes.dev/blog/javascript_the_webs_muscles.html" role="link">JavaScript</a>, I provided you with a general overview of the three main languages utilized to interface with modern web browsers. In reading these articles, however, you may have noticed that how these three languages interface directly with each other may not be obvious. This is especially true of the article on JavaScript, as there was no manipulation of the Document Object Model using JavaScript.</p><p>As mentioned in my previous article, JavaScript is a vast subject in its own right. It is my hope that through this series of blog posts that you gain a good introductory understanding of how web pages and web applications come to life. Because JavaScript is a full-fledged programming language, the basic aspects of programming needed to be addressed before diving into how it interfaces directly with the Browser's Application Interface (i.e. API).</p><h2>The To Do List</h2><p>In preparation for this article, I created a small To Do List Application. Beginner programmers, regardless of the programming language they are learning, are often encouraged to start with building a To Do List Application. The reason for this is because the essential concepts learned while building such an application are easily applied to the majority of real world applications. Specifically, building a To Do List Application teaches you about the basic operations commonly found in many applications. These operations are "Create", "Read", "Update", and "Delete", abbreviated as the acronym, "CRUD".</p><p>These correspond roughly to the standard HTTP operations, which will be the subject of a future blog post where this To Do List application is expanded out of just the browser, and is hooked up to a backend server and database. For now, however, this application will be kept on the front end in order to introduce you to how JavaScript specifically interacts with the DOM.</p><p>Be aware that this blog article/tutorial assumes you have an introductory understanding of HTML, CSS, and JavaScript. Should you need to brush up on the basics, I encourage you to read up on these subjects in my previous three blog posts. Here, we will dive deeper, introducing many new aspects of HTML, CSS, and JavaScript. Let's get started.</p><h2>The Setup</h2><p>Getting up and running for this tutorial should be relatively straight forward if you've read my previous articles. First, you'll need to make a directory in which your To Do Application will live. Go ahead and, from the command line, create a new directory called "app_todo" and navigate into it:</p><pre><code>#bash
 
-console.log(firstNameInGroupOfNames);
-// returns "Mary"
+mkdir app_todo &amp;&amp; cd app_todo</code></pre><p>From here you'll want to make three files, index.html, styles.css, and script.js:</p><pre><code>#bash
 
-console.log(secondNameInGroupOfNames);
-// returns "John"</code></pre>
-        <p>This convention seems straight forward enough to the beginner, but you'll see this convention unfortunately can often result in what are known as "off by one" errors when working with control flow statements (introduced later on in this article), as it is easily forgotten when first starting out. </p>
-        <p>Lastly, I'll point out that should you desire to grab the last element in an array, regardless of it's length, one can always refer to the last element in an array like so:</p>
-        <pre><code>var groupOfNames = ["Mary", "John", "Larry", "Brett"];
-var lastNameInGroupOfNames = groupOfNames[groupOfNames.length - 1];
+touch index.html styles.css script.js</code></pre><p>Now open up index.html in your text editor of choice and enter the following:</p><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;App ToDo&lt;/title&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+    &lt;meta name="description" content="A Basic ToDo Application" /&gt;
+    &lt;link type="text/css" href="./styles.css" rel="stylesheet" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;main&gt;
+      &lt;h1&gt;App ToDo&lt;/h1&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;
+  &lt;script type="text/javascript" src="./script.js" default defer&gt;&lt;/script&gt;
+&lt;/html&gt;
+</code></pre><p>As you can see, we are sourcing our styles.css and script.js files directly within our HTML. Let's now set up some sane defaults in our styles.css file:</p><pre><code>/*styles.css*/
 
-console.log(lastNameInGroupOfNames);
-// returns "Brett"</code></pre>
-        <p>This code snippet, to the beginner, might raise an eyebrow, as to why the "-1" is necessary. The .length property is an Array specific property that refers to the counted number of elements in the Array, but this number is always equivalent to index of the last element of the Array plus 1, as it is a count of the elements in the Array, and not simply a reference to the index. Thusly, to get the last element of an Array, one must reference it's length and then subtract 1 from it.</p>
-        <p>We'll be returning to Arrays later on in this article when we start working with control flow statements. For now, let's cover the other Reference data type in JavaScript, which also happens to be the most ubiquitously used, the JavaScript Object.</p>
-        <h3>Objects</h3>
-        <p>As mentioned earlier, the saying "Everything is an Object in JavaScript" is very often referenced when delving deep into the intricacies of the language. Objects are somewhat similar to Arrays in that they are stores of any kind of data types, with one small difference that makes Objects vastly more powerful than Arrays (at least when it comes to levels of abstraction). Unlike Arrays, which are automatically indexed by number, Objects can be indexed by strings. Thusly high level abstractions can be encapsulated within an Object. To start, one declares an Object very much like an array, but instead using the curly braces syntax, "{ }". Let's declare a basic object called <code class="inline-code">person</code> to demonstrate:</p>
-        <pre><code>var person = {
-  name: "Mary",
-  age: 25,
-  favoriteFood: "chicken",
-  isEmployed: true
-};</code></pre>
-        <p>Notice the way this object is declared. After instantiating our object, <code class="inline-code">person</code>, we open a set of curly braces and declare a <em>key</em>, <code class="inline-code">name</code>, and its corresponding <em>value</em>, <code class="inline-code">"Mary"</code>. This <em>key/value</em> pair declaration is then followed by a comma and carriage return before going onto declare more <em>key/value</em> pairs in a similar fashion until we finish off with the <em>key</em>, <code class="inline-code">"isEmployed"</code>, and finally close off the curly braces, encapsulating our new created Object, and finishing its declaration.</p>
-        <p>Notice the <em>keys</em> are always followed by a colon <code class="inline-code">":"</code> character, and then the <em>values</em> are declared very much like variables, ensuring strings are encapsulated by quotation marks, numbers and booleans are similarly declared like variables (without the quotation marks). Unlike arrays, where referencing these values by index can sometimes be unreadable, Objects allow the programmer to create <em>key/value</em> pair references that start to appear like English nouns, adjectives, and verbs.</p>
-        <p>So if we wish to reference our <code class="inline-code">person</code> Object's <code class="inline-code">name</code>, <code class="inline-code">age</code>, and <code class="inline-code">isEmployed</code> values. We can simply reference it like so, using the <em>object dot key</em> syntax:</p>
-        <pre><code>var person = {
-  name: "Mary",
-  age: 25,
-  favoriteFood: "chicken",
-  isEmployed: true
-};
-
-console.log(person.name);
-// returns "Mary"
-
-console.log(person.age);
-// returns 25
-
-console.log(person.isEmployed);
-// returns true</code></pre>
-        <p>Objects can do so much in the realm of JavaScript. Hence why JavaScript is referred to as an "Object Oriented" programming language. Even the previous data types I've referenced can technically be thought of as Objects. We'll return to Objects later on when we cover Functions. We have now covered the basics of most common JavaScript data types. </p>
-        <p>But declaring variables and storing data is only part of programming/coding. In order to work with this data in any meaningful way, we'll need other tools. What if we wish to change each element in an Array? What if we wish to list out only the <em>keys</em> or <em>values</em> in an object? This involves an essential concept in programming, the control flow statement.</p>
-        <h2>Loops</h2>
-        <p>Control Flow Statements, more commonly known as "loops", allow for a specific set of instructions to be invoked over and over again until a certain condition is met. After this condition is met, the loop is "broken out of", and the iteration is stopped. There are many forms of control flow statements, the most common being that of the "for loop". Other control flow statements include the "while loop" and the "do while" loop. There are also what are known as "higher order" functions which perform different operations on the data being passed to it. For the sake of keeping this article as introductory as possible, we'll only be covering one of these control flow statements, that of the classic "for loop".</p>
-        <p>Technically the for loop is a JavaScript function, which we haven't covered yet, but I feel that loops are a fine segue from the subject of Arrays and Objects, as loops are often used to iterate over, and sometimes change, the data within these Reference data types. Let's simply declare an array of names, then instead of referencing each one by index, we'll use a for loop to simply log each name to the console:</p>
-        <pre><code>var groupOfNames = ["Mary", "John", "Larry", "Lenny", "Bruce"];
-
-for (var i = 0; i &lt;= groupOfNames.length -1; i++) {
-  console.log(groupOfNames[i]);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/*
- * returns:
- * Mary
- * John
- * Larry
- * Lenny
- * Bruce
-*/</code></pre>
-        <p>Here we declare an array of strings called <code class="inline-code">groupOfNames</code>. The for loop's syntax can look quite foreign to those who have never seen one before, so let's break it down. The reserved keyword <code class="inline-code">for</code> is first used to indicate that we wish to start a for loop. Afterwards which, we declare the logic to take place inside our for loop using an opening parentheses character, <code class="inline-code">(</code>. This is what indicates we are invoking a function call (more on that later). Inside these parentheses, we are defining a series of <em>arguments</em>, which tell the <code class="inline-code">for</code> function how to behave. Each argument is delineated by a comma character. In the case of a standard for loop, the function expects three arguments. Let's break down each argument in further detail.</p>
-        <p>Firstly we have the statement:</p>
-        <pre><code>var i = 0;</code></pre>
-        <p>This statement should seem familiar, we simply declare a variable <code class="inline-code">i</code> and set it hold the value of the number <code class="inline-code">0</code>. The use of the letter <code class="inline-code">i</code> is based off of convention. It is meant to stand for <em>iterator</em>, and is generally what is used to keep count as we go through the loop.</p>
-        <p>The second argument to our for function call looks like a mathematical comparison, which indeed it is:</p>
-        <pre><code>i &lt;= groupOfNames.length - 1;</code></pre>
-        <p>Much like in mathematics, the <code class="inline-code">&lt;=</code> indeed refers to "less than or equal to". This is our first equality statement covered thus far, and by the end of this article we will cover a few more. So what does this translate to? Well if our iterator, <code class="inline-code">i</code>, is <em>less than or equal to</em> the length of our <code class="inline-code">groupOfNames</code> array (minus one to account for the zero indexing). The statement here returns a boolean value of <code class="inline-code">true</code> or <code class="inline-code">false</code>. It is basically telling the for loop, as long as this condition is true, run the following code again.</p>
-        <p>Lastly we have the third argument of the for loop:</p>
-        <pre><code>i++;</code></pre>
-        <p>This <code class="inline-code">++</code> is what is known as an increment operator. It is basically telling the for loop that at the end of each iteration, add one to the iterator number, <code class="inline-code">i</code>. Thusly on the first loop, after the first name is printed to the console, <code class="inline-code">i</code>, which was initially set to the number, <code class="inline-code">0</code>, is now set to the number, <code class="inline-code">1</code>. Let's also log to the console the iterator itself to hammer home the point:</p>
-        <pre><code>var groupOfNames = ["Mary", "John", "Larry", "Lenny", "Bruce"];
-
-for (var i = 0; i &lt;= groupOfNames.length -1; i++) {
-  console.log("index: ", i);
-  console.log(groupOfNames[i]);
+html {
+  color-scheme: light dark;
 }
 
-/*
- * returns:
- * index: 0
- * Mary
- * index: 1
- * John
- * index: 2
- * Larry
- * index: 3
- * Lenny
- * index: 4
- * Bruce
-*/</code></pre>
-        <p>Hopefully the above example illustrates not only the basics of a classic for loop, but also reiterates the concepts around zero indexing of arrays introduced earlier. Let's now loop over an array of objects, and in the process, change each of the object's <code class="inline-code">age</code> value:</p>
-        <pre><code>var groupOfPeople = [
-  {
-    name: "Mary",
-    age: 25
-  },
-  {
-    name: "John",
-    age: 37
-  },
-  {
-    name: "Leslie",
-    age: 64
-  }
-];
-
-for (var i = 0; i &lt;= groupOfPeople.length - 1; i++) {
-  var person = groupOfPeople[i];
-  var statementOfAge = person.name + " is my name, my age is: " + person.age;
-  console.log(statementOfAge);
-
-  person.age = ++person.age;
-  var statementOfAgeAfterOneYear = "After one year's time, I, " + person.name + " will be " + person.age + " years old";
-  console.log(statementOfAgeAfterOneYear);
+body {
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
 
-console.log(groupOfPeople);</code></pre>
-        <p>This code is a bit more complicated than what we covered thus far, but hopefully my naming conventions have made it clear what the expected output of this for loop will be.</p>
-        <p>Let's cover first our declaration of our <code class="inline-code">groupOfPeople</code> array. Unlike our previous example, which simply was a collection of names, here we are declaring a series of objects, each object representing one single person. Each person is declared with a <code class="inline-code">name</code> and an <code class="inline-code">age</code> <em>key</em>, and have a corresponding string (their name), and number (their age). Very much like our previous example on referencing an array, we do so using the square bracket syntax, which is demonstrated within our for loop on the first line:</p>
-        <pre><code>var person = groupOfPeople[i];</code></pre>
-        <p>This is more for semantics as to not be confusing. By shortening my reference to each individual <code class="inline-code">person</code> from <code class="inline-code">groupofPeople[i]</code>, I can more easily read the rest of the code inside my for loop.</p>
-        <p>Next a series of what is know as "string concatenation" operations occur. Unlike with numbers, when strings are <em>added</em> to each other using the <code class="inline-code">+</code> operator, the previous string is concatenated with whatever the following value is. If what follows is not a string, like the <code class="inline-code">age</code> value, JavaScript will <em>coerce</em> the value into a string.</p>
-        <pre><code>var statementOfAge = person.name + " is my name, my age is: " + person.age;</code></pre>
-        <p>And of course, we then log out this statement to the console.</p>
-        <p>Next we then do something we have not covered in this article thus far. We reassign the person's <code class="inline-code">age</code> value to itself, but prepended with a <code class="inline-code">++</code> operator. Unlike in our for loop declaration, where the iterator is appended the <code class="inline-code">++</code> operator, the prepending of the <code class="inline-code">++</code> operator ensures that the value is changed prior to the remainder of the subsequent statement(s).</p>
-        <pre><code>person.age = ++person.age;</code></pre>
-        <p>Then, we declare a new variable, <code class="inline-code">statementOfAgeAfterOneYear</code>, in which we then concatenate a new string, stating what the person's <code class="inline-code">age</code> will be after one year.</p>
-        <pre><code>var statementOfAgeAfterOneYear = "After one year's time, I, " + person.name + " will be " + person.age + " years old";</code></pre>
-        <p>We once again log this statement to the console to reflect the change in the person's <code class="inline-code">age</code>.</p>
-        <p>Once the for loop is finished, delineated by the closing curly brace <code class="inline-code">}</code> character, we simply log to the console the entire <code class="inline-code">groupOfPeople</code> array. This demonstrates that the change of the <code class="inline-code">age</code> value on each of our persons in the <code class="inline-code">groupOfPeople</code> array did <em>actually change</em> our original array of objects. Let's take a look at our final print outs to the console:</p>
-        <pre><code>/*
- * returns:
- * Mary is my name, my age is: 25
- * After one year's time, I, Mary will be 26 years old
- * John is my name, my age is: 37
- * After one year's time, I, John will be 38 years old
- * Leslie is my name, my age is: 64
- * After one year's time, I, Leslie will be 65 years old
- * 
- * 
- * [
- *   {
- *     name: Mary,
- *     age: 26
- *   },
- *   {
- *     name: John,
- *     age: 38
- *   },
- *   {
- *     name: Leslie,
- *     age: 65
- *   }  
- * ]
-*/ </code></pre>
-        <p>We have now covered the quintessential for loop. There are other control flow statements to investigate (while, do while loops), and modern JavaScript has many variations on these as well. Covering the varying control flow statements would take an entire article (or two) to really investigate the myriad of control flow statements available, but understanding the basic for loop can carry a JavaScript programmer very far, especially when used in the context of functions and conditional statements.</p>
-        <h2>Functions and Conditionals</h2>
-        <p>Functions are a series of procedures encapsulated within a block of code. Unlike procedures that take place within the global scope of the program (an explanation of scope will come shortly), functions take in a form of input and generate a form of output that is related to the input. Prior to covering functions however, I feel it is necessary to briefly touch on conditional statements.</p>
-        <p>Recall in our standard for loop examples, we have encapsulated inside the initial parentheses, <code class="inline-code">( )</code>, a series of <em>arguments</em>, delineated by a semicolon character, <code class="inline-code">;</code>.</p>
-        <pre><code>for (var i = 0; i &lt;= groupOfPeople.length - 1; i++) {</code></pre>
-        <p>Note the second <em>argument</em> in this for loop:</p>
-        <pre><code>i &lt;= groupOfPeople.length - 1;</code></pre>
-        <p>You may recall in our previous section that this utilizes a mathematical comparison, the <code class="inline-code">&lt;=</code> or <em>less than or equal</em> operator which in essence tells our for loop that as long as "<code class="inline-code">i</code> is <em>less than or equal</em> to the <code class="inline-code">groupOfPeople</code> array's length," to continue repeating the following sequence of code encapsulated inside of the curly braces <code class="inline-code">{ }</code>.</p>
-        <p>This is what is known as a <em>conditional statement</em>. A conditional statement declares a comparative operation between two or more values that either returns <code class="inline-code">true</code> or <code class="inline-code">false</code>.</p>
-        <p>Technically these statements return <em>truthy</em> or <em>falsy</em> values, and this is one of the major reasons JavaScript is often criticized, as these comparitive statements can sometimes return a boolean value that is not expected. In the interest of keeping this introduction to the concept of conditional statements simple, however, we will not delve into these nuances at this time.</p>
-        <h3>If Statements</h3>
-        <p>The most common conditional statement one will see in many programs is the <code class="inline-code">if</code> statement. The <code class="inline-code">if</code> statement is very readable even to novice programmers, and relatively easy to pick up. Let us examine this simple block of code:</p>
-        <pre><code>var person = {
-  name: "Janice",
-  age: 42
+main {
+  width: min(70ch, 100% - 4rem);
+  margin-inline: auto;
 }
 
-if (person.age == 42) {
-  console.log("person's age is 42!");
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
 }
 
-// returns "person's age is 42!"</code></pre>
-        <p>This <code class="inline-code">if</code> statement is almost self explanatory, but let's break it down regardless. The reserved keyword, <code class="inline-code">if</code>, is used to instantiate a conditional statement. Within the parentheses characters <code class="inline-code">( )</code>, a conditional statement is passed which can only return a <code class="inline-code">true</code> or <code class="inline-code">false</code> boolean value. In this case, the <code class="inline-code">person</code> object's <code class="inline-code">age</code> <em>value</em> is compared to the number, <code class="inline-code">42</code>, using the double equal sign equivalency operator, <code class="inline-code">==</code>. Should the <code class="inline-code">person.age</code> <em>value</em> be equal to <code class="inline-code">42</code>, the code encapsulated within the curly braces is executed. In this case, the <code class="inline-code">person.age</code> variable is equal to <code class="inline-code">42</code>, so the logged message is dispalyed in the console.</p>
-        <p>Had the <code class="inline-code">person.age</code> <em>not</em> have been equal to <code class="inline-code">42</code>, no call to the console would have been invoked, and nothing would have been logged or outputted.</p>
-        <h3>Else Clauses</h3>
-        <p>While sometimes in programs, having a simple statement that only runs if a condition is true works just fine, but other times we wish to run some other code should that statement <em>not</em> return true. Very much like the syntax of the English language, we can follow up our <code class="inline-code">if</code> statement with an <code class="inline-code">else</code> statement, which should run if our initial <code class="inline-code">if</code> statement not return <code class="inline-code">true</code>. Here is a simple example:</p>
-        <pre><code>var person = {
-  name: "Janice",
-  age: 43
+input,
+textarea {
+  min-width: 0;
+}</code></pre><p>Great! Now that we have that set up, let's lastly just put a simple log to the console in our script.js file to test that we set everything up properly:</p><pre><code>//script.js
+
+console.log("Hello World!");</code></pre><p>Once you've finished, go ahead and use live-server (either from the <a aria-label="a link to the live-server github repository" class="inline-link" href="https://github.com/tapio/live-server" rel="noopener noreferrer" role="link" target="_blank">command line</a> or from within VSCode using the <a aria-label="a link to the visualstudio marketplace's live server extension" class="inline-link" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" rel="noopener noreferrer" role="link" target="_blank">the extension</a>) to start your development server. I personally use the command line to do so from within my project directory like so:</p><pre><code>#bash
+
+live-server .</code></pre><p>This should automatically open up your browser on your localhost and show you the basic webpage you've just created with these three files. Open up your devtools as well once the browser is open by hitting the F12 key. If all is configured properly, you should see your HTML page with some very basic CSS stylings (from the styles.css file) and in your developer's console page, you should see the "Hello World!" message (from the scripts.js file). Your browser/devtools setup should look something like this:</p><figure><img alt="a screenshot image showing our rendered html page" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/all_together_ss_01.webp" title="a screenshot of the rendered html page"></figure><figcaption>The HTML Page Rendered By Live Server</figcaption><p>Looks Good! Let's now start by centering our <code class="inline-code">h1</code> tag within a <code class="inline-code">div</code> tag with the class of <code class="inline-code">form-container</code>:</p><pre><code>  &lt;body&gt;
+    &lt;main&gt;
+      <b>&lt;div class="form-container"&gt;</b>
+        &lt;h1&gt;App ToDo&lt;/h1&gt;
+      <b>&lt;/div&gt;</b>
+    &lt;/main&gt;
+  &lt;/body&gt;</code></pre><p>Adding "container" divs and spans to encapsulate other HTML elements is a common practice to apply styles to all elements within said container or, as you'll see below, directly to specific elements within that container. Let's now adjust our CSS to center our <code class="inline-code">form-container</code> div, and the <code class="inline-code">h1</code> tag within it.</p><pre><code>/*styles.css*/
+
+input,
+textrea {
+  min-width: 0;
 }
 
-if (person.age == 42) {
-  console.log("person's age is 42!");
-} else {
-  console.log("person's age is NOT 42!");
+<b>.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-// returns "person's age is NOT 42!"</code></pre>
-        <p>Else clauses in <code class="inline-code">if</code> statements are useful when there is some other outcome we wish to occur should our initial conditional statement fails.</p>
-        <h3>Else If Clauses</h3>
-        <p>But what if we have multiple conditionals we wish to check against? Let's utilize a for loop with conditional statements to demonstrate how to do so, now also using the <code class="inline-code">else if</code> clause:</p>
-        <pre><code>var groupOfPeople = [
-  {
-    name: "Mary",
-    age: 21
-  },
-  {
-    name: "John",
-    age: 18
-  },
-  {
-    name: "Leslie",
-    age: 25
-  }
-];
+.form-container &gt; h1 {
+  margin: 1em auto -0.0125em auto;
+  text-align: center;
+}</b></code></pre><p>Now if we look at our updated HTML in our browser, we should see that our header "App ToDo" is indeed centered:</p><figure><img alt="a screenshot of our HTML page with centered h1" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/all_together_ss_02.webp" title="a screenshot of our HTML page with centered h1"></figure><figcaption>Our <code class="inline-code">h1</code> Tag Centered</figcaption><p>In the interest of keeping this article concise, and to focus mainly on the JavaScript logic that we will implement, I'll not spend time on documenting the CSS aspects of this project. Please feel free to take a look at MDN's article on <a aria-label="a link to MDN's article on centering an HTML element" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element" rel="noopener noreferrer" role="link" target="_blank">Centering An Element</a> should you be curious on how the above CSS works.</p><p>In order to create a series of todos, we'll need a way for the user to enter a todo, adding it to a list, with the result being that it renders nicely on our page. Let's first establish a <code class="inline-code">form</code> with an <code class="inline-code">input</code> field as well as a submit <code class="inline-code">button</code> for them to utilize and to create a todo item:</p><h2>HTML Forms</h2><p>Forms in HTML are one of the few ways we can grab specific data from the user of our application. There is much to discuss when it comes to HTML forms and the various aspects to how to properly implement them in web applications, but as this is an introductory article, I'll forego most of that for now and simply dive into the basics. Here is how we can establish a basic HTML form below our <code class="inline-code">h1</code> tag:</p><pre><code>  &lt;body&gt;
+    &lt;main&gt;
+      &lt;div class="form-container"&gt;
+        &lt;h1&gt;App ToDo&lt;/h1&gt;
+        <b>&lt;form id="todo-form-container"&gt;
+          &lt;label class="todo-label" for="todo-input"&gt;Enter A Todo:&lt;/label&gt;
+          &lt;input
+            type="text"
+            name="todo-form"
+            placeholder="Todo Item"
+            minlength="1"
+            maxlength="18"
+            class="todo-input"
+            id="todo-input"
+          /&gt;
+        &lt;/form&gt;
+        &lt;input type="submit" value="Add Todo" class="todo-button" id="add-todo-btn" /&gt;
+</b>      &lt;/div&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;</code></pre><p>There is a lot going on even in this simple form. The <code class="inline-code">label</code> tag provides us, the developer, with an easy way to establish a connection between our <code class="inline-code">input</code> tag using the <code class="inline-code">for</code> attribute. By inputting <em>"todo-input"</em> in the <code class="inline-code">label</code>'s <code class="inline-code">for</code> attribute, as well as in the <code class="inline-code">input</code>'s <code class="inline-code">id</code> attribute, we are creating an implicit relationship between the two HTML elements.</p><p>The other attributes present within the <code class="inline-code">input</code> tag are somewhat self explanatory, but if you wish to explore further, I recommend taking a look at MDN's article on the <a aria-label="A Link To MDN's Article On HTML Forms" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" rel="noopener noreferrer" role="link" target="_blank">form element</a>.</p><p>At this point, our HTML form should render via live-server in our web browser like so:</p><figure><img alt="An image of our new HTML form" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/all_together_ss_03.webp" title="An image of our new HTML form"></figure><figcaption>Our HTML Form Is Now Rendered</figcaption><p>Let's take a moment to return to our CSS to style our form a bit, give each element a bit of breathing room, and center these elements as well. Here is the relevant CSS:</p><pre><code>/*styles.css*/
 
-for (var i = 0; i &lt;= groupOfPeople.length - 1; i++) {
-  var person = groupOfPeople[i];
-  var statement = "";
-
-  if (person.age &lt; 21) {
-    statement = "My name is: " + person.name + " and I am under 21";
-  } else if (person.age == 21) {
-    statement = "My name is: " + person.name + " and I recently turned 21";
-  } else {
-    statement = "My name is: " + person.name + " and I am over 21";
-  }
-
-  console.log(statement);
+.form-container &gt; h1 {
+  margin: 1em auto -0.0125em auto;
+  text-align: center;
 }
 
-/*
- * returns:
- * My name is: Mary and I recently turned 21
- * My name is: John and I am under 21
- * My name is: Leslie and I am over 21
-*/</code></pre>
-        <p>Here we utilize a for loop which utilizes two conditional clauses, whether <code class="inline-code">person.age</code> is less than <code class="inline-code">21</code>:</p>
-        <pre><code>(person.age &lt; 21)</code></pre>
-        <p>And also to see if the person's age is equal to <code class="inline-code">21</code>:</p>
-        <pre><code>(person.age == 21)</code></pre>
-        <p>Within our for loop, we iterate over the <code class="inline-code">groupOfPeople</code> array, checking each object's <code class="inline-code">age</code> property to see if the number value it returns is either <em>less than 21</em> or <em>equal to 21</em>. If neither of these conditions returns <code class="inline-code">true</code>, the <code class="inline-code">else</code> clause is run:</p>
-        <pre><code>statement = "My name is: " + person.name + " and I am over 21";</code></pre>
-        <p>Also note here how we initialize the variable statement to an empty string:</p>
-        <pre><code>var statement = "";</code></pre>
-        <p>This <code class="inline-code">statement</code> variable is set to an empty string every time our for loop runs, and then is assigned a new value based off of the set of <code class="inline-code">if</code>/<code class="inline-code">else if</code>/<code class="inline-code">else</code> conditionals that evaluate afterwards. Finally, at the end of each iteration, the <code class="inline-code">statement</code> is logged to the console. </p>
-        <h3>Functions</h3>
-        <p>Functions are a series of code that is encapsulated into a reusable series of control flow statements and conditionals. It takes a series of inputs and outputs a result related to that input. Let's say I have two different arrays which include objects that represent people and their respective ages. I wish to extract all the people from these arrays that are over 21 and store them in a new array called <code class="inline-code">canDrink</code>. I then wish to log this new <code class="inline-code">canDrink</code> array to the console. I could do so with two consecutive for loops like so:</p>
-        <pre><code>var groupOne = [
-  {
-    name: "Mary",
-    age: 25
-  },
-  {
-    name: "Albert",
-    age: 16
-  },  
-  {
-    name: "Louis",
-    age: 23
-  }
-];
-
-var groupTwo = [
-  {
-    name: "Clarence",
-    age: 42
-  },
-  {
-    name: "Alphonse",
-    age: 12
-  },  
-  {
-    name: "Lucy",
-    age: 24
-  }
-];
-
-var canDrink = [];
-
-for (var i = 0; i &lt;= groupOne.length -1; i++) {
-  var person = groupOne[i];
-  if (person.age &gt; 21) {
-    canDrink.push(person);
-  }
+<b>.todo-label,
+.todo-input,
+.todo-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1em auto 0.5em auto;
+  font-weight: 500;
 }
 
-for (var i = 0; i &lt;= groupTwo.length -1; i++) {
-  var person = groupTwo[i];
-  if (person.age &gt; 21) {
-    canDrink.push(person);
-  }
+.todo-input {
+  padding: 0.25em;
+  font-size: 1em;
+  text-align: center;
+  line-height: 1.5;
+  border: 2px solid #000;
+  border-radius: 5px;
+  width: 20px;
+  max-width: 80vw;
 }
 
-console.log(canDrink);
-
-/*
- * returns:
- * [
- *  {
- *    name: "Mary", 
- *    age: 25
- *  },
- *  {
- *    name: "Louise",
- *    age: 23
- *  },
- *  {
- *    name: "Clarence",
- *    age: 42
- *  },
- *  {
- *    name: "Lucy",
- *    age: 24
- *  }
- * ] 
-*/</code></pre>
-        <p>As you can see, the two for loops are only slightly different, one grabbing the persons from <code class="inline-code">groupOne</code> who are over <code class="inline-code">21</code>, and one grabbing the persons from <code class="inline-code">groupTwo</code> who are over <code class="inline-code">21</code>. The code, <code class="inline-code">canDrink.push</code>, by the way, is what is known as a method, specifically a method owned by the Array prototype (more on prototypes in a future article). The <code class="inline-code">push</code> method is relatively self explanatory. It simply adds the element passed to it onto the array it is called on. Thusly the <code class="inline-code">person</code> object is being <em>pushed</em> onto the end of the <code class="inline-code">canDrink</code> array in this particular example.</p>
-        <p>There's a simple saying in programming, "Don't Repeat Yourself" (known by the acronym, DRY), and while this rule isn't exactly dogma, one should consider rewriting code that repeats itself like our example here. Note that there really is just one difference between the two for loops (the array being operated on).</p>
-        <p>This is a classic case where a function can be utilized to encapsulate our for loop and the logic it uses so that we can accomplish the same task with a bit less code. See the following example:</p>
-        <pre><code>var groupOne = [
-  {
-    name: "Mary",
-    age: 25
-  },
-  {
-    name: "Albert",
-    age: 16
-  },  
-  {
-    name: "Louis",
-    age: 23
-  }
-];
-
-var groupTwo = [
-  {
-    name: "Clarence",
-    age: 42
-  },
-  {
-    name: "Alphonse",
-    age: 12
-  },  
-  {
-    name: "Lucy",
-    age: 24
-  }
-];
-
-var canDrink = [];
-
-function grabPersonsOfLegalAgeFrom(group) {
-  for (var i = 0; i &lt;= group.length -1; i++) {
-    var person = group[i];
-    if (person.age &gt; 21) {
-      canDrink.push(person);
-    }
-  }
+.todo-button {
+  padding: 0.25em 0.5em;
+  font-size: 0.9em;
+  line-height: 1.5;
+  background-color: #fff;
 }
 
-grabPersonsOfLegalAgeFrom(groupOne);
-grabPersonsOfLegalAgeFrom(groupTwo);
+todo-button:hover {
+  scale: 1.1;
+}</b></code></pre><p>This CSS should now center our form, if we return to view our HTML in the browser, this should be reflected like so:</p><figure><img alt="A ScreenShot Of Our HTML Page With The Form Centered" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/screenshots/all_together_ss_04.webp" title="A ScreenShot Of Our HTML Page With The Form Centered"></figure><figcaption>Our Form Is Now Centered And Styled</figcaption><p>Let's now hook up our form to JavaScript events. We'll be starting small, simply making sure our interactions with our forms are <em>"seen"</em> by our JavaScript file. Remove our <code class="inline-code">console.log("Hello World!");</code> from our <code class="inline-code">script.js</code> file and replace it with this:</p><pre><code>//script.js
 
-console.log(canDrink);
+console.log("Hello World!"); // Delete this line
 
-/*
- * returns:
- * [
- *  {
- *    name: "Mary", 
- *    age: 25
- *  },
- *  {
- *    name: "Louise",
- *    age: 23
- *  },
- *  {
- *    name: "Clarence",
- *    age: 42
- *  },
- *  {
- *    name: "Lucy",
- *    age: 24
- *  }
- * ] 
-*/</code></pre>
-        <p>Functions are one of the essential building blocks of nearly all programming languages. By encapsulating our for loop inside of a declared function, <code class="inline-code">grabPersonsOfLegalAgeFrom</code>, and passing it the more generic argument, <code class="inline-code">group</code>, we have created a piece of reusable logic. Notice that we even call it <em>twice</em>, using our first for loop to grab all persons within the <code class="inline-code">groupOne</code> array that are over <code class="inline-code">21</code> and pushing them into the <code class="inline-code">canDrink</code> array, and then calling the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function once again to do the same with the <code class="inline-code">groupTwo</code> array. Let's break down this new chunk of code:</p>
-        <pre><code>var canDrink = [];
+<b>const todoForm = document.getElementById("todo-form-container");
+const todoBtn = document.getElementById("add-todo-btn");
+const todoInput = document.getElementById("todo-input");
 
-function grabPersonsOfLegalAgeFrom(group) {
-  for (var i = 0; i &lt;= group.length -1; i++) {
-    var person = group[i];
-    if (person.age &gt; 21) {
-      canDrink.push(person);
-    }
-  }
+
+function handleSubmit(event) {
+  event.preventDefault();
+  console.log("handleSubmit function invoked!");
 }
 
-grabPersonsOfLegalAgeFrom(groupOne);
-grabPersonsOfLegalAgeFrom(groupTwo);</code></pre>
-        <p>Firstly, we instantiate our <code class="inline-code">canDrink</code> variable, assigning it the value of an empty array. We then invoke the creation of a new function by utilizing the reserved keyword, <code class="inline-code">function</code>. The new function is assigned the name <code class="inline-code">grabPersonsOfLegalAgeFrom</code>. Note that the lengthy name is a convention to ensure the readability of our code. </p>
-        <pre><code><b>function</b> grabPersonsOfLegalAgeFrom</code></pre>
-        <p>While I could have easily named the function <code class="inline-code">grabAdults</code> or <code class="inline-code">grabPeople</code> or even just <code class="inline-code">g</code>, I try my best to name my functions in a way that other programmers (or my future self) can easily understand what the function is supposed to do, even if they don't necessarily understand the code inside the function itself.</p>
-        <p>The declared <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function is then appended a pair of parentheses <code class="inline-code"> ( )</code>, inside of which the <em>argument</em>, <code class="inline-code">group</code> is provided.</p>
-        <pre><code>function grabPersonsOfLegalAgeFrom(<b>group</b>)</code></pre>
-        <p>Arguments are the input to functions. Ideally, arguments should be somehow related to the function's output. A function can be declared with as many arguments as you'd like, including no arguments. When declared, a JavaScript function makes no assumptions as to the data types of the variables being passed to it as arguments. Thusly in truth we could have passed a string variable, a number variable, an object, etc. to the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function and JavaScript would still <e>attempt to execute the code (possibly returning some unexpected output). </e></p>
-        <p>After the declaration of our argumeents, we close off our parentheses, <code class="inline-code">( )</code>, and then instantiate the function body using curly braces, <code class="inline-code"> { }</code>. Inside the body of our function, we then encapsulate our previous logic from before. This time, however, the generic <code class="inline-code">group</code> argument is passed instead of the specific <code class="inline-code">groupOne</code> and <code class="inline-code">groupTwo</code> arrays. Afterwards which, we close off our function declaration using a closing curly brace, <code class="inline-code">}</code>.</p>
-        <p>Lastly we <em>invoke</em> or <em>call</em> our function directly by simply writing it's name, then passing the <code class="inline-code">groupOne</code> array as an argument to the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function. This syntax essentially tells the JavaScript interpreter, "run the code inside this function, and pass this variable as the argument(s) to it".</p>
-        <pre><code>grabPersonsOfLegalAgeFrom(groupOne);
-grabPersonsOfLegalAgeFrom(groupTwo);</code></pre>
-        <p>Had these two lines been omitted, the <code class="inline-code">canDrink</code> array would remain empty, as the function, <code class="inline-code">grabPersonsOfLegalAgeFrom</code>, although indeed is <em>defined</em>, was never <em>called</em>, and the code inside of it, thusly, never ran.</p>
-        <h3>Scope and Returns</h3>
-        <p>You'll note the declaration of the array <code class="inline-code">canDrink</code> in the previous example is instantiated prior to the declaration of the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function:</p>
-        <pre><code>var canDrink = [];
-
-function grabPersonsOfLegalAgeFrom(group) {</code></pre>
-        <p>If you take some extra time to think on this, one might wonder: "Why not just instantiate the <code class="inline-code">candDrink</code> array <em>inside</em> of the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function? Why declare it <em>prior</em> to the function?" For the sake of demonstration, let's go ahead and input this code into our Developer Console and see the result of doing so:</p>
-        <pre><code>var groupOne = [
-  {
-    name: "Mary",
-    age: 25
-  },
-  {
-    name: "Albert",
-    age: 16
-  },  
-  {
-    name: "Louis",
-    age: 23
-  }
-];
-
-var groupTwo = [
-  {
-    name: "Clarence",
-    age: 42
-  },
-  {
-    name: "Alphonse",
-    age: 12
-  },  
-  {
-    name: "Lucy",
-    age: 24
-  }
-];
-
-function grabPersonsOfLegalAgeFrom(group) {
-  var canDrink = [];
-  for (var i = 0; i &lt;= group.length -1; i++) {
-    var person = group[i];
-    if (person.age &gt; 21) {
-      canDrink.push(person);
-    }
-  }
+function main() {
+  todoForm.addEventListener("submit", handleSubmit);
+  todoBtn.addEventListener("click", handleSubmit);
 }
 
-grabPersonsOfLegalAgeFrom(groupOne);
-grabPersonsOfLegalAgeFrom(groupTwo);
+main();</b></code></pre><p>Before explaining the above code, let's first test it in our browser to ensure it's working as expected. After inputting this code into our <code class="inline-code">script.js</code> file, we can return to our HTML page in the browser and interact with the form by typing in some text and hitting the <em>Enter</em> key. We also can click on our <em>Add Todo</em> button. Once either event is fired by our interaction with the webpage, the text <em>"handleSubmit function invoked!"</em> should be logged to the developer console.</p><figure><img alt="A Gif Screenshot demonstrating that the form interacts via javascript" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/gifs/all_together_01.gif" title="A Gif Screenshot demonstrating that the form interacts via javascript"></figure><figcaption>Form Interactions Fire JavaScript Events</figcaption><p>This is the first time in our tutorial series on these tools that I have now demonstrated how JavaScript is interacting with the Document Object Model (the DOM). In our JavaScript above, when we declare the variable <code class="inline-code">todoForm</code> like so:</p><pre><code>//script.js
 
-console.log(canDrink);</code></pre>
-        <p>If we copy this code into the browser's console and run it, we'll receive the following error:</p>
-        <pre><code>Uncaught ReferenceError: canDrink is not defined</code></pre>
-        <p>To the beginner, this might cause some annoyance. One can clearly see the <code class="inline-code">canDrink</code> variable is declared, just this time inside of the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function. Why did this subtle change cause an error? Before explaining, let's adjust our code slightly by putting a log to the console inside of the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function:</p>
-        <pre><code>function grabPersonsOfLegalAgeFrom(group) {
-  var canDrink = [];
-  for (var i = 0; i &lt;= group.length -1; i++) {
-    var person = group[i];
-    if (person.age &gt; 21) {
-      canDrink.push(person);
-    }
-  }
-  console.log(canDrink);
+<b>const todoForm = document.getElementById("todo-form-container");</b></code></pre><p>We are instantiating a <em>reference</em> to the HTML element that we assigned to an id called <code class="inline-code">todo-form-container</code>. This refers specifically to this piece of HTML code:</p><pre><code>&lt;form <b>id="todo-form-container"</b>&gt;
+  &lt;label class="todo-label" for="todo-input"&gt;Enter A Todo:&lt;/label&gt;
+  &lt;input
+    type="text"
+    name="todo-form"
+    placeholder="Todo Item"
+    minlength="1"
+    maxlength="18"
+    class="todo-input"
+    id="todo-input"
+  /&gt;
+&lt;/form&gt;
+&lt;input type="submit" value="Add Todo" class="todo-button" id="add-todo-btn" /&gt;</code></pre><p>We also grab references to our <code class="inline-code">add-todo-btn</code> and also our <code class="inline-code">todo-input</code>:</p><pre><code>//script.js
+
+const todoForm = document.getElementById("todo-form-container");
+<b>const todoBtn = document.getElementById("add-todo-btn");
+const todoInput = document.getElementById("todo-input");</b></code></pre><p>In our HTML, we can find references to these ids within the same markup example:</p><pre><code>&lt;form id="todo-form-container"&gt;
+  &lt;label class="todo-label" for="todo-input"&gt;Enter A Todo:&lt;/label&gt;
+  &lt;input
+    type="text"
+    name="todo-form"
+    placeholder="Todo Item"
+    minlength="1"
+    maxlength="18"
+    class="todo-input"
+    <b>id="todo-input"</b>
+  /&gt;
+&lt;/form&gt;
+&lt;input type="submit" value="Add Todo" class="todo-button" <b>id="add-todo-btn"</b> /&gt;</code></pre><p>We then establish a <code class="inline-code">main</code> function. This is a common convention in not just JavaScript, but in many programming paradigms, where a final main <em>routine</em> is established and, in some cases, invoked (as is seen on the last line of the <code class="inline-code">script.js</code> file). Usually the <code class="inline-code">main</code> function calls other <em>"helper"</em> functions within the file. While technically these invocations could occur in the global namespace of our program, it is a common convention and good practice to encapsulate our JavaScript in this fashion as it limits the declaration of global variables and is more readable overall.</p><p>Currently within our <code class="inline-code">main</code> functin, we grab our <code class="inline-code">todoForm</code> and <code class="inline-code">todoBtn</code> variables. Again, these are pulled from our references to the Document Object Model. These references themselves have various properties and methods that we can reference in order to program interactivity with our HTML elements. Inputs like the one we have created of type <em>"text"</em> have a <em>"submit"</em> event that we can <em>"listen"</em> to and initialize scripted events to occur. Similarly, our input of type <em>"text"</em> has a <em>"click"</em> event that we can hook into and "listen" for. Hence our <code class="inline-code">main</code> function invokes two <em>"addEventListener"</em> calls like so:</p><pre><code>//script.js
+
+function main() {
+  todoForm.addEventListener("submit", handleSubmit);
+  todoBtn.addEventListener("click", handleSubmit);
+}</code></pre><p>We then <em>"tell"</em> the DOM to add an <em>"event listener"</em> to our respective HTML input elements and associate that listener with a helper function called <code class="inline-code">handleSubmit</code>. Note that both events fire off the <code class="inline-code">handleSubmit</code> function. We could have fired off separate functions for each, but whether the user hits the <em>"Enter"</em> key <em>or</em> clicks the <em>"Add Todo"</em> button, we want the same result (to register the creation of a new todo item).</p><p>The <code class="inline-code">handleSubmit</code> function is then invoked any time that the <em>"submit"</em> or the <em>"click"</em> events occur. In investigating our <code class="inline-code">handleSubmit</code> function, we find that it takes an <code class="inline-code">event</code> argument. This is needed in order to prevent the Browser's native actions from executing when either the <em>"submit"</em> or <em>"click"</em> events occur. While some might find this a bit cumbersome, it is a common practice in front end web development to circumvent the default behavior of these events using the <code class="inline-code">preventDefault</code> method:</p><pre><code>//script.js
+
+function handleSubmit(<b>event</b>) {
+  <b>event.preventDefault();</b>
+  console.log("handleSubmit function invoked!");
+}</code></pre><p>Lastly we then have our code we wish to invoke whenever the <code class="inline-code">handleSubmit</code> function is called. This, for the time being, is simply to log to the console the phrase "handleSubmit function invoked". We will now implement the logic to add a todo item, and have it render on our HTML page.</p><h2>Adding Todos</h2><p>Firstly we'll need to establish a JavaScript array to hold our todo items in memory. Once this is established, we'll then need to populate this array with our todo string whenever we hit the <em>"Enter"</em> button or click the <em>"Add Todo"</em> button. Finally, every time this event occurs, the array is rendered back to the HTML page in the form of an unordered list. Let's first establish the unordered list in our HTML file. Because this list will be blank at first, we'll simply leave it as a <code class="inline-code">ul</code> element for now:</p><pre><code>&lt;input type="submit" value="Add Todo" class="todo-button" <b>id="add-todo-btn"</b> /&gt;
+<b>&lt;ul id="todo-list"&gt;&lt;/ul&gt;</b></code></pre><p>Let's take a brief moment to stylize our unordered list. Specifically, we'll be targeting any <code class="inline-code">li</code> elements that are created, that way they are somewhat readable when generated and rendered:</p><pre><code>/*styles.css*/
+
+.todo-button:hover {
+  scale: 1.1;
 }
 
-grabPersonsOfLegalAgeFrom(groupOne);
-grabPersonsOfLegalAgeFrom(groupTwo);
-
-console.log(canDrink);</code></pre>
-        <p>The output to this gives us some insights into what is happening. By having a log to the console inside of our <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function, as well as outside of it, we see that the inner logs to the console are actually showing us results:</p>
-        <pre><code>/*
- * returns
- * [
- *   {
- *     name: "Mary",
- *     age: 25
- *   },
- *   {
- *     name: "Louis",
- *     age: 23
- *   }
- * ]
- * and then returns
- * [
- *   {
- *     name: "Clarence",
- *     age: 42,
- *   },
- *   {
- *     name: "Lucy",
- *     age: 24,
- *   }
- * ]
- * and then logs the error:
- * Uncaught ReferenceError: canDrink is not defined
-*/</code></pre>
-        <p>First and foremost, unlike our previous return value, which was all encapsulated within a single array, the inner <code class="inline-code">canDrink</code> array is logged <em>twice</em>: two separate arrays are presented each from the respective original <code class="inline-code">groupOne</code> and <code class="inline-code">groupTwo</code> arrays. The people inside it are indeed over <code class="inline-code">21</code>, but why two arrays?</p>
-        <p>Scope within the JavaScript programming language can be thought of as the <em>context</em> in which variables can be "seen". Prior to our little investigation here, our <code class="inline-code">canDrink</code> array was instantiated inside of what is known as the <em>global scope</em>. This means there are no contexts outside of the one we instantiated it. It is visible to all functions, for loops, if statements, etc. because it was instantiated at the top most level, or "global", scope.</p>
-        <p>When we decided to investigate and see what happened if we instead instantiated the <code class="inline-code">canDrink</code> array inside of the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function, we made the <code class="inline-code">canDrink</code> variable "visible" only within the context of the <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function. This means that the inner <code class="inline-code">for</code> loop and <code class="inline-code">if</code> statement all had access to and could "see" that <code class="inline-code">canDrink</code> exists, but any reference to it outside of the function would be as if we were to try and reference a variable we never declared. In programming, you cannot directly reference a variable that you did not first instantiate. In this case, we cannot reference the <code class="inline-code">canDrink</code> array outside of the function.</p>
-        <p>One might then say, "Ok, so why not just end our little experiment here and just declare <code class="inline-code">canDrink</code> as a global variable?". For the sake of this trivial program, we indeed could do so, but in larger scale applications, it is considered poor practice to declare every variable as a global variable. Global variables indeed exist in nearly every program, but every time we instantiate a variable, we are asking the browser, and by extension, the computer it's running on, to reserve a new place in memory (RAM) to hold onto the reference of our new variable. In a large enough program, if all variables were declared simply in the global scope, the memory footprint of our program would become unnecessary large.</p>
-        <p>Additionally, variables declared in the global scope that do not use the reserved keyword <code class="inline-code">const</code> (more on that in the next article), can be redeclared by any function that has access to the global scope. In other words, if you have multiple programmers working on a single file and one of them accidentally overwrites a global variable, they may throw off all the other functions that reference that variable, thus creating unexpected behavior in our program. Worse yet, our program wouldn't even throw any useful error messages as this is technically viable JavaScript, and thusly it would be difficult to pinpoint where exactly this unexpected behavior was originating from.</p>
-        <p>Please note that one cannot eliminate the use of global variables entirely. It's just good practice to keep the global scope of our programs as clean and concise as possible, ensuring variables are only declared in the global scope when they are to be returned to the user in some form or fashion, or are utilized by too many functions to justify repeatedly encapsulating said variables in multiple local scopes.</p>
-        <p>Ultimately when JavaScript threw this ReferenceError, it was not only letting us know that we didn't have a global variable called <code class="inline-code">canDrink</code>, but it was helping us determine what course of action to take to resolve this error (hopefully in an elegant fashion). Rather than simply reverting back to putting <code class="inline-code">canDrink</code> into the global scope, let's use a <code class="inline-code">return</code> statement within our <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function, and then encapsulate the return values into variables that we can then utilize to return our <code class="inline-code">canDrink</code> array as before:</p>
-        <pre><code>var groupOne = [
-  {
-    name: "Mary",
-    age: 25
-  },
-  {
-    name: "Albert",
-    age: 16
-  },  
-  {
-    name: "Louis",
-    age: 23
-  }
-];
-
-var groupTwo = [
-  {
-    name: "Clarence",
-    age: 42
-  },
-  {
-    name: "Alphonse",
-    age: 12
-  },  
-  {
-    name: "Lucy",
-    age: 24
-  }
-];
-
-function grabPersonsOfLegalAgeFrom(group) {
-  var canDrink = [];
-  for (var i = 0; i &lt;= group.length -1; i++) {
-    var person = group[i];
-    if (person.age &gt; 21) {
-      canDrink.push(person);
-    }
-  }
-  return canDrink;
+<b>.form-container &gt; #todo-list {
+  list-style: none;
+  width: 100%;
+  max-width: 18em;
+  padding: 0;
 }
 
-var personsOfLegalAgeFromGroupOne = grabPersonsOfLegalAgeFrom(groupOne);
-var personsOfLegalAgeFromGroupTwo = grabPersonsOfLegalAgeFrom(groupTwo);
+#todo-list &gt; li {
+  margin: 0.75em 0;
+  padding: 0.25em;
+  border-bottom: 2px solid #000;
+  font-weight: 500;
+}</b></code></pre><p>We'll now create an array called <code class="inline-code">myTodos</code>. For now, this array will live within the global scope of our program, but towards the end of this article, I will point you to a Github repository that will hold a more advanced form of this script for your reference with somewhat better practices involved in its execution. Start a new <code class="inline-code">myTodos</code> array at the top of your <code class="inline-code">script.js</code> file. We'll also instantiate a reference to our <code class="inline-code">todo-list</code> as well:</p><pre> <code>//script.js
 
-var globalCanDrink = personsOfLegalAgeFromGroupOne.concat(personsOfLegalAgeFromGroupTwo);
+const todoInput = document.getElementById("todo-input");
+<b>const todoList = document.getElementById("todo-list");
+const myTodos = [];</b></code></pre><p>Next we'll add the logic that will actually render our todos to the HTML document. Input the following code to the <code class="inline-code">handleSubmit</code> function:</p><pre> <code>//script.js
 
-console.log(globalCanDrink);</code></pre>
-        <p>This is a contrived example, and probably is no better than the prior examples where <code class="inline-code">canDrink</code> was initially declared in the global scope as an empty array. This example, however, demonstrates the use of the <code class="inline-code">return</code> keyword, which is often used when you wish to output a value from a function and then subsequently encapsulate it in another variable (or work with it directly in another function).</p>
-        <p>By returning the <code class="inline-code">canDrink</code> array from our <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function, we are now able to reference that value directly. Often this is more easily managed by declaring a variable that then holds the return value of the invoked function. </p>
-        <p>To hammer home the point let's look at how our calls to <code class="inline-code">grabPersonsOfLegalAgeFrom</code> function have changed. In our previous piece of code, in which the <code class="inline-code">canDrink</code> array was initially declared in the global scope, our calls to <code class="inline-code">grabPersonsOfLegalAgeFrom</code> were simply invoked, <em>pushing</em> the people who's age is over <code class="inline-code">21</code> into the global <code class="inline-code">canDrink</code> array:</p>
-        <pre><code>grabPersonsOfLegalAgeFrom(groupOne);
-grabPersonsOfLegalAgeFrom(groupTwo);</code></pre>
-        <p>Our new version instead encapsulates the returned <code class="inline-code">canDrink</code> array inside two new variables:</p>
-        <pre><code>var personsOfLegalAgeFromGroupOne = grabPersonsOfLegalAgeFrom(groupOne);
-var personsOfLegalAgeFromGroupTwo = grabPersonsOfLegalAgeFrom(groupTwo);</code></pre>
-        <p>And then uses the Array prototype's <code class="inline-code">.concat</code> method to essentially merge/join the two arrays together so that our result is the same as our previous example's. I chose to encapsulate this in a variable called <code class="inline-code">globalCanDrink</code> to ensure that the differentiation from the canDrink's local scope is made overtly clear.</p>
-        <pre><code>var globalCanDrink = personsOfLegalAgeFromGroupOne.concat(personsOfLegalAgeFromGroupTwo);
+function handleSubmit(event) {
+  event.preventDefault();
+  <b>todoList.innerHTML = "";
+  myTodos.unshift(todoInput.value);
+  for (let i = 0; i &lt; myTodos.length; i++) {
+    const newTodo = document.createElement("li");
+    newTodo.textContent = myTodos[i];
+    todoList.appendChild(newTodo);
+  }
+  todoInput.value = "";</b>
+}</code></pre><p>For the new developer, this can be a bit confusing. We'll break it down, don't worry, but first let's take a look at our HTML page and test our Todo App first:</p><figure><img alt="A Screenshot gif demonstrating our working todo application" cite="author screenshot" class="img-image" loading="lazy" src="../assets/images/gifs/all_together_02.gif" title="A Screenshot gif demonstrating our working todo application"></figure><figcaption>Our Todo Application Works!</figcaption><p>Excellent! Now that we have confirmed everything is working as expected, what exactly did we do? This bit of logic introduces a few new concepts, so let's break it down. The first new line we added to our <code class="inline-code">handleSubmit</code> function shows us accessing our <code class="inline-code">todoList</code>'s <code class="inline-code">innerHTML</code> property:</p><pre> <code>//script.js
 
-console.log(globalCanDrink);</code></pre>
-        <p>Finally a call to the console shows our results, which are the same as our original example's:</p>
-        <pre><code>/*
- * returns:
- * [
- *  {
- *    name: "Mary", 
- *    age: 25
- *  },
- *  {
- *    name: "Louise",
- *    age: 23
- *  },
- *  {
- *    name: "Clarence",
- *    age: 42
- *  },
- *  {
- *    name: "Lucy",
- *    age: 24
- *  }
- * ] 
-*/</code></pre>
-        <h1>Conclusion </h1>
-        <p>The subject of JavaScript is so vast that one could spend a lifetime trying to cover it all in detail. The same technically could be said of CSS and even HTML. Ultimately, however, the use of these three tools together are the backbone of the web itself, and it is my opinion that exploring each of these subjects together in the process of making web pages and applications to be the best way to learn each of them, as they were originally designed to work in concert together.</p>
-        <p>In my next article, I will be walking you through a small codebase that exemplifies a basic todo list application. It will utilize many of the concepts we have covered thus far as well as concepts covered in my previous two articles, <a aria-label="a link to the article HTML: The Web's Skeleton" class="inline-link" href="https://brianhayes.dev/blog/html_the_webs_skeleton.html" role="link">HTML: The Web's Skeleton</a>, and <a aria-label="a link to the article CSS: The Web's Makeup" class="inline-link" href="https://brianhayes.dev/blog/css_the_webs_makeup.html" role="link">CSS: The Web's Makeup</a>. Additionally, very basic git commands and other developer tools will be utilized to give you an introduction into the essential workflow of creating a basic interactive web page.</p>
-        <p>I do hope that this introduction to the JavaScript Programming Language has proven insightful and useful to you. Originally my hope was to encapsulate the subject matter into a single article, but as you can see, JavaScript is a vast language, and we haven't even started utilizing it on an acutal web page. I look forward to shedding further light on the topic in the next article, <a aria-label="link to the article: HTML, CSS, and JS" class="inline-link" href="https://brianhayes.dev/blog/javascript_the_webs_muscles#" role="link">HTML, CSS, and JS: All Together</a>.</p>
-      </article>]]></description>
-			<guid isPermaLink="false">https://brianhayes.dev/blog/javascript_the_webs_muscles</guid>
-			<pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+function handleSubmit(event) {
+  event.preventDefault();
+  <b>todoList.innerHTML = "";</b>
+  ...</code></pre><p>This is simply clearing out our unordered list, setting it's <code class="inline-code">innerHTML</code> back to being empty. Recall our related HTML code?:</p><pre><code>&lt;input type="submit" value="Add Todo" class="todo-button" <b>id="add-todo-btn"</b> /&gt;
+<b>&lt;ul id="todo-list"&gt;&lt;/ul&gt;</b></code></pre><p>Our unordered list, <code class="inline-code">todo-list</code>, is initialized as having no elements <em>inside</em> it. There are no <code class="inline-code">&lt;li&gt;</code> elements yet. Whenever we submit a new todo list, if we didn't clear it, it would not only prepend the new todo to the list, but would regenerate our entire code snippet again and print the entire list plus the new item, creating an unncessarily long list of repeated todo items.</p><p>Next we prepend our new todo item to the beginning of our <code class="inline-code">myTodos</code> array using the <code class="inline-code">unshift()</code> method:</p><pre> <code>//script.js
+
+function handleSubmit(event) {
+  event.preventDefault();
+  todoList.innerHTML = "";
+  <b>mytodos.unshift(todoInput.value);</b>
+  ...</code></pre><p>The <code class="inline-code">unshift()</code> method is very similar to the <code class="inline-code">push()</code> method covered in our <a aria-label="a link to our previous article on javascript" class="inline-link" href="https://brianhayes.dev/blog/javascript_the_webs_muscles.html" role="link">previous article on JavaScript</a>. Instead of <em>appending</em> our new item to the end of the <code class="inline-link">myTodos</code> array however, we <em>prepend</em> our new todo item to the beginning of the <code class="inline-code">myTodos</code> array. Perhaps it is self-explanatory, but in order for us to grab the text content of the input the user has in the input field, we need to reference the <code class="inline-code">todoInput</code>'s <code class="inline-code">value</code> property.</p><p>Because the <code class="inline-code">myTodos</code> array is instantiated in the global namespace of our program, it holds onto all todos input in memory. It is important to note that if you refresh the page, this memory is cleared and all todos will be lost. There are many ways to get this data to persist between refreshes, including storing our todos in <a aria-label="a link to mdn's article on localstorage" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" rel="noopener noreferrer" role="link" target="_blank">localstorage</a>, <a aria-label="a link to mozilla's article on web cookies" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" rel="noopener noreferrer" role="link" target="_blank">cookies</a>, or, in more real world examples, a <a aria-label="a link to wikipedia's article on databases" class="inline-link" href="https://en.wikipedia.org/wiki/Database" rel="noopener noreferrer" role="link" target="_blank">database</a>. For now, however, we'll keep it simple and have the <code class="inline-code">myTodos</code> array stand in for these.</p><p>Returning to our <code class="inline-code">handleSubmit</code> function, we now start a <code class="inline-code">for</code> loop, which iterates over our <code class="inline-code">myTodos</code> aray. For each todo element within our <code class="inline-code">myTodos</code> array, we instantiate a new <code class="inline-code">newTodo</code> variable, calling on the <code class="inline-code">document</code>'s <code class="inline-code">createElement()</code> method, and pass it the string <em>"li"</em>. As this syntax indicates, we are creating a new list item. In our HTML document, this would be equivalent to creating an empty <code class="inline-code">&lt;li&gt;</code> element:</p><pre> <code>//script.js
+
+function handleSubmit(event) {
+  event.preventDefault();
+  todoList.innerHTML = "";
+  mytodos.unshift(todoInput.value);
+  <b>for (let i = 0; i &lt; myTodos.length; i++) {
+    const newTodo = document.createElement("li");</b>
+    ...</code></pre><p>We proceed to populate this new <code class="inline-code">&lt;li&gt;</code> element with the text contained within our todo element expressed as <code class="inline-code">myTodos[i]</code>. This is done by defining the value of our <code class="inline-code">newTodo</code> variable's <code class="inline-code">textContent</code> property:</p><pre> <code>//script.js
+
+function handleSubmit(event) {
+  event.preventDefault();
+  todoList.innerHTML = "";
+  mytodos.unshift(todoInput.value);
+  for (let i = 0; i &lt; myTodos.length; i++) {
+    const newTodo = document.createElement("li");
+    <b>newTodo.textContent = myTodos[i];</b>
+    ...</code></pre><p>Finally, we <em>append</em> this new <code class="inline-code">&lt;li&gt;</code> element to our unordered list as a <em>child</em> element. The <code class="inline-code">appendChild()</code> method populates the <code class="inline-code">todoList</code> with text from the <code class="inline-code">myTodos</code> array:</p><pre> <code>//script.js
+
+function handleSubmit(event) {
+  event.preventDefault();
+  todoList.innerHTML = "";
+  mytodos.unshift(todoInput.value);
+  for (let i = 0; i &lt; myTodos.length; i++) {
+    const newTodo = document.createElement("li");
+    newTodo.textContent = myTodos[i];
+    <b>todoList.appendChild(newTodo);</b>
+  }
+  ...</code></pre><p>Inside our HTML page, this would look like this had we written it out by hand:</p><pre> <code>&lt;ul id="todo-list"&gt;
+  &lt;li&gt;"my todo from input"&lt;/li&gt;
+ &lt;/ul&gt;</code></pre><p>To facilitate a better user experience, we also include another line of code that executes once the <code class="inline-code">for</code> loop has completed, which clears the <code class="inline-code">todoInput</code>'s value so the user doesn't have to delete the old todo before entering a new one:</p><pre> <code>//script.js
+
+function handleSubmit(event) {
+  event.preventDefault();
+  todoList.innerHTML = "";
+  mytodos.unshift(todoInput.value);
+  for (let i = 0; i &lt; myTodos.length; i++) {
+    const newTodo = document.createElement("li");
+    newTodo.textContent = myTodos[i];
+    todoList.appendChild(newTodo);
+  }
+  <b>todoInput.value = "";</b>
+}</code></pre><h1>Conclusion</h1><p>Admittedly, a true Todo Application is far more fully featured, and perhaps I will write more on this topic further in future articles. As mentioned in the introduction of this article, a true Todo List Application follows what is known as the <em>Create, Read, Update,</em> and <em>Delete</em> paradigm (commonly known as <em>CRUD</em>), in which we, as the developer, would give the user an interface to not only <em>Create</em> and <em>Read</em> todos (which we have done here), but also to <em>Update</em> and <em>Delete</em> them. The goal of this article, however, was to establish exactly <em>how</em> HTML, CSS, and JavaScript all work together to provide a user with an interactive experience.</p><p>For your reference, I am providing <a aria-label="a link to my repository showing the final version of this todo app" class="inline-link" href="https://github.com/tomit4/app_todo" rel="noopener noreferrer" role="link" target="_blank">this repository</a>, which showcases the final code of this todo application, completing the <em>CRUD</em> paradigm. In addition, the final version of this project utilizes the Browser's native <a aria-label="a link to mdn's article on localstorage" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" rel="noopener noreferrer" role="link" target="_blank">localstorage</a> API to persist the todo list between refreshes (although if you delete cookies on closing your browser, then the local storage is cleared, so be mindful of that).</p><p>I also added a bit of CSS to the final project, including some icons that were downloaded from <a aria-label="link to iconify" class="inline-link" href="https://iconify.design/" rel="noopener noreferrer" role="link" target="_blank">Iconify</a>. If you take a look at the <a aria-label="a link to the styles.css file of the App Todo Project on github" class="inline-link" href="https://github.com/tomit4/app_todo/blob/main/styles.css" rel="noopener noreferrer" role="link" target="_blank">styles.css</a> file in the final version of the project, you'll see how this is accomplished.</p><p>I do wish I could include the entirety of this project within the context of this article, but as it is already quite lengthy (with this article itself being a continuation of the <a aria-label="a link to my previous article on JavaScript" class="inline-link" href="https://brianhayes.dev/blog/javascript_the_webs_muscles.html" role="link">previous article</a>), I don't wish to burden you with another overly lengthy article on the subject, and instead invite you to take a look at <a aria-label="a link to my repository showing the final version of this todo app" class="inline-link" href="https://github.com/tomit4/app_todo" rel="noopener noreferrer" role="link" target="_blank">the final project on Github!</a></p><p>As always, I do hope this was helpful! ☮️</p></article>]]></description>
+			<guid isPermaLink="false">https://brianhayes.dev/blog/all_together</guid>
+			<pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
 		</item>
 <item>
 			<title>Command Line</title>
@@ -893,7 +499,7 @@ video {
   max-width: 100%;
   display: block;
 }&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This .css file obviously includes some CSS selectors that we have not yet covered in this introduction. Let's start simply by breaking down this file line by line. I will forego explaining the first commented out section of this file, as I have already covered what this is earlier in this article.&lt;/p&gt;&lt;p&gt;The asterix, &lt;code class="inline-code"&gt;*&lt;/code&gt;, selector here is what is known in programming circles as a "wildcard" character. It essentially means any and all elements. Since there are no parent selectors preceding it, this wildcard is selecting &lt;em&gt;every&lt;/em&gt; element within the HTML document. Very essentially, &lt;code class="inline-code"&gt;*&lt;/code&gt; is taking every element within the HTML page and changing its uger-agent value for the box-sizing property and changing it from its default, &lt;code class="inline-code"&gt;content-box&lt;/code&gt;, to &lt;code class="inline-code"&gt;border-box&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;The commas following the selectors indicate that the declaration below is to be applied to these selectors as well. In this case, we have another piece of syntax that has yet to be introduced, which is that of psuedo elements, delineated by the double colon syntax, &lt;code class="inline-code"&gt;::&lt;/code&gt;, followed in this case by the &lt;code class="inline-code"&gt;before&lt;/code&gt;, and &lt;code class="inline-code"&gt;after&lt;/code&gt; keywords. To greatly oversimplify what this indicates, these pseudo-elements are elements that don't exist as actual HTML elements within the DOM, but are still capable of being styled by CSS. Visually speaking, these elements will appear as if they are a part of the usual HTML document, but will not affect the overall flow of it. If this sounds confusing to you, do not fret, pseudo-elements are only used in specific scenarios where styling of visual elements are needed to appear before or after specific HTML elements. In this particular case we again, are applying any and all pseudo-elements to be styled to have their &lt;code class="inline-code"&gt;border-sizing&lt;/code&gt; property's value changed to &lt;code class="inline-code"&gt;border-box&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;So why change every element in the HTML document as well as all pseudo-elements to not utilize the default &lt;code class="inline-code"&gt;content-box&lt;/code&gt; value? To understand this in more depth than is presented here, please see MDN's documentation on the &lt;a aria-label="A link to MDN's documentation on the CSS Box Model" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model" rel="noopener noreferrer" role="link" target="_blank"&gt;CSS Box Model&lt;/a&gt;. In brief, however, when changing the width and height of an HTML element within CSS, the adjustments to these property values only are applicable to the content within said element (in most cases, the element's text content). Oftentimes this is not what the majority of web developers want, as they wish to change the width and height of the entire element, including any borders, margins, and padding applied to said element. This change to the &lt;code class="inline-code"&gt;border-box&lt;/code&gt; value for the &lt;code class="inline-code"&gt;box-sizing&lt;/code&gt; property value ensures that the document defaults to what is usually the expected and desired behavior.&lt;/p&gt;&lt;p&gt;Moving on, we encounter the &lt;code class="inline-code"&gt;:root&lt;/code&gt; CSS selector. It is easy to confuse the &lt;code class="inline-code"&gt;:root&lt;/code&gt; pseudo class selector with the &lt;code class="inline-code"&gt;*&lt;/code&gt; selector or the &lt;code class="inline-code"&gt;html&lt;/code&gt; selector. &lt;code class="inline-code"&gt;:root&lt;/code&gt; is utilized here to select the &lt;code class="inline-code"&gt;&amp;lt;html&amp;gt;&lt;/code&gt; tag. Note here that it is used instead of the &lt;code class="inline-code"&gt;html&lt;/code&gt; CSS selector solely because it holds higher precedence within the CSS Cascade (for all intents and purposes they are nearly identical selectors). Within the declaration block, we see that the &lt;code class="inline-code"&gt;color-scheme&lt;/code&gt; property is being set to &lt;code class="inline-code"&gt;light dark&lt;/code&gt;. This essentially tells HTML to respect the browser's preference for either light or dark theme and therefore instructs the browser's CSS parser to coerce any stylings to reflects this preference if available.&lt;/p&gt;&lt;p&gt;Next we have the &lt;code class="inline-code"&gt;body&lt;/code&gt; selector, where we see that the font-family is set to the &lt;code class="inline-code"&gt;system-ui&lt;/code&gt; value. As the value name suggests, this is simply telling the browser to initially set all text to whatever the browser's preference for the font family is.&lt;/p&gt;&lt;p&gt;Additionally the &lt;code class="inline-code"&gt;font-size&lt;/code&gt; property is set to &lt;code class="inline-code"&gt;1.125rem&lt;/code&gt;. Yet another subject not covered previously in this article, this measurement unit, &lt;code class="inline-code"&gt;rem&lt;/code&gt;, is utilized to reference the root element's default font-size. This is contrasted with the unit, &lt;code class="inline-code"&gt;em&lt;/code&gt;, which references the parent element's default font-size. Both these units have similar behaviors, but &lt;code class="inline-code"&gt;rem&lt;/code&gt; can be thought of as being a safer bet for default stylings when there are compounding font-size changes over many nested elements within an HTML document.&lt;/p&gt;&lt;p&gt;Lastly, the &lt;code class="inline-code"&gt;line-height&lt;/code&gt; property is changed to &lt;code class="inline-code"&gt;1.5&lt;/code&gt;, which simply adjusts from the default &lt;code class="inline-code"&gt;line-height&lt;/code&gt; of &lt;code class="inline-code"&gt;1&lt;/code&gt; so that the text has a bit more breathing room for each line (&lt;code class="inline-code"&gt;1&lt;/code&gt; tends to leave little space inbetween lines).&lt;/p&gt;&lt;p&gt;Moving onto the &lt;code class="inline-code"&gt;main&lt;/code&gt; selector, we find a very sane default for the width property, which utilizes the min() CSS function. We didn't cover CSS functions (and indeed, haven't covered the basics of programming functions in general), but the concepts in this case are relatively straight forward. Demarcated by comma separated values, the min() function takes two arguments, the first being the minimum value passed to the width property. In this case, each line of text within the &lt;code class="inline-code"&gt;main&lt;/code&gt; selector, will be a minimum of &lt;code class="inline-code"&gt;70ch&lt;/code&gt;, or 70 characters, long. The second argument, expressed as &lt;code class="inline-code"&gt;100% - 4rem&lt;/code&gt;, basically tells the browser that the widest any block of text within the &lt;code class="inline-code"&gt;main&lt;/code&gt; selector can be is 100% of the width of the browser window, but subtract 4rem from that to find the maximum width the content can be. The &lt;code class="inline-code"&gt;margin-inline&lt;/code&gt; property takes the &lt;code class="inline-code"&gt;auto&lt;/code&gt; value to indicate that the inline margins (side margins) should be automatically calculated. Thanks to the width property's min() function's return value, the margin surrounding this content will conform to this defined range.&lt;/p&gt;&lt;p&gt;Finally we move onto the &lt;code class="inline-code"&gt;img&lt;/code&gt;, &lt;code class="inline-code"&gt;svg&lt;/code&gt;, and &lt;code class="inline-code"&gt;video&lt;/code&gt; selectors. What these are in reference to is somewhat self explanatory, but essentially we are referencing all HTML visual elements that refer to images (i.e. &lt;code class="inline-code"&gt;&amp;lt;img&amp;gt;&lt;/code&gt;), &lt;code class="inline-code"&gt;&amp;lt;svg&amp;gt;&lt;/code&gt; elements (otherwise known as scalable vector graphics), and also the &lt;code class="inline-code"&gt;&amp;lt;video&amp;gt;&lt;/code&gt; element (self-explanatory). The defaults changed here are subtle, essentially the width of the video is limited to being &lt;code class="inline-code"&gt;100%&lt;/code&gt; of the &lt;code class="inline-code"&gt;max-width&lt;/code&gt; property, ensuring that all images, svg elements, and videos never exceed 100% width of the browser window size (preventing content overflow), and additionally the &lt;code class="inline-code"&gt;display&lt;/code&gt; property is set to &lt;code class="inline-code"&gt;block&lt;/code&gt;, essentially starting all new images, svgs, and videos on new lines instead of visually adjacent (i.e. horizontally oriented/side by side) to other HTML elements.&lt;/p&gt;&lt;p&gt;As I initially mentioned in the opening paragraph to this section, these are just a &lt;em&gt;few&lt;/em&gt; of sane defaults that can be found throughout the internet in regards to default author stylings for css documents. I encourage you to go looking for others as there are some css default sheets that can get quite extensive. Personally, I've found this is enough for me, but you might desire to have others depending on your goals and work flow.&lt;/p&gt;&lt;h1&gt;Conclusion&lt;/h1&gt;&lt;p&gt;Hopefully this introduction to Cascading Style Sheets has proved to be of some use to you. This article just barely scratches the surface of what is possible just with HTML and CSS, let alone JavaScript. If you are inclined to do further research into CSS, I would highly recommend you to look at the official MDN documentation on &lt;a aria-label="A link to the Offical MDN documentation on CSS basics" class="inline-link" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" rel="noopener noreferrer" role="link" target="_blank"&gt;CSS Basics&lt;/a&gt;, as well as the highly acclaimed &lt;a aria-label="A link to the CSS Tricks website" class="inline-link" href="https://css-tricks.com/" rel="noopener noreferrer" role="link" target="_blank"&gt;CSS Tricks website&lt;/a&gt;. These resources have proved to be immensely valuable in my endeavors when creating web pages, and I am sure they will serve you as well.&lt;/p&gt;&lt;p&gt;We have now covered The HyperText Markup Language, a skeletal scaffolding onto which we can apply Cascading Style Sheets, a beautiful mask of makeup applied to this structure. But much like Pygmalion wishing for his creation to come to life, web developers are left only with a beautiful, but still immobile, statue. Only when we apply the magic of that ubiquitous programming language, JavaScript, can our creation be given &lt;a aria-label="link to article, javascript the web's muscles" class="inline-link" href="https://brianhayes.dev/blog/javascript_the_webs_muscles.html" role="link"&gt;Muscles&lt;/a&gt;, and come to life.&lt;/p&gt;&lt;/article&gt;</description>
-			<guid isPermaLink="false">https://brianhayes.dev/blog/css_the_webs_makeup</guid>
+			<guid isPermaLink="false">https://brianhayes.dev/blog/javascript_the_webs_muscles.html</guid>
 			<pubDate>Tue, 07 Nov 2023 00:00:00 +0000</pubDate>
 		</item>
 <item>
