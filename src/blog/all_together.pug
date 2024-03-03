@@ -70,10 +70,10 @@ html(lang = "en")
                 h2 The Setup
                 p Getting up and running for this tutorial should be relatively straight forward if you've read my previous articles. First, you'll need to make a directory in which your To Do Application will live. Go ahead and, from the command line, create a new directory called "app_todo" and navigate into it:
                 pre
-                    code #bash&#10&#10mkdir app_todo && cd app_todo
+                    code #bash&#10&#10[ ~]$ mkdir app_todo && cd app_todo
                 p From here you'll want to make three files, index.html, styles.css, and script.js:
                 pre
-                    code #bash&#10&#10touch index.html styles.css script.js
+                    code #bash&#10&#10[ ~]$ touch index.html styles.css script.js
                 p Now open up index.html in your text editor of choice and enter the following:
                 pre
                     code &lt!DOCTYPE html&gt&#10&lthtml lang="en"&gt&#10  &lthead&gt&#10    &lttitle&gtApp ToDo&lt/title&gt&#10    &ltmeta charset="UTF-8" /&gt&#10    &ltmeta name="viewport" content="width=device-width, initial-scale=1" /&gt&#10    &ltmeta name="description" content="A Basic ToDo Application" /&gt&#10    &ltlink type="text/css" href="./styles.css" rel="stylesheet" /&gt&#10  &lt/head&gt&#10  &ltbody&gt&#10    &ltmain&gt&#10      &lth1&gtApp ToDo&lt/h1&gt&#10    &lt/main&gt&#10  &lt/body&gt&#10  &ltscript type="text/javascript" src="./script.js" default defer&gt&lt/script&gt&#10&lt/html&gt&#10
@@ -85,7 +85,7 @@ html(lang = "en")
                     code //script.js&#10&#10console.log("Hello World!");
                 p Once you've finished, go ahead and use live-server (either from the <a class="inline-link" aria-label="a link to the live-server github repository" target="_blank" rel="noopener noreferrer" role="link" href="https://github.com/tapio/live-server">command line</a> or from within VSCode using the <a class="inline-link" aria-label="a link to the visualstudio marketplace's live server extension" target="_blank" rel="noopener noreferrer" role="link" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">the extension</a>) to start your development server. I personally use the command line to do so from within my project directory like so:
                 pre
-                    code #bash&#10&#10live-server .
+                    code #bash&#10&#10[ ~l$ live-server .
                 p This should automatically open up your browser on your localhost and show you the basic webpage you've just created with these three files. Open up your devtools as well once the browser is open by hitting the F12 key. If all is configured properly, you should see your HTML page with some very basic CSS stylings (from the styles.css file) and in your developer's console page, you should see the "Hello World!" message (from the scripts.js file). Your browser/devtools setup should look something like this:
 
                 figure
