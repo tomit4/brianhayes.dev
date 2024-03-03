@@ -1,8 +1,48 @@
 [rsspls]
-output = "your/output/directory/here"
+output = "/your/output/directory/here"
+[[feed]]
+title = "All Together: HTML, CSS, and JS In Unison"
+filename = "feed.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/all_together"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+date = "time"
+[[feed]]
+title = "JavaScript: The Web's Muscles"
+filename = "feed.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/javascript_the_webs_muscles"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+date = "time"
+[[feed]]
+title = "CSS: The Web's Makeup"
+filename = "css_the_webs_makeup.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/css_the_webs_makeup"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+date = "time"
+[[feed]]
+title = "HTML: The Web's Skeleton"
+filename = "html_the_webs_skeleton.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/html_the_webs_skeleton"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+date = "time"
 [[feed]]
 title = "The ReadMe"
-filename = "feed.rss"
+filename = "the_readme.rss"
 [feed.config]
 url = "https://brianhayes.dev/blog/the_readme"
 item = ".container"
