@@ -61,11 +61,11 @@ html(lang = "en")
                     div.quote_author -Brian Kernighan
 
             article.demo-button
-                h1 Introduction
+                h1#introduction Introduction
                 p Learning to Program can be an intimidating venture. Not only is there a plethora of programming languages, libraries, frameworks, text editors, and more, there is also the overwhelming amount of opinions amongst more experienced programmers one might consider when deciding between which of these tools is best. Navigating all of this is no easy task and it is something I still struggle with when examining a field of software development I have little knowledge of (pretty much all of it).
                 p How does one know which text editor to choose? Which programming language should I learn first? Should I use MacOS or Windows? (hint: neither). One of the more uncommon (although not necessarily rare) questions asked amongst beginner developers is, which shell should I use?
                 p Before I dive into this topic, I feel like it may be prudent to address the simple question of:
-                h2 What Is A Shell?
+                h2#what-is-a-shell What Is A Shell?
                 p If you have done any amount of beginner programming, systems administration, database management, or other computer related work, it is likely you have already interacted with The Terminal (Emulator), The Command Line and its close companion, The Shell. I shall very briefly address what each of these are, and why, together, they are the most important tool for anyone interested in interacting with computers at any meaningful level.
                 p In Windows, it is known as The Command Prompt(or Powershell), in MacOS it is known as The Terminal, and in Linux and BSD, it is also known simply as the Terminal. The history of the terminal is extensive, and I would only doing you a disservice to you were I to attempt to explain it in depth to you. For the sake of brevity, I shall simply explain how The Command Line and shell pertain to you, the prospective Computer Programmer, and why it is so important for all programmers to become familiar with it.
                 p If you were to open up Command Prompt in Windows, or the Terminal in MacOS, you would be presented with a black (or blue) colored screen, usually prefaced by a series of characters known as a prompt, and a cursor indicating the program is awaiting you to type something (to provide input via the keyboard). To the uninitiated, this is intimidating, especially after inputting something and getting a mean looking error message (oftentimes highlighted in red). I must admit, whenever anyone who is unfamiliar with computers has seen me working in the terminal, they have often thrown around terms like "hacker," which I find to be so funny, because it simply shows how the mainstream media has failed to portray technology in an accurate light (save for modern exceptions like Mr. Robot, Halt and Catch Fire, and Silicon Valley). Although hackers do indeed use the command line, so do nearly all computer related professions!
@@ -101,7 +101,7 @@ html(lang = "en")
                    img.img-image(src="../assets/images/screenshots/redirection_01.webp" alt="results of the cat command on a file" title="results of the cat command on a file" cite="author screenshot" loading="lazy")
                 figcaption Example Results Of The "cat" Commmand On A File
                 p We'll see that indeed, the text 'this text is inputted from the command line' is indeed there. What is happening here?
-                h2 Redirection Basics
+                h2#redirection-basics Redirection Basics
                 p Well just like every problem in programming, we divide the program up into sizeable chunks, and explain each part to the best of our abilities (and hopefully our peers very kindly correct us if we are wrong).
                 p Firstly, what does echo do? Well if you researched my list up above a bit, you'll know that the first recommended command was the 'man' command. Why? well it's the manual of course! Any command you wish to know more about can be investigated by invoking 'man' before the command you wish to know more about, if you type:
                 pre
@@ -122,7 +122,7 @@ html(lang = "en")
                 figcaption Using The "&#62&#62" Operator Appends Text When Used With "echo"
                 p If you wish to research one of the most powerful operators in bash, research the pipe ('|') operator!
                 p Hopefully at this point, you are starting to understand the role of the shell and the command line a bit better. For this next example, I am going to demonstrate how many programs have a command line interface with which one may interact, or at least initialize, a program, be it a Graphical or Terminal based application.
-                h2 The Power Of The Shell
+                h2#the-power-of-the-shell The Power Of The Shell
                 p One of the first epiphanies for me regarding the terminal was when I realized I could invoke pretty much any program in my operating system with simple commands. If I wished to open my browser (librewolf), I simply had to type into the terminal its name:
                 figure
                    img.img-image(src="../assets/images/screenshots/librewolf.webp" alt="librewolf browser being called from the bash shell" title="librewolf browser being called from the bash shell" cite="author screenshot" loading="lazy")
@@ -134,7 +134,7 @@ html(lang = "en")
                     code &#35timeshift_commands.txt&#10&#10- timeshift --create&#10- timeshift --delete&#10- timeshift --list&#10- timeshift --restore
                 p And every once in a while, after an update on my system, I would invoke the 'timeshift create' command to create a snapshot of my current system. Timeshift has occasionally saved me from big mistakes I've made, and is a good piece of software.
                 p The reason I point this out is that even though timeshift isn't a part of the shell as a subject, I am simply pointing it out as a practical example of when utilizing the text interface of Timeshift's CLI, via the shell, became more useful to me than interfacing with the GUI version. This became even more the case when I discovered the existence of shell aliases.
-                h2 A Rose By Any Other Name
+                h2#a-rose-by-any-other-name A Rose By Any Other Name
                 p Of course, I've provided you now with the knowledge of how to do your own research regarding any command, so be sure to pull up:
                 pre
                     code &#35bash shell&#10[ ~]$ man alias
@@ -153,7 +153,7 @@ html(lang = "en")
                 pre
                     code &#35.bashrc &#10&#35!/usr/bin/env bash &#10&#10alias tshift="sudo timeshift --delete && sudo timeshift --create && sudo timeshift --list"
                 p As you can see, tshift is far less characters to type, and it is a very handy, but very simple, alias I have created for myself. (if you are on Linux and unfamiliar with the sudo command, please see the man pages for sudo, if you are on MacOs, a simple query into your favorite search engine I am sure will yield good results).
-                h1 Conclusion
+                h1#conclusion Conclusion
                 p Aliases is where I leave this short introduction to the Command Line and shell. It is at this point that the subject of BASH scripting should be covered, and that is an extensive topic of its own.
                 p I do hope that you have now gained a better understanding and appreciation for the command line and the shell. The shell provides a direct, unobfuscated, and elegantly simple interface through which all computer users can accomplish more with less, and is one of the best tools you can become familiar with. So get comfy in it!
             div.foot-arrows
