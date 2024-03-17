@@ -231,14 +231,16 @@ I also wanted to learn the basics of NGINX, Docker, and already had purchased a 
 
 **TODO:**
 
--   [ ] Fix UI bug with images in blog posts being wrong margin (too far right)
+-   [x] Fix UI bug with images in blog posts being wrong margin (too far right)
+-   [ ] Use mp4 video instead of gifs for quick screen captured blog animations,
+        much smaller file size and better quality
 -   [ ] Fix UI bug with Portfolio page margins of content being too far right...
 -   [ ] Implement Pre Commit Git Hook for minify script
 -   [ ] Recreate dockerify script to instead use docker-compose
 -   [ ] Adjust hover tooltips to have aria-hidden="true" attribute (hides from screen readers)
 -   [ ] Add aria-controls to all buttons indicating what the button is doing to those using screen readers
 -   [x] Create a custom 404 Not Found Page and redirect it utilizing NGINX (see wittcode's easy guide)
--   [ ] Integrate [Goatcounter](https://www.goatcounter.com/) (google analytics alternative)
+-   [x] Integrate [Goatcounter](https://www.goatcounter.com/) (google analytics alternative)
 
 **Blog Post Ideas (not a preview)**
 
