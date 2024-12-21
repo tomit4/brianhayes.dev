@@ -3,3 +3,4 @@ nginx_sample.conf
 .env
 *.vim
 *.report.html
+drafts
