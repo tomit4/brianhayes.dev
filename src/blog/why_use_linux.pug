@@ -38,11 +38,11 @@ html(lang = "en")
                 li.nav-text-items(role="none")
                     div.nav-text-item#text-blog(aria-label="blog-text" role="none") blog
                 li.nav-text-items(role="none")
-                    div.nav-text-item#text-rss(aria-label="rss-text" role="none") rss 
+                    div.nav-text-item#text-rss(aria-label="rss-text" role="none") rss
         div.container.fadein
             div.arrows
-                a.icons#left-arrow(aria-label="previous" role="navigation" href="./musings_on_vim.html")
-                a.icons#right-arrow(aria-label="next" role="navigation" href="./command_line.html")
+                a.icons#left-arrow(aria-label="previous" role="navigation" href="./command_line.html")
+                a.icons#right-arrow(aria-label="next" role="navigation" href="./musings_on_vim.html")
             div.arrows-text
                 span.arrow-text#text-left-arrow prev
                 span.arrow-text#text-right-arrow next
@@ -50,8 +50,10 @@ html(lang = "en")
                 div.title-card
                     header Why Use Linux
                     div.subtitle Learning To Love The Penguin
-                    div.aside Published on 
+                    div.aside Published on
                         time(datetime="2022-11-06") 2022-11-06
+                    div.edited-aside Last Edited on
+                        time(datetime="2025-04-08") 2025-04-08
                 picture(role="img")
                     source(media="(min-width: 62.5em)" srcset="../assets/images/intro_images/gentoo_penguin_desktop.jpg")
                     source(media="(min-width: 37.5em)" srcset="../assets/images/intro_images/gentoo_penguin_tablet.jpg")
@@ -162,7 +164,7 @@ html(lang = "en")
                 figcaption If All Went Well, You Should See A Login Screen
                 p Once logged in, you should see the Linux Mint Cinnamon Desktop Environment, which is now running natively on your hardware. Congratulations! You have successfully installed Linux!
                 h2#on-updating On Updating
-                p I will complete this article more or less here with one last bit of advice. Utilizing Linux generally involves interacting with the terminal (at least occassionally for casual users). Unlike Windows or MacOs, there are no automatic updates, you choose when you wish to update your software. Upon initial installation, it is always recommended to update your software. You can do this by navigating to the terminal application from your Launch Menu (located on the bottom left hand side of your desktop).
+                p I will complete this article more or less here with one last bit of advice. Utilizing Linux generally involves interacting with the terminal (at least occassionally for casual users). Unlike Windows or MacOs, there are no automatic updates. <em>You</em> choose when you wish to update your software. Upon initial installation, it is always recommended to update your software. You can do this by navigating to the terminal application from your Launch Menu (located on the bottom left hand side of your desktop).
                 p Open up the Terminal and enter the following command to update your newly installed Linux Operating System:
                 pre
                     code &#35bash shell&#10[~]$ sudo apt update && sudo apt upgrade

@@ -2,7 +2,7 @@
 
 # Function to minify HTML files
 minify_html() {
-    html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true "$1" -o "$1"
+    html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css false --minify-js false --ignore-custom-fragments "<pre><code[\\s\\S]*?<\\/code><\\/pre>" "$1" -o "$1"
 }
 
 # Function to minify CSS files
@@ -26,9 +26,9 @@ for file in "${html_files[@]}"; do
 done
 # Loop over CSS files and minify them
 for file in "${css_files[@]}"; do
-    minify_html "$file"
+    minify_css "$file"
 done
 # Loop over JS files and minify them
 for file in "${js_files[@]}"; do
-    minify_html "$file"
+    minify_js "$file"
 done

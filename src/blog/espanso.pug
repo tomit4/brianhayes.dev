@@ -38,11 +38,11 @@ html(lang = "en")
                 li.nav-text-items(role="none")
                     div.nav-text-item#text-blog(aria-label="blog-text" role="none") blog
                 li.nav-text-items(role="none")
-                    div.nav-text-item#text-rss(aria-label="rss-text" role="none") rss 
+                    div.nav-text-item#text-rss(aria-label="rss-text" role="none") rss
         div.container.fadein
             div.arrows
-                a.icons#left-arrow(aria-label="previous" role="navigation" href="./git_basics.html")
-                a.icons#right-arrow(aria-label="next" role="navigation" href="./ortholinear_keyboards.html")
+                a.icons#left-arrow(aria-label="previous" role="navigation" href="./ortholinear_keyboards.html")
+                a.icons#right-arrow(aria-label="next" role="navigation" href="./git_basics.html")
             div.arrows-text
                 span.arrow-text#text-left-arrow prev
                 span.arrow-text#text-right-arrow next
@@ -50,8 +50,10 @@ html(lang = "en")
                 div.title-card
                     header Espanso
                     div.subtitle Expand Your Text
-                    div.aside Published on 
+                    div.aside Published on
                         time(datetime="2023-01-11") 2023-01-11
+                    div.edited-aside Last Edited on
+                        time(datetime="2025-04-08") 2025-04-08
                 picture(role="img")
                     source(media="(min-width: 62.5em)" srcset="../assets/images/intro_images/balloon_over_luxor_desktop.jpg")
                     source(media="(min-width: 37.5em)" srcset="../assets/images/intro_images/balloon_over_luxor_tablet.jpg")
@@ -95,7 +97,7 @@ html(lang = "en")
                 pre
                     code &#35base.yml&#10&#10- trigger: ";cll"&#10  replace: "console.log()"
                 p Note that instead of using the colon, I opted to use the semicolon for my custom espanso aliases as the likelihood of typing out anything directly after a semicolon is even less likely than after a colon (especially if using Vim in command mode). While this might seem trivial at first, if anyone has ever debugged a JavaScript file using this most basic of tools, one can see how useful this could be.
-                p Within JavaScript (or any programming language), there are many times one can find themselves writing various words or series of code blocks over and over again, here a few examples of what I have written in my espanso config to occasionally speed this up:
+                p Within JavaScript (or any programming language), there are many times one can find themselves writing various words or series of code blocks over and over again, here are a few examples of what I have written in my espanso config to occasionally speed this up:
                 pre
                     code &#35base.yml&#10&#10- trigger: ";for&#10  replace: "for (;;) {}"&#10&#10- trigger: ";while"&#10  replace: "while () {}"&#10&#10- trigger: ";if"&#10  replace: "if () {}"&#10&#10- trigger: ";elif"&#10  replace: "else if () {}"&#10&#10- trigger: ";else"&#10  replace: "else {}"&#10&#10- trigger: ";$"&#10  replace: "`${}`"&#10&#10- trigger: ";do"&#10  replace: "do {} while{}"&#10&#10- trigger: ";func"&#10  replace: "function () {}"&#10&#10- trigger: ";=>"&#10  replace: "() => {}"&#10&#10- trigger: ";try"&#10  replace: "try {} catch(error) {}"
                 p Okay, so what about use outside of the terminal? Well in writing any website, any good web developer will be typing either "127.0.0.1:" or "localhost:" a lot, right? Well why not use this espanso alias instead?:

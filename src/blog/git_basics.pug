@@ -38,11 +38,11 @@ html(lang = "en")
                 li.nav-text-items(role="none")
                     div.nav-text-item#text-blog(aria-label="blog-text" role="none") blog
                 li.nav-text-items(role="none")
-                    div.nav-text-item#text-rss(aria-label="rss-text" role="none") rss 
+                    div.nav-text-item#text-rss(aria-label="rss-text" role="none") rss
         div.container.fadein
             div.arrows
-                a.icons#left-arrow(aria-label="previous" role="navigation" href="./the_readme.html")
-                a.icons#right-arrow(aria-label="next" role="navigation" href="./espanso.html")
+                a.icons#left-arrow(aria-label="previous" role="navigation" href="./espanso.html")
+                a.icons#right-arrow(aria-label="next" role="navigation" href="./the_readme.html")
             div.arrows-text
                 span.arrow-text#text-left-arrow prev
                 span.arrow-text#text-right-arrow next
@@ -50,8 +50,10 @@ html(lang = "en")
                 div.title-card
                     header Git Basics
                     div.subtitle Understanding Version Control
-                    div.aside Published on 
+                    div.aside Published on
                         time(datetime="2023-01-11") 2023-01-11
+                    div.edited-aside Last Edited on
+                        time(datetime="2025-04-08") 2025-04-08
                 picture(role="img")
                     source(media="(min-width: 62.5em)" srcset="../assets/images/intro_images/tree_desktop.jpg")
                     source(media="(min-width: 37.5em)" srcset="../assets/images/intro_images/tree_tablet.jpg")
@@ -94,7 +96,7 @@ html(lang = "en")
                 p So, returning to our initial example, we have a 'hello.js' file, in a project directory under the same name as our project name from before, "my_awesome_js_project". Let's initialize a Git repository inside of this directory by typing into the terminal:
                 pre
                     code &#35bash shell&#10[ ~]$ git init
-                p Great, you should receive a brief message that covers the initialization of your project. If you look around using the "ls" command, however, you'll find that there aren't any new files...or are there? If you then try the "ls" command with the "-a" flag, you'll see that we now have a hidden ".git" directory. You shouldn't need to access this directory as a beginner, but it's good to know it's there in case you do need to make some direct modifications to your Git configuration.
+                p Great, you should receive a brief message that covers the initialization of your project. If you look around using the "<code class="inline-code">ls</code>" command, however, you'll find that there aren't any new files...or are there? If you then try the "<code class="inline-code">ls</code>" command with the "<code class="inline-code">-a</code>" flag, you'll see that we now have a hidden "<code class="inline-code">.git</code>" directory. You shouldn't need to access this directory as a beginner, but it's good to know it's there in case you do need to make some direct modifications to your Git configuration.
                 p Continuing on, let's add some basic files to our repository. While we do have our "hello.js" file, it's always a good practice to have a README.md file in our repository. Github will present this README to anyone who navigates to your project via Github, and it's generally a good idea to provide some basic documentation about our project to those who take a look at it. Let's create a very basic README.md via the command line per the suggestion on Github like so:
                 pre
                     code &#35bash shell&#10[ ~]$ echo "# my_awesome_js_project" >> README.md
@@ -111,10 +113,10 @@ html(lang = "en")
                 p Finally, we'll configure Git to send our changes to our Github repository using the following command:
                 pre
                     code &#35bash shell&#10[ ~]$ git remote add origin https://github.com/'your_name'/my_awesome_js_project.git
-                p This saves your remote Github repository in the .git directory's config file allowing you to quickly send your changes to Github. Let's send it off to Github now:
+                p This saves your remote Github repository in the <code class="inline-code">.git</code> directory's config file allowing you to quickly send your changes to Github. Let's send it off to Github now:
                 pre
                     code &#35bash shell&#10[ ~]$ git push -u origin main
-                p You'll be asked to enter your login credentials. Github no longer uses passwords and instead requires use of either a Personal Access Token(PAT) or an SSH key to make changes to your repository. The set up for these are well documented, but can be somewhat intimidating for a new user. While I recommend setting up an <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account"> SSH key</a>, you can also set up a <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token"> PAT</a> for this purpose as well.
+                p You'll be asked to enter your login credentials. Github no longer uses passwords and instead requires use of either a Personal Access Token (PAT) or an SSH key to make changes to your repository. The set up for these are well documented, but can be somewhat intimidating for a new user. While I recommend setting up an <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account"> SSH key</a>, you can also set up a <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token"> PAT</a> for this purpose as well.
                 p Once you've entered your credentials, a short message letting you know of your successful push to your repository will display in your terminal emulator. Refresh the repository page on Github and you'll see that your project is now up and running.
                 figure
                     img.img-image(src="../assets/images/screenshots/ss_github_02.webp" alt="Initial Repository Instantiation Page" title="Initial Repository Instantiation Page" cite="author screenshot" loading="lazy")
@@ -143,7 +145,7 @@ html(lang = "en")
                 figcaption The Github Repository Is Now Updated
                 p As you can see, our update is reflected next to our hello.js file on our repository page. At this point, you will have a very basic understanding about how to use Git. Now I'll cover some other useful aspects.
                 h2#git-log-and-reverting-back Git Log And Reverting Back
-                p You can see changes pushed to your Git repository locally by invoking Git's builtin log:
+                p You can see changes pushed to your Git repository locally by invoking Git's built in log:
                 pre
                     code &#35bash shell&#10[ ~]$ git log
                 p Invoking git log will show you the history of the project for every commit you make. This output is useful should you wish to revert back to one of your previous commits, or simply wish to review the history of a project. Since you only currently have two commits, let's cover how to simply revert back by one commit using the information presented here at git log.
@@ -151,10 +153,10 @@ html(lang = "en")
                 p Now enter into the command line:
                 pre
                     code &#35bash shell&#10[ ~]$ git reset --hard 'unique-identifier-goes-here'
-                p Keep in mind that this will only change your local repository, and nothing will have changed on your remote over at Github. If you wish to revert the remoterepository as well, you can do so by using git push with the -f or --force option:
+                p Keep in mind that this will only change your local repository, and nothing will have changed on your remote over at Github. If you wish to revert the remote repository as well, you can do so by using <code class="inline-code">git push</code> with the <code class="inline-code">-f</code> or <code class="inline-code">--force</code> option:
                 pre
                     code &#35bash shell&#10[ ~]$ git push --force
-                p Keep in mind that using --force is considered to be somewhat overbearing, and you should always heavily consider the ramifications of using this option on a collaborative project, as you can accidentally overwrite another contributor's code. This is why when working on non-trivial projects it is always a good idea to <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging"> create a different branch</a>.
+                p Keep in mind that using <code class="inline-code">--force</code> is considered to be somewhat overbearing, and you should always heavily consider the ramifications of using this option on a collaborative project, as you can accidentally overwrite another contributor's code. This is why when working on non-trivial projects it is always a good idea to <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging"> create a different branch</a>.
                 h2#conclusion Conclusion
                 p Whatever your preferences regarding text editors, desktop environments, or operating systems, using Git as a version control system is an essential skill for the modern day software developer. Even though there are other version control systems out there, Git has become ubiquitous with version control. It is essential that if you are just starting out with software development that you become familiar with Git and its many features, as they will inevitably become a part of your daily workflow.
                 p As an aside, there are far more features of Git than what is covered here in this article, so please see the <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://git-scm.com/doc"> official documentation</a> for more information.  Additionally, there are many pieces of software that make working with Git less cumbersome than what is available at the standard command line. Some of these projects include <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://github.com/jesseduffield/lazygit"> lazygit</a>, <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://github.com/cli/cli">Github's offical CLI tool</a>, and for those of you who use Vim, there is <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://github.com/tpope/vim-fugitive"> Vim-Fugitive</a>.

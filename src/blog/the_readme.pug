@@ -38,11 +38,11 @@ html(lang = "en")
                 li.nav-text-items(role="none")
                     div.nav-text-item#text-blog(aria-label="blog-text" role="none") blog
                 li.nav-text-items(role="none")
-                    div.nav-text-item#text-rss(aria-label="rss-text" role="none") rss 
+                    div.nav-text-item#text-rss(aria-label="rss-text" role="none") rss
         div.container.fadein
             div.arrows
-                a.icons#left-arrow(aria-label="previous" role="navigation" href="./html_the_webs_skeleton.html")
-                a.icons#right-arrow(aria-label="next" role="navigation" href="./git_basics.html")
+                a.icons#left-arrow(aria-label="previous" role="navigation" href="./git_basics.html")
+                a.icons#right-arrow(aria-label="next" role="navigation" href="./html_the_webs_skeleton.html")
             div.arrows-text
                 span.arrow-text#text-left-arrow prev
                 span.arrow-text#text-right-arrow next
@@ -50,8 +50,10 @@ html(lang = "en")
                 div.title-card
                     header The ReadMe
                     div.subtitle Documentation For Beginners
-                    div.aside Published on 
+                    div.aside Published on
                         time(datetime="2022-11-06") 2022-11-06
+                    div.edited-aside Last Edited on
+                        time(datetime="2025-04-08") 2025-04-08
                 picture(role="img")
                     source(media="(min-width: 62.5em)" srcset="../assets/images/intro_images/reader_desktop.jpg")
                     source(media="(min-width: 37.5em)" srcset="../assets/images/intro_images/reader_tablet.jpg")
@@ -70,13 +72,13 @@ html(lang = "en")
                 h2#the-basic-readme The Basic Readme
                 p The README is a document that one can think of as being the entry point to learning about and using a piece of software. Oftentimes this document provides instructions on installation, basic usage, and configuration. Sometimes multiple READMEs are provided on more extensive projects to help developers extend, debug, and manage a piece of software.
                 p Not including a README, even when working on a trivial or basic project, is considered poor etiquette, as having no README leaves any potential user or developer with absolutely no information about what lies within the project, and indicates that the project maintainer doesn't care about the project, or at least, doesn't care to provide documentation. Very simply, it is always a good idea to provide at least a basic README when creating a project.
-                p Although a README can be written in plain text or even HTML, the markdown language has become the standard for writing READMEs, as it provides a quick way to create formatted text that is well presented to the reader. READMEs are traditionally capitalized so that the 'ls' command prioritizes its display, and the .md appended to the end of the README indicative that the document is written in markdown.
+                p Although a README can be written in plain text or even HTML, the markdown language has become the standard for writing READMEs, as it provides a quick way to create formatted text that is well presented to the reader. READMEs are traditionally capitalized so that the '<code class="inline-code">ls</code>' command prioritizes its display, and the .md appended to the end of the README indicative that the document is written in markdown.
                 h2#the-markdown-language The Markdown Language
                 p Anyone familiar with The HyperText Markup Language, commonly known as HTML, will find themselves comfortable working in Markdown, as many pieces of Markdown are interchangeable with classic HTML elements, just expressed differently.
                 p In certain circumstances, the Markdown language is even more powerful than HTML, as it can very quickly represent tables, graphs, checkboxes, and other common presentation elements in a way that is easier to read and requires fewer typed characters to express them.
                 p For the remainder of this blog post, I will cover how to create a standard README for a software project. While Markdown has many extensive features such as presentation graphs and tables, I will solely be covering the basics for the sake of brevity and this is only meant as an introduction. Should you desire to explore what other features the Markdown language has to offer, I advise you to take a look at the <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://www.markdownguide.org/">official guide</a>.
                 h2#getting-started Getting Started
-                p At the end of the day, Markdown is simply an extension upon a plain text document, so one can get started working in it right away. Navigate to the base of a project you'd like to write a README for (or just create a test directory), and let's create one from the command line using the touch command:
+                p At the end of the day, Markdown is simply an extension upon a plain text document, so one can get started working in it right away. Navigate to the base of a project you'd like to write a README for (or just create a test directory), and let's create one from the command line using the <code class="inline-code">touch</code> command:
                 pre
                     code &#35bash shell&#10[~]$ touch README.md
                 p Next we'll open up our newly created README.md file in our favorite text editor and start documenting our project. I'll be using NeoVim for my examples, and will also be using an extension called <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://github.com/iamcco/markdown-preview.nvim">markdown-preview</a>. If you are reading this blog post and want to follow along in VS Code, there is equivalent functionality available for that editor as well in the form of different extensions.
@@ -140,11 +142,11 @@ html(lang = "en")
                 p And here is an example Picture showing the results:
                 figure
                     img.img-image(src="../assets/images/screenshots/readme-pic-08.webp" alt="demonstration of how to write checkboxes in markdown" title="demonstration of how to write checkboxes in markdown" cite="author screenshot" loading="lazy")
-                figcaption Checkboxes in Markdown 
+                figcaption Checkboxes in Markdown
                 h1 Conclusion
                 p The capabilities of Markdown are vast. In addition to what has been covered here, one can create tables, graphs, and embed images/GIFs into Markdown files to further help document your projects.
                 p A good README can often be the saving grace of a project. Even if a project is poorly designed or not well maintained, a good README can provide a general overview of a piece of software and help others navigate its use, configuration, and further development. Without a README, the potential user or developer is left solely with the code itself to determine everything about the project. Indeed, a project without a README is probably not worth investigating, unless the codebase is particularly small and even then, some form of introductory documentation would be highly encouraged.
-                p As a beginning software developer, the README is one of your most important resources when learning about a new tool, or even referring back to one of your old projects. It is within your best interest to develop a good habit of writing READMEs and other forms documentation for your projects, so take the time to familiarize yourself with one of the most common forms of it, Markdown.
+                p As a beginning software developer, the README is one of your most important resources when learning about a new tool, or even referring back to one of your old projects. It is within your best interest to develop a good habit of writing READMEs and other forms of documentation for your projects, so take the time to familiarize yourself with one of the most common forms of it, Markdown.
                 p I do hope this has been helpful to you and provides you with a basic understanding of the Markdown language and how to utilize it for a basic README. Cheers and Happy Coding!
             div.foot-arrows
                 button.icons#up-arrow(title="back to top" aria-label="back-to-top" alt="back to top" role="navigation")
