@@ -1,8 +1,18 @@
 [rsspls]
 output = "/your/output/directory/here"
 [[feed]]
-title = "All Together: HTML, CSS, and JS In Unison"
+title = "The Wandering Mind: The Pros and Cons of Being Distracted"
 filename = "feed.rss"
+[feed.config]
+url = "https://brianhayes.dev/blog/the_wandering_mind"
+item = ".container"
+heading = "header"
+link = "a"
+summary = ".demo-button"
+date = "time"
+[[feed]]
+title = "All Together: HTML, CSS, and JS In Unison"
+filename = "all_together.rss"
 [feed.config]
 url = "https://brianhayes.dev/blog/all_together"
 item = ".container"
