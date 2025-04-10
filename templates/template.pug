@@ -6,6 +6,7 @@ html(lang = "en")
         meta(name='viewport' content='width=device-width, initial-scale=1')
         meta(name="robots" content="follow, index, max-snippet:-1, max-image-preview:large")
         meta(name='description' content='A simple blog written by a Web Developer, for Web Developers. Covering Basics of HTML, CSS, JavaScript, and much more, including Linux and other subjects related to technology.')
+        script(src="../toggle-temp.js")
         link(rel="icon" type="image/x-icon" href="../assets/icons/favicon.png")
         link(rel='icon' type='application/rss+xml' title='RSS Feed' href='../assets/feed.rss')
         link(rel='stylesheet' type='text/css' href='../css/style.css')
@@ -37,7 +38,7 @@ html(lang = "en")
                 li.nav-text-items(role="none")
                     div.nav-text-item#text-blog(aria-label="blog-text" role="none") blog
                 li.nav-text-items(role="none")
-                    div.nav-text-item#text-rss(aria-label="rss-text" role="none") rss 
+                    div.nav-text-item#text-rss(aria-label="rss-text" role="none") rss
         div.container.fadein
             div.arrows
                 a.icons#left-arrow(aria-label="previous" role="navigation" href="")
